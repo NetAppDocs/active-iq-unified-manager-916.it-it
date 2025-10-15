@@ -1,0 +1,65 @@
+---
+permalink: data-protection/task_create_snapmirror_relationship_from_health_volumes.html 
+sidebar: sidebar 
+keywords: create, snapmirror, protection, relationship, health, volumes view 
+summary: 'Utilizzando la vista Integrità: tutti i volumi è possibile creare più relazioni di protezione SnapMirror contemporaneamente selezionando più volumi sulla stessa VM di archiviazione.' 
+---
+= Creare una relazione di protezione SnapMirror dalla vista Integrità: Tutti i volumi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzando la vista Integrità: tutti i volumi è possibile creare più relazioni di protezione SnapMirror contemporaneamente selezionando più volumi sulla stessa VM di archiviazione.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* È necessario aver configurato l'automazione del flusso di lavoro.
+
+
+Il menu *Proteggi* non viene visualizzato nei seguenti casi:
+
+* Se le impostazioni RBAC non consentono questa azione: ad esempio, se si dispone solo dei privilegi di operatore
+* Quando l'ID del volume è sconosciuto: ad esempio, quando si ha una relazione intercluster e il cluster di destinazione non è ancora stato scoperto
+
+
+.Passi
+. Nella vista *Integrità: Tutti i volumi*, seleziona il volume che desideri proteggere.
++
+In alternativa, per creare più relazioni di protezione sullo stesso SVM, selezionare uno o più volumi nella vista Integrità: Tutti i volumi e fare clic su *Proteggi* > * SnapMirror* sulla barra degli strumenti.
+
++
+Viene visualizzata la finestra di dialogo Configura protezione.
+
+. Fare clic su * SnapMirror* per visualizzare la scheda * SnapMirror* e configurare le informazioni sulla destinazione.
+. Fare clic su *Avanzate* per impostare la garanzia di spazio, se necessario, quindi fare clic su *Applica*.
+. Completare l'area *Informazioni sulla destinazione* e l'area *Impostazioni relazione* nella scheda * SnapMirror*.
+. Fare clic su *Applica*.
++
+Verrai reindirizzato alla vista Salute: Tutti i volumi.
+
+. Fare clic sul collegamento al processo di configurazione della protezione nella parte superiore della vista *Integrità: tutti i volumi*.
++
+Se si sta creando una sola relazione di protezione, viene visualizzata la pagina Dettagli processo; se invece si stanno creando più relazioni di protezione, viene visualizzato un elenco di tutti i processi associati all'operazione di protezione.
+
+. Eseguire una delle seguenti operazioni:
++
+** Se si dispone di un solo processo, fare clic su *Aggiorna* per aggiornare l'elenco delle attività e i dettagli delle attività associati al processo di configurazione della protezione e per determinare quando il processo è completato.
+** Se hai più di un lavoro:
++
+... Fare clic su un lavoro nell'elenco dei lavori.
+... Fare clic su *Aggiorna* per aggiornare l'elenco delle attività e i dettagli delle attività associati al processo di configurazione della protezione e per determinare quando il processo è completato.
+... Utilizzare il pulsante *Indietro* per tornare all'elenco filtrato e visualizzare un altro lavoro.
+
+
+
+
+
+
+A seconda della SVM di destinazione specificata durante la configurazione o delle opzioni abilitate nelle impostazioni avanzate, la relazione SnapMirror risultante potrebbe essere una delle seguenti possibili varianti:
+
+* Se è stata specificata una SVM di destinazione eseguita con la stessa versione di ONTAP o con una versione più recente rispetto a quella del volume di origine, il risultato predefinito è una relazione SnapMirror basata sulla replicazione a blocchi.
+* Se è stata specificata una SVM di destinazione eseguita con la stessa versione di ONTAP o con una versione più recente rispetto a quella del volume di origine, ma è stata abilitata la replica flessibile in base alla versione nelle impostazioni avanzate, il risultato sarà una relazione SnapMirror con replica flessibile in base alla versione.
+* Se è stata specificata una SVM di destinazione eseguita con una versione di ONTAP precedente a quella del volume di origine e la versione precedente supporta la replica flessibile in base alla versione, il risultato automatico sarà una relazione SnapMirror con replica flessibile in base alla versione.
+

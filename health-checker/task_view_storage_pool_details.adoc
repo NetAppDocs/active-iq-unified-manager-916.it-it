@@ -1,0 +1,39 @@
+---
+permalink: health-checker/task_view_storage_pool_details.html 
+sidebar: sidebar 
+keywords: view, storage pool, details 
+summary: È possibile visualizzare i dettagli del pool di archiviazione per monitorarne lo stato di integrità, la cache totale e disponibile e le allocazioni utilizzate e disponibili. 
+---
+= Visualizza i dettagli del pool di archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare i dettagli del pool di archiviazione per monitorarne lo stato di integrità, la cache totale e disponibile e le allocazioni utilizzate e disponibili.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Aggregati*.
+. Fare clic su un nome aggregato.
++
+Vengono visualizzati i dettagli dell'aggregato selezionato.
+
+. Fare clic sulla scheda *Informazioni disco*.
++
+Vengono visualizzate informazioni dettagliate sul disco.
+
++
+[NOTE]
+====
+La tabella Cache viene visualizzata solo quando l'aggregato selezionato utilizza un pool di archiviazione.
+
+====
+. Nella tabella Cache, spostare il puntatore sul nome del pool di archiviazione richiesto.
++
+Vengono visualizzati i dettagli del pool di archiviazione.
+
+

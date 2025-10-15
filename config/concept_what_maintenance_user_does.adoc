@@ -1,0 +1,16 @@
+---
+permalink: config/concept_what_maintenance_user_does.html 
+sidebar: sidebar 
+keywords: what, maintenance, user does, installation, unified manager 
+summary: 'L"utente addetto alla manutenzione viene creato durante l"installazione di Unified Manager su un sistema Red Hat Enterprise Linux.  Il nome utente addetto alla manutenzione è “umadmin”.  L"utente addetto alla manutenzione ha il ruolo di amministratore dell"applicazione nell"interfaccia utente Web e può creare utenti successivi e assegnare loro ruoli.' 
+---
+= Cosa fa l'utente addetto alla manutenzione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'utente addetto alla manutenzione viene creato durante l'installazione di Unified Manager su un sistema Red Hat Enterprise Linux.  Il nome utente addetto alla manutenzione è "`umadmin`".  L'utente addetto alla manutenzione ha il ruolo di amministratore dell'applicazione nell'interfaccia utente Web e può creare utenti successivi e assegnare loro ruoli.
+
+L'utente addetto alla manutenzione, o utente umadmin, può anche accedere alla console di manutenzione di Unified Manager.

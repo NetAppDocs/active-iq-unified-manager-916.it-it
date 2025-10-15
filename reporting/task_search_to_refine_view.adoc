@@ -1,0 +1,23 @@
+---
+permalink: reporting/task_search_to_refine_view.html 
+sidebar: sidebar 
+keywords: search, refine, view 
+summary: Dopo aver ottenuto la visualizzazione desiderata, puoi perfezionare ulteriormente i risultati utilizzando il campo Cerca per concentrarti sui risultati che desideri includere nel report. 
+---
+= Utilizzare la ricerca per perfezionare la visualizzazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver ottenuto la visualizzazione desiderata, puoi perfezionare ulteriormente i risultati utilizzando il campo Cerca per concentrarti sui risultati che desideri includere nel report.
+
+.Passi
+. Apri la visualizzazione personalizzata o predefinita che desideri utilizzare come base per il tuo report.
+. Digita nel campo Cerca per restringere i dati elencati nella vista.  È possibile immettere dati parziali in una qualsiasi delle colonne visualizzate.  Ad esempio, se si desidera cercare nodi che includono "US_East" nel nome, è possibile restringere l'elenco completo dei nodi.
++
+I risultati della ricerca vengono salvati nella vista personalizzata e utilizzati nel report pianificato risultante.
+
+. Assegna un nome alla vista non salvata per salvare le modifiche.
+

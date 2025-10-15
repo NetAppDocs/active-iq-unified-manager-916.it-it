@@ -1,0 +1,14 @@
+---
+permalink: health-checker/concept_understand_more_about_annotations.html 
+sidebar: sidebar 
+keywords: understand, annotations 
+summary: Comprendere i concetti sulle annotazioni aiuta a gestire gli eventi correlati agli oggetti di archiviazione nel proprio ambiente. 
+---
+= Scopri di più sulle annotazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Comprendere i concetti sulle annotazioni aiuta a gestire gli eventi correlati agli oggetti di archiviazione nel proprio ambiente.

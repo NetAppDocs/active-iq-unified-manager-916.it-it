@@ -1,0 +1,126 @@
+---
+permalink: events/reference_alert_setup_page.html 
+sidebar: sidebar 
+keywords: alert, setup, page, command buttons, list view, details area 
+summary: 'La pagina Impostazione avvisi visualizza un elenco di avvisi e fornisce informazioni sul nome dell"avviso, sullo stato, sul metodo di notifica e sulla frequenza di notifica.  Da questa pagina puoi anche aggiungere, modificare, rimuovere, abilitare o disabilitare gli avvisi.' 
+---
+= Pagina di configurazione degli avvisi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Impostazione avvisi visualizza un elenco di avvisi e fornisce informazioni sul nome dell'avviso, sullo stato, sul metodo di notifica e sulla frequenza di notifica.  Da questa pagina puoi anche aggiungere, modificare, rimuovere, abilitare o disabilitare gli avvisi.
+
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+
+== Pulsanti di comando
+
+* *Aggiungere*
++
+Visualizza la finestra di dialogo Aggiungi avviso, che consente di aggiungere nuovi avvisi.
+
+* *Modificare*
++
+Visualizza la finestra di dialogo Modifica avviso, che consente di modificare gli avvisi selezionati.
+
+* *Eliminare*
++
+Elimina gli avvisi selezionati.
+
+* *Abilitare*
++
+Abilita gli avvisi selezionati a inviare notifiche.
+
+* *Disabilita*
++
+Disattiva gli avvisi selezionati quando si desidera interrompere temporaneamente l'invio delle notifiche.
+
+* *Test*
++
+Esegue il test degli avvisi selezionati per verificarne la configurazione dopo essere stati aggiunti o modificati.
+
+* *Avvisi per eventi risolti e obsoleti*
++
+Consente di abilitare o disabilitare l'invio di avvisi quando gli eventi vengono spostati negli stati Risolto o Obsoleto.  Ciò può impedire agli utenti di ricevere notifiche non necessarie.
+
+
+
+
+
+== Visualizzazione elenco
+
+La vista elenco mostra, in formato tabellare, le informazioni sugli avvisi creati.  È possibile utilizzare i filtri delle colonne per personalizzare i dati visualizzati.  Puoi anche selezionare un avviso per visualizzare maggiori informazioni nell'area dettagli.
+
+* *Stato*
++
+Specifica se un avviso è abilitato (image:../media/alert_status_enabled.gif[""] ) o disabilitato (image:../media/alert_status_disabled.gif[""] ).
+
+* *Attenzione*
++
+Visualizza il nome dell'avviso.
+
+* *Descrizione*
++
+Visualizza una descrizione dell'avviso.
+
+* *Metodo di notifica*
++
+Visualizza il metodo di notifica selezionato per l'avviso.  È possibile avvisare gli utenti tramite e-mail o trap SNMP.
+
+* *Frequenza di notifica*
++
+Specifica la frequenza (in minuti) con cui il server di gestione continua a inviare notifiche finché l'evento non viene riconosciuto, risolto o spostato nello stato Obsoleto.
+
+
+
+
+
+== Area dettagli
+
+L'area dei dettagli fornisce maggiori informazioni sull'avviso selezionato.
+
+* *Nome avviso*
++
+Visualizza il nome dell'avviso.
+
+* *Descrizione dell'avviso*
++
+Visualizza una descrizione dell'avviso.
+
+* *Eventi*
++
+Visualizza gli eventi per i quali si desidera attivare l'avviso.
+
+* *Risorse*
++
+Visualizza le risorse per le quali si desidera attivare l'avviso.
+
+* *Include*
++
+Visualizza il gruppo di risorse per cui si desidera attivare l'avviso.
+
+* *Esclude*
++
+Visualizza il gruppo di risorse per cui non si desidera attivare l'avviso.
+
+* *Metodo di notifica*
++
+Visualizza il metodo di notifica per l'avviso.
+
+* *Frequenza di notifica*
++
+Visualizza la frequenza con cui il server di gestione continua a inviare notifiche di avviso finché l'evento non viene riconosciuto, risolto o spostato nello stato Obsoleto.
+
+* *Nome dello script*
++
+Visualizza il nome dello script associato all'avviso selezionato.  Questo script viene eseguito quando viene generato un avviso.
+
+* *Destinatari e-mail*
++
+Visualizza gli indirizzi email degli utenti che ricevono la notifica di avviso.
+
+

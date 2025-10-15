@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_edit_protection_relationships_from_protection_volume.html 
+sidebar: sidebar 
+keywords: edit, protection, relationships, volume, relationships, page 
+summary: È possibile modificare le relazioni di protezione esistenti per cambiare la velocità di trasferimento massima, la politica di protezione o la pianificazione della protezione.  È possibile modificare una relazione per ridurre la larghezza di banda utilizzata per i trasferimenti o per aumentare la frequenza dei trasferimenti pianificati, poiché i dati cambiano spesso. 
+---
+= Modificare le relazioni di protezione dalla pagina Relazioni volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare le relazioni di protezione esistenti per cambiare la velocità di trasferimento massima, la politica di protezione o la pianificazione della protezione.  È possibile modificare una relazione per ridurre la larghezza di banda utilizzata per i trasferimenti o per aumentare la frequenza dei trasferimenti pianificati, poiché i dati cambiano spesso.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+I volumi selezionati devono essere destinazioni di relazioni di protezione.  Non è possibile modificare le relazioni quando sono selezionati volumi di origine, volumi di condivisione del carico o volumi che non sono la destinazione di una relazione SnapMirror o SnapVault .
+
+.Passi
+. Dalla pagina *Relazioni volume*, seleziona nell'elenco dei volumi uno o più volumi nella stessa SVM per i quali desideri modificare le impostazioni delle relazioni, quindi seleziona *Modifica* dalla barra degli strumenti.
++
+Viene visualizzata la finestra di dialogo Modifica relazione.
+
+. Nella finestra di dialogo *Modifica relazione*, modificare la velocità di trasferimento massima, la politica di protezione o la pianificazione della protezione, in base alle esigenze.
+. Fare clic su *Applica*.
++
+Le modifiche vengono applicate alle relazioni selezionate.
+
+

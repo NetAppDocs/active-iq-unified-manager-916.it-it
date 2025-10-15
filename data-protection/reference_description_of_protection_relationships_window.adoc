@@ -1,0 +1,14 @@
+---
+permalink: data-protection/reference_description_of_protection_relationships_window.html 
+sidebar: sidebar 
+keywords: description, protect, relationships, windows, dialog boxes 
+summary: È possibile visualizzare e gestire i dettagli relativi alla protezione, quali pool di risorse, associazioni SVM e processi di protezione.  È possibile utilizzare la pagina Soglie di integrità appropriata per configurare i valori delle soglie di integrità globali per aggregati, volumi e relazioni. 
+---
+= Descrizione delle finestre e delle finestre di dialogo delle relazioni di protezione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare e gestire i dettagli relativi alla protezione, quali pool di risorse, associazioni SVM e processi di protezione.  È possibile utilizzare la pagina Soglie di integrità appropriata per configurare i valori delle soglie di integrità globali per aggregati, volumi e relazioni.

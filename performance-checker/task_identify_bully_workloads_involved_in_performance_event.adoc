@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/task_identify_bully_workloads_involved_in_performance_event.html 
+sidebar: sidebar 
+keywords: identify, bully workloads, dynamic, performance, event 
+summary: 'In Unified Manager è possibile identificare quali carichi di lavoro presentano la deviazione più elevata nell"utilizzo per un componente del cluster in competizione.  L"identificazione di questi carichi di lavoro aiuta a comprendere perché determinati volumi del cluster presentano tempi di risposta lenti (latenza).' 
+---
+= Identificare i carichi di lavoro eccessivi coinvolti in un evento di performance dinamica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In Unified Manager è possibile identificare quali carichi di lavoro presentano la deviazione più elevata nell'utilizzo per un componente del cluster in competizione.  L'identificazione di questi carichi di lavoro aiuta a comprendere perché determinati volumi del cluster presentano tempi di risposta lenti (latenza).
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* Devono esserci eventi di performance dinamica nuovi, riconosciuti o obsoleti.
+
+
+La pagina Dettagli evento visualizza un elenco dei carichi di lavoro definiti dall'utente e dal sistema, classificati in base al maggiore utilizzo del componente o al maggiore impatto dell'evento.  I valori si basano sui picchi identificati da Unified Manager quando ha rilevato e analizzato per l'ultima volta l'evento.
+
+.Passi
+. Visualizza la pagina Dettagli evento per visualizzare le informazioni sull'evento.
+. Nei grafici Latenza del carico di lavoro e Attività del carico di lavoro, seleziona *Carichi di lavoro pesanti*.
+. Passa il cursore sui grafici per visualizzare i principali carichi di lavoro definiti dall'utente che influiscono sul componente.
+

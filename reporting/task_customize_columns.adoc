@@ -1,0 +1,23 @@
+---
+permalink: reporting/task_customize_columns.html 
+sidebar: sidebar 
+keywords: customize, columns 
+summary: 'Utilizzare Mostra/Nascondi per scegliere le colonne che si desidera utilizzare nel report.  Trascina le colonne nella pagina dell"inventario per riorganizzarle.' 
+---
+= Personalizza le colonne
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzare *Mostra/Nascondi* per scegliere le colonne che si desidera utilizzare nel report.  Trascina le colonne nella pagina dell'inventario per riorganizzarle.
+
+.Passi
+. Fare clic su *Mostra/Nascondi* per aggiungere o rimuovere colonne.
++
+image::../media/show_hide_3.png[Uno screenshot dell'interfaccia utente che mostra come aggiungere o rimuovere colonne.]
+
+. Nella pagina dell'inventario, trascina le colonne per riorganizzarle nell'ordine desiderato nel report.
+. Assegna un nome alla vista non salvata per salvare le modifiche.
+

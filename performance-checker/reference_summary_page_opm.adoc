@@ -1,0 +1,140 @@
+---
+permalink: performance-checker/reference_summary_page_opm.html 
+sidebar: sidebar 
+keywords: summary page, charts, counter, statistics 
+summary: 'La pagina Riepilogo visualizza grafici dei contatori contenenti dettagli sugli eventi e sulle prestazioni per oggetto per il periodo di 72 ore precedente.  Questi dati non vengono aggiornati automaticamente, ma sono aggiornati all"ultimo caricamento della pagina.  I grafici nella pagina Riepilogo rispondono alla domanda: devo cercare oltre?' 
+---
+= Pagina di riepilogo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Riepilogo visualizza grafici dei contatori contenenti dettagli sugli eventi e sulle prestazioni per oggetto per il periodo di 72 ore precedente.  Questi dati non vengono aggiornati automaticamente, ma sono aggiornati all'ultimo caricamento della pagina.  I grafici nella pagina Riepilogo rispondono alla domanda _Devo cercare oltre?_
+
+
+
+== Grafici e statistiche del contatore
+
+I grafici riepilogativi forniscono una rapida panoramica di alto livello per le ultime 72 ore e aiutano a identificare possibili problemi che richiedono ulteriori indagini.
+
+Le statistiche del contatore della pagina Riepilogo vengono visualizzate nei grafici.
+
+È possibile posizionare il cursore sulla linea di tendenza in un grafico per visualizzare i valori del contatore per un determinato momento.  I grafici riepilogativi mostrano anche il numero totale di eventi critici e di avviso attivi per il periodo di 72 ore precedente per i seguenti contatori:
+
+* *Latenza*
++
+Tempo medio di risposta per tutte le richieste di I/O; espresso in millisecondi per operazione.
+
++
+Visualizzato per tutti i tipi di oggetto.
+
+* *IOPS*
++
+Velocità media di funzionamento; espressa in operazioni di input/output al secondo.
+
++
+Visualizzato per tutti i tipi di oggetto.
+
+* *MB/s*
++
+Capacità di elaborazione media; espressa in megabyte al secondo.
+
++
+Visualizzato per tutti i tipi di oggetto.
+
+* *Capacità di prestazione utilizzata*
++
+Percentuale della capacità di prestazione consumata da un nodo o da un aggregato.
+
++
+Visualizzato solo per nodi e aggregati.
+
+* *Utilizzo*
++
+Percentuale di utilizzo degli oggetti per nodi e aggregati o utilizzo della larghezza di banda per le porte.
+
++
+Visualizzato solo per nodi, aggregati e porte.
+
+
+
+Posizionando il cursore sul conteggio degli eventi per Eventi attivi vengono visualizzati il tipo e il numero di eventi.  Gli eventi critici vengono visualizzati in rosso (image:../media/treemapred_png.gif["Icona per TreeMap – Colore rosso"] ), e gli eventi di avviso vengono visualizzati in giallo (image:../media/treemapstatus_warning_png.gif["Icona per TreeMap – Stato di avviso"] ).
+
+Il numero in alto a destra del grafico, nella barra grigia, è il valore medio delle ultime 72 ore.  I numeri mostrati nella parte inferiore e superiore del grafico della linea di tendenza rappresentano i valori minimo e massimo dell'ultimo periodo di 72 ore.  La barra grigia sotto il grafico contiene il conteggio degli eventi attivi (nuovi e riconosciuti) e degli eventi obsoleti dell'ultimo periodo di 72 ore.
+
+image::../media/iops_graph.gif[Uno screenshot dell'interfaccia utente che mostra il grafico IOPS.]
+
+* *Grafico del contatore di latenza*
++
+Il grafico del contatore di latenza fornisce una panoramica di alto livello della latenza dell'oggetto per il periodo di 72 ore precedente.  La latenza si riferisce al tempo medio di risposta per tutte le richieste di I/O; espresso in millisecondi per operazione, al tempo di servizio, al tempo di attesa o ad entrambi sperimentati da un pacchetto di dati o da un blocco nel componente di archiviazione del cluster in esame.
+
++
+*In alto (valore del contatore):* il numero nell'intestazione mostra la media del periodo di 72 ore precedente.
+
++
+*Centro (grafico delle prestazioni):* il numero nella parte inferiore del grafico indica la latenza più bassa, mentre il numero nella parte superiore del grafico indica la latenza più alta per il periodo di 72 ore precedente.  Posiziona il cursore sulla linea di tendenza del grafico per visualizzare il valore di latenza per un tempo specifico.
+
++
+*In basso (eventi):* Passando il mouse sopra, il pop-up mostra i dettagli degli eventi.  Fare clic sul collegamento *Eventi attivi* sotto il grafico per accedere alla pagina Inventario eventi e visualizzare i dettagli completi dell'evento.
+
+* *Grafico contatore IOPS*
++
+Il grafico del contatore IOPS fornisce una panoramica di alto livello dello stato IOPS dell'oggetto per il periodo di 72 ore precedente.  IOPS indica la velocità del sistema di archiviazione in numero di operazioni di input/output al secondo.
+
++
+*In alto (valore del contatore):* il numero nell'intestazione mostra la media del periodo di 72 ore precedente.
+
++
+*Centro (grafico delle prestazioni):* il numero nella parte inferiore del grafico mostra gli IOPS più bassi, mentre il numero nella parte superiore del grafico mostra gli IOPS più alti per il periodo di 72 ore precedente.  Posiziona il cursore sulla linea di tendenza del grafico per visualizzare il valore IOPS per un periodo di tempo specifico.
+
++
+*In basso (eventi):* Passando il mouse sopra, il pop-up mostra i dettagli degli eventi.  Fare clic sul collegamento *Eventi attivi* sotto il grafico per accedere alla pagina Inventario eventi e visualizzare i dettagli completi dell'evento.
+
+* *Grafico contatore MB/s*
++
+Il grafico del contatore MB/s mostra le prestazioni MB/s dell'oggetto e indica quanti dati sono stati trasferiti da e verso l'oggetto in megabyte al secondo.  Il grafico del contatore MB/s fornisce una panoramica di alto livello dello stato di salute in MB/s dell'oggetto per il periodo di 72 ore precedente.
+
++
+*In alto (valore del contatore):* il numero nell'intestazione mostra il numero medio di MB/s per il periodo di 72 ore precedente.
+
++
+*Centro (grafico delle prestazioni):* il valore nella parte inferiore del grafico mostra il numero più basso di MB/s, mentre il valore nella parte superiore del grafico mostra il numero più alto di MB/s per il periodo di 72 ore precedente.  Posiziona il cursore sulla linea di tendenza del grafico per visualizzare il valore MB/s per un periodo di tempo specifico.
+
++
+*In basso (eventi):* Passando il mouse sopra, il pop-up mostra i dettagli degli eventi.  Fare clic sul collegamento *Eventi attivi* sotto il grafico per accedere alla pagina Inventario eventi e visualizzare i dettagli completi dell'evento.
+
+* *Tabella del contatore della capacità prestazionale utilizzata*
++
+Il grafico del contatore Capacità di prestazione utilizzata mostra la percentuale di capacità di prestazione utilizzata dall'oggetto.
+
++
+*In alto (valore del contatore):* il numero nell'intestazione mostra la capacità di prestazione media utilizzata per il periodo di 72 ore precedente.
+
++
+*Centro (grafico delle prestazioni):* il valore nella parte inferiore del grafico mostra la percentuale di capacità di prestazioni utilizzata più bassa, mentre il valore nella parte superiore del grafico mostra la percentuale di capacità di prestazioni utilizzata più alta per il periodo di 72 ore precedente.  Posiziona il cursore sulla linea di tendenza del grafico per visualizzare il valore della capacità prestazionale utilizzata per un periodo di tempo specifico.
+
++
+*In basso (eventi):* Passando il mouse sopra, il pop-up mostra i dettagli degli eventi.  Fare clic sul collegamento *Eventi attivi* sotto il grafico per accedere alla pagina Inventario eventi e visualizzare i dettagli completi dell'evento.
+
+* *Grafico contatore di utilizzo*
++
+Il grafico del contatore di utilizzo mostra la percentuale di utilizzo dell'oggetto.  Il grafico del contatore di utilizzo fornisce una panoramica di alto livello della percentuale di utilizzo dell'oggetto o della larghezza di banda per il periodo di 72 ore precedente.
+
++
+*In alto (valore del contatore):* il numero nell'intestazione mostra la percentuale media di utilizzo per il periodo di 72 ore precedente.
+
++
+*Centro (grafico delle prestazioni):* il valore nella parte inferiore del grafico mostra la percentuale di utilizzo più bassa, mentre il valore nella parte superiore del grafico mostra la percentuale di utilizzo più alta per il periodo di 72 ore precedente.  Posiziona il cursore sulla linea di tendenza del grafico per visualizzare il valore di utilizzo per un periodo di tempo specifico.
+
++
+*In basso (eventi):* Passando il mouse sopra, il pop-up mostra i dettagli degli eventi.  Fare clic sul collegamento *Eventi attivi* sotto il grafico per accedere alla pagina Inventario eventi e visualizzare i dettagli completi dell'evento.
+
+
+
+
+
+== Eventi
+
+La tabella della cronologia degli eventi, ove applicabile, elenca gli eventi più recenti che si sono verificati su quell'oggetto.  Facendo clic sul nome dell'evento vengono visualizzati i dettagli dell'evento nella pagina Dettagli evento.

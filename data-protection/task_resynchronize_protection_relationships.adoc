@@ -1,0 +1,49 @@
+---
+permalink: data-protection/task_resynchronize_protection_relationships.html 
+sidebar: sidebar 
+keywords: resynchronize, protection, relationships, volume, relationships page 
+summary: 'Dalla pagina Relazioni volume è possibile risincronizzare una relazione per ripristinare un evento che ha disabilitato il volume di origine o quando si desidera modificare l"origine corrente in un volume diverso.' 
+---
+= Risincronizzare le relazioni di protezione dalla pagina Relazioni volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dalla pagina Relazioni volume è possibile risincronizzare una relazione per ripristinare un evento che ha disabilitato il volume di origine o quando si desidera modificare l'origine corrente in un volume diverso.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* È necessario aver configurato l'automazione del flusso di lavoro.
+
+
+.Passi
+. Dalla pagina *Relazioni volume*, selezionare uno o più volumi con relazioni inattive e, dalla barra degli strumenti, fare clic su *Risincronizza*.
++
+Viene visualizzata la finestra di dialogo Risincronizza.
+
+. Nella scheda *Opzioni di risincronizzazione*, selezionare una priorità di trasferimento e la velocità di trasferimento massima.
+. Fare clic su *Copie snapshot di origine*; quindi, nella colonna *Copia snapshot*, fare clic su *Predefinito*.
++
+Viene visualizzata la finestra di dialogo Seleziona copia snapshot di origine.
+
+. Se si desidera specificare una copia Snapshot esistente anziché trasferire la copia Snapshot predefinita, fare clic su *Copia Snapshot esistente* e selezionare una copia Snapshot dall'elenco.
+. Fare clic su *Invia*.
++
+Verrà visualizzata nuovamente la finestra di dialogo Risincronizza.
+
+. Se hai selezionato più di una sorgente da risincronizzare, fai clic su *Predefinito* per la sorgente successiva per la quale desideri specificare una copia Snapshot esistente.
+. Fare clic su *Invia* per avviare il processo di risincronizzazione.
++
+Il processo di risincronizzazione viene avviato, si torna alla pagina Relazioni volume e nella parte superiore della pagina viene visualizzato un collegamento ai processi.
+
+. *Facoltativo:* fare clic su *Visualizza processi* nella pagina *Relazioni volume* per monitorare lo stato di ciascun processo di risincronizzazione.
++
+Viene visualizzato un elenco filtrato di lavori.
+
+. *Facoltativo:* fare clic sulla freccia *Indietro* del browser per tornare alla pagina *Relazioni di volume*.
++
+L'operazione di risincronizzazione termina quando tutte le attività di lavoro vengono completate correttamente.
+
+

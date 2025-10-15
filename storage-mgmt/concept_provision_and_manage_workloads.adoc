@@ -1,0 +1,46 @@
+---
+permalink: storage-mgmt/concept_provision_and_manage_workloads.html 
+sidebar: sidebar 
+keywords: provision, manage, workloads 
+summary: La funzionalità di gestione attiva di Active IQ Unified Manager fornisce livelli di servizio delle prestazioni, criteri di efficienza dello storage e API del provider di storage per il provisioning, il monitoraggio e la gestione dei carichi di lavoro di storage in un data center. 
+---
+= Fornire e gestire i carichi di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La funzionalità di gestione attiva di Active IQ Unified Manager fornisce livelli di servizio delle prestazioni, criteri di efficienza dello storage e API del provider di storage per il provisioning, il monitoraggio e la gestione dei carichi di lavoro di storage in un data center.
+
+[NOTE]
+====
+Unified Manager fornisce questa funzionalità per impostazione predefinita.  Se non si prevede di utilizzare questa funzionalità, è possibile disattivarla da *Gestione archiviazione* > *Impostazioni funzionalità*.
+
+====
+Se abilitata, è possibile eseguire il provisioning dei carichi di lavoro sui cluster ONTAP gestiti dall'istanza di Unified Manager.  È inoltre possibile assegnare policy, come i livelli di servizio delle prestazioni e le policy di efficienza dell'archiviazione, ai carichi di lavoro e gestire l'ambiente di archiviazione in base a tali policy.
+
+Questa funzionalità abilita le seguenti funzioni:
+
+* Rilevamento automatico dei carichi di lavoro di archiviazione sui cluster aggiunti, consentendo una facile valutazione e distribuzione dei carichi di lavoro di archiviazione
+* Provisioning di carichi di lavoro NAS che supportano i protocolli NFS e CIFS
+* Provisioning di carichi di lavoro SAN che supportano i protocolli iSCSI e FCP
+* Supporto per i protocolli NFS e CIFS sulla stessa condivisione file
+* Gestione dei livelli di servizio delle prestazioni e delle politiche di efficienza dello storage
+* Assegnazione di livelli di servizio delle prestazioni e policy di efficienza di archiviazione ai carichi di lavoro di archiviazione
+
+
+Le opzioni *Provisioning*, *Storage* > *Workloads* e *Policies* nel riquadro sinistro dell'interfaccia utente consentono di modificare varie configurazioni.
+
+Utilizzando queste opzioni è possibile eseguire le seguenti funzioni:
+
+* Visualizza i carichi di lavoro di archiviazione nella pagina *Archiviazione* > *Carichi di lavoro*
+* Crea carichi di lavoro di archiviazione dalla pagina Provision Workload
+* Creare e gestire i livelli di servizio delle prestazioni dalle policy
+* Crea e gestisci criteri di efficienza di archiviazione da Criteri
+* Assegnare policy ai carichi di lavoro di archiviazione dalla pagina Carichi di lavoro
+
+
+*Informazioni correlate*
+
+link:../config/concept_policy_based_storage_management.html["Gestione dell'archiviazione basata su policy"]

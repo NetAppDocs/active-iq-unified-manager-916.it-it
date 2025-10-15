@@ -1,0 +1,91 @@
+---
+permalink: reporting/task_report_quick_start.html 
+sidebar: sidebar 
+keywords: reporting, quick, start 
+summary: 'Crea un report personalizzato di esempio per provare a esplorare le viste e pianificare i report.  Questo report di avvio rapido individua un elenco di volumi che potresti voler spostare nel livello cloud perché contengono una discreta quantità di dati inattivi (freddi).  Aprirai la vista Prestazioni: Tutti i volumi, personalizzerai la vista utilizzando filtri e colonne, salverai la vista personalizzata come report e programmerai la condivisione del report una volta alla settimana.' 
+---
+= Avvio rapido della segnalazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Crea un report personalizzato di esempio per provare a esplorare le viste e pianificare i report.  Questo report di avvio rapido individua un elenco di volumi che potresti voler spostare nel livello cloud perché contengono una discreta quantità di dati inattivi (freddi).  Aprirai la vista Prestazioni: Tutti i volumi, personalizzerai la vista utilizzando filtri e colonne, salverai la vista personalizzata come report e programmerai la condivisione del report una volta alla settimana.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* È necessario aver configurato gli aggregati FabricPool e disporre di volumi su tali aggregati.
+
+
+Seguire i passaggi sottostanti per:
+
+* Apri la vista predefinita
+* Personalizza le colonne filtrando e ordinando i dati
+* Salva la vista
+* Pianifica la generazione di un report per la vista personalizzata
+
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Volumi*.
+. Nel menu Visualizza, seleziona *Prestazioni* > *Tutti i volumi*.
+. Fare clic su *Mostra/Nascondi* per assicurarsi che la colonna "`Tipi di disco`" venga visualizzata nella vista.
++
+image::../media/show_hide_3.png[Uno screenshot dell'interfaccia utente che mostra l'elenco a discesa del menu Mostra/Nascondi.]
+
++
+Aggiungi o rimuovi altre colonne per creare una vista contenente i campi importanti per il tuo report.
+
+. Trascina la colonna "`Tipi di disco`" accanto alla colonna "`Raccomandazione cloud`".
+. Fare clic sull'icona del filtro per aggiungere i seguenti tre filtri, quindi fare clic su *Applica filtro*:
++
+** I tipi di disco contengono FabricPool
+** La raccomandazione cloud contiene il livello
+** Dati freddi superiori a 10 GBimage:../media/filter_cold_data_2.png["Uno screenshot dell'interfaccia utente che mostra come applicare un filtro dall'opzione filtro."]
+
+
++
+Si noti che ogni filtro è unito tramite un AND logico, in modo che tutti i volumi restituiti debbano soddisfare tutti i criteri.  Puoi aggiungere un massimo di cinque filtri.
+
+. Fare clic sulla parte superiore della colonna Cold Data per ordinare i risultati in modo che i volumi con il maggior numero di dati cold vengano visualizzati nella parte superiore della vista.
+. Quando la vista è personalizzata, il nome della vista è Vista non salvata.  Assegnare alla vista un nome che rifletta ciò che la vista stessa mostra, ad esempio "`I volumi modificano la politica di tiering`".  Al termine, fare clic sul segno di spunta o premere *Invio* per salvare la vista con il nuovo nome.
++
+image::../media/report_vol_code_data_2.png[Uno screenshot dell'interfaccia utente che mostra la pagina dei criteri di modifica dei livelli di Vols con le colonne richieste nell'ordine corretto.]
+
+. Scarica il report come file *CSV*, *Excel* o *PDF* per visualizzare il risultato prima di pianificarlo o condividerlo.
++
+Aprire il file con un'applicazione installata, come Microsoft Excel (CSV o Excel) o Adobe Acrobat (PDF), oppure salvare il file.
+
++
+[NOTE]
+====
+È possibile personalizzare ulteriormente il report utilizzando filtri complessi, ordinamenti, tabelle pivot o grafici scaricando la vista come file Excel.  Dopo aver aperto il file in Excel, utilizza le funzionalità avanzate per personalizzare il report.  Una volta soddisfatti, caricate il file Excel.  Questo file, con le sue personalizzazioni, viene applicato alla vista quando viene eseguito il report.
+
+====
++
+Per ulteriori informazioni sulla personalizzazione dei report tramite Excel, vedere _Esempi di report Microsoft Excel_.
+
+. Fare clic sul pulsante *Rapporti pianificati* nella pagina dell'inventario.  Nell'elenco vengono visualizzati tutti i report pianificati relativi all'oggetto, in questo caso i volumi.
++
+image::../media/scheduled_reports_3.gif[Uno screenshot dell'interfaccia utente che mostra tutti i report pianificati relativi all'oggetto.]
+
+. Fare clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina Pianificazioni report, in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
+. Inserisci un nome per il report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""] ) alla fine della riga.
++
+Il rapporto viene inviato immediatamente a scopo di verifica.  Successivamente, il report viene generato e inviato tramite e-mail ai destinatari elencati utilizzando la frequenza specificata.
+
++
+Il seguente report di esempio è in formato CSV:
+
++
+image::../media/csv_sample_report.gif[Uno screenshot dell'interfaccia utente che mostra un report di esempio in formato CSV.]
+
++
+Il seguente report di esempio è in formato PDF:
+
++
+image::../media/pdf_sample_report.gif[Uno screenshot dell'interfaccia utente che mostra un report di esempio in formato PDF.]
+
+
+
+In base ai risultati mostrati nel report, potresti voler utilizzare ONTAP System Manager o ONTAP CLI per modificare la policy di suddivisione in livelli in "`auto`" o "`all`" per determinati volumi, in modo da trasferire più dati inattivi al livello cloud.

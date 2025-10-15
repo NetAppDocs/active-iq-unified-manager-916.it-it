@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/concept_performance_monitor_of_metrocluster_configurations.html 
+sidebar: sidebar 
+keywords: performance, monitor, metrocluster, throughput 
+summary: 'Unified Manager consente di monitorare la velocità di scrittura tra cluster in una configurazione MetroCluster per identificare i carichi di lavoro con un"elevata velocità di scrittura.  Se questi carichi di lavoro ad alte prestazioni causano tempi di risposta I/O elevati in altri volumi del cluster locale, Unified Manager attiva eventi di prestazioni per avvisarti.' 
+---
+= Monitoraggio delle prestazioni delle configurazioni MetroCluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager consente di monitorare la velocità di scrittura tra cluster in una configurazione MetroCluster per identificare i carichi di lavoro con un'elevata velocità di scrittura.
+
+Se questi carichi di lavoro ad alte prestazioni causano tempi di risposta I/O elevati in altri volumi del cluster locale, Unified Manager attiva eventi di prestazioni per avvisarti.
+
+
+NOTE: Unified Manager tratta i cluster in una configurazione MetroCluster come cluster individuali.  Non distingue tra cluster partner né correla la velocità di scrittura di ciascun cluster.
+
+Quando un cluster locale in una configurazione MetroCluster esegue il mirroring dei propri dati sul cluster partner, i dati vengono scritti nella NVRAM e poi trasferiti tramite i collegamenti interswitch (ISL) agli aggregati remoti.  Unified Manager analizza la NVRAM per identificare i carichi di lavoro la cui elevata velocità NVRAM scrittura sta sovrautilizzando la NVRAM , mettendola in competizione.
+
+I carichi di lavoro la cui deviazione nel tempo di risposta ha superato la soglia di prestazioni sono chiamati _vittime_, mentre i carichi di lavoro la cui deviazione nella velocità di scrittura sulla NVRAM è superiore al normale, causando la contesa, sono chiamati _bulli_.  Poiché solo le richieste di scrittura vengono replicate nel cluster partner, Unified Manager non analizza la velocità di lettura.
+
+È possibile visualizzare la produttività di uno qualsiasi dei cluster in una configurazione MetroCluster analizzando i carichi di lavoro dei LUN e dei volumi corrispondenti dalle schermate seguenti.  È possibile filtrare i risultati in base al cluster.  Dal riquadro di navigazione a sinistra:
+
+* Visualizzazione *Archiviazione > Cluster > Prestazioni: Tutti i cluster*. Vedere
+* Visualizzazione *Archiviazione > Volumi > Prestazioni: Tutti i volumi*.
+* *Archiviazione > LUN > Prestazioni: visualizzazione Tutti i LUN*.
+* *Analisi del carico di lavoro > Tutti i carichi di lavoro*
+
+
+*Informazioni correlate*
+
+link:../performance-checker/reference_performance_event_analysis_and_notification.html["Analisi e notifica degli eventi prestazionali"]
+
+link:../performance-checker/concept_performance_incident_analysis_for_metrocluster_configuration.html["Analisi degli eventi prestazionali per una configurazione MetroCluster"]
+
+link:../performance-checker/concept_roles_of_workloads_involved_in_performance_incident.html["Ruoli dei carichi di lavoro coinvolti in un evento di performance"]
+
+link:../performance-checker/task_identify_victim_workloads_involved_in_performance_event.html["Identificazione dei carichi di lavoro delle vittime coinvolte in un evento di performance"]
+
+link:../performance-checker/task_identify_bully_workloads_involved_in_performance_event.html["Identificazione dei carichi di lavoro impegnativi coinvolti in un evento di performance"]
+
+link:../performance-checker/task_identify_shark_workloads_involved_in_performance_event.html["Identificazione dei carichi di lavoro degli squali coinvolti in un evento di performance"]

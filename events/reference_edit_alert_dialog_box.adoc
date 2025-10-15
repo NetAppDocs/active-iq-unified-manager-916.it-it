@@ -1,0 +1,119 @@
+---
+permalink: events/reference_edit_alert_dialog_box.html 
+sidebar: sidebar 
+keywords: edit, alert, dialog box, name, resources, events, actions 
+summary: 'È possibile modificare le proprietà dell"avviso, ad esempio la risorsa a cui è associato, gli eventi, lo script e le opzioni di notifica.' 
+---
+= Finestra di dialogo Modifica avviso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare le proprietà dell'avviso, ad esempio la risorsa a cui è associato, gli eventi, lo script e le opzioni di notifica.
+
+
+
+== Nome
+
+Quest'area consente di modificare il nome e la descrizione dell'avviso.
+
+* *Nome avviso*
++
+Consente di modificare il nome dell'avviso.
+
+* *Descrizione dell'avviso*
++
+Consente di specificare una descrizione per l'avviso.
+
+* *Stato di allerta*
++
+Consente di abilitare o disabilitare l'avviso.
+
+
+
+
+
+== Risorse
+
+Quest'area consente di selezionare una singola risorsa o di raggruppare le risorse in base a una regola dinamica per la quale si desidera attivare l'avviso.  È possibile cercare risorse selezionando un tipo di risorsa dall'elenco a discesa oppure è possibile specificare il nome esatto della risorsa per visualizzarne una specifica.
+
+* *Includere*
++
+Consente di includere le risorse per le quali si desidera attivare gli avvisi.  È possibile specificare una stringa di testo per raggruppare le risorse che corrispondono alla stringa e selezionare questo gruppo da includere nell'avviso.  Ad esempio, è possibile raggruppare tutti i volumi il cui nome contiene la stringa "`vol0`".
+
+* *Escludere*
++
+Consente di escludere le risorse per le quali non si desidera attivare avvisi.  Ad esempio, è possibile escludere tutti i volumi il cui nome contiene la stringa "`xyz`".
+
++
+[NOTE]
+====
+La scheda Escludi viene visualizzata solo quando selezioni tutte le risorse di un particolare tipo di risorsa, ad esempio +<<All Volumes>> + o +<<All Volumes whose name contains 'xyz'>> +.
+
+====
+
+
+
+
+== Eventi
+
+In questa area è possibile selezionare gli eventi per i quali si desidera attivare gli avvisi.  È possibile attivare un avviso per eventi basati su una particolare gravità o per una serie di eventi.
+
+* *Gravità dell'evento*
++
+Consente di selezionare gli eventi in base al tipo di gravità, che può essere Critico, Errore o Avviso.
+
+* *Il nome dell'evento contiene*
++
+Consente di selezionare gli eventi il cui nome contiene i caratteri specificati.
+
+
+
+
+
+== Azioni
+
+In questa area è possibile specificare il metodo di notifica e la frequenza della notifica.
+
+* *Avvisa questi utenti*
++
+Consente di modificare l'indirizzo email o il nome utente oppure di specificare un nuovo indirizzo email o nome utente per ricevere le notifiche.
+
+* *Frequenza di notifica*
++
+Consente di modificare la frequenza con cui il server di gestione invia notifiche finché l'evento non viene riconosciuto, risolto o spostato nello stato obsoleto.
+
++
+Puoi scegliere i seguenti metodi di notifica:
+
++
+** Notificare solo una volta
+** Notificare con una frequenza specificata
+** Notificare con una frequenza specificata entro l'intervallo di tempo specificato
+
+
+* *Emetti trap SNMP*
++
+Consente di specificare se le trap SNMP devono essere inviate all'host SNMP configurato globalmente.
+
+* *Esegui script*
++
+Consente di associare uno script all'avviso.  Questo script viene eseguito quando viene generato un avviso.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Salva*
++
+Salva le modifiche e chiude la finestra di dialogo.
+
+* *Cancellare*
++
+Annulla le modifiche e chiude la finestra di dialogo.
+
+

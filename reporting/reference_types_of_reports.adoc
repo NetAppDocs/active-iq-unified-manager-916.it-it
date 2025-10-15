@@ -1,0 +1,109 @@
+---
+permalink: reporting/reference_types_of_reports.html 
+sidebar: sidebar 
+keywords: types, reports 
+summary: Questa tabella fornisce un elenco completo delle visualizzazioni e delle pagine di inventario disponibili come report che è possibile personalizzare, scaricare e pianificare. 
+---
+= Tipi di report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa tabella fornisce un elenco completo delle visualizzazioni e delle pagine di inventario disponibili come report che è possibile personalizzare, scaricare e pianificare.
+
+
+
+== Report Active IQ Unified Manager
+
+[cols="2*"]
+|===
+| Tipo | Oggetto di archiviazione o di rete 
+
+
+ a| 
+Capacità
+ a| 
+Cluster
+
+Aggregati
+
+Volumi
+
+Qtrees
+
+
+
+ a| 
+Salute
+ a| 
+Cluster
+
+Nodi
+
+Aggregati
+
+VM di archiviazione
+
+Volumi
+
+Azioni SMB/CIFS
+
+Azioni NFS
+
+
+
+ a| 
+Prestazione
+ a| 
+Cluster
+
+Nodi
+
+Aggregati
+
+VM di archiviazione
+
+Volumi
+
+LUN
+
+Spazi dei nomi NVMe
+
+Interfacce di rete (LIF)
+
+porti
+
+
+
+ a| 
+Qualità del servizio
+ a| 
+Gruppi di policy QoS tradizionali
+
+Gruppi di policy QoS adattive
+
+Gruppi di policy del livello di servizio delle prestazioni
+
+
+
+ a| 
+Relazioni di protezione del volume (disponibili nella pagina Volumi)
+ a| 
+Tutte le relazioni
+
+Stato del trasferimento dell'ultimo mese
+
+Tasso di trasferimento dell'ultimo mese
+
+
+
+ a| 
+Sicurezza
+ a| 
+VM di archiviazione
+
+Cluster
+
+|===

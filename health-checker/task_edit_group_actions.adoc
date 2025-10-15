@@ -1,0 +1,24 @@
+---
+permalink: health-checker/task_edit_group_actions.html 
+sidebar: sidebar 
+keywords: edit, group actions 
+summary: 'È possibile modificare i parametri dell"azione di gruppo configurati in Unified Manager, ad esempio il nome dell"azione di gruppo, la descrizione, il nome del gruppo associato e i parametri del tipo di azione.' 
+---
+= Modifica azioni di gruppo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare i parametri dell'azione di gruppo configurati in Unified Manager, ad esempio il nome dell'azione di gruppo, la descrizione, il nome del gruppo associato e i parametri del tipo di azione.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Gruppi*.
+. Nella scheda *Azioni di gruppo*, seleziona l'azione di gruppo che desideri modificare, quindi fai clic su *Modifica*.
+. Nella finestra di dialogo *Modifica azione di gruppo*, modificare il nome dell'azione di gruppo, la descrizione, il nome del gruppo associato e i parametri del tipo di azione, come richiesto.
+. Fare clic su *Salva*.
+

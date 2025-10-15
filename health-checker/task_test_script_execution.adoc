@@ -1,0 +1,53 @@
+---
+permalink: health-checker/task_test_script_execution.html 
+sidebar: sidebar 
+keywords: test, script, execution 
+summary: È possibile verificare che lo script venga eseguito correttamente quando viene generato un avviso per un oggetto di archiviazione. 
+---
+= Esecuzione dello script di test
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile verificare che lo script venga eseguito correttamente quando viene generato un avviso per un oggetto di archiviazione.
+
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* È necessario aver caricato uno script nel formato di file supportato su Unified Manager.
+
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Script*.
+. Nella pagina Script, aggiungi lo script di prova.
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Configurazione avvisi*.
+. Nella pagina *Impostazione avviso*, eseguire una delle seguenti azioni:
++
+[cols="2*"]
+|===
+| A... | Fai questo... 
+
+
+ a| 
+Aggiungi un avviso
+ a| 
+.. Fare clic su *Aggiungi*.
+.. Nella sezione Azioni, associa l'avviso allo script di test.
+
+
+
+
+ a| 
+Modifica un avviso
+ a| 
+.. Seleziona un avviso, quindi fai clic su *Modifica*.
+.. Nella sezione Azioni, associa l'avviso allo script di test.
+
+
+|===
+. Fare clic su *Salva*.
+. Nella pagina *Impostazione avviso*, seleziona l'avviso che hai aggiunto o modificato, quindi fai clic su *Test*.
++
+Lo script viene eseguito con l'argomento "`-test`" e un avviso di notifica viene inviato agli indirizzi e-mail specificati al momento della creazione dell'avviso.
+
+

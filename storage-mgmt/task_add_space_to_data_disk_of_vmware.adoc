@@ -1,0 +1,33 @@
+---
+permalink: storage-mgmt/task_add_space_to_data_disk_of_vmware.html 
+sidebar: sidebar 
+keywords: add space, data, disk, vmware, virtual, machine 
+summary: 'Se è necessario aumentare la quantità di spazio sul disco dati per il database di Unified Manager, è possibile aggiungere capacità dopo l"installazione aumentando lo spazio su disco tramite la console di manutenzione di Unified Manager.' 
+---
+= Aggiungere spazio al disco dati della macchina virtuale VMware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se è necessario aumentare la quantità di spazio sul disco dati per il database di Unified Manager, è possibile aggiungere capacità dopo l'installazione aumentando lo spazio su disco tramite la console di manutenzione di Unified Manager.
+
+.Prima di iniziare
+* È necessario avere accesso a vSphere Client.
+* La macchina virtuale non deve avere snapshot archiviati localmente.
+* È necessario disporre delle credenziali utente di manutenzione.
+
+
+Si consiglia di eseguire il backup della macchina virtuale prima di aumentare le dimensioni dei dischi virtuali.
+
+.Passi
+. Nel client vSphere, seleziona la macchina virtuale Unified Manager, quindi aggiungi più capacità del disco ai dati `disk 3` .  Per maggiori dettagli, consultare la documentazione VMware.
++
+In alcuni rari casi la distribuzione di Unified Manager utilizza "Hard Disk 2" per il disco dati anziché "Hard Disk 3".  Se questo si è verificato nella distribuzione, aumentare lo spazio del disco più grande.  Il disco dati avrà sempre più spazio rispetto all'altro disco.
+
+. Nel client vSphere, seleziona la macchina virtuale Unified Manager, quindi seleziona la scheda *Console*.
+. Fare clic nella finestra della console, quindi accedere alla console di manutenzione utilizzando il nome utente e la password.
+. Nel *Menu principale*, immettere il numero per l'opzione *Configurazione del sistema*.
+. Nel *Menu di configurazione del sistema*, immettere il numero per l'opzione *Aumenta dimensione disco dati*.
+

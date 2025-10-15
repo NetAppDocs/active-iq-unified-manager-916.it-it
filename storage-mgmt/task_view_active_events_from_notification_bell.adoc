@@ -1,0 +1,23 @@
+---
+permalink: storage-mgmt/task_view_active_events_from_notification_bell.html 
+sidebar: sidebar 
+keywords: view, active, events, notification, bell 
+summary: La campanella delle notifiche nella barra dei menu offre un modo rapido per visualizzare gli eventi attivi più importanti monitorati da Unified Manager. 
+---
+= Visualizza gli eventi attivi dalla campana delle notifiche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La campanella di notifica (image:../media/notification_bell.png[""] ) nella barra dei menu fornisce un modo rapido per visualizzare gli eventi attivi più importanti monitorati da Unified Manager.
+
+L'elenco degli eventi attivi consente di visualizzare il numero totale di eventi critici, di errore, di avviso e di aggiornamento su tutti i cluster.  Questo elenco include gli eventi dei 7 giorni precedenti e non include gli eventi informativi.  Puoi cliccare su un link per visualizzare l'elenco degli eventi che più ti interessano.
+
+Si noti che quando un cluster non è raggiungibile, Unified Manager visualizza questa informazione in questa pagina.  È possibile visualizzare informazioni dettagliate su un cluster non raggiungibile facendo clic sul pulsante *Dettagli*.  Questa azione apre la pagina dei dettagli dell'evento.  In questa pagina vengono visualizzati anche i problemi di monitoraggio della scala, come spazio insufficiente o RAM insufficiente sulla stazione di gestione.
+
+.Passi
+. Dalla barra dei menu, fare clic suimage:../media/notification_bell.png[""] .
+. Per visualizzare i dettagli di uno qualsiasi degli eventi attivi, fare clic sul collegamento di testo dell'evento, ad esempio "Capacità 2" o "Prestazioni 4".
+

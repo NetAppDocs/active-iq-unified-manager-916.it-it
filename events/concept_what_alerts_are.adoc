@@ -1,0 +1,16 @@
+---
+permalink: events/concept_what_alerts_are.html 
+sidebar: sidebar 
+keywords: alerts 
+summary: Sebbene gli eventi si verifichino continuamente, Unified Manager genera un avviso solo quando un evento soddisfa i criteri di filtro specificati.  È possibile scegliere gli eventi per i quali generare avvisi, ad esempio quando viene superata una soglia di spazio o un oggetto va offline.  È anche possibile associare un avviso a uno script che viene eseguito quando viene attivato un avviso. 
+---
+= Cosa sono gli avvisi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sebbene gli eventi si verifichino continuamente, Unified Manager genera un avviso solo quando un evento soddisfa i criteri di filtro specificati.  È possibile scegliere gli eventi per i quali generare avvisi, ad esempio quando viene superata una soglia di spazio o un oggetto va offline.  È anche possibile associare un avviso a uno script che viene eseguito quando viene attivato un avviso.
+
+I criteri di filtro includono la classe dell'oggetto, il nome o la gravità dell'evento.

@@ -1,0 +1,28 @@
+---
+permalink: health-checker/task_delete_groups.html 
+sidebar: sidebar 
+keywords: delete, groups 
+summary: È possibile eliminare un gruppo da Unified Manager quando non è più necessario. 
+---
+= Elimina gruppi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare un gruppo da Unified Manager quando non è più necessario.
+
+.Prima di iniziare
+* Nessuno degli oggetti di archiviazione (cluster, SVM o volumi) deve essere associato a una regola di gruppo associata al gruppo che si desidera eliminare.
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Gruppi*.
+. Nella scheda *Gruppi*, seleziona il gruppo che desideri eliminare, quindi fai clic su *Elimina*.
+. Nella finestra di dialogo *Avviso*, confermare l'eliminazione facendo clic su *Sì*.
++
+L'eliminazione di un gruppo non elimina le azioni di gruppo associate al gruppo.  Tuttavia, queste azioni di gruppo non saranno più mappate dopo l'eliminazione del gruppo.
+
+

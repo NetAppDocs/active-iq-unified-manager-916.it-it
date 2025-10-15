@@ -1,0 +1,78 @@
+---
+permalink: health-checker/task_add_group_rules.html 
+sidebar: sidebar 
+keywords: add, group rules 
+summary: 'È possibile creare regole di gruppo per un gruppo per aggiungere dinamicamente oggetti di archiviazione quali volumi, cluster o macchine virtuali di archiviazione (SVM) al gruppo.  Per creare una regola di gruppo è necessario configurare almeno un gruppo di condizioni con almeno una condizione.' 
+---
+= Aggiungi regole di gruppo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare regole di gruppo per un gruppo per aggiungere dinamicamente oggetti di archiviazione quali volumi, cluster o macchine virtuali di archiviazione (SVM) al gruppo.  Per creare una regola di gruppo è necessario configurare almeno un gruppo di condizioni con almeno una condizione.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Gli oggetti di archiviazione attualmente monitorati vengono aggiunti non appena viene creata la regola di gruppo.  I nuovi oggetti vengono aggiunti solo dopo il completamento del ciclo di monitoraggio.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Gruppi*.
+. Nella scheda *Regole di gruppo*, fare clic su *Aggiungi*.
+. Nella finestra di dialogo *Aggiungi regola di gruppo*, specificare un nome per la regola di gruppo.
+. Nel campo *Tipo di oggetto di destinazione*, seleziona il tipo di oggetto di archiviazione che desideri raggruppare.
+. Nel campo *Gruppo*, seleziona il gruppo richiesto per il quale vuoi creare regole di gruppo.
+. Nella sezione *Condizioni*, eseguire i seguenti passaggi per creare una condizione, un gruppo di condizioni o entrambi:
++
+[cols="2*"]
+|===
+| Per creare.... | Fai questo... 
+
+
+ a| 
+Una condizione
+ a| 
+.. Selezionare un operando dall'elenco degli operandi.
+.. Selezionare *Contiene* o *È* come operatore.
+.. Inserisci un valore o selezionane uno dall'elenco disponibile.
+
+
+
+
+ a| 
+Un gruppo di condizioni
+ a| 
+.. Fare clic su *Aggiungi gruppo di condizioni*
+.. Selezionare un operando dall'elenco degli operandi.
+.. Selezionare *Contiene* o *È* come operatore.
+.. Inserisci un valore o selezionane uno dall'elenco disponibile.
+.. Fare clic su *Aggiungi condizione* per creare altre condizioni, se necessario, e ripetere i passaggi da a a d per ciascuna condizione.
+
+
+|===
+. Fare clic su *Aggiungi*.
+
+
+
+
+== Esempio di creazione di una regola di gruppo
+
+Per creare una regola di gruppo, inclusa la configurazione di una condizione e l'aggiunta di un gruppo di condizioni, eseguire i seguenti passaggi nella finestra di dialogo Aggiungi regola di gruppo:
+
+.Passi
+. Specificare un nome per la regola di gruppo.
+. Selezionare il tipo di oggetto come macchina virtuale di archiviazione (SVM).
+. Seleziona un gruppo dall'elenco dei gruppi.
+. Nella sezione Condizioni, seleziona *Nome oggetto* come operando.
+. Selezionare *Contiene* come operatore.
+. Inserisci il valore come `svm_data` .
+. Fare clic su *Aggiungi gruppo di condizioni*.
+. Selezionare *Nome oggetto* come operando.
+. Selezionare *Contiene* come operatore.
+. Inserisci il valore come `vol` .
+. Fare clic su *Aggiungi condizione*.
+. Ripetere i passaggi da 8 a 10 selezionando *data-priority* come operando nel passaggio 8, *Is* come operatore nel passaggio 9 e *critical* come valore nel passaggio 10.
+. Fare clic su *Aggiungi* per creare la condizione per la regola di gruppo.
+

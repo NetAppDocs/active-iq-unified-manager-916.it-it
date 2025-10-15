@@ -1,0 +1,33 @@
+---
+permalink: events/reference_power_supplies_events.html 
+sidebar: sidebar 
+keywords: power, supplies, events, impact area, availability 
+summary: 'Gli eventi degli alimentatori forniscono informazioni sullo stato dell"hardware, consentendo di monitorare eventuali problemi.  Gli eventi sono raggruppati in base all"area di impatto e includono il nome dell"evento e della trappola, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi di alimentazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi degli alimentatori forniscono informazioni sullo stato dell'hardware, consentendo di monitorare eventuali problemi.  Gli eventi sono raggruppati in base all'area di impatto e includono il nome dell'evento e della trappola, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Uno o più alimentatori guasti (ocumEvtPowerSupplyOneOrMoreFailed)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Critico
+
+|===

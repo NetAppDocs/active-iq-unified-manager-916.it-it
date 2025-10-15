@@ -1,0 +1,97 @@
+---
+permalink: performance-checker/reference_what_objects_can_be_used_in_threshold_policies.html 
+sidebar: sidebar 
+keywords: objects, counters, combination, threshold, policies 
+summary: Solo alcuni contatori delle prestazioni possono essere utilizzati insieme nelle policy combinate.  Quando vengono specificati contatori delle prestazioni primari e secondari, entrambi i contatori delle prestazioni devono superare i loro limiti massimi prima che venga generato un evento. 
+---
+= Quali oggetti e contatori possono essere utilizzati nelle policy di soglia combinate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Solo alcuni contatori delle prestazioni possono essere utilizzati insieme nelle policy combinate.  Quando vengono specificati contatori delle prestazioni primari e secondari, entrambi i contatori delle prestazioni devono superare i loro limiti massimi prima che venga generato un evento.
+
+|===
+| Oggetto di archiviazione primario e contatore | Oggetto di archiviazione secondario e contatore 
+
+
+ a| 
+Latenza del volume
+ a| 
+IOPS volume
+
+
+
+ a| 
+Volume MB/s
+
+
+
+ a| 
+Utilizzo aggregato
+
+
+
+ a| 
+Capacità di prestazione aggregata utilizzata
+
+
+
+ a| 
+Utilizzo del nodo
+
+
+
+ a| 
+Capacità di prestazioni del nodo utilizzata
+
+
+
+ a| 
+Capacità di prestazione del nodo utilizzata - Acquisizione
+
+
+
+ a| 
+Latenza LUN
+ a| 
+LUN IOPS
+
+
+
+ a| 
+MB/s LUN
+
+
+
+ a| 
+Utilizzo aggregato
+
+
+
+ a| 
+Capacità di prestazione aggregata utilizzata
+
+
+
+ a| 
+Utilizzo del nodo
+
+
+
+ a| 
+Capacità di prestazioni del nodo utilizzata
+
+
+
+ a| 
+Capacità di prestazione del nodo utilizzata - Acquisizione
+
+|===
+[NOTE]
+====
+Quando un criterio di combinazione di volumi viene applicato a un volume FlexGroup , anziché a un FlexVol volume, solo gli attributi "`Volume IOPS`" e "`Volume MB/s`" possono essere selezionati come contatore secondario.  Se il criterio di soglia contiene uno degli attributi nodo o aggregato, il criterio non verrà applicato al volume FlexGroup e verrà visualizzato un messaggio di errore che descrive questo caso.  Ciò avviene perché i volumi FlexGroup possono esistere su più nodi o aggregati.
+
+====

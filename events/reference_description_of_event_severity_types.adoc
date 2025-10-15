@@ -1,0 +1,41 @@
+---
+permalink: events/reference_description_of_event_severity_types.html 
+sidebar: sidebar 
+keywords: description, event, severity, types 
+summary: 'A ciascun evento è associato un tipo di gravità per aiutarti a stabilire la priorità degli eventi che richiedono un"azione correttiva immediata.' 
+---
+= Descrizione dei tipi di gravità degli eventi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A ciascun evento è associato un tipo di gravità per aiutarti a stabilire la priorità degli eventi che richiedono un'azione correttiva immediata.
+
+* *Critico*
++
+Si è verificato un problema che potrebbe causare l'interruzione del servizio se non si interviene immediatamente con misure correttive.
+
++
+Gli eventi critici per le prestazioni vengono inviati solo da soglie definite dall'utente.
+
+* *Errore*
++
+L'origine dell'evento è ancora funzionante; tuttavia, è necessario un intervento correttivo per evitare l'interruzione del servizio.
+
+* *Avvertimento*
++
+Si è verificato un evento di cui dovresti essere a conoscenza nell'origine dell'evento oppure un contatore delle prestazioni per un oggetto cluster è fuori dall'intervallo normale e deve essere monitorato per assicurarti che non raggiunga la gravità critica.  Eventi di questa gravità non causano interruzioni del servizio e potrebbero non essere necessarie misure correttive immediate.
+
++
+Gli eventi di avviso sulle prestazioni vengono inviati da soglie definite dall'utente, definite dal sistema o dinamiche.
+
+* *Informazioni*
++
+L'evento si verifica quando viene scoperto un nuovo oggetto o quando viene eseguita un'azione da parte dell'utente.  Ad esempio, quando viene eliminato un oggetto di archiviazione o quando si verificano modifiche alla configurazione, viene generato l'evento con tipo di gravità Informazioni.
+
++
+Gli eventi informativi vengono inviati direttamente da ONTAP quando rileva una modifica alla configurazione.
+
+

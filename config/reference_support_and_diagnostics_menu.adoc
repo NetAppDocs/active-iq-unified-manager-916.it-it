@@ -1,0 +1,29 @@
+---
+permalink: config/reference_support_and_diagnostics_menu.html 
+sidebar: sidebar 
+keywords: support and diagnostics, menu 
+summary: Il menu Supporto e diagnostica consente di generare un pacchetto di supporto da inviare al supporto tecnico per ricevere assistenza nella risoluzione dei problemi. 
+---
+= Menu Supporto e Diagnostica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il menu Supporto e diagnostica consente di generare un pacchetto di supporto da inviare al supporto tecnico per ricevere assistenza nella risoluzione dei problemi.
+
+Sono disponibili le seguenti opzioni di menu:
+
+* *Genera pacchetto di supporto leggero*
++
+Consente di produrre un pacchetto di supporto leggero che contiene solo 30 giorni di registri e record del database di configurazione, escludendo i dati sulle prestazioni, i file di registrazione delle acquisizioni e il dump dell'heap del server.
+
+* *Genera pacchetto di supporto*
++
+Consente di creare un pacchetto di supporto completo (file 7-Zip) contenente informazioni diagnostiche nella directory home dell'utente diagnostico.  Se il tuo sistema è connesso a Internet, puoi anche caricare il pacchetto di supporto su NetApp.
+
++
+Il file include informazioni generate da un messaggio AutoSupport , il contenuto del database Unified Manager, dati dettagliati sugli elementi interni del server Unified Manager e registri dettagliati normalmente non inclusi nei messaggi AutoSupport o nel bundle di supporto leggero.
+
+

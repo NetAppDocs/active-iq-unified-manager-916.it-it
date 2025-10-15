@@ -1,0 +1,33 @@
+---
+permalink: data-protection/task_edit_resource_pools.html 
+sidebar: sidebar 
+keywords: edit, resource, pools 
+summary: È possibile modificare un pool di risorse esistente quando si desidera cambiarne il nome e la descrizione. 
+---
+= Modifica pool di risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare un pool di risorse esistente quando si desidera cambiarne il nome e la descrizione.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Il pulsante *Modifica* è abilitato solo quando è selezionato un pool di risorse.  Se viene selezionato più di un pool di risorse, il pulsante *Modifica* è disabilitato.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Protezione* > *Pool di risorse*.
+. Selezionare un pool di risorse dall'elenco.
+. Fare clic su *Modifica*.
++
+Viene visualizzata la finestra Modifica pool di risorse.
+
+. Modificare il nome e la descrizione del pool di risorse secondo necessità.
+. Fare clic su *Salva*.
++
+Il nuovo nome e la nuova descrizione vengono visualizzati nell'elenco del pool di risorse.
+
+

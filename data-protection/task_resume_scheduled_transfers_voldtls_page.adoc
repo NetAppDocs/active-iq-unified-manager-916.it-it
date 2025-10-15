@@ -1,0 +1,35 @@
+---
+permalink: data-protection/task_resume_scheduled_transfers_voldtls_page.html 
+sidebar: sidebar 
+keywords: resume schedule, transfers, quiesce, relationship,  volume, health details page 
+summary: Dopo aver sospeso una relazione per impedire che si verifichino trasferimenti pianificati, è possibile utilizzare Riprendi nella pagina Dettagli volume/integrità per riattivare i trasferimenti pianificati in modo che i dati sul volume di origine o primario siano protetti.  I trasferimenti riprendono da un checkpoint, se presente, al successivo intervallo di trasferimento programmato. 
+---
+= Riprendi i trasferimenti programmati su una relazione sospesa dalla pagina dei dettagli Volume/Salute
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver sospeso una relazione per impedire che si verifichino trasferimenti pianificati, è possibile utilizzare *Riprendi* nella pagina Dettagli volume/integrità per riattivare i trasferimenti pianificati in modo che i dati sul volume di origine o primario siano protetti.  I trasferimenti riprendono da un checkpoint, se presente, al successivo intervallo di trasferimento programmato.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* È necessario aver configurato l'automazione del flusso di lavoro.
+
+
+.Passi
+. Nella scheda *Protezione* della pagina dei dettagli *Volume/Integrità*, fare clic con il pulsante destro del mouse nella vista topologia su una relazione inattiva che si desidera riprendere.
++
+In alternativa, seleziona *Riprendi* dal menu *Azioni* > *Relazione*.
+
+. Nella finestra di dialogo *Riprendi*, fare clic su *Continua*.
++
+Verrai reindirizzato alla pagina dei dettagli Volume/Salute.
+
+. Per visualizzare le attività lavorative correlate e monitorarne l'avanzamento, fare clic sul collegamento al lavoro visualizzato nella parte superiore della pagina dei dettagli *Volume / Salute*.
+. Nella pagina dei dettagli *Job*, fare clic su *Aggiorna* per aggiornare l'elenco delle attività e i dettagli delle attività associati al job di configurazione della protezione e per determinare quando il job è completato.
++
+Una volta completati i lavori, i trasferimenti di dati vengono ripresi al successivo intervallo di trasferimento pianificato.
+
+

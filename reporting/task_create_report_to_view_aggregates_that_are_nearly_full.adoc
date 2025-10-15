@@ -1,0 +1,42 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_that_are_nearly_full.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, full 
+summary: 'È possibile creare un report per evidenziare gli aggregati pieni all"80% o più.' 
+---
+= Crea un report per visualizzare gli aggregati pieni all'80% o più
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un report per evidenziare gli aggregati pieni all'80% o più.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+Per creare una vista personalizzata che mostri aggregati pieni all'80% o più, attenersi alla seguente procedura, quindi pianificare la generazione di un report per tale vista.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Aggregati*.
+. Nel menu Visualizza, seleziona *Capacità* > *Tutti gli aggregati*.
+. Selezionare *Mostra/Nascondi* per rimuovere le colonne che non si desiderano nel report.
+. Trascinare le colonne "`Dati disponibili %`" e "`Dati utilizzati %`" vicino alla colonna "`Aggregato`".
+. Fare clic sull'icona del filtro, aggiungere i seguenti filtri e quindi fare clic su *Applica filtro*:
++
+** La percentuale di dati utilizzati è maggiore dell'80%
+
+
+. Fare clic sulla parte superiore della colonna "`Dati utilizzati %`" per ordinare i risultati in base alla percentuale di capacità.
+. Salvare la vista con un nome specifico che rifletta ciò che la vista sta mostrando, ad esempio "`Aggregati quasi pieni`", e fare clic sul segno di spunta (image:../media/blue_check.gif[""] ) .
+. Fare clic sul pulsante *Rapporti pianificati* nella pagina dell'inventario.
+. Fare clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina Pianificazioni report, in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""] ) alla fine della riga.
++
+Il rapporto viene inviato immediatamente a scopo di verifica.  Successivamente, il report viene generato e inviato tramite e-mail ai destinatari elencati utilizzando la frequenza specificata.
+
+
+
+In base ai risultati mostrati nel report, potresti voler spostare alcuni dati da determinati aggregati.

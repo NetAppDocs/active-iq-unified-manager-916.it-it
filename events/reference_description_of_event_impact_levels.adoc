@@ -1,0 +1,32 @@
+---
+permalink: events/reference_description_of_event_impact_levels.html 
+sidebar: sidebar 
+keywords: description, event, impact, levels 
+summary: 'A ciascun evento è associato un livello di impatto (incidente, rischio, evento o aggiornamento) per aiutarti a stabilire la priorità degli eventi che richiedono un"azione correttiva immediata.' 
+---
+= Descrizione dei livelli di impatto dell'evento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A ciascun evento è associato un livello di impatto (incidente, rischio, evento o aggiornamento) per aiutarti a stabilire la priorità degli eventi che richiedono un'azione correttiva immediata.
+
+* *Incidente*
++
+Un incidente è un insieme di eventi che possono causare l'interruzione della fornitura di dati al client da parte di un cluster e l'esaurimento dello spazio per l'archiviazione dei dati.  Gli eventi con un livello di impatto pari a Incidente sono i più gravi.  È necessario adottare misure correttive immediate per evitare interruzioni del servizio.
+
+* *Rischio*
++
+Un rischio è un insieme di eventi che possono potenzialmente causare l'interruzione della fornitura di dati al client da parte di un cluster e l'esaurimento dello spazio per l'archiviazione dei dati.  Gli eventi con un livello di impatto pari a Rischio possono causare l'interruzione del servizio.  Potrebbero essere necessarie misure correttive.
+
+* *Evento*
++
+Un evento è uno stato o una modifica dello stato degli oggetti di archiviazione e dei loro attributi.  Gli eventi con un livello di impatto Evento sono informativi e non richiedono azioni correttive.
+
+* *Aggiornamento*
++
+Gli eventi di aggiornamento sono un tipo specifico di evento segnalato dalla piattaforma Active IQ .  Questi eventi identificano problemi per la cui risoluzione è necessario aggiornare il software ONTAP , il firmware del nodo o il software del sistema operativo (per gli avvisi di sicurezza).  Per alcuni di questi problemi potrebbe essere necessario intervenire immediatamente, mentre per altri potrebbe essere necessario attendere la successiva manutenzione programmata.
+
+

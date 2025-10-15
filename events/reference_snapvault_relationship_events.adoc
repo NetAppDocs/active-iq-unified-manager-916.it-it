@@ -1,0 +1,99 @@
+---
+permalink: events/reference_snapvault_relationship_events.html 
+sidebar: sidebar 
+keywords: snapvault, relationship, events, impact area, protection 
+summary: 'Gli eventi di relazione SnapVault forniscono informazioni sullo stato delle relazioni SnapVault , in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all"area di impatto e includono il nome dell"evento e della trappola, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi di relazione SnapVault
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi di relazione SnapVault forniscono informazioni sullo stato delle relazioni SnapVault , in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all'area di impatto e includono il nome dell'evento e della trappola, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+== Area di impatto: protezione
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Vault asincrono non integro (ocumEvtSnapVaultRelationshipUnhealthy)
+ a| 
+Rischio
+ a| 
+Relazione SnapMirror
+ a| 
+Avvertimento
+
+
+
+ a| 
+Vault asincrono interrotto (ocumEvtSnapVaultRelationshipStateBrokenoff)
+ a| 
+Rischio
+ a| 
+Relazione SnapMirror
+ a| 
+Errore
+
+
+
+ a| 
+Inizializzazione del vault asincrono non riuscita (ocumEvtSnapVaultRelationshipInitializeFailed)
+ a| 
+Rischio
+ a| 
+Relazione SnapMirror
+ a| 
+Errore
+
+
+
+ a| 
+Aggiornamento asincrono del vault non riuscito (ocumEvtSnapVaultRelationshipUpdateFailed)
+ a| 
+Rischio
+ a| 
+Relazione SnapMirror
+ a| 
+Errore
+
+
+
+ a| 
+Errore di ritardo del vault asincrono (ocumEvtSnapVaultRelationshipLagError)
+ a| 
+Rischio
+ a| 
+Relazione SnapMirror
+ a| 
+Errore
+
+
+
+ a| 
+Avviso di ritardo del vault asincrono (ocumEvtSnapVaultRelationshipLagWarning)
+ a| 
+Rischio
+ a| 
+Relazione SnapMirror
+ a| 
+Avvertimento
+
+
+
+ a| 
+Risincronizzazione asincrona del vault non riuscita (ocumEvtSnapvaultRelationshipResyncFailed)
+ a| 
+Rischio
+ a| 
+Relazione SnapMirror
+ a| 
+Errore
+
+|===

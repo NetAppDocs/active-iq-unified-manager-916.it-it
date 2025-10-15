@@ -1,0 +1,59 @@
+---
+permalink: performance-checker/concept_understand_um_recommendations_to_tier_data_to_cloud.html 
+sidebar: sidebar 
+keywords: understand, unified manager, recommendations, tier, data, cloud 
+summary: 'La vista Prestazioni: tutti i volumi mostra informazioni relative alle dimensioni dei dati utente archiviati sul volume inattivo (freddo).  In alcuni casi, Unified Manager identifica determinati volumi che trarrebbero vantaggio dall"organizzazione dei dati inattivi nel livello cloud (provider cloud o StorageGRID) di un aggregato abilitato per FabricPool.' 
+---
+= Comprendere le raccomandazioni di Unified Manager per suddividere i dati nel cloud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La vista Prestazioni: tutti i volumi mostra informazioni relative alle dimensioni dei dati utente archiviati sul volume inattivo (freddo).  In alcuni casi, Unified Manager identifica determinati volumi che trarrebbero vantaggio dall'organizzazione dei dati inattivi nel livello cloud (provider cloud o StorageGRID) di un aggregato abilitato per FabricPool.
+
+[NOTE]
+====
+FabricPool è stato introdotto in ONTAP 9.2, quindi se si utilizza una versione del software ONTAP precedente alla 9.2, la raccomandazione di Unified Manager di suddividere i dati in livelli richiede l'aggiornamento del software ONTAP .  Inoltre, il `*auto*` La politica di suddivisione in livelli è stata introdotta in ONTAP 9.4 e `*all*` La politica di suddivisione in livelli è stata introdotta in ONTAP 9.6, quindi se si consiglia di utilizzare la politica di suddivisione in livelli automatica, è necessario eseguire l'aggiornamento a ONTAP 9.4 o versione successiva.
+
+====
+I tre campi seguenti nella vista Prestazioni: Tutti i volumi forniscono informazioni sulla possibilità di migliorare l'utilizzo del disco del sistema di archiviazione e di risparmiare spazio sul livello delle prestazioni spostando i dati inattivi sul livello cloud.
+
+* *Politica di suddivisione in livelli*
++
+La politica di suddivisione in livelli determina se i dati sul volume rimangono sul livello delle prestazioni o se alcuni dati vengono spostati dal livello delle prestazioni al livello cloud.
+
++
+Il valore in questo campo indica la politica di suddivisione in livelli impostata sul volume, anche se il volume non risiede attualmente su un aggregato FabricPool .  La politica di suddivisione in livelli ha effetto solo quando il volume si trova su un aggregato FabricPool .
+
+* *Dati inespressi*
++
+I dati freddi mostrano la dimensione dei dati utente memorizzati sul volume inattivo (freddo).
+
++
+Un valore viene visualizzato qui solo quando si utilizza il software ONTAP 9.4 o versione successiva perché richiede che l'aggregato su cui viene distribuito il volume abbia `*inactive data reporting parameter*` impostato su `*enabled*` , e che sia stata raggiunta la soglia minima di giorni di raffreddamento (per i volumi che utilizzano il `*snapshot-only*` O `*auto*` politica di livelli).  In caso contrario il valore è indicato come "`N/D`".
+
+* *Raccomandazione cloud*
++
+Dopo aver acquisito informazioni sufficienti sull'attività dei dati sul volume, Unified Manager potrebbe stabilire che non è richiesta alcuna azione oppure che è possibile risparmiare spazio sul livello delle prestazioni suddividendo i dati inattivi nel livello cloud.
+
+
+
+[NOTE]
+====
+Il campo Cold Data viene aggiornato ogni 15 minuti, ma il campo Cloud Recommendation viene aggiornato ogni 7 giorni quando l'analisi dei cold data viene eseguita sul volume.  Pertanto, la quantità esatta di dati freddi può variare tra i campi.  Nel campo Raccomandazione cloud viene visualizzata la data in cui è stata eseguita l'analisi.
+
+====
+Quando la segnalazione dei dati inattivi è abilitata, il campo Dati inattivi visualizza la quantità esatta di dati inattivi.  Senza la funzionalità di segnalazione dei dati inattivi, Unified Manager utilizza le statistiche sulle prestazioni per determinare se i dati sono inattivi su un volume.  In questo caso, la quantità di dati inattivi non viene visualizzata nel campo Cold Data, ma viene visualizzata quando si passa il cursore sulla parola *Tier* per visualizzare la raccomandazione cloud.
+
+I consigli sul cloud che vedrai sono:
+
+* *Apprendimento*.  Non sono stati raccolti dati sufficienti per formulare una raccomandazione.
+* *Livello*.  L'analisi ha determinato che il volume contiene dati inattivi (freddi) e che è necessario configurare il volume per spostare tali dati sul livello cloud.  In alcuni casi potrebbe essere necessario spostare prima il volume su un aggregato abilitato per FabricPool.  Negli altri casi in cui il volume è già su un aggregato FabricPool , è sufficiente modificare la politica di suddivisione in livelli.
+* *Nessuna azione*.  O il volume contiene pochissimi dati inattivi, oppure è già impostato sul criterio di suddivisione in livelli "`auto`" su un aggregato FabricPool , oppure è un volume di protezione dei dati.  Questo valore viene visualizzato anche quando il volume è offline o quando viene utilizzato in una configurazione MetroCluster .
+
+
+Per spostare un volume o per modificare i criteri di suddivisione in livelli del volume o le impostazioni di reporting dei dati inattivi aggregati, utilizzare ONTAP System Manager, i comandi ONTAP CLI o una combinazione di questi strumenti.
+
+Se hai effettuato l'accesso a Unified Manager con il ruolo di Amministratore applicazioni o Amministratore archiviazione, il collegamento *Configura volume* è disponibile nella raccomandazione cloud quando passi il cursore sulla parola *Livello*.  Fare clic su questo pulsante per aprire la pagina Volumi in System Manager e apportare la modifica consigliata.

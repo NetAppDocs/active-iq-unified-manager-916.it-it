@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_unified_manager_performance_monitoring_features.html 
+sidebar: sidebar 
+keywords: unified manager, performance, monitoring, features 
+summary: 'Unified Manager raccoglie e analizza le statistiche sulle prestazioni dei sistemi che eseguono il software ONTAP .  Utilizza soglie di prestazioni dinamiche e soglie di prestazioni definite dall"utente per monitorare una serie di contatori di prestazioni su numerosi componenti del cluster.' 
+---
+= Funzionalità di monitoraggio delle prestazioni di Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager raccoglie e analizza le statistiche sulle prestazioni dei sistemi che eseguono il software ONTAP .  Utilizza soglie di prestazioni dinamiche e soglie di prestazioni definite dall'utente per monitorare una serie di contatori di prestazioni su numerosi componenti del cluster.
+
+Un tempo di risposta elevato (latenza) indica che l'oggetto di archiviazione, ad esempio un volume, è più lento del normale.  Questo problema indica anche che le prestazioni sono diminuite per le applicazioni client che utilizzano il volume.  Unified Manager identifica il componente di archiviazione in cui si verifica il problema di prestazioni e fornisce un elenco di azioni suggerite che è possibile intraprendere per risolvere il problema.
+
+Unified Manager include le seguenti funzionalità:
+
+* Monitora e analizza le statistiche sulle prestazioni del carico di lavoro da un sistema che esegue il software ONTAP .
+* Tiene traccia dei contatori delle prestazioni per cluster, nodi, aggregati, porte, SVM, volumi, LUN, namespace NVMe e interfacce di rete (LIF).
+* Visualizza grafici dettagliati che tracciano l'attività del carico di lavoro nel tempo, inclusi IOPS (operazioni), MB/s (throughput), latenza (tempo di risposta), utilizzo, capacità delle prestazioni e rapporto della cache.
+* Consente di creare criteri di soglia delle prestazioni definiti dall'utente che attivano eventi e inviano avvisi tramite e-mail quando le soglie vengono superate.
+* Utilizza soglie definite dal sistema e soglie di prestazioni dinamiche che apprendono l'attività del carico di lavoro per identificare e avvisare l'utente di eventuali problemi di prestazioni.
+* Identifica le policy di qualità del servizio (QoS) e le policy di livello di servizio delle prestazioni (PSL) applicate ai volumi e alle LUN.
+* Identifica chiaramente il componente del cluster in competizione.
+* Identifica i carichi di lavoro che utilizzano eccessivamente i componenti del cluster e i carichi di lavoro le cui prestazioni sono influenzate dall'aumento dell'attività.
+

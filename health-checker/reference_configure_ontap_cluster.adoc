@@ -1,0 +1,37 @@
+---
+permalink: health-checker/reference_configure_ontap_cluster.html 
+sidebar: sidebar 
+keywords: netapp, snapshot copy, copies, backup, windows, configure, ontap, cluster 
+summary: È necessario eseguire alcuni passaggi di preconfigurazione sui cluster ONTAP prima di poter eseguire il backup e il ripristino Active IQ Unified Manager utilizzando la copia Snapshot sui sistemi Windows. 
+---
+= Configurare il cluster ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario eseguire alcuni passaggi di preconfigurazione sui cluster ONTAP prima di poter eseguire il backup e il ripristino Active IQ Unified Manager utilizzando la copia Snapshot sui sistemi Windows.
+
+È possibile configurare il cluster ONTAP utilizzando il prompt dei comandi o l'interfaccia utente di System Manager.  La configurazione del cluster ONTAP prevede la configurazione dei LIF dati in modo che siano disponibili per essere assegnati come LIF iSCSI alla VM di archiviazione.  Il passaggio successivo consiste nel configurare una VM di archiviazione abilitata per iSCSI utilizzando l'interfaccia utente di System Manager.  Sarà necessario configurare un percorso di rete statico per questa VM di archiviazione per controllare il modo in cui i LIF utilizzano la rete per il traffico in uscita.
+
+[NOTE]
+====
+Dovresti avere un volume dedicato e un LUN per la configurazione del backup.  Il volume selezionato deve includere una sola LUN.  La dimensione del LUN deve essere almeno il doppio della dimensione dei dati che si prevede vengano gestiti da Active IQ Unified Manager.
+
+====
+È necessario eseguire la seguente configurazione:
+
+.Passi
+. Configurare una VM di archiviazione abilitata per iSCSI oppure utilizzare una VM di archiviazione esistente con la stessa configurazione.
+. Configurare un percorso di rete per la VM di archiviazione configurata.
+. Configurare un volume di capacità adeguata e un singolo LUN al suo interno, assicurandosi che il volume sia dedicato solo a questo LUN.
++
+
+NOTE: In uno scenario in cui il LUN viene creato su System Manager, l'annullamento della mappatura del LUN potrebbe eliminare l'igroup e il ripristino potrebbe non riuscire.  Per evitare questo scenario, assicurarsi che durante la creazione di un LUN, questo venga creato in modo esplicito e non venga eliminato quando il LUN non è più mappato.
+
+. Configurare un gruppo di iniziatori nella VM di archiviazione.
+. Configurare un set di porte.
+. Integrare l'igroup con il portset.
+. Mappare il LUN sull'igroup.
+

@@ -1,0 +1,29 @@
+---
+permalink: api-automation/reference_recommendations_to_use_um_apis.html 
+sidebar: sidebar 
+keywords: recommendations, apis, active iq, unified, manager 
+summary: Quando si utilizzano le API in Active IQ Unified Manager, è necessario seguire alcune procedure consigliate. 
+---
+= Consigli per l'utilizzo delle API per Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si utilizzano le API in Active IQ Unified Manager, è necessario seguire alcune procedure consigliate.
+
+* Per un'esecuzione valida, tutti i tipi di contenuto della risposta devono essere nel seguente formato:
++
+[listing]
+----
+application/json
+----
+* Il numero di versione dell'API non è correlato al numero di versione del prodotto.  Dovresti utilizzare la versione più recente dell'API disponibile per la tua istanza di Unified Manager.  Per ulteriori informazioni sulle versioni dell'API di Unified Manager, vedere la sezione "Versione dell'API REST in Active IQ Unified Manager".
+* Durante l'aggiornamento dei valori dell'array tramite un'API Unified Manager, è necessario aggiornare l'intera stringa di valori.  Non è possibile aggiungere valori a un array.  È possibile sostituire solo un array esistente.
+* È possibile utilizzare operatori di filtro, come pipe (|) e caratteri jolly (+*+), per tutti i parametri di query, ad eccezione dei valori double, ad esempio IOPS e prestazioni nelle API delle metriche.
+* Evitare di interrogare gli oggetti utilizzando una combinazione degli operatori di filtro jolly (+*+) e barra verticale (|).  Potrebbe recuperare un numero errato di oggetti.
+* Quando si utilizzano valori per il filtro, assicurarsi che il valore non contenga alcun `?` carattere.  Questo serve a mitigare i rischi di iniezione SQL.
+* Nota che il `GET` (tutte) le richieste per qualsiasi API restituiscono un massimo di 1000 record.  Anche se si esegue la query impostando `max_records` parametro su un valore superiore a 1000, vengono restituiti solo 1000 record.
+* Per eseguire funzioni amministrative, si consiglia di utilizzare l'interfaccia utente di Unified Manager.
+

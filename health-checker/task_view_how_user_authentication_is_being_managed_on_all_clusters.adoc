@@ -1,0 +1,24 @@
+---
+permalink: health-checker/task_view_how_user_authentication_is_being_managed_on_all_clusters.html 
+sidebar: sidebar 
+keywords: view, cluster authentication status, user authentication, manage, clusters 
+summary: 'Nella pagina Sicurezza vengono visualizzati i tipi di autenticazione utilizzati per autenticare gli utenti su ciascun cluster e il numero di utenti che accedono al cluster utilizzando ciascun tipo.  Ciò consente di verificare che l"autenticazione dell"utente venga eseguita in modo sicuro, come definito dalla propria organizzazione.' 
+---
+= Visualizza come viene gestita l'autenticazione utente su tutti i cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nella pagina Sicurezza vengono visualizzati i tipi di autenticazione utilizzati per autenticare gli utenti su ciascun cluster e il numero di utenti che accedono al cluster utilizzando ciascun tipo.  Ciò consente di verificare che l'autenticazione dell'utente venga eseguita in modo sicuro, come definito dalla propria organizzazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Dashboard*.
+. Nella parte superiore della dashboard, seleziona *Tutti i cluster* dal menu a discesa.
+. Fare clic sulla freccia destra nel pannello *Sicurezza* per visualizzare la pagina *Sicurezza*.
+. Visualizza la scheda *Autenticazione cluster* per vedere il numero di utenti che accedono al sistema utilizzando ciascun tipo di autenticazione.
+. Visualizzare la scheda *Sicurezza cluster* per visualizzare i meccanismi di autenticazione utilizzati per autenticare gli utenti su ciascun cluster.
+
+
+Se alcuni utenti accedono al sistema utilizzando un metodo non sicuro o un metodo non consigliato da NetApp, è possibile disabilitare il metodo.

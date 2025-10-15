@@ -1,0 +1,85 @@
+---
+permalink: data-protection/reference_initialize_update_relationship_dialog_box.html 
+sidebar: sidebar 
+keywords: initialize, update, dialog box 
+summary: La finestra di dialogo Inizializza/Aggiorna consente di eseguire un primo trasferimento di base su una nuova relazione di protezione oppure di aggiornare una relazione se è già inizializzata e si desidera eseguire un aggiornamento incrementale manuale e non pianificato. 
+---
+= Finestra di dialogo Inizializza/Aggiorna
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Inizializza/Aggiorna consente di eseguire un primo trasferimento di base su una nuova relazione di protezione oppure di aggiornare una relazione se è già inizializzata e si desidera eseguire un aggiornamento incrementale manuale e non pianificato.
+
+
+
+== Scheda Opzioni di trasferimento
+
+La scheda Opzioni di trasferimento consente di modificare la priorità di inizializzazione di un trasferimento e di modificare la larghezza di banda utilizzata durante i trasferimenti.
+
+* *Priorità di trasferimento*
++
+La priorità con cui viene eseguito il trasferimento.  È possibile selezionare Normale o Basso.  Le relazioni con policy che specificano una priorità di trasferimento normale vengono eseguite prima di quelle che specificano una priorità di trasferimento bassa.  Per impostazione predefinita è selezionata l'opzione Normale.
+
+* *Velocità di trasferimento massima*
++
+Specifica la velocità massima alla quale i dati vengono trasferiti tra cluster sulla rete.  Se si sceglie di non utilizzare una velocità di trasferimento massima, il trasferimento di base tra le relazioni è illimitato.  Se si seleziona più di una relazione con diverse velocità di trasferimento massime, è possibile specificare una delle seguenti impostazioni di velocità di trasferimento massima:
+
++
+** Utilizzare i valori specificati durante la configurazione o la modifica della relazione individuale
++
+Se selezionata, le operazioni di inizializzazione e aggiornamento utilizzano la velocità di trasferimento massima specificata al momento della creazione o della modifica di ciascuna relazione.  Questo campo è disponibile solo quando vengono inizializzate o aggiornate più relazioni con velocità di trasferimento diverse.
+
+** Illimitato
++
+Indica che non vi è alcuna limitazione di larghezza di banda per i trasferimenti tra relazioni.  Questo campo è disponibile solo quando vengono inizializzate o aggiornate più relazioni con velocità di trasferimento diverse.
+
+** Limita la larghezza di banda a
++
+Se selezionata, la larghezza di banda della rete è limitata al valore specificato.  È possibile immettere un valore numerico e quindi selezionare kilobyte al secondo (KBps), megabyte al secondo (MBps), gigabyte al secondo (GBps) o terabyte al secondo (TBps).  La velocità di trasferimento massima specificata deve essere maggiore di 1 KBps e minore di 4 TBps.
+
+
+
+
+
+
+
+== Scheda Copie snapshot di origine
+
+La scheda Copie snapshot di origine visualizza le seguenti informazioni sulla copia snapshot di origine utilizzata per il trasferimento di base:
+
+* *Volume sorgente*
++
+Visualizza i nomi dei volumi sorgente corrispondenti.
+
+* *Volume di destinazione*
++
+Visualizza i nomi dei volumi di destinazione selezionati.
+
+* *Tipo di fonte*
++
+Visualizza il tipo di volume.  Il tipo può essere Lettura/scrittura o Protezione dati.
+
+* *Copia istantanea*
++
+Visualizza la copia Snapshot utilizzata per il trasferimento dei dati.  Facendo clic sul valore Copia snapshot viene visualizzata la finestra di dialogo Seleziona copia snapshot di origine, in cui è possibile selezionare una copia snapshot specifica per il trasferimento, a seconda del tipo di relazione di protezione di cui si dispone e dell'operazione che si sta eseguendo.  L'opzione per specificare una copia Snapshot diversa non è disponibile per le origini di tipo protezione dati.
+
+
+
+
+
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti attività:
+
+* *Cancellare*
++
+Annulla le selezioni e chiude la finestra di dialogo Inizializza/Aggiorna.
+
+* *Invia*
++
+Salva le selezioni e avvia il processo di inizializzazione o aggiornamento.
+
+

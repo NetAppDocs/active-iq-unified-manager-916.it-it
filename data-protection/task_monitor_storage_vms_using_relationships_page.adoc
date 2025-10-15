@@ -1,0 +1,37 @@
+---
+permalink: data-protection/task_monitor_storage_vms_using_relationships_page.html 
+sidebar: sidebar 
+keywords: relationships page, monitor, storage, vm 
+summary: 'È possibile monitorare le relazioni di disaster recovery della VM di archiviazione dalla pagina Relazioni nella sezione PROTEZIONE dell"INVENTARIO.  Per impostazione predefinita, la pagina Relazioni elenca solo le relazioni di livello superiore quando viene applicato il filtro delle relazioni costituenti.' 
+---
+= Monitora le VM di archiviazione utilizzando la pagina Relazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile monitorare le relazioni di disaster recovery della VM di archiviazione dalla pagina Relazioni nella sezione PROTEZIONE dell'INVENTARIO.  Per impostazione predefinita, la pagina Relazioni elenca solo le relazioni di livello superiore quando viene applicato il filtro delle relazioni costituenti.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+È possibile utilizzare i filtri per visualizzare le relazioni di disaster recovery delle VM di archiviazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *PROTEZIONE* > *Relazioni*.
++
+La pagina visualizza tutti i tipi di relazioni: relazioni tra volumi, gruppi di coerenza e VM di archiviazione.
+
+. Fare clic su *Filtro*, quindi selezionare *Tipo di oggetto relazione* e *VM di archiviazione* per visualizzare solo le relazioni di ripristino di emergenza della VM di archiviazione.
+. Fare clic su *Applica filtro*.
++
+[NOTE]
+====
+È necessario cancellare il filtro delle relazioni costituenti per visualizzare tutte le relazioni di protezione.
+
+====
++
+Nella pagina vengono visualizzate solo le relazioni di disaster recovery delle VM di archiviazione.
+
+

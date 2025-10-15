@@ -1,0 +1,29 @@
+---
+permalink: reporting/concept_understand_view_and_reports_relationship.html 
+sidebar: sidebar 
+keywords: understand, view, report, relationship 
+summary: Le visualizzazioni e le pagine di inventario diventano report quando vengono scaricate o pianificate. 
+---
+= Comprendere la relazione tra vista e report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le visualizzazioni e le pagine di inventario diventano report quando vengono scaricate o pianificate.
+
+È possibile personalizzare e salvare le visualizzazioni e le pagine di inventario per riutilizzarle.  Quasi tutto ciò che puoi visualizzare in Unified Manager può essere salvato, riutilizzato, personalizzato, pianificato e condiviso come report.
+
+Nel menu a discesa delle visualizzazioni, gli elementi contrassegnati dall'icona Elimina sono visualizzazioni personalizzate esistenti create da te o da un altro utente.  Gli elementi senza icona sono visualizzazioni predefinite fornite con Unified Manager.  Le viste predefinite non possono essere modificate o eliminate.
+
+[NOTE]
+====
+* Se si elimina una visualizzazione personalizzata dall'elenco, verranno eliminati anche tutti i file Excel o i report pianificati che utilizzano tale visualizzazione.
+* Se modifichi una visualizzazione personalizzata, i report che utilizzano tale visualizzazione rifletteranno la modifica la prossima volta che il report verrà generato e inviato tramite e-mail in base alla pianificazione del report.  Quando si modificano le visualizzazioni, assicurarsi che le modifiche siano compatibili con tutte le personalizzazioni di Excel associate utilizzate per i report.  Se necessario, è possibile aggiornare il file Excel scaricandolo, apportando le modifiche necessarie e caricandolo come nuova personalizzazione di Excel per la visualizzazione.
+
+
+====
+image::../media/view_drop_down_3.png[Uno screenshot dell'interfaccia utente del menu a discesa Visualizza.]
+
+Solo gli utenti con il ruolo di Amministratore applicazione o Amministratore archiviazione possono visualizzare l'icona di eliminazione, modificare o eliminare una visualizzazione oppure modificare o eliminare un report pianificato.

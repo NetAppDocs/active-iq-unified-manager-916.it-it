@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/concept_what_happens_when_performance_threshold_policy_is_breached.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policy, breached 
+summary: Quando il valore di un contatore supera il valore soglia delle prestazioni definito per il periodo di tempo specificato nella durata, la soglia viene superata e viene segnalato un evento. 
+---
+= Cosa succede quando viene violata una soglia di prestazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando il valore di un contatore supera il valore soglia delle prestazioni definito per il periodo di tempo specificato nella durata, la soglia viene superata e viene segnalato un evento.
+
+L'evento determina l'avvio delle seguenti azioni:
+
+* L'evento viene visualizzato nella Dashboard, nella pagina Riepilogo cluster prestazioni, nella pagina Eventi e nella pagina Inventario prestazioni specifica dell'oggetto.
+* (facoltativo) È possibile inviare un avviso e-mail sull'evento a uno o più destinatari e-mail e una trap SNMP può essere inviata a un ricevitore di trap.
+* (facoltativo) È possibile eseguire uno script per modificare o aggiornare automaticamente gli oggetti di archiviazione.
+
+
+La prima azione viene sempre eseguita.  È possibile configurare se le azioni facoltative devono essere eseguite nella pagina Impostazione avvisi.  È possibile definire azioni univoche a seconda che venga violata una soglia di avviso o di soglia critica.
+
+Dopo che si è verificata una violazione della soglia di prestazione su un oggetto di archiviazione, non vengono generati ulteriori eventi per tale soglia finché il valore del contatore non scende al di sotto del valore di soglia, momento in cui la durata per tale limite viene reimpostata.  Finché la soglia continua a essere superata, l'ora di fine dell'evento viene continuamente aggiornata per indicare che l'evento è in corso.
+
+Un evento soglia cattura o blocca le informazioni relative alla gravità e alla definizione della policy, in modo che con l'evento vengano visualizzate informazioni univoche sulla soglia, anche se la policy sulla soglia viene modificata in futuro.

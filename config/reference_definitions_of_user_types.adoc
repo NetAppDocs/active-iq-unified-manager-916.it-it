@@ -1,0 +1,38 @@
+---
+permalink: config/reference_definitions_of_user_types.html 
+sidebar: sidebar 
+keywords: definitions, user types 
+summary: 'Un tipo di utente specifica il tipo di account di cui l"utente è titolare e include utenti remoti, gruppi remoti, utenti locali, utenti di database e utenti di manutenzione.  Ciascuno di questi tipi ha un proprio ruolo, assegnato da un utente con il ruolo di Amministratore.' 
+---
+= Definizioni dei tipi di utente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un tipo di utente specifica il tipo di account di cui l'utente è titolare e include utenti remoti, gruppi remoti, utenti locali, utenti di database e utenti di manutenzione.  Ciascuno di questi tipi ha un proprio ruolo, assegnato da un utente con il ruolo di Amministratore.
+
+I tipi di utenti di Unified Manager sono i seguenti:
+
+* *Utente addetto alla manutenzione*
++
+Creato durante la configurazione iniziale di Unified Manager.  L'utente addetto alla manutenzione crea quindi altri utenti e assegna loro i ruoli.  L'utente addetto alla manutenzione è anche l'unico ad avere accesso alla console di manutenzione.  Quando Unified Manager è installato su un sistema Red Hat Enterprise Linux, all'utente addetto alla manutenzione viene assegnato il nome utente "`umadmin.`"
+
+* *Utente locale*
++
+Accede all'interfaccia utente di Unified Manager ed esegue funzioni in base al ruolo assegnato dall'utente addetto alla manutenzione o da un utente con il ruolo di amministratore dell'applicazione.
+
+* *Gruppo remoto*
++
+Un gruppo di utenti che accedono all'interfaccia utente di Unified Manager utilizzando le credenziali memorizzate sul server di autenticazione.  Il nome di questo account deve corrispondere al nome di un gruppo memorizzato sul server di autenticazione.  A tutti gli utenti del gruppo remoto viene concesso l'accesso all'interfaccia utente di Unified Manager utilizzando le proprie credenziali utente individuali.  I gruppi remoti possono svolgere funzioni in base ai ruoli assegnati.
+
+* *Utente remoto*
++
+Accede all'interfaccia utente di Unified Manager utilizzando le credenziali memorizzate sul server di autenticazione.  Un utente remoto esegue funzioni in base al ruolo assegnato dall'utente addetto alla manutenzione o da un utente con il ruolo di amministratore dell'applicazione.
+
+* *Utente del database*
++
+Ha accesso in sola lettura ai dati nel database di Unified Manager, non ha accesso all'interfaccia web di Unified Manager o alla console di manutenzione e non può eseguire chiamate API.
+
+

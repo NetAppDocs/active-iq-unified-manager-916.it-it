@@ -1,0 +1,35 @@
+---
+permalink: performance-checker/task_view_svm_iops_traffic_by_protocol.html 
+sidebar: sidebar 
+keywords: view, svm, iops, traffic, protocol 
+summary: 'È possibile visualizzare informazioni dettagliate sugli IOPS per una SVM utilizzando la pagina Performance/SVM Explorer.  Il grafico del contatore IOPS - Totale mostra l"utilizzo totale degli IOPS sulla SVM, mentre il grafico del contatore IOPS - Suddivisione è utile per determinare l"impatto di lettura, scrittura e altri IOPS sulla SVM.' 
+---
+= Visualizza il traffico IOPS SVM per protocollo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare informazioni dettagliate sugli IOPS per una SVM utilizzando la pagina Performance/SVM Explorer.  Il grafico del contatore IOPS - Totale mostra l'utilizzo totale degli IOPS sulla SVM, mentre il grafico del contatore IOPS - Suddivisione è utile per determinare l'impatto di lettura, scrittura e altri IOPS sulla SVM.
+
+Inoltre, il grafico IOPS - Protocolli mostra un confronto dettagliato del traffico IOPS per ciascun protocollo utilizzato sulla SVM.  Sono disponibili i seguenti protocolli:
+
+* CIFS
+* NFS
+* FCP
+* iSCSI
+* NVMe-FC
+
+
+.Passi
+. Nella pagina *Performance/SVM Explorer* per l'SVM selezionato, dal grafico IOPS, seleziona *Protocolli* dal menu a discesa.
++
+Viene visualizzato il grafico IOPS - Protocolli.
+
+. Per visualizzare una versione più grande del grafico, seleziona *Zoom vista*.
++
+Viene visualizzato il grafico comparativo del protocollo avanzato IOPS.  È possibile limitare il confronto deselezionando o selezionando l'opzioneimage:../media/eye_icon.gif["icona dell'occhio"] che è associato a un protocollo.
+
+. Per visualizzare i valori specifici, spostare il cursore nell'area del grafico per visualizzare la finestra popup.
+

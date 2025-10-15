@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_use_failover_planning_page_to_determine_corrective_actions.html 
+sidebar: sidebar 
+keywords: node, failover, planning page, determine, corrective, actions 
+summary: In base alle informazioni visualizzate nella pagina Pianificazione failover nodi/prestazioni, è possibile adottare misure per garantire che un failover non provochi un calo delle prestazioni di una coppia HA al di sotto di un livello accettabile. 
+---
+= Utilizzare la pagina Pianificazione del failover del nodo per determinare le azioni correttive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In base alle informazioni visualizzate nella pagina Pianificazione failover nodi/prestazioni, è possibile adottare misure per garantire che un failover non provochi un calo delle prestazioni di una coppia HA al di sotto di un livello accettabile.
+
+Ad esempio, per ridurre l'impatto stimato sulle prestazioni di un failover, è possibile spostare alcuni volumi o LUN da un nodo nella coppia HA ad altri nodi nel cluster.  In questo modo si garantisce che il nodo primario possa continuare a fornire prestazioni accettabili dopo un failover.

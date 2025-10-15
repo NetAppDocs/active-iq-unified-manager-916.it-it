@@ -1,0 +1,122 @@
+---
+permalink: events/reference_notifications_page.html 
+sidebar: sidebar 
+keywords: notifications page, email, smtp, server, snmp 
+summary: È possibile configurare il server Unified Manager in modo che invii notifiche quando viene generato un evento o quando viene assegnato a un utente.  È anche possibile configurare i meccanismi di notifica.  Ad esempio, le notifiche possono essere inviate tramite e-mail o trap SNMP. 
+---
+= Pagina delle notifiche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare il server Unified Manager in modo che invii notifiche quando viene generato un evento o quando viene assegnato a un utente.  È anche possibile configurare i meccanismi di notifica.  Ad esempio, le notifiche possono essere inviate tramite e-mail o trap SNMP.
+
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+
+== E-mail
+
+Quest'area consente di configurare le seguenti impostazioni e-mail per la notifica degli avvisi:
+
+* *Da Indirizzo*
++
+Specifica l'indirizzo email da cui viene inviata la notifica di avviso.  Questo valore viene utilizzato anche come indirizzo del mittente per un report quando viene condiviso.  Se l'indirizzo del mittente è precompilato con l'indirizzo "ActiveIQUnifiedManager@localhost.com", dovresti modificarlo con un indirizzo email reale e funzionante per assicurarti che tutte le notifiche email vengano recapitate correttamente.
+
+
+
+
+
+== Server SMTP
+
+Quest'area consente di configurare le seguenti impostazioni del server SMTP:
+
+* *Nome host o indirizzo IP*
++
+Specifica il nome host del server host SMTP, utilizzato per inviare la notifica di avviso ai destinatari specificati.
+
+* *Nome utente*
++
+Specifica il nome utente SMTP.  Il nome utente SMTP è obbligatorio solo quando SMTPAUTH è abilitato nel server SMTP.
+
+* *Password*
++
+Specifica la password SMTP.  Il nome utente SMTP è obbligatorio solo quando SMTPAUTH è abilitato nel server SMTP.
+
+* *Porta*
++
+Specifica la porta utilizzata dal server host SMTP per inviare notifiche di avviso.
+
++
+Il valore predefinito è 25.
+
+* *Usa START/TLS*
++
+Selezionando questa casella si garantisce una comunicazione sicura tra il server SMTP e il server di gestione mediante l'utilizzo dei protocolli TLS/SSL (noti anche come start_tls e StartTLS).
+
+* *Usa SSL*
++
+Selezionando questa casella si garantisce una comunicazione sicura tra il server SMTP e il server di gestione mediante l'utilizzo del protocollo SSL.
+
+
+
+
+
+== SNMP
+
+Quest'area consente di configurare le seguenti impostazioni trap SNMP:
+
+* *Versione*
++
+Specifica la versione SNMP che si desidera utilizzare a seconda del tipo di sicurezza richiesto.  Le opzioni includono la versione 1, la versione 3, la versione 3 con autenticazione e la versione 3 con autenticazione e crittografia.  Il valore predefinito è Versione 1.
+
+* *Host di destinazione della trappola*
++
+Specifica il nome host o l'indirizzo IP (IPv4 o IPv6) che riceve le trap SNMP inviate dal server di gestione.  Per specificare più destinazioni trap, separare ogni host con una virgola.
+
++
+[NOTE]
+====
+Tutte le altre impostazioni SNMP, come "Versione" e "Porta in uscita", devono essere le stesse per tutti gli host nell'elenco.
+
+====
+* *Porta trappola in uscita*
++
+Specifica la porta attraverso la quale il server SNMP riceve le trap inviate dal server di gestione.
+
++
+Il valore predefinito è 162.
+
+* *Comunità*
++
+Stringa della community per accedere all'host.
+
+* *ID motore*
++
+Specifica l'identificatore univoco dell'agente SNMP e viene generato automaticamente dal server di gestione.  L'ID motore è disponibile con SNMP versione 3, SNMP versione 3 con autenticazione e SNMP versione 3 con autenticazione e crittografia.
+
+* *Nome utente*
++
+Specifica il nome utente SNMP.  Il nome utente è disponibile con SNMP versione 3, SNMP versione 3 con autenticazione e SNMP versione 3 con autenticazione e crittografia.
+
+* *Protocollo di autenticazione*
++
+Specifica il protocollo utilizzato per autenticare un utente.  Le opzioni di protocollo includono MD5 e SHA.  MD5 è il valore predefinito.  Il protocollo di autenticazione è disponibile con SNMP versione 3 con autenticazione e SNMP versione 3 con autenticazione e crittografia.
+
+* *Password di autenticazione*
++
+Specifica la password utilizzata per l'autenticazione di un utente.  La password di autenticazione è disponibile con SNMP versione 3 con autenticazione e SNMP versione 3 con autenticazione e crittografia.
+
+* *Protocollo sulla privacy*
++
+Specifica il protocollo di privacy utilizzato per crittografare i messaggi SNMP.  Le opzioni di protocollo includono AES 128 e DES.  Il valore predefinito è AES 128.  Il protocollo di privacy è disponibile con SNMP versione 3 con autenticazione e crittografia.
+
+* *Password di riservatezza*
++
+Specifica la password quando si utilizza il protocollo di privacy.  La password di privacy è disponibile con SNMP versione 3 con autenticazione e crittografia.
+
+
+
+Per ulteriori informazioni sugli oggetti e le trappole SNMP, è possibile scaricare illink:https://mysupport.netapp.com/site/tools/tool-eula/aiqum-mib["MIB Active IQ Unified Manager"^] dal sito di supporto NetApp .

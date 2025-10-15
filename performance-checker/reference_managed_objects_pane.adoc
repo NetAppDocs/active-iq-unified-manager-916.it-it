@@ -1,0 +1,50 @@
+---
+permalink: performance-checker/reference_managed_objects_pane.html 
+sidebar: sidebar 
+keywords: managed, objects, pane 
+summary: Il riquadro Oggetti gestiti nella scheda Riepilogo prestazioni fornisce una panoramica di alto livello dei tipi di oggetti di archiviazione e dei conteggi per il cluster.  Questo riquadro consente di monitorare lo stato degli oggetti in ciascun cluster. 
+---
+= Riquadro Oggetti gestiti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il riquadro Oggetti gestiti nella scheda Riepilogo prestazioni fornisce una panoramica di alto livello dei tipi di oggetti di archiviazione e dei conteggi per il cluster.  Questo riquadro consente di monitorare lo stato degli oggetti in ciascun cluster.
+
+Il conteggio degli oggetti gestiti è costituito da dati puntuali a partire dall'ultimo periodo di raccolta.  Nuovi oggetti vengono scoperti a intervalli di 15 minuti.
+
+Facendo clic sul numero collegato per qualsiasi tipo di oggetto viene visualizzata la pagina dell'inventario delle prestazioni dell'oggetto per quel tipo di oggetto.  La pagina dell'inventario degli oggetti è filtrata per mostrare solo gli oggetti presenti in questo cluster.
+
+Gli oggetti gestiti sono:
+
+* *Nodi*
++
+Un sistema fisico in un cluster.
+
+* *Aggregati*
++
+Un set di più gruppi RAID (Redundant Array of Independent Disks) che possono essere gestiti come un'unica unità per la protezione e il provisioning.
+
+* *Porte*
++
+Punto di connessione fisica sui nodi utilizzato per connettersi ad altri dispositivi su una rete.
+
+* *VM di archiviazione*
++
+Una macchina virtuale che fornisce accesso alla rete tramite indirizzi di rete univoci.  Una SVM può fornire dati da uno spazio dei nomi distinto ed è amministrabile separatamente dal resto del cluster.
+
+* *Volumi*
++
+Un'entità logica che contiene dati utente accessibili tramite uno o più protocolli di accesso supportati.  Il conteggio include sia i volumi FlexVol sia i volumi FlexGroup ; non include i componenti FlexGroup .
+
+* *LUN*
++
+Identificatore di un'unità logica Fibre Channel (FC) o di un'unità logica iSCSI.  Un'unità logica corrisponde in genere a un volume di archiviazione ed è rappresentata all'interno del sistema operativo di un computer come un dispositivo.
+
+* *Interfacce di rete*
++
+Un'interfaccia di rete logica che rappresenta un punto di accesso alla rete per un nodo.  Il conteggio include tutti i tipi di interfaccia.
+
+

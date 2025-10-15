@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_view_security_events_that_require_software_or_firmware_updates.html 
+sidebar: sidebar 
+keywords: upgrade events, view, security events, software, firmware updates 
+summary: 'Ci sono alcuni eventi di sicurezza che hanno un impatto sull"area di "Aggiornamento".  Questi eventi vengono segnalati dalla piattaforma Active IQ e identificano problemi per la cui risoluzione è necessario aggiornare il software ONTAP , il firmware del nodo o il software del sistema operativo (per gli avvisi di sicurezza).' 
+---
+= Visualizza gli eventi di sicurezza che potrebbero richiedere aggiornamenti software o firmware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ci sono alcuni eventi di sicurezza che hanno un'area di impatto di "`Aggiornamento`".  Questi eventi vengono segnalati dalla piattaforma Active IQ e identificano problemi per la cui risoluzione è necessario aggiornare il software ONTAP , il firmware del nodo o il software del sistema operativo (per gli avvisi di sicurezza).
+
+.Prima di iniziare
+È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Per alcuni di questi problemi potrebbe essere necessario intervenire immediatamente, mentre per altri potrebbe essere necessario attendere la successiva manutenzione programmata.  È possibile visualizzare tutti questi eventi e assegnarli agli utenti in grado di risolvere i problemi.  Inoltre, se ci sono determinati eventi di aggiornamento della sicurezza di cui non vuoi essere informato, questo elenco può aiutarti a identificare tali eventi in modo da poterli disabilitare.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione eventi*.
++
+Per impostazione predefinita, tutti gli eventi attivi (nuovi e riconosciuti) vengono visualizzati nella pagina dell'inventario Gestione eventi.
+
+. Dal menu Visualizza, seleziona *Aggiorna eventi*.
++
+La pagina visualizza tutti gli eventi di sicurezza di aggiornamento attivi.
+
+

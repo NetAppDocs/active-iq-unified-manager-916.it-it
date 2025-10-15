@@ -1,0 +1,45 @@
+---
+permalink: reporting/task_create_report_for_volumes_with_high_amount_of_cold_data.html 
+sidebar: sidebar 
+keywords: display, volumes, cold, data, non-fabricpool, aggregate, identify 
+summary: 'È possibile creare un report per visualizzare volumi con un"elevata quantità di dati inattivi su un aggregato non FabricPool .  Ciò può aiutarti a identificare i volumi che devono essere spostati in un aggregato FabricPool .' 
+---
+= Crea un report per visualizzare volumi con un'elevata quantità di dati inattivi su un aggregato che non è abilitato per FabricPool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un report per visualizzare volumi con un'elevata quantità di dati inattivi su un aggregato non FabricPool .  Ciò può aiutarti a identificare i volumi che devono essere spostati in un aggregato FabricPool .
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+Utilizzare i passaggi seguenti per creare una vista personalizzata per volumi con un'elevata quantità di dati inattivi su un aggregato non abilitato per FabricPool, quindi pianificare la generazione di un report per tale vista.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Volumi*.
+. Nel menu Visualizza, seleziona *Prestazioni* > *Tutti i volumi*.
+. Selezionare *Mostra/Nascondi* per assicurarsi che la colonna "`Tipo di disco`" venga visualizzata nella vista.
++
+Aggiungi o rimuovi altre colonne per creare una visualizzazione importante per il tuo report.
+
+. Trascinare la colonna "`Tipo di disco`" vicino alla colonna "`Dati inattivi`".
+. Fare clic sull'icona del filtro, aggiungere il seguente filtro e quindi fare clic su *Applica filtro*:
++
+** Dati freddi superiori a 100 GB
+** Il tipo di disco contiene SSD
+
+
+. Fare clic sulla parte superiore della colonna "`Tipo di disco`" per ordinare i volumi in base al tipo di disco, in modo che il tipo di disco SSD (FabricPool) sia in basso.
+. Salva la vista con un nome specifico che rifletta ciò che la vista sta mostrando, ad esempio "`Volumi dati inattivi non FabricPool`".
+. Fare clic sul pulsante *Rapporti pianificati* nella pagina dell'inventario.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""] ) alla fine della riga.
++
+Il rapporto viene inviato immediatamente a scopo di verifica.  Successivamente, il report viene generato e inviato tramite e-mail ai destinatari elencati utilizzando la frequenza specificata.
+
+
+
+Sulla base dei risultati mostrati nel report, è possibile individuare i volumi che rappresentano buoni candidati per essere trasferiti agli aggregati FabricPool .

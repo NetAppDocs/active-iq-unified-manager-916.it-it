@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_volume_capacity_reports.html 
+sidebar: sidebar 
+keywords: customize, volume, capacity reports 
+summary: Questi report personalizzati di esempio vengono utilizzati per aiutarti a identificare e rispondere a potenziali problemi relativi alla capacità del volume e alle prestazioni. 
+---
+= Personalizza i report sulla capacità del volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questi report personalizzati di esempio vengono utilizzati per aiutarti a identificare e rispondere a potenziali problemi relativi alla capacità del volume e alle prestazioni.

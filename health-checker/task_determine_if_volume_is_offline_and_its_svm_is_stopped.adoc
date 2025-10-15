@@ -1,0 +1,46 @@
+---
+permalink: health-checker/task_determine_if_volume_is_offline_and_its_svm_is_stopped.html 
+sidebar: sidebar 
+keywords: determine, volume, offline, svm, node 
+summary: 'È possibile utilizzare l"interfaccia utente Web di Unified Manager per confermare o escludere la possibilità che un volume sia offline perché la sua macchina virtuale di archiviazione host (SVM) è arrestata perché il nodo che ospita il volume radice di tale SVM è inattivo.' 
+---
+= Determina se un volume è offline e il suo SVM è arrestato perché un nodo è inattivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare l'interfaccia utente Web di Unified Manager per confermare o escludere la possibilità che un volume sia offline perché la sua macchina virtuale di archiviazione host (SVM) è arrestata perché il nodo che ospita il volume radice di tale SVM è inattivo.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Per determinare se la condizione di volume offline è causata dall'arresto dell'SVM host perché il nodo che ospita il volume radice di tale SVM è inattivo, eseguire le seguenti azioni:
+
+.Passi
+. Individuare e fare clic sul collegamento ipertestuale visualizzato sotto l'SVM nel riquadro *Dispositivi correlati* della pagina dei dettagli *Volume / Integrità* del volume offline.
++
+La pagina dei dettagli Storage VM/Health visualizza lo stato "`running`" o "`stopped`" della SVM di hosting.  Se lo stato SVM è in esecuzione, la condizione di volume offline non è causata dal fatto che il nodo che ospita il volume radice di tale SVM è inattivo.
+
+. Se lo stato SVM è arrestato, fare clic su *Visualizza SVM* per identificare ulteriormente la causa dell'arresto dell'SVM di hosting.
+. Nell'intestazione della colonna SVM della vista *Integrità: tutte le VM di archiviazione*, fare clic sul simbolo del filtroimage:../media/filtericon_um60.png["Icona per il filtro della colonna"] e quindi digitare il nome dell'SVM arrestato.
++
+Le informazioni per tale SVM sono mostrate in una tabella.
+
+. Nella vista *Stato: tutte le VM di archiviazione*, fare clic suimage:../media/gridviewicon.gif["Icona per la visualizzazione griglia"] e quindi selezionare l'opzione *Volume radice*.
++
+La colonna Volume radice viene aggiunta all'inventario SVM e visualizza il nome del volume radice dell'SVM arrestato.
+
+. Nella colonna Volume radice, fare clic sul nome del volume radice per visualizzare la pagina dei dettagli *VM di archiviazione/integrità* per quel volume.
++
+Se lo stato del volume radice SVM è (Online), la condizione offline del volume originale non è causata dal fatto che il nodo che ospita il volume radice di tale SVM è inattivo.
+
+. Se lo stato del volume radice SVM è (Offline), individuare e fare clic sul collegamento ipertestuale visualizzato in Aggregato nel riquadro Dispositivi correlati della pagina Dettagli volume/integrità del volume radice SVM.
+. Individuare e fare clic sul collegamento ipertestuale visualizzato sotto Nodo nel riquadro *Dispositivi correlati* della pagina dei dettagli *Aggregato/Stato* dell'Aggregato.
++
+La scheda Nodi nella pagina Dettagli cluster/integrità visualizza lo stato della coppia di nodi HA a cui appartiene il nodo di hosting del volume radice SVM.  Lo stato del nodo è indicato sul display.
+
+
+
+Dopo aver confermato che la condizione di offline del volume è causata dalla condizione di offline dell'SVM host di quel volume, che a sua volta è causata dal fatto che il nodo che ospita il volume radice di quell'SVM è inattivo, contattare l'amministratore o l'operatore appropriato per riavviare manualmente il nodo inattivo.

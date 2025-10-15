@@ -1,0 +1,60 @@
+---
+permalink: data-protection/task_create_snapvault_protection_relationship.html 
+sidebar: sidebar 
+keywords: create, snapvault, protection, relationship, health, volumes view 
+summary: 'È possibile utilizzare la vista Integrità: Tutti i volumi per creare relazioni SnapVault per uno o più volumi sulla stessa VM di archiviazione per abilitare i backup dei dati a scopo di protezione.' 
+---
+= Creare una relazione di protezione SnapVault dalla vista Integrità: Tutti i volumi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la vista Integrità: Tutti i volumi per creare relazioni SnapVault per uno o più volumi sulla stessa VM di archiviazione per abilitare i backup dei dati a scopo di protezione.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* È necessario aver configurato l'automazione del flusso di lavoro.
+
+
+Il menu *Proteggi* non viene visualizzato nei seguenti casi:
+
+* Se le impostazioni RBAC non consentono questa azione: ad esempio, se si dispone solo dei privilegi di operatore
+* Quando l'ID del volume è sconosciuto: ad esempio, quando si ha una relazione intercluster e il cluster di destinazione non è ancora stato scoperto
+
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Volumi*.
+. Nella vista *Integrità: Tutti i volumi*, seleziona il volume che desideri proteggere e fai clic su *Proteggi*.
++
+In alternativa, per creare più relazioni di protezione sulla stessa macchina virtuale di archiviazione (SVM), selezionare uno o più volumi nella vista Integrità: Tutti i volumi e fare clic su *Proteggi* sulla barra degli strumenti.
+
+. Seleziona * SnapVault* dal menu.
++
+Viene aperta la finestra di dialogo Configura protezione.
+
+. Fare clic su * SnapVault* per visualizzare la scheda * SnapVault* e configurare le informazioni sul volume secondario.
+. Fare clic su *Avanzate* per impostare la deduplicazione, la compressione, l'aumento automatico e la garanzia dello spazio in base alle esigenze, quindi fare clic su *Applica*.
+. Completare l'area *Informazioni sulla destinazione* e l'area *Impostazioni relazione* nella scheda * SnapVault*.
+. Fare clic su *Applica*.
++
+Verrai reindirizzato alla vista Salute: Tutti i volumi.
+
+. Fare clic sul collegamento al processo di configurazione della protezione nella parte superiore della vista *Integrità: tutti i volumi*.
++
+Se si sta creando una sola relazione di protezione, viene visualizzata la pagina Dettagli processo; se invece si stanno creando più relazioni di protezione, viene visualizzato un elenco filtrato di tutti i processi associati all'operazione di protezione.
+
+. Eseguire una delle seguenti operazioni:
++
+** Se si dispone di un solo processo, fare clic su *Aggiorna* per aggiornare l'elenco delle attività e i dettagli delle attività associati al processo di configurazione della protezione e per determinare quando il processo è completato.
+** Se hai più di un lavoro:
++
+... Fare clic su un lavoro nell'elenco dei lavori.
+... Fare clic su *Aggiorna* per aggiornare l'elenco delle attività e i dettagli delle attività associati al processo di configurazione della protezione e per determinare quando il processo è completato.
+... Utilizzare il pulsante *Indietro* per tornare all'elenco filtrato e visualizzare un altro lavoro.
+
+
+
+
+

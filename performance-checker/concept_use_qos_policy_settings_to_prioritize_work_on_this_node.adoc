@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_use_qos_policy_settings_to_prioritize_work_on_this_node.html 
+sidebar: sidebar 
+keywords: qos, policy, settings, prioritize, work, node 
+summary: 'È possibile impostare un limite su un gruppo di policy QoS per controllare il limite di I/O al secondo (IOPS) o di throughput MBps per i carichi di lavoro in esso contenuti.  Se i carichi di lavoro si trovano in un gruppo di policy senza limiti impostati, ad esempio il gruppo di policy predefinito, o se il limite impostato non soddisfa le proprie esigenze, è possibile aumentare il limite impostato o spostare i carichi di lavoro in un gruppo di policy nuovo o esistente che abbia il limite desiderato.' 
+---
+= Utilizzare le impostazioni dei criteri QoS per dare priorità al lavoro su questo nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile impostare un limite su un gruppo di policy QoS per controllare il limite di I/O al secondo (IOPS) o di throughput MBps per i carichi di lavoro in esso contenuti.  Se i carichi di lavoro si trovano in un gruppo di policy senza limiti impostati, ad esempio il gruppo di policy predefinito, o se il limite impostato non soddisfa le proprie esigenze, è possibile aumentare il limite impostato o spostare i carichi di lavoro in un gruppo di policy nuovo o esistente che abbia il limite desiderato.
+
+Se un evento di prestazioni su un nodo è causato da carichi di lavoro che utilizzano eccessivamente le risorse del nodo, la descrizione dell'evento nella pagina Dettagli evento visualizza un collegamento all'elenco dei volumi coinvolti.  Nella pagina Prestazioni/Volumi, è possibile ordinare i volumi interessati in base a IOPS e MBps per vedere quali carichi di lavoro hanno l'utilizzo più elevato che potrebbe aver contribuito all'evento.
+
+Assegnando i volumi che stanno utilizzando eccessivamente le risorse del nodo a un'impostazione di gruppo di policy più restrittiva, il gruppo di policy limita i carichi di lavoro per limitarne l'attività, il che può ridurre l'utilizzo delle risorse su quel nodo.
+
+È possibile utilizzare ONTAP System Manager o i comandi ONTAP per gestire i gruppi di policy, incluse le seguenti attività:
+
+* Creazione di un gruppo di policy
+* Aggiunta o rimozione di carichi di lavoro in un gruppo di policy
+* Spostamento di un carico di lavoro tra gruppi di policy
+* Modifica del limite di throughput di un gruppo di policy
+

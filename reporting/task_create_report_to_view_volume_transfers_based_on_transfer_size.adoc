@@ -1,0 +1,34 @@
+---
+permalink: reporting/task_create_report_to_view_volume_transfers_based_on_transfer_size.html 
+sidebar: sidebar 
+keywords: create, report, view, volume, transfers, transfer size 
+summary: È possibile creare un report per visualizzare i trasferimenti di volume in base alle dimensioni del trasferimento. 
+---
+= Crea un report per visualizzare i trasferimenti di volume in base alle dimensioni del trasferimento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un report per visualizzare i trasferimenti di volume in base alle dimensioni del trasferimento.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+Per creare una vista personalizzata per i trasferimenti di volume in base alle dimensioni del trasferimento, utilizzare i passaggi seguenti, quindi pianificare la generazione di un report per tale vista.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Volumi*.
+. Nel menu Visualizza, seleziona *Relazione* > *Tasso di trasferimento ultimo mese*.
+. Fare clic sulla parte superiore della colonna "`Dimensione totale del trasferimento`" per ordinare i trasferimenti di volume in base alla dimensione.
+. Salva la vista con un nome specifico che rifletta ciò che la vista sta mostrando, ad esempio "`Volumi per dimensione di trasferimento`".
+. Fare clic sul pulsante *Rapporti pianificati* nella pagina dell'inventario.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""] ) alla fine della riga.
++
+Il rapporto viene inviato immediatamente a scopo di verifica.  Successivamente, il report viene generato e inviato tramite e-mail ai destinatari elencati utilizzando la frequenza specificata.
+
+
+
+Sulla base dei risultati mostrati nel report, è possibile analizzare le relazioni di volume in base alle dimensioni del trasferimento.

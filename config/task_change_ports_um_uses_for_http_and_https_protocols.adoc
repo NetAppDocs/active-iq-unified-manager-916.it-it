@@ -1,0 +1,43 @@
+---
+permalink: config/task_change_ports_um_uses_for_http_and_https_protocols.html 
+sidebar: sidebar 
+keywords: change, ports, unified manager, uses, http, https, protocols 
+summary: 'Le porte predefinite utilizzate da Unified Manager per i protocolli HTTP e HTTPS possono essere modificate dopo l"installazione, se necessario per motivi di sicurezza.  Le porte predefinite sono 80 per HTTP e 443 per HTTPS.' 
+---
+= Modifica le porte utilizzate da Unified Manager per i protocolli HTTP e HTTPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le porte predefinite utilizzate da Unified Manager per i protocolli HTTP e HTTPS possono essere modificate dopo l'installazione, se necessario per motivi di sicurezza.  Le porte predefinite sono 80 per HTTP e 443 per HTTPS.
+
+.Prima di iniziare
+Per accedere alla console di manutenzione del server Unified Manager è necessario disporre di un ID utente e di una password autorizzati.
+
+[NOTE]
+====
+Ci sono alcune porte considerate non sicure quando si utilizzano i browser Mozilla Firefox o Google Chrome.  Prima di assegnare un nuovo numero di porta per il traffico HTTP e HTTPS, verifica con il tuo browser.  Selezionando una porta non sicura il sistema potrebbe risultare inaccessibile e in tal caso sarebbe necessario contattare l'assistenza clienti per risolvere il problema.
+
+====
+L'istanza di Unified Manager viene riavviata automaticamente dopo aver modificato la porta, quindi assicurati che sia il momento giusto per disattivare il sistema per un breve periodo di tempo.
+
+. Accedere tramite SSH come utente di manutenzione all'host Unified Manager.
++
+Vengono visualizzati i prompt della console di manutenzione di Unified Manager.
+
+. Digitare il numero dell'opzione di menu denominata *Visualizza/Modifica porte applicazione*, quindi premere Invio.
+. Se richiesto, immettere nuovamente la password dell'utente addetto alla manutenzione.
+. Digitare i nuovi numeri di porta per le porte HTTP e HTTPS, quindi premere Invio.
++
+Lasciando vuoto il numero di porta si assegna la porta predefinita per il protocollo.
+
++
+Ti verrà chiesto se desideri modificare le porte e riavviare Unified Manager ora.
+
+. Digitare *y* per modificare le porte e riavviare Unified Manager.
+. Uscire dalla console di manutenzione.
+
+
+Dopo questa modifica, gli utenti devono includere il nuovo numero di porta nell'URL per accedere all'interfaccia utente Web di Unified Manager, ad esempio + https://host.company.com:1234+ , +https://12.13.14.15:1122+ o +https://[2001:db8:0:1]:2123+.

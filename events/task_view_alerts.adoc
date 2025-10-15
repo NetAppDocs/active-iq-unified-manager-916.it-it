@@ -1,0 +1,24 @@
+---
+permalink: events/task_view_alerts.html 
+sidebar: sidebar 
+keywords: view, alerts 
+summary: 'È possibile visualizzare l"elenco degli avvisi creati per vari eventi dalla pagina Configurazione avvisi.  È inoltre possibile visualizzare le proprietà dell"avviso, ad esempio la descrizione dell"avviso, il metodo e la frequenza di notifica, gli eventi che attivano l"avviso, i destinatari e-mail degli avvisi e le risorse interessate, ad esempio cluster, aggregati e volumi.' 
+---
+= Visualizza avvisi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare l'elenco degli avvisi creati per vari eventi dalla pagina Configurazione avvisi.  È inoltre possibile visualizzare le proprietà dell'avviso, ad esempio la descrizione dell'avviso, il metodo e la frequenza di notifica, gli eventi che attivano l'avviso, i destinatari e-mail degli avvisi e le risorse interessate, ad esempio cluster, aggregati e volumi.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+.Fare un passo
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Configurazione avvisi*.
++
+L'elenco degli avvisi viene visualizzato nella pagina Impostazione avvisi.
+
+

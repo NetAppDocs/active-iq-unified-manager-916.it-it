@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_confirm_that_response_time_is_within_expected_range.html 
+sidebar: sidebar 
+keywords: confirm, latency, within, expected, range 
+summary: 'Quando un componente del cluster è in competizione, i carichi di lavoro del volume che lo utilizzano potrebbero avere tempi di risposta (latenza) ridotti.  È possibile esaminare la latenza di ciascun carico di lavoro della vittima sul componente in conflitto per confermare che la latenza effettiva rientri nell"intervallo previsto.  È anche possibile fare clic sul nome di un volume per visualizzarne i dati storici.' 
+---
+= Verificare che la latenza sia compresa nell'intervallo previsto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando un componente del cluster è in competizione, i carichi di lavoro del volume che lo utilizzano potrebbero avere tempi di risposta (latenza) ridotti.  È possibile esaminare la latenza di ciascun carico di lavoro della vittima sul componente in conflitto per confermare che la latenza effettiva rientri nell'intervallo previsto.  È anche possibile fare clic sul nome di un volume per visualizzarne i dati storici.
+
+Se l'evento di performance si trova nello stato obsoleto, la latenza di ciascuna vittima coinvolta nell'evento potrebbe essere rientrata nell'intervallo previsto.

@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_break_snapmirror_relationship.html 
+sidebar: sidebar 
+keywords: break, snapmirror, relationship, volume, relationship page 
+summary: 'È possibile interrompere una relazione di protezione per interrompere i trasferimenti di dati tra un volume di origine e un volume di destinazione in una relazione SnapMirror .  È possibile interrompere una relazione quando si desidera migrare dati, per il ripristino di emergenza o per testare un"applicazione.  Il volume di destinazione viene modificato in un volume di lettura/scrittura.  Non è possibile interrompere una relazione SnapVault .' 
+---
+= Interrompere una relazione SnapMirror dalla pagina Relazioni volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile interrompere una relazione di protezione per interrompere i trasferimenti di dati tra un volume di origine e un volume di destinazione in una relazione SnapMirror .  È possibile interrompere una relazione quando si desidera migrare dati, per il ripristino di emergenza o per testare un'applicazione.  Il volume di destinazione viene modificato in un volume di lettura/scrittura.  Non è possibile interrompere una relazione SnapVault .
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* È necessario aver configurato l'automazione del flusso di lavoro.
+
+
+.Passi
+. Dalla pagina *Relazioni volume*, seleziona uno o più volumi con relazioni di protezione per i quali desideri interrompere i trasferimenti di dati e, sulla barra degli strumenti, fai clic su *Interrompi*.
++
+Viene visualizzata la finestra di dialogo Interrompi relazione.
+
+. Fare clic su *Continua* per interrompere la relazione.
+. Nella pagina *Relazioni volume*, verificare nella colonna *Stato relazione* che la relazione sia interrotta.
++
+La colonna Stato relazione è nascosta per impostazione predefinita, quindi potrebbe essere necessario selezionarla nell'elenco delle colonne mostra/nascondiimage:../media/icon_columnshowhide_sm_onc.gif[""] .
+
+

@@ -1,0 +1,14 @@
+---
+permalink: api-automation/concept_manage_storage_workloads.html 
+sidebar: sidebar 
+keywords: manage, workloads 
+summary: 'Le API descritte qui coprono varie funzioni di amministrazione dello storage, come la visualizzazione dei carichi di lavoro di storage, la creazione di LUN e condivisioni di file, la gestione dei livelli di servizio delle prestazioni e delle policy di efficienza dello storage e l"assegnazione delle policy sui carichi di lavoro di storage.' 
+---
+= Gestisci i carichi di lavoro utilizzando le API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le API descritte qui coprono varie funzioni di amministrazione dello storage, come la visualizzazione dei carichi di lavoro di storage, la creazione di LUN e condivisioni di file, la gestione dei livelli di servizio delle prestazioni e delle policy di efficienza dello storage e l'assegnazione delle policy sui carichi di lavoro di storage.

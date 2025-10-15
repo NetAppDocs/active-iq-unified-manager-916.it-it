@@ -1,0 +1,54 @@
+---
+permalink: events/task_subscribe_to_ontap_ems_events.html 
+sidebar: sidebar 
+keywords: subscribe, ontap, ems events 
+summary: 'È possibile abbonarsi per ricevere gli eventi EMS (Event Management System) generati dai sistemi installati con il software ONTAP .  Un sottoinsieme di eventi EMS viene segnalato automaticamente a Unified Manager, ma gli eventi EMS aggiuntivi vengono segnalati solo se si è sottoscritti tali eventi.' 
+---
+= Iscriviti agli eventi ONTAP EMS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile abbonarsi per ricevere gli eventi EMS (Event Management System) generati dai sistemi installati con il software ONTAP .  Un sottoinsieme di eventi EMS viene segnalato automaticamente a Unified Manager, ma gli eventi EMS aggiuntivi vengono segnalati solo se si è sottoscritti tali eventi.
+
+.Prima di iniziare
+Non iscriverti agli eventi EMS che sono già stati aggiunti automaticamente a Unified Manager, poiché ciò potrebbe causare confusione quando si ricevono due eventi per lo stesso problema.
+
+Puoi iscriverti a tutti gli eventi EMS che vuoi.  Tutti gli eventi a cui ti iscrivi vengono convalidati e solo gli eventi convalidati vengono applicati ai cluster che stai monitorando in Unified Manager.  Il catalogo eventi EMS di ONTAP 9 fornisce informazioni dettagliate su tutti i messaggi EMS per la versione specificata del software ONTAP 9.  Individuare la versione appropriata del _Catalogo eventi EMS_ nella pagina Documentazione prodotto ONTAP 9 per un elenco degli eventi applicabili.
+
+https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Libreria prodotti ONTAP 9"]
+
+È possibile configurare avvisi per gli eventi ONTAP EMS a cui ci si iscrive e creare script personalizzati da eseguire per tali eventi.
+
+[NOTE]
+====
+Se non ricevi gli eventi ONTAP EMS a cui ti sei abbonato, potrebbe esserci un problema con la configurazione DNS del cluster che impedisce al cluster di raggiungere il server Unified Manager.  Per risolvere questo problema, l'amministratore del cluster deve correggere la configurazione DNS del cluster e quindi riavviare Unified Manager.  In questo modo gli eventi EMS in sospeso verranno trasferiti al server Unified Manager.
+
+====
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Configurazione evento*.
+. Nella pagina Configurazione evento, fare clic sul pulsante *Iscriviti agli eventi EMS*.
+. Nella finestra di dialogo Iscriviti agli eventi EMS, immettere il nome dell'evento ONTAP EMS a cui si desidera iscriversi.
++
+Per visualizzare i nomi degli eventi EMS a cui è possibile iscriversi, dalla shell del cluster ONTAP , è possibile utilizzare `event route show` comando (prima di ONTAP 9) o il `event catalog show` comando (ONTAP 9 o successivo).
+
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_and_receive_alerts_from_ONTAP_EMS_Event_Subscription_in_Active_IQ_Unified_Manager["Come configurare e ricevere avvisi dall'abbonamento agli eventi ONTAP EMS in Active IQ Unified Manager"]
+
+. Fare clic su *Aggiungi*.
++
+L'evento EMS viene aggiunto all'elenco degli eventi EMS sottoscritti, ma la colonna Applicabile al cluster visualizza lo stato "`Sconosciuto`" per l'evento EMS aggiunto.
+
+. Fare clic su *Salva e chiudi* per registrare l'abbonamento all'evento EMS con il cluster.
+. Fai clic di nuovo su *Iscriviti agli eventi EMS*.
++
+Nella colonna Applicabile al cluster per l'evento EMS aggiunto viene visualizzato lo stato "Sì".
+
++
+Se lo stato non è "Sì", controllare l'ortografia del nome dell'evento ONTAP EMS.  Se il nome è stato immesso in modo errato, è necessario rimuovere l'evento errato e quindi aggiungerlo nuovamente.
+
+
+
+Quando si verifica l'evento ONTAP EMS, l'evento viene visualizzato nella pagina Eventi.  È possibile selezionare l'evento per visualizzare i dettagli sull'evento EMS nella pagina Dettagli evento.  È anche possibile gestire lo svolgimento dell'evento o creare avvisi per l'evento.

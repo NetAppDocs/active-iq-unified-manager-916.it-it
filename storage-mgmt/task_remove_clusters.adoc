@@ -1,0 +1,33 @@
+---
+permalink: storage-mgmt/task_remove_clusters.html 
+sidebar: sidebar 
+keywords: remove, cluster 
+summary: È possibile rimuovere un cluster da Unified Manager utilizzando la pagina Configurazione cluster.  Ad esempio, è possibile rimuovere un cluster se il rilevamento del cluster non riesce o quando si desidera dismettere un sistema di archiviazione. 
+---
+= Rimuovi i cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile rimuovere un cluster da Unified Manager utilizzando la pagina Configurazione cluster.  Ad esempio, è possibile rimuovere un cluster se il rilevamento del cluster non riesce o quando si desidera dismettere un sistema di archiviazione.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o di Amministratore dell'archiviazione.
+
+Questa attività rimuove il cluster selezionato da Unified Manager.  Una volta rimosso, un cluster non viene più monitorato.  Anche l'istanza di Unified Manager registrata nel cluster rimosso viene annullata dalla registrazione nel cluster.
+
+La rimozione di un cluster elimina anche tutti i suoi oggetti di archiviazione, i dati storici, i servizi di archiviazione e tutti gli eventi associati da Unified Manager.  Tali modifiche vengono riflesse nelle pagine dell'inventario e nelle pagine dei dettagli dopo il successivo ciclo di raccolta dati.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Configurazione cluster*.
+. Nella pagina Configurazione cluster, seleziona il cluster che desideri rimuovere e fai clic su *Rimuovi*.
+. Nella finestra di dialogo del messaggio *Rimuovi origine dati*, fare clic su *Rimuovi* per confermare la richiesta di rimozione.
+
+
+*Informazioni correlate*
+
+link:../config/task_add_users.html["Aggiunta di utenti"]
+
+link:../health-checker/task_view_cluster_list_and_details.html["Visualizzazione dell'elenco e dei dettagli dei cluster"]

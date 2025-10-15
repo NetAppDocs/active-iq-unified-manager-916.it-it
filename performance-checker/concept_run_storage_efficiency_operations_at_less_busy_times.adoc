@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_run_storage_efficiency_operations_at_less_busy_times.html 
+sidebar: sidebar 
+keywords: run, storage, efficiency, operations, less, busy, times 
+summary: 'È possibile modificare la policy o la pianificazione che gestisce le operazioni di efficienza dell"archiviazione in modo che vengano eseguite quando i carichi di lavoro del volume interessato sono meno impegnati.' 
+---
+= Eseguire operazioni di efficienza di archiviazione in orari meno impegnativi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare la policy o la pianificazione che gestisce le operazioni di efficienza dell'archiviazione in modo che vengano eseguite quando i carichi di lavoro del volume interessato sono meno impegnati.
+
+Le operazioni di efficienza dell'archiviazione possono utilizzare una quantità elevata di risorse della CPU del cluster e diventare un ostacolo per i volumi su cui vengono eseguite le operazioni.  Se i volumi delle vittime presentano un'attività elevata nello stesso momento in cui vengono eseguite le operazioni di efficienza dello storage, la loro latenza può aumentare e innescare un evento.
+
+Nella pagina Dettagli evento, la sezione Diagnosi di sistema visualizza i carichi di lavoro nel gruppo di policy QoS in base alla deviazione massima nell'attività per identificare i carichi di lavoro più problematici.  Se nella parte superiore della tabella viene visualizzata la dicitura ``efficienza di archiviazione`', queste operazioni stanno sovraccaricando i carichi di lavoro della vittima.  Modificando la politica di efficienza o la pianificazione in modo che vengano eseguite quando questi carichi di lavoro sono meno impegnati, è possibile impedire che le operazioni di efficienza dello storage causino conflitti su un cluster.
+
+È possibile utilizzare ONTAP System Manager per gestire le policy di efficienza.  È possibile utilizzare i comandi ONTAP per gestire politiche e pianificazioni di efficienza.

@@ -1,0 +1,23 @@
+---
+permalink: storage-mgmt/concept_add_disk_space_to_um_database_directory.html 
+sidebar: sidebar 
+keywords: add, disk, space, unified manager, database, directory 
+summary: La directory del database Unified Manager contiene tutti i dati sullo stato e sulle prestazioni raccolti dai sistemi ONTAP .  In alcune circostanze potrebbe essere necessario aumentare le dimensioni della directory del database. 
+---
+= Aggiungere spazio su disco alla directory del database Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La directory del database Unified Manager contiene tutti i dati sullo stato e sulle prestazioni raccolti dai sistemi ONTAP .  In alcune circostanze potrebbe essere necessario aumentare le dimensioni della directory del database.
+
+Ad esempio, la directory del database potrebbe riempirsi se Unified Manager raccoglie dati da un numero elevato di cluster, ognuno dei quali ha molti nodi.  Riceverai un evento di avviso quando la directory del database è piena al 90% e un evento critico quando la directory è piena al 95%.
+
+[NOTE]
+====
+Non vengono raccolti dati aggiuntivi dai cluster dopo che la directory raggiunge il 95% di riempimento.
+
+====
+I passaggi necessari per aggiungere capacità alla directory dati sono diversi a seconda che Unified Manager sia in esecuzione su un server VMware ESXi, su un server Red Hat Linux o su un server Microsoft Windows.

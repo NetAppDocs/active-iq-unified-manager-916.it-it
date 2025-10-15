@@ -1,0 +1,32 @@
+---
+permalink: health-checker/task_configure_lag_threshold_settings_for_unmanaged_protection.html 
+sidebar: sidebar 
+keywords: configure, lag, threshold settings, unmanaged, protection, relationships 
+summary: È possibile modificare le impostazioni predefinite globali relative agli avvisi di ritardo e alle soglie di errore per le relazioni di protezione non gestite, in modo che gli eventi vengano generati a intervalli appropriati alle proprie esigenze. 
+---
+= Configurare le impostazioni della soglia di ritardo per le relazioni di protezione non gestite
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare le impostazioni predefinite globali relative agli avvisi di ritardo e alle soglie di errore per le relazioni di protezione non gestite, in modo che gli eventi vengano generati a intervalli appropriati alle proprie esigenze.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Il tempo di ritardo non deve essere superiore all'intervallo di pianificazione del trasferimento definito.  Ad esempio, se la pianificazione del trasferimento è oraria, il tempo di ritardo non deve essere superiore a un'ora.  La soglia di ritardo specifica una percentuale che il tempo di ritardo non deve superare.  Utilizzando l'esempio di un'ora, se la soglia di ritardo è definita al 150%, si riceverà un evento quando il tempo di ritardo è superiore a 1,5 ore.
+
+Le impostazioni descritte in questa attività vengono applicate globalmente a tutte le relazioni di protezione non gestite.  Le impostazioni non possono essere specificate e applicate esclusivamente a una relazione di protezione non gestita.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Soglie evento* > *Relazione*.
+. Aumentare o diminuire la percentuale di tempo di ritardo predefinito per l'avviso o l'errore a livello globale, secondo necessità.
+. Per disattivare l'attivazione di un evento di avviso o errore a partire da qualsiasi soglia di ritardo, deselezionare la casella accanto a *Abilitato*.
+. Fare clic su *Salva*.
+
+
+*Informazioni correlate*
+
+link:../config/task_add_users.html["Aggiunta di utenti"]

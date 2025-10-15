@@ -1,0 +1,59 @@
+---
+permalink: config/task_update_saml_authentication_after_um_certificate_change.html 
+sidebar: sidebar 
+keywords: update, saml, authentication, settings, unified manager, security, certificate, change 
+summary: 'Qualsiasi modifica al certificato di sicurezza HTTPS installato sul server Unified Manager richiede l"aggiornamento delle impostazioni di configurazione dell"autenticazione SAML.  Il certificato viene aggiornato se si rinomina il sistema host, si assegna un nuovo indirizzo IP al sistema host o si modifica manualmente il certificato di sicurezza per il sistema.' 
+---
+= Aggiorna le impostazioni di autenticazione SAML dopo la modifica del certificato di sicurezza di Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Qualsiasi modifica al certificato di sicurezza HTTPS installato sul server Unified Manager richiede l'aggiornamento delle impostazioni di configurazione dell'autenticazione SAML.  Il certificato viene aggiornato se si rinomina il sistema host, si assegna un nuovo indirizzo IP al sistema host o si modifica manualmente il certificato di sicurezza per il sistema.
+
+Dopo aver modificato il certificato di sicurezza e riavviato il server Unified Manager, l'autenticazione SAML non funzionerà e gli utenti non saranno in grado di accedere all'interfaccia grafica di Unified Manager.  È necessario aggiornare le impostazioni di autenticazione SAML sia sul server IdP che sul server Unified Manager per riabilitare l'accesso all'interfaccia utente.
+
+.Passi
+. Accedi alla console di manutenzione.
+. Nel *Menu principale*, immettere il numero per l'opzione *Disabilita autenticazione SAML*.
++
+Viene visualizzato un messaggio per confermare che si desidera disabilitare l'autenticazione SAML e riavviare Unified Manager.
+
+. Avviare l'interfaccia utente di Unified Manager utilizzando l'FQDN o l'indirizzo IP aggiornato, accettare il certificato del server aggiornato nel browser ed effettuare l'accesso utilizzando le credenziali dell'utente addetto alla manutenzione.
+. Nella pagina *Configurazione/Autenticazione*, seleziona la scheda *Autenticazione SAML* e configura la connessione IdP.
+. Copiare l'URI dei metadati dell'host Unified Manager oppure salvare i metadati dell'host in un file di testo XML.
+. Fare clic su *Salva*.
++
+Viene visualizzata una finestra di messaggio per confermare che si desidera completare la configurazione e riavviare Unified Manager.
+
+. Fare clic su *Conferma e disconnetti* e Unified Manager verrà riavviato.
+. Accedi al tuo server IdP e inserisci l'URI e i metadati del server Unified Manager per completare la configurazione.
++
+[cols="2*"]
+|===
+| Fornitore di identità | Fasi di configurazione 
+
+
+ a| 
+ADFS
+ a| 
+.. Eliminare la voce di trust della relying party esistente nell'interfaccia utente grafica di gestione ADFS.
+.. Aggiungere una nuova voce di trust della parte affidabile utilizzando `saml_sp_metadata.xml` dal server Unified Manager aggiornato.
+.. Definire le tre regole di claim necessarie affinché Unified Manager analizzi le risposte SAML di ADFS per questa voce di trust della relying party.
+.. Riavviare il servizio ADFS di Windows.
+
+
+
+
+ a| 
+Shibboleth
+ a| 
+.. Aggiorna il nuovo FQDN del server Unified Manager in `attribute-filter.xml` E `relying-party.xml` file.
+.. Riavviare il server web Apache Tomcat e attendere che la porta 8005 torni online.
+
+
+|===
+. Accedi a Unified Manager e verifica che l'autenticazione SAML funzioni come previsto tramite il tuo IdP.
+

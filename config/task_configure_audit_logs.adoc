@@ -1,0 +1,24 @@
+---
+permalink: config/task_configure_audit_logs.html 
+sidebar: sidebar 
+keywords: configure, audit logs 
+summary: È possibile utilizzare il pulsante Configura nella sezione Registri di controllo per configurare la policy di rotazione per i file dei registri di controllo e anche per abilitare la registrazione remota per i registri di controllo. 
+---
+= Configurare i registri di controllo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare il pulsante *Configura* nella sezione Registri di controllo per configurare la policy di rotazione per i file dei registri di controllo e per abilitare anche la registrazione remota per i registri di controllo.
+
+È possibile impostare i valori in *DIMENSIONE MASSIMA FILE* e *GIORNI DI CONSERVAZIONE REGISTRO DI CONTROLLO* in base alla quantità e alla frequenza desiderate dei dati che si desidera archiviare nel sistema.  Il valore nel campo *DIMENSIONE TOTALE REGISTRO DI CONTROLLO* è la dimensione totale dei dati del registro di controllo presenti nel sistema.  La politica di rollover è determinata dai valori nei campi *GIORNI DI CONSERVAZIONE DEL REGISTRO DI CONTROLLO*, *DIMENSIONE MASSIMA DEL FILE* e *DIMENSIONE TOTALE DEL REGISTRO DI CONTROLLO*.  Quando la dimensione del backup del registro di controllo raggiunge il valore configurato in *DIMENSIONE TOTALE REGISTRO DI CONTROLLO*, il file archiviato per primo viene eliminato.  Ciò significa che il file più vecchio viene eliminato.  Tuttavia, la voce del file continua a essere disponibile nel database ed è contrassegnata come "`Eliminazione rollover`".  Il valore *GIORNI DI CONSERVAZIONE DEL REGISTRO DI CONTROLLO* indica il numero di giorni in cui vengono conservati i file del registro di controllo.  Tutti i file più vecchi del valore impostato in questo campo vengono riportati al valore precedente.
+
+.Passi
+. Fare clic su *Registri di controllo* > > *Configura*.
+. Immettere i valori in *DIMENSIONE MASSIMA DEL FILE*, *DIMENSIONE TOTALE DEL REGISTRO DI CONTROLLO* e *GIORNI DI CONSERVAZIONE DEL REGISTRO DI CONTROLLO*.
++
+Se si desidera abilitare la registrazione remota, è necessario selezionare *Abilita registrazione remota*.  /// 2025-6-11, OTHERDOC-133
+
+

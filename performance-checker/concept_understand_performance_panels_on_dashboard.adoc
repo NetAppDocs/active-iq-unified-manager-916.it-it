@@ -1,0 +1,42 @@
+---
+permalink: performance-checker/concept_understand_performance_panels_on_dashboard.html 
+sidebar: sidebar 
+keywords: understand, performance, panels, dashboard 
+summary: La dashboard di Unified Manager fornisce alcuni pannelli che mostrano lo stato delle prestazioni di alto livello per tutti i cluster monitorati nel tuo ambiente.  È possibile scegliere di visualizzare lo stato di tutti i cluster o di un singolo cluster. 
+---
+= Comprendere i pannelli delle prestazioni nella Dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La dashboard di Unified Manager fornisce alcuni pannelli che mostrano lo stato delle prestazioni di alto livello per tutti i cluster monitorati nel tuo ambiente.  È possibile scegliere di visualizzare lo stato di tutti i cluster o di un singolo cluster.
+
+Oltre a mostrare informazioni sulle prestazioni, la maggior parte dei pannelli mostra anche il numero di eventi attivi in quella categoria e il numero di nuovi eventi aggiunti nelle 24 ore precedenti.  Queste informazioni ti aiutano a decidere quali cluster potresti dover analizzare ulteriormente per risolvere gli eventi segnalati.  Facendo clic sugli eventi vengono visualizzati i primi eventi e viene fornito un collegamento alla pagina dell'inventario di Gestione eventi filtrata per visualizzare gli eventi in quella categoria.
+
+I pannelli seguenti forniscono informazioni sullo stato delle prestazioni.
+
+* *Pannello Capacità di prestazione*
++
+Quando si visualizzano tutti i cluster, questo pannello mostra il valore della capacità di prestazione per ciascun cluster (calcolato sulla media dell'ora precedente) e il numero di giorni necessari affinché la capacità di prestazione raggiunga il limite superiore (in base al tasso di crescita giornaliero).  Facendo clic sul grafico a barre si accede alla pagina dell'inventario dei nodi per quel cluster.  Si noti che la pagina Inventario nodi visualizza la capacità prestazionale media delle 72 ore precedenti, pertanto questo valore potrebbe non corrispondere al valore della Dashboard.
+
++
+Quando si visualizza un singolo cluster, questo pannello mostra la capacità delle prestazioni del cluster, gli IOPS totali e i valori di throughput totale.
+
+* *Pannello IOPS del carico di lavoro*
++
+Quando è abilitata la gestione attiva del carico di lavoro e quando si visualizza un singolo cluster, questo pannello mostra il numero totale di carichi di lavoro attualmente in esecuzione in un determinato intervallo di IOPS.
+
+* *Pannello Prestazioni del carico di lavoro*
++
+Quando la gestione attiva del carico di lavoro è abilitata, questo pannello visualizza il numero totale di carichi di lavoro conformi e non conformi assegnati a ciascun livello di servizio delle prestazioni definito.  Facendo clic su un grafico a barre si accede ai carichi di lavoro assegnati a tale criterio nella pagina Carichi di lavoro.
+
+* *Pannello Panoramica sull'utilizzo*
++
+Quando si visualizzano tutti i cluster, è possibile scegliere di visualizzarli ordinati in base al numero più elevato di IOPS o di throughput (MB/s).
+
++
+Quando si visualizza un singolo cluster, è possibile scegliere di visualizzare i carichi di lavoro su quel cluster ordinati in base al numero più elevato di IOPS o di throughput (MB/s).
+
+

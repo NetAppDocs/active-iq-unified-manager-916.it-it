@@ -1,0 +1,87 @@
+---
+permalink: events/concept_what_event_management_system_events_are.html 
+sidebar: sidebar 
+keywords: event management, system, 
+summary: 'L"Event Management System (EMS) raccoglie i dati degli eventi da diverse parti del kernel ONTAP e fornisce meccanismi di inoltro degli eventi.  Questi eventi ONTAP possono essere segnalati come eventi EMS in Unified Manager.  Il monitoraggio e la gestione centralizzati semplificano la configurazione degli eventi EMS critici e le notifiche di avviso basate su tali eventi EMS.' 
+---
+= Cosa sono gli eventi del sistema di gestione degli eventi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'Event Management System (EMS) raccoglie i dati degli eventi da diverse parti del kernel ONTAP e fornisce meccanismi di inoltro degli eventi.  Questi eventi ONTAP possono essere segnalati come eventi EMS in Unified Manager.  Il monitoraggio e la gestione centralizzati semplificano la configurazione degli eventi EMS critici e le notifiche di avviso basate su tali eventi EMS.
+
+L'indirizzo Unified Manager viene aggiunto come destinazione di notifica al cluster quando si aggiunge il cluster a Unified Manager.  Un evento EMS viene segnalato non appena si verifica un evento nel cluster.
+
+Esistono due metodi per ricevere eventi EMS in Unified Manager:
+
+* Un certo numero di eventi EMS importanti vengono segnalati automaticamente.
+* È possibile iscriversi per ricevere singoli eventi EMS.
+
+
+Gli eventi EMS generati da Unified Manager vengono segnalati in modo diverso a seconda del metodo con cui l'evento è stato generato:
+
+|===
+| Funzionalità | Messaggi EMS automatici | Messaggi EMS sottoscritti 
+
+
+ a| 
+Eventi EMS disponibili
+ a| 
+Sottoinsieme di eventi EMS
+ a| 
+Tutti gli eventi EMS
+
+
+
+ a| 
+Nome del messaggio EMS quando attivato
+ a| 
+Nome evento Unified Manager (convertito dal nome evento EMS)
+ a| 
+Non specifico nel formato "Errore EMS ricevuto".  Il messaggio dettagliato fornisce il formato di notazione a punti dell'evento EMS effettivo
+
+
+
+ a| 
+Messaggi ricevuti
+ a| 
+Non appena il cluster sarà scoperto
+ a| 
+Dopo aver aggiunto ogni evento EMS richiesto a Unified Manager e dopo il successivo ciclo di polling di 15 minuti
+
+
+
+ a| 
+Ciclo di vita dell'evento
+ a| 
+Uguale agli altri eventi di Unified Manager: stati Nuovo, Riconosciuto, Risolto e Obsoleto
+ a| 
+L'evento EMS diventa obsoleto dopo l'aggiornamento del cluster, ovvero dopo 15 minuti dalla creazione dell'evento.
+
+
+
+ a| 
+Cattura gli eventi durante i tempi di inattività di Unified Manager
+ a| 
+Sì, quando il sistema si avvia comunica con ciascun cluster per acquisire gli eventi mancanti
+ a| 
+NO
+
+
+
+ a| 
+Dettagli dell'evento
+ a| 
+Le azioni correttive suggerite vengono importate direttamente da ONTAP per fornire risoluzioni coerenti
+ a| 
+Azioni correttive non disponibili nella pagina Dettagli evento
+
+|===
+[NOTE]
+====
+Alcuni dei nuovi eventi EMS automatici sono eventi informativi che indicano che un evento precedente è stato risolto.  Ad esempio, l'evento informativo "Stato dello spazio dei costituenti FlexGroup OK" indica che l'evento di errore "Problemi di spazio nei costituenti FlexGroup " è stato risolto.  Gli eventi informativi non possono essere gestiti utilizzando lo stesso ciclo di vita degli altri tipi di gravità degli eventi; tuttavia, l'evento diventa automaticamente obsoleto se lo stesso volume riceve un altro evento di errore "`Problemi di spazio`".
+
+====

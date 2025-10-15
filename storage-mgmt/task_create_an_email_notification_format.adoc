@@ -1,0 +1,26 @@
+---
+permalink: storage-mgmt/task_create_an_email_notification_format.html 
+sidebar: sidebar 
+keywords: create, email, notification, format, user, group, quotas 
+summary: 'È possibile creare un formato di notifica per le e-mail inviate a un utente o a un gruppo di utenti quando si verifica un problema relativo alla quota (superamento del limite flessibile o raggiungimento del limite rigido).' 
+---
+= Creare un formato di notifica e-mail per le quote degli utenti e dei gruppi di utenti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un formato di notifica per le e-mail inviate a un utente o a un gruppo di utenti quando si verifica un problema relativo alla quota (superamento del limite flessibile o raggiungimento del limite rigido).
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Generale* > *Formato e-mail quota*.
+. Inserisci o modifica i dettagli nei campi *Da*, *Oggetto* e *Dettagli e-mail*.
+. Fare clic su *Anteprima* per visualizzare l'anteprima della notifica e-mail.
+. Fare clic su *Chiudi* per chiudere la finestra di anteprima.
+. Se necessario, modificare il contenuto della notifica e-mail.
+. Fare clic su *Salva*.
+

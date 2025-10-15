@@ -1,0 +1,42 @@
+---
+permalink: data-protection/task_quiesce_protection_relationship_from_volume_relationships.html 
+sidebar: sidebar 
+keywords: quiesce, protection, relationship, volume, relationships page 
+summary: 'Dalla pagina Relazioni volume è possibile disattivare una relazione di protezione per impedire temporaneamente il trasferimento dei dati.  È possibile disattivare una relazione quando si desidera creare una copia Snapshot di un volume di destinazione SnapMirror contenente un database e si desidera garantire che il suo contenuto sia stabile durante l"operazione di copia Snapshot.' 
+---
+= Disattiva una relazione di protezione dalla pagina Relazioni di volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dalla pagina Relazioni volume è possibile disattivare una relazione di protezione per impedire temporaneamente il trasferimento dei dati.  È possibile disattivare una relazione quando si desidera creare una copia Snapshot di un volume di destinazione SnapMirror contenente un database e si desidera garantire che il suo contenuto sia stabile durante l'operazione di copia Snapshot.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* È necessario aver configurato l'automazione del flusso di lavoro.
+
+
+L'azione di quiescenza non viene visualizzata nei seguenti casi:
+
+* Se le impostazioni RBAC non consentono questa azione; ad esempio, se si dispone solo di privilegi di operatore
+* Quando l'ID del volume è sconosciuto; ad esempio, quando si ha una relazione intercluster e il cluster di destinazione non è ancora stato scoperto
+* Quando non hai associato Workflow Automation e Unified Manager
+
+
+.Passi
+. Per sospendere i trasferimenti per una o più relazioni di protezione, dalla pagina *Relazioni volume*, selezionare uno o più volumi e, sulla barra degli strumenti, fare clic su *Sospendi*.
++
+Viene visualizzata la finestra di dialogo Quiesce.
+
+. Fare clic su *Continua*.
++
+Lo stato del processo di quiesce viene visualizzato nella parte superiore della pagina dei dettagli Volume/Integrità, insieme a un collegamento ai dettagli del processo.
+
+. Fare clic sul collegamento *Visualizza dettagli* per andare alla pagina dei dettagli del *Lavoro* per ulteriori dettagli e per conoscere lo stato di avanzamento del lavoro.
+. *Facoltativo:* fare clic sulla freccia *Indietro* del browser per tornare alla pagina *Relazioni di volume*.
++
+Il processo di quiesce termina quando tutte le attività sono state completate con successo.
+
+

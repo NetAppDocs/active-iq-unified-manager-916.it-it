@@ -1,0 +1,36 @@
+---
+permalink: data-protection/task_resolve_protection_job_failure.html 
+sidebar: sidebar 
+keywords: resolve, protection, job failure 
+summary: Questo flusso di lavoro fornisce un esempio di come è possibile identificare e risolvere un errore di un processo di protezione dalla dashboard di Unified Manager. 
+---
+= Risolvere un errore del processo di protezione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questo flusso di lavoro fornisce un esempio di come è possibile identificare e risolvere un errore di un processo di protezione dalla dashboard di Unified Manager.
+
+.Prima di iniziare
+Poiché alcune attività in questo flusso di lavoro richiedono l'accesso tramite il ruolo di Amministratore, è necessario avere familiarità con i ruoli richiesti per utilizzare varie funzionalità.
+
+In questo scenario, accedi alla pagina Dashboard per verificare se ci sono problemi con i tuoi processi di protezione.  Nell'area Incidente di protezione, si nota la presenza di un incidente Job terminato, che mostra un errore di errore di Job di protezione non riuscito su un volume.  Esamina questo errore per determinarne la possibile causa e la possibile soluzione.
+
+.Passi
+. Nel pannello Incidenti di protezione dell'area Incidenti e rischi irrisolti della dashboard, fare clic sull'evento *Processo di protezione non riuscito*.
++
+[TIP]
+====
+Il testo collegato all'evento è scritto nella forma `object_name:/object_name - Error Name` , ad esempio `cluster2_src_svm:/cluster2_src_vol2 - Protection Job Failed` .
+
+====
++
+Viene visualizzata la pagina dei dettagli dell'evento per il processo di protezione non riuscito.
+
+. Esaminare il messaggio di errore nel campo Causa dell'area *Riepilogo* per determinare il problema e valutare potenziali azioni correttive.
++
+Vederelink:task_identify_problem_for_failed_protection_job.html["Identificazione del problema ed esecuzione di azioni correttive per un lavoro di protezione non riuscito"] .
+
+

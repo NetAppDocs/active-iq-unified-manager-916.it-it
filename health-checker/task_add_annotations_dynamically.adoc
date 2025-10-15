@@ -1,0 +1,25 @@
+---
+permalink: health-checker/task_add_annotations_dynamically.html 
+sidebar: sidebar 
+keywords: add, annotations, dynamically 
+summary: 'Quando si creano annotazioni personalizzate, Unified Manager associa dinamicamente cluster, macchine virtuali di archiviazione (SVM) e volumi alle annotazioni utilizzando regole.  Queste regole assegnano automaticamente le annotazioni agli oggetti di archiviazione.' 
+---
+= Aggiungi annotazioni in modo dinamico
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si creano annotazioni personalizzate, Unified Manager associa dinamicamente cluster, macchine virtuali di archiviazione (SVM) e volumi alle annotazioni utilizzando regole.  Queste regole assegnano automaticamente le annotazioni agli oggetti di archiviazione.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Annotazioni*.
+. Nella pagina *Annotazioni*, fare clic su *Aggiungi annotazione*.
+. Nella finestra di dialogo *Aggiungi annotazione*, digitare un nome e una descrizione per l'annotazione.
+. Facoltativo: nella sezione *Valori annotazione*, fare clic su *Aggiungi* per aggiungere valori all'annotazione.
+. Fare clic su *Salva*.
+

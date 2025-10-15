@@ -1,0 +1,41 @@
+---
+permalink: data-protection/task_resume_scheduled_transfers_on_quiesced_relationship.html 
+sidebar: sidebar 
+keywords: resume, schedule, transfers, quiesce, relationship, volume relationships page 
+summary: Dopo aver sospeso una relazione per impedire che si verifichino trasferimenti pianificati, è possibile utilizzare Riprendi per riattivare i trasferimenti pianificati in modo che i dati sul volume di origine o primario siano protetti.  I trasferimenti riprendono da un checkpoint, se presente, al successivo intervallo di trasferimento programmato. 
+---
+= Riprendi i trasferimenti pianificati su una relazione sospesa dalla pagina Relazioni di volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver sospeso una relazione per impedire che si verifichino trasferimenti pianificati, è possibile utilizzare *Riprendi* per riattivare i trasferimenti pianificati in modo che i dati sul volume di origine o primario siano protetti.  I trasferimenti riprendono da un checkpoint, se presente, al successivo intervallo di trasferimento programmato.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* È necessario aver configurato l'automazione del flusso di lavoro.
+
+
+È possibile selezionare non più di 10 relazioni sospese su cui riprendere i trasferimenti.
+
+.Passi
+. Dalla pagina *Relazioni* del volume, seleziona uno o più volumi con relazioni inattive e, sulla barra degli strumenti, fai clic su *Riprendi*.
+. Nella finestra di dialogo *Riprendi*, fare clic su *Continua*.
++
+Verrai reindirizzato alla pagina Relazioni tra volumi.
+
+. Per visualizzare le attività lavorative correlate e monitorarne l'avanzamento, fare clic sul collegamento al lavoro visualizzato nella parte superiore della pagina *Relazioni di volume*.
+. Eseguire una delle seguenti operazioni:
++
+** Se viene visualizzato un solo processo, nella pagina Dettagli processo fare clic su *Aggiorna* per aggiornare l'elenco delle attività e i dettagli delle attività associati al processo di configurazione della protezione e per determinare quando il processo è completato.
+** Se viene visualizzato più di un lavoro,
++
+... Nella pagina Lavori, fai clic sul lavoro di cui desideri visualizzare i dettagli.
+... Nella pagina Dettagli attività, fare clic su *Aggiorna* per aggiornare l'elenco delle attività e i dettagli delle attività associati al processo di configurazione della protezione e per determinare quando il processo è completato.  Una volta completati i lavori, i trasferimenti di dati vengono ripresi al successivo intervallo di trasferimento pianificato.
+
+
+
+
+

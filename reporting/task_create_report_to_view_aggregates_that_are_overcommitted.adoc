@@ -1,0 +1,42 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_that_are_overcommitted.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, overcommitted 
+summary: 'È possibile creare un report per analizzare la capacità di archiviazione e l"utilizzo degli aggregati, nonché per visualizzare gli aggregati sovradimensionati.' 
+---
+= Crea un report per visualizzare gli aggregati sovraccaricati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un report per analizzare la capacità di archiviazione e l'utilizzo degli aggregati, nonché per visualizzare gli aggregati sovradimensionati.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+Per creare una vista personalizzata che mostri gli aggregati che superano la soglia di impegno eccessivo, attenersi alla seguente procedura, quindi pianificare la generazione di un report per tale vista.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Aggregati*.
+. Nel menu Visualizza, seleziona *Capacità* > *Tutti gli aggregati*.
+. Selezionare *Mostra/Nascondi* per rimuovere le colonne che non si desidera visualizzare nel report.
+. Trascinare la colonna "`Capacità sovraccaricata %`" vicino alla colonna "`Aggregato`".
+. Fare clic sull'icona del filtro, aggiungere i seguenti filtri e quindi fare clic su *Applica filtro*:
++
+** La capacità sovraccaricata % è maggiore del 100%
+
+
+. Fare clic sulla parte superiore della colonna "`Capacità sovraccaricata %`" per ordinare i risultati in base alla percentuale di capacità.
+. Salvare la vista con un nome specifico che rifletta ciò che la vista sta mostrando, ad esempio "`Aggregati sovracommissionati`", e fare clic sul segno di spunta (image:../media/blue_check.gif[""] ).
+. Fare clic sul pulsante *Rapporti pianificati* nella pagina dell'inventario.
+. Fare clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina Pianificazioni report, in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""] ) alla fine della riga.
++
+Il rapporto viene inviato immediatamente a scopo di verifica.  Successivamente, il report viene generato e inviato tramite e-mail ai destinatari elencati utilizzando la frequenza specificata.
+
+
+
+In base ai risultati mostrati nel report, potresti voler aggiungere ulteriore capacità agli aggregati o spostare alcuni dati da determinati aggregati.

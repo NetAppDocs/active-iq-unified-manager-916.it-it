@@ -1,0 +1,61 @@
+---
+permalink: events/task_acknowledge_and_resolve_events.html 
+sidebar: sidebar 
+keywords: acknowledge, resolve, events 
+summary: 'È opportuno riconoscere un evento prima di iniziare a lavorare sul problema che lo ha generato, in modo da non continuare a ricevere notifiche di avviso ripetute.  Dopo aver adottato misure correttive per un evento specifico, dovresti contrassegnare l"evento come risolto.' 
+---
+= Riconoscere e risolvere gli eventi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È opportuno riconoscere un evento prima di iniziare a lavorare sul problema che lo ha generato, in modo da non continuare a ricevere notifiche di avviso ripetute.  Dopo aver adottato misure correttive per un evento specifico, dovresti contrassegnare l'evento come risolto.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+È possibile riconoscere e risolvere più eventi contemporaneamente.
+
+[NOTE]
+====
+Non è possibile riconoscere gli eventi informativi.
+
+====
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione eventi*.
+. Dall'elenco degli eventi, eseguire le seguenti azioni per confermare gli eventi:
++
+|===
+| Se lo desidera... | Fai questo... 
+
+
+ a| 
+Riconosci e contrassegna un singolo evento come risolto
+ a| 
+.. Fare clic sul nome dell'evento.
+.. Nella pagina Dettagli evento, determina la causa dell'evento.
+.. Fare clic su *Riconosci*.
+.. Adottare misure correttive appropriate.
+.. Fare clic su *Segna come risolto*.
+
+
+
+
+ a| 
+Riconosci e contrassegna più eventi come risolti
+ a| 
+.. Determinare la causa degli eventi dalla rispettiva pagina dei dettagli dell'evento.
+.. Seleziona gli eventi.
+.. Fare clic su *Riconosci*.
+.. Adottare le misure correttive appropriate.
+.. Fare clic su *Segna come risolto*.
+
+
+|===
++
+Dopo che l'evento è stato contrassegnato come risolto, viene spostato nell'elenco degli eventi risolti.
+
+. *Facoltativo*: nell'area *Note e aggiornamenti*, aggiungi una nota su come hai affrontato l'evento, quindi fai clic su *Pubblica*.
+

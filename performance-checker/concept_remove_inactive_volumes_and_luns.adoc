@@ -1,0 +1,34 @@
+---
+permalink: performance-checker/concept_remove_inactive_volumes_and_luns.html 
+sidebar: sidebar 
+keywords: remove, inactive, volumes, luns 
+summary: 'Se lo spazio libero aggregato viene identificato come un problema, è possibile cercare volumi e LUN inutilizzati ed eliminarli dall"aggregato.  Ciò può contribuire ad alleviare il problema dello spazio su disco insufficiente.' 
+---
+= Rimuovere volumi e LUN inattivi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se lo spazio libero aggregato viene identificato come un problema, è possibile cercare volumi e LUN inutilizzati ed eliminarli dall'aggregato.  Ciò può contribuire ad alleviare il problema dello spazio su disco insufficiente.
+
+Se un evento di prestazioni su un aggregato è causato da spazio su disco insufficiente, esistono alcuni modi per determinare quali volumi e LUN non vengono più utilizzati.
+
+Per identificare i volumi non utilizzati:
+
+* Nella pagina Dettagli evento, il campo *Conteggio oggetti interessati* fornisce un collegamento che visualizza l'elenco dei volumi interessati.
++
+Fare clic sul collegamento per visualizzare i volumi nella vista Prestazioni: Tutti i volumi.  Da lì è possibile ordinare i volumi interessati in base a *IOPS* per vedere quali volumi non sono stati attivi.
+
+
+
+Per identificare i LUN non utilizzati:
+
+. Nella pagina Dettagli evento, annotare il nome dell'aggregato su cui si è verificato l'evento.
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *LUN* e selezionare *Prestazioni* > *Tutti i LUN* dal menu Visualizza.
+. Fare clic su *Filtro*, selezionare *Aggregato* dal menu a discesa a sinistra, digitare il nome dell'aggregato nel campo di testo, quindi fare clic su *Applica filtro*.
+. Ordinare l'elenco risultante delle LUN interessate in base a *IOPS* per visualizzare le LUN non attive.
+
+
+Dopo aver identificato i volumi e i LUN non utilizzati, è possibile utilizzare ONTAP System Manager o i comandi ONTAP per eliminare tali oggetti.

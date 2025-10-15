@@ -1,0 +1,44 @@
+---
+permalink: health-checker/task_configure_conditions_for_annotation_rules.html 
+sidebar: sidebar 
+keywords: unified manager, configure, conditions, annotation rules 
+summary: È possibile configurare una o più condizioni per creare regole di annotazione che Unified Manager applica agli oggetti di archiviazione.  Gli oggetti di archiviazione che soddisfano la regola di annotazione vengono annotati con il valore specificato nella regola. 
+---
+= Configurare le condizioni per le regole di annotazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare una o più condizioni per creare regole di annotazione che Unified Manager applica agli oggetti di archiviazione.  Gli oggetti di archiviazione che soddisfano la regola di annotazione vengono annotati con il valore specificato nella regola.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Annotazioni*.
+. Nella scheda *Regole di annotazione*, fare clic su *Aggiungi*.
+. Nella finestra di dialogo *Aggiungi regola di annotazione*, immettere un nome per la regola.
+. Selezionare un tipo di oggetto dall'elenco Tipo di oggetto di destinazione, quindi selezionare un nome e un valore di annotazione dall'elenco.
+. Nella sezione *Condizioni* della finestra di dialogo, seleziona un operando e un operatore dall'elenco e immetti un valore di condizione oppure fai clic su *Aggiungi condizione* per creare una nuova condizione.
+. Fare clic su *Salva e aggiungi*.
+
+
+
+
+== Esempio di configurazione di una condizione per una regola di annotazione
+
+Si consideri una condizione per il tipo di oggetto SVM, in cui il nome dell'oggetto contiene "`svm_data`".
+
+Per configurare la condizione, eseguire i seguenti passaggi nella finestra di dialogo Aggiungi regola di annotazione:
+
+.Passi
+. Inserisci un nome per la regola di annotazione.
+. Selezionare il tipo di oggetto di destinazione come SVM.
+. Selezionare un'annotazione dall'elenco delle annotazioni e un valore.
+. Nel campo *Condizioni*, selezionare *Nome oggetto* come operando.
+. Selezionare *Contiene* come operatore.
+. Inserisci il valore come `svm_data` .
+. Fare clic su *Aggiungi*.
+

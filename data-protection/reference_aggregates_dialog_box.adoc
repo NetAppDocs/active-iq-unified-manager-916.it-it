@@ -1,0 +1,160 @@
+---
+permalink: data-protection/reference_aggregates_dialog_box.html 
+sidebar: sidebar 
+keywords: aggregates, dialog box 
+summary: È possibile utilizzare la finestra di dialogo Aggregati per selezionare gli aggregati che si desidera aggiungere al pool di risorse. 
+---
+= Finestra di dialogo Aggregati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la finestra di dialogo Aggregati per selezionare gli aggregati che si desidera aggiungere al pool di risorse.
+
+
+
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti attività:
+
+* *Aggiungere*
++
+Aggiunge gli aggregati selezionati al pool di risorse.  Il pulsante Aggiungi non è abilitato finché non viene selezionato almeno un aggregato.
+
+* *Cancellare*
++
+Annulla le modifiche e chiude la finestra di dialogo Aggregati.
+
+
+
+
+
+== Elenco degli aggregati
+
+L'elenco Aggregati visualizza (in formato tabellare) i nomi e le proprietà degli aggregati monitorati.
+
+* *Stato*
++
+Visualizza lo stato corrente di un volume.  Lo stato può essere Critico (image:../media/sev_critical_um60.png[""] ), Errore (image:../media/sev_error_um60.png[""] ), Avvertimento (image:../media/sev_warning_um60.png[""] ), o Normale (image:../media/sev_normal_um60.png[""] ).
+
++
+È possibile spostare il puntatore sullo stato per visualizzare maggiori informazioni sull'evento o sugli eventi generati per il volume.
+
+* *Nome aggregato*
++
+Visualizza il nome dell'aggregato.
+
+* *Stato*
++
+Visualizza lo stato corrente dell'aggregato, che può essere uno dei seguenti:
+
++
+** Fuori linea
++
+L'accesso in lettura o scrittura non è consentito.
+
+** Limitato
++
+Sono consentite operazioni limitate (come la ricostruzione della parità), ma non è consentito l'accesso ai dati.
+
+** In linea
++
+È consentito l'accesso in lettura e scrittura ai volumi ospitati su questo aggregato.
+
+** Creazione
++
+L'aggregato è in fase di creazione.
+
+** Distruggendo
++
+L'aggregato viene distrutto.
+
+** Fallito
++
+L'aggregato non può essere messo online.
+
+** Congelato
++
+L'aggregato (temporaneamente) non sta elaborando le richieste.
+
+** Incoerente
++
+L'aggregato è stato contrassegnato come danneggiato; contattare l'assistenza tecnica.
+
+** Ferro limitato
++
+Gli strumenti diagnostici non possono essere eseguiti in modo aggregato.
+
+** Montaggio
++
+L'aggregato è in fase di montaggio.
+
+** Parziale
++
+È stato trovato almeno un disco per l'aggregato, ma ne mancano due o più.
+
+** Quiescenza
++
+L'aggregato è in fase di sospensione.
+
+** Quieced
++
+L'aggregato è inattivo.
+
+** Ripristinato
++
+Il ripristino di un aggregato è completato.
+
+** Smontato
++
+L'aggregato è offline.
+
+** Smontaggio
++
+L'aggregato verrà disattivato.
+
+** Sconosciuto
++
+L'aggregato è stato rilevato, ma le informazioni aggregate non sono ancora state recuperate dal server Unified Manager.
+
+
+
+* *Grappolo*
++
+Visualizza il nome del cluster su cui risiede l'aggregato.
+
+* *Nodo*
++
+Visualizza il nome del controller di archiviazione che contiene l'aggregato.
+
+* *Capacità totale*
++
+Visualizza la dimensione totale dei dati (in MB, GB e così via) dell'aggregato.  Per impostazione predefinita, questa colonna è nascosta.
+
+* *Capacità impegnata*
++
+Visualizza lo spazio totale (in MB, GB e così via) impegnato per tutti i volumi nell'aggregato.  Per impostazione predefinita, questa colonna è nascosta.
+
+* *Capacità utilizzata*
++
+Visualizza la quantità di spazio (in MB, GB e così via) utilizzata nell'aggregato.
+
+* *Capacità disponibile*
++
+Visualizza la quantità di spazio (in MB, GB e così via) disponibile per i dati aggregati.  Per impostazione predefinita, questa colonna è nascosta.
+
+* *Disponibile %*
++
+Visualizza la percentuale di spazio disponibile per i dati aggregati.  Per impostazione predefinita, questa colonna è nascosta.
+
+* *Usato %*
++
+Visualizza la percentuale di spazio utilizzata dai dati nell'aggregato.
+
+* *Tipo RAID*
++
+Visualizza il tipo RAID del volume selezionato.  Il tipo di RAID può essere RAID0, RAID4, RAID-DP, RAID-TEC o RAID misto.
+
+

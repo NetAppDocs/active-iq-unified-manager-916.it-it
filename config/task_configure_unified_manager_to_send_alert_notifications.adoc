@@ -1,0 +1,42 @@
+---
+permalink: config/task_configure_unified_manager_to_send_alert_notifications.html 
+sidebar: sidebar 
+keywords: configure, unified manager, send, alert, notifications 
+summary: 'È possibile configurare Unified Manager in modo che invii notifiche che avvisano l"utente degli eventi che si verificano nel proprio ambiente.  Prima di poter inviare le notifiche, è necessario configurare diverse altre opzioni di Unified Manager.' 
+---
+= Configurare Unified Manager per inviare notifiche di avviso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare Unified Manager in modo che invii notifiche che avvisano l'utente degli eventi che si verificano nel proprio ambiente.  Prima di poter inviare le notifiche, è necessario configurare diverse altre opzioni di Unified Manager.
+
+.Prima di iniziare
+È necessario disporre del ruolo di amministratore dell'applicazione.
+
+Dopo aver distribuito Unified Manager e completato la configurazione iniziale, dovresti prendere in considerazione la possibilità di configurare l'ambiente in modo da attivare avvisi e generare e-mail di notifica o trap SNMP in base alla ricezione di eventi.
+
+.Passi
+. link:task_configure_event_notification_settings.html["Configurare le impostazioni di notifica degli eventi"].
++
+Se si desidera che vengano inviate notifiche di avviso quando si verificano determinati eventi nel proprio ambiente, è necessario configurare un server SMTP e fornire un indirizzo e-mail da cui verrà inviata la notifica di avviso.  Se si desidera utilizzare trap SNMP, è possibile selezionare tale opzione e fornire le informazioni necessarie.
+
+. link:task_enable_remote_authentication.html["Abilita l'autenticazione remota"].
++
+Se si desidera che gli utenti LDAP o Active Directory remoti accedano all'istanza di Unified Manager e ricevano notifiche di avviso, è necessario abilitare l'autenticazione remota.
+
+. link:task_add_authentication_servers.html["Aggiungi server di autenticazione"].
++
+È possibile aggiungere server di autenticazione in modo che gli utenti remoti all'interno del server di autenticazione possano accedere a Unified Manager.
+
+. link:task_add_users.html["Aggiungi utenti"].
++
+È possibile aggiungere diversi tipi di utenti locali o remoti e assegnare ruoli specifici.  Quando si crea un avviso, si assegna un utente che riceverà le notifiche di avviso.
+
+. link:task_add_alerts.html["Aggiungi avvisi"].
++
+Dopo aver aggiunto l'indirizzo email per l'invio delle notifiche, aggiunto gli utenti che riceveranno le notifiche, configurato le impostazioni di rete e configurato le opzioni SMTP e SNMP necessarie per il tuo ambiente, puoi assegnare gli avvisi.
+
+

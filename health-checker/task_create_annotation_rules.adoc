@@ -1,0 +1,78 @@
+---
+permalink: health-checker/task_create_annotation_rules.html 
+sidebar: sidebar 
+keywords: create, annotation rules 
+summary: 'È possibile creare regole di annotazione che Unified Manager utilizza per annotare dinamicamente oggetti di archiviazione quali volumi, cluster o macchine virtuali di archiviazione (SVM).' 
+---
+= Crea regole di annotazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare regole di annotazione che Unified Manager utilizza per annotare dinamicamente oggetti di archiviazione quali volumi, cluster o macchine virtuali di archiviazione (SVM).
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Gli oggetti di archiviazione attualmente monitorati vengono annotati non appena viene creata la regola di annotazione.  I nuovi oggetti vengono annotati solo dopo il completamento del ciclo di monitoraggio.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Annotazioni*.
+. Nella scheda *Regole di annotazione*, fare clic su *Aggiungi*.
+. Nella finestra di dialogo *Aggiungi regola di annotazione*, specificare un nome per la regola di annotazione.
+. Nel campo *Tipo di oggetto di destinazione*, seleziona il tipo di oggetto di archiviazione che desideri annotare.
+. Nei campi *Applica annotazione*, seleziona l'annotazione e il valore dell'annotazione che desideri utilizzare.
+. Nella sezione Condizioni, eseguire l'azione appropriata per creare una condizione, un gruppo di condizioni o entrambi:
++
+[cols="2*"]
+|===
+| Per creare... | Fai questo... 
+
+
+ a| 
+Una condizione
+ a| 
+.. Selezionare un operando dall'elenco degli operandi.
+.. Selezionare *Contiene* o *È* come operatore.
+.. Inserisci un valore o selezionane uno dall'elenco disponibile.
+
+
+
+
+ a| 
+Un gruppo di condizioni
+ a| 
+.. Fare clic su *Aggiungi gruppo di condizioni*.
+.. Selezionare un operando dall'elenco degli operandi.
+.. Selezionare *Contiene* o *È* come operatore.
+.. Inserisci un valore o selezionane uno dall'elenco disponibile.
+.. Fare clic su *Aggiungi condizione* per creare altre condizioni, se necessario, e ripetere i passaggi da a a d per ciascuna condizione.
+
+
+|===
+. Fare clic su *Aggiungi*.
+
+
+
+
+== Esempio di creazione di una regola di annotazione
+
+Per creare una regola di annotazione, eseguire i seguenti passaggi nella finestra di dialogo Aggiungi regola di annotazione, inclusa la configurazione di una condizione e l'aggiunta di un gruppo di condizioni:
+
+.Passi
+. Specificare un nome per la regola di annotazione.
+. Selezionare il tipo di oggetto di destinazione come macchina virtuale di archiviazione (SVM).
+. Selezionare un'annotazione dall'elenco delle annotazioni e specificare un valore.
+. Nella sezione Condizioni, seleziona *Nome oggetto* come operando.
+. Selezionare *Contiene* come operatore.
+. Inserisci il valore come `svm_data` .
+. Fare clic su *Aggiungi gruppo di condizioni*.
+. Selezionare *Nome oggetto* come operando.
+. Selezionare *Contiene* come operatore.
+. Inserisci il valore come `vol` .
+. Fare clic su *Aggiungi condizione*.
+. Ripetere i passaggi da 8 a 10 selezionando *data-priority* come operando nel passaggio 8, *Is* come operatore nel passaggio 9 e *mission-critical* come valore nel passaggio 10.
+. Fare clic su *Aggiungi*.
+

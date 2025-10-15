@@ -1,0 +1,47 @@
+---
+permalink: health-checker/task_determine_if_volume_offline_condition_is_by_down_cluster_node.html 
+sidebar: sidebar 
+keywords: determine, volume, offline, host, node 
+summary: 'È possibile utilizzare l"interfaccia utente Web di Unified Manager per confermare o escludere la possibilità che un volume sia offline perché il suo nodo host è inattivo e che il failover dello storage sul suo partner di coppia HA non sia riuscito.' 
+---
+= Determina se un volume è offline perché il suo nodo host è inattivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare l'interfaccia utente Web di Unified Manager per confermare o escludere la possibilità che un volume sia offline perché il suo nodo host è inattivo e che il failover dello storage sul suo partner di coppia HA non sia riuscito.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Per determinare se la condizione di volume offline è causata da un errore del nodo di hosting e dal successivo failover di archiviazione non riuscito, eseguire le seguenti azioni:
+
+.Passi
+. Individuare e fare clic sul collegamento ipertestuale visualizzato sotto SVM nel riquadro *Dispositivi correlati* della pagina dei dettagli *Volume / Integrità* del volume offline.
++
+La pagina Dettagli VM di archiviazione/Stato visualizza informazioni sulla macchina virtuale di archiviazione (SVM) che ospita il volume offline.
+
+. Nel riquadro *Dispositivi correlati* della pagina dei dettagli *VM di archiviazione/integrità*, individuare e fare clic sul collegamento ipertestuale visualizzato in Volumi.
++
+La vista Integrità: Tutti i volumi mostra una tabella di informazioni su tutti i volumi ospitati dall'SVM.
+
+. Nell'intestazione della colonna Stato della vista *Salute: Tutti i volumi*, fare clic sul simbolo del filtroimage:../media/filtericon_um60.png["Icona per il filtro della colonna"] , quindi seleziona l'opzione *Offline*.
++
+Vengono elencati solo i volumi SVM che sono offline.
+
+. Nella vista Salute: Tutti i volumi, fare clic sul simbolo della grigliaimage:../media/gridviewicon.gif["Icona per la visualizzazione griglia"] e quindi selezionare l'opzione *Nodi cluster*.
++
+Potrebbe essere necessario scorrere la casella di selezione della griglia per individuare l'opzione *Nodi cluster*.
+
++
+La colonna Nodi cluster viene aggiunta all'inventario dei volumi e visualizza il nome del nodo che ospita ciascun volume offline.
+
+. Nella vista *Integrità: Tutti i volumi*, individuare l'elenco del volume offline e, nella colonna Nodo cluster, fare clic sul nome del nodo di hosting.
++
+La scheda Nodi nella pagina Dettagli Cluster/Stato visualizza lo stato della coppia di nodi HA a cui appartiene il nodo di hosting.  Lo stato del nodo di hosting e il successo di qualsiasi operazione di failover del cluster vengono indicati nel display.
+
+
+
+Dopo aver confermato che la condizione di volume offline esiste perché il suo nodo host è inattivo e il failover dell'archiviazione sul partner della coppia HA non è riuscito, contattare l'amministratore o l'operatore appropriato per riavviare manualmente il nodo inattivo e risolvere il problema di failover dell'archiviazione.

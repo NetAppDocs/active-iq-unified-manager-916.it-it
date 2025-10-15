@@ -1,0 +1,43 @@
+---
+permalink: api-automation/concept_events_workflows.html 
+sidebar: sidebar 
+keywords: determine, issues, storage, objects, events 
+summary: Quando un oggetto di archiviazione nel tuo data center supera una soglia, ricevi una notifica relativa a tale evento.  Utilizzando questa notifica, puoi analizzare il problema e adottare misure correttive tramite le API degli eventi. 
+---
+= Determinare i problemi negli oggetti di archiviazione utilizzando le API degli eventi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando un oggetto di archiviazione nel tuo data center supera una soglia, ricevi una notifica relativa a tale evento.  Utilizzando questa notifica, è possibile analizzare il problema e adottare misure correttive utilizzando `events` API.
+
+Questo flusso di lavoro prende come esempio un volume come oggetto risorsa.  Puoi usare il `events` API per recuperare l'elenco degli eventi correlati a un volume, analizzare i problemi critici per quel volume e quindi intraprendere azioni correttive per risolvere il problema.
+
+image::../media/handling_event_related_issues_of_a_storage_object_flowchart.gif[gestione dei problemi relativi agli eventi di un diagramma di flusso di un oggetto di archiviazione]
+
+Seguire questi passaggi per individuare i problemi nel volume prima di adottare misure correttive.
+
+.Passi
+. Analizza le notifiche degli eventi critici Active IQ Unified Manager per i volumi nel tuo data center.
+. Interrogare tutti gli eventi per i volumi utilizzando i seguenti parametri nell'API /management-server/events:
+`"*resource_type": "volume*"`
+`"*severity": "critical*"`
++
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Sentiero 
+
+
+ a| 
+server di gestione
+ a| 
+OTTENERE
+ a| 
+/server-di-gestione/eventi
+
+|===
+. Visualizza l'output e analizza i problemi nei volumi specifici.
+. Eseguire le azioni necessarie utilizzando le API REST di Unified Manager o l'interfaccia utente Web per risolvere i problemi.
+

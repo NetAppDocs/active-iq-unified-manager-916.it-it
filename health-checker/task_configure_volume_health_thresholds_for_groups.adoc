@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_configure_volume_health_thresholds_for_groups.html 
+sidebar: sidebar 
+keywords: configure, volume, health, thresholds, groups 
+summary: È possibile configurare soglie di integrità del volume a livello di gruppo per capacità, copie snapshot, quote qtree, crescita e inode. 
+---
+= Configurare le soglie di integrità del volume per i gruppi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare soglie di integrità del volume a livello di gruppo per capacità, copie snapshot, quote qtree, crescita e inode.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Il tipo di azione di gruppo soglia di integrità del volume viene applicato solo ai volumi di un gruppo.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Gruppi*.
+. Nella scheda *Azioni di gruppo*, fare clic su *Aggiungi*.
+. Inserisci un nome e una descrizione per l'azione di gruppo.
+. Dalla casella a discesa *Gruppo*, seleziona un gruppo per il quale desideri configurare l'azione di gruppo.
+. Selezionare *Tipo di azione* come soglia di integrità del volume.
+. Seleziona la categoria per la quale desideri impostare la soglia.
+. Immettere i valori richiesti per la soglia di integrità.
+. Fare clic su *Aggiungi*.
+

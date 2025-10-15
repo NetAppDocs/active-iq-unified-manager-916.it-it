@@ -1,0 +1,14 @@
+---
+permalink: health-checker/concept_understand_groups.html 
+sidebar: sidebar 
+keywords: understand, groups 
+summary: È possibile creare gruppi in Unified Manager per gestire gli oggetti di archiviazione.  Comprendere i concetti sui gruppi e il modo in cui le regole di gruppo consentono di aggiungere oggetti di archiviazione a un gruppo ti aiuterà a gestire gli oggetti di archiviazione nel tuo ambiente. 
+---
+= Comprendere i gruppi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare gruppi in Unified Manager per gestire gli oggetti di archiviazione.  Comprendere i concetti sui gruppi e il modo in cui le regole di gruppo consentono di aggiungere oggetti di archiviazione a un gruppo ti aiuterà a gestire gli oggetti di archiviazione nel tuo ambiente.

@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/task_select_predefined_time_range.html 
+sidebar: sidebar 
+keywords: select, predefined, time, range 
+summary: 'La selezione di un intervallo di tempo predefinito è un modo rapido ed efficiente per personalizzare e focalizzare l"output dei dati quando si visualizzano i dati sulle prestazioni degli oggetti cluster.  Selezionando un intervallo di tempo predefinito, sono disponibili dati fino a 13 mesi.' 
+---
+= Seleziona un intervallo di tempo predefinito
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La selezione di un intervallo di tempo predefinito è un modo rapido ed efficiente per personalizzare e focalizzare l'output dei dati quando si visualizzano i dati sulle prestazioni degli oggetti cluster.  Selezionando un intervallo di tempo predefinito, sono disponibili dati fino a 13 mesi.
+
+.Passi
+. In alto a destra della pagina *Performance Explorer*, fare clic su *Intervallo di tempo*.
+. Dal lato destro del pannello *Selezione intervallo di tempo*, seleziona un intervallo di tempo predefinito.
+. Fare clic su *Applica intervallo*.
+

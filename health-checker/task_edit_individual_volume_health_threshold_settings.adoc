@@ -1,0 +1,37 @@
+---
+permalink: health-checker/task_edit_individual_volume_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: edit, individual, volume, health, threshold, settings 
+summary: 'È possibile modificare le impostazioni della soglia di integrità per la capacità del volume, la crescita, la quota e lo spazio riservato di uno o più volumi.  Quando viene superata una soglia, vengono generati degli avvisi e si ricevono delle notifiche.  Queste notifiche ti aiutano ad adottare misure preventive in base all"evento generato.' 
+---
+= Modifica le impostazioni della soglia di integrità del volume individuale
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare le impostazioni della soglia di integrità per la capacità del volume, la crescita, la quota e lo spazio riservato di uno o più volumi.  Quando viene superata una soglia, vengono generati degli avvisi e si ricevono delle notifiche.  Queste notifiche ti aiutano ad adottare misure preventive in base all'evento generato.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+In base alle modifiche ai valori soglia, gli eventi vengono generati o resi obsoleti nel ciclo di monitoraggio successivo.
+
+Si noti che quando Autogrow è abilitato su un volume, le soglie di capacità vengono considerate superate in base alla dimensione massima del volume impostata da Autogrow, non in base alla dimensione del volume originale.
+
+[NOTE]
+====
+Il valore predefinito di 1000 copie Snapshot è applicabile solo ai volumi FlexVol quando la versione ONTAP è 9.4 o successiva e ai volumi FlexGroup quando la versione ONTAP è 9.8 o successiva.  Per i cluster installati con versioni precedenti del software ONTAP , il numero massimo è 250 copie Snapshot per volume.  Per queste versioni precedenti, Unified Manager interpreta questo numero 1000 (e qualsiasi numero compreso tra 1000 e 250) come 250; ciò significa che continuerai a ricevere eventi quando il numero di copie Snapshot raggiunge 250.  Se si desidera impostare questa soglia su un valore inferiore a 250 per queste versioni precedenti, è necessario impostarla su un valore pari o inferiore a 250 qui, nella vista Integrità: Tutti i volumi o nella pagina dei dettagli Volume/Integrità.
+
+====
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Volumi*.
+. Nella vista *Integrità: Tutti i volumi*, seleziona uno o più volumi e poi fai clic su *Modifica soglie*.
+. Nella finestra di dialogo *Modifica soglie volume*, modificare le impostazioni di soglia di uno dei seguenti elementi: capacità, copie snapshot, quota qtree, crescita o inode selezionando la casella di controllo appropriata e quindi modificando le impostazioni.
+. Fare clic su *Salva*.
+
+
+*Informazioni correlate*
+
+link:../config/task_add_users.html["Aggiunta di utenti"]

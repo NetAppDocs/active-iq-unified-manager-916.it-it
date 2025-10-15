@@ -1,0 +1,52 @@
+---
+permalink: events/concept_event_state_definitions.html 
+sidebar: sidebar 
+keywords: event, state, definitions 
+summary: 'Lo stato di un evento aiuta a stabilire se è necessaria un"azione correttiva appropriata.  Un evento può essere Nuovo, Riconosciuto, Risolto o Obsoleto.  Si noti che sia gli eventi Nuovi che quelli Riconosciuti sono considerati eventi attivi.' 
+---
+= Definizioni dello stato dell'evento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lo stato di un evento aiuta a stabilire se è necessaria un'azione correttiva appropriata.  Un evento può essere Nuovo, Riconosciuto, Risolto o Obsoleto.  Si noti che sia gli eventi Nuovi che quelli Riconosciuti sono considerati eventi attivi.
+
+Gli stati dell'evento sono i seguenti:
+
+* *Nuovo*
++
+Lo stato di un nuovo evento.
+
+* *Riconosciuto*
++
+Lo stato di un evento quando lo hai riconosciuto.
+
+* *Risolto*
++
+Lo stato di un evento quando viene contrassegnato come risolto.
+
+* *Obsoleto*
++
+Lo stato di un evento quando viene corretto automaticamente o quando la causa dell'evento non è più valida.
+
++
+[NOTE]
+====
+Non è possibile riconoscere o risolvere un evento obsoleto.
+
+====
+
+
+
+
+== Esempio di diversi stati di un evento
+
+Gli esempi seguenti illustrano le modifiche di stato degli eventi manuali e automatici.
+
+Quando viene attivato l'evento Cluster non raggiungibile, lo stato dell'evento è Nuovo.  Quando si riconosce l'evento, lo stato dell'evento cambia in Riconosciuto.  Dopo aver adottato un'azione correttiva appropriata, è necessario contrassegnare l'evento come risolto.  Lo stato dell'evento cambia quindi in Risolto.
+
+Se l'evento Cluster non raggiungibile viene generato a causa di un'interruzione di corrente, quando l'alimentazione viene ripristinata il cluster inizia a funzionare senza alcun intervento dell'amministratore.  Pertanto, l'evento Cluster non raggiungibile non è più valido e lo stato dell'evento cambia in Obsoleto nel ciclo di monitoraggio successivo.
+
+Unified Manager invia un avviso quando un evento è nello stato Obsoleto o Risolto.  L'oggetto e il contenuto dell'e-mail di un avviso forniscono informazioni sullo stato dell'evento.  Una trap SNMP include anche informazioni sullo stato dell'evento.

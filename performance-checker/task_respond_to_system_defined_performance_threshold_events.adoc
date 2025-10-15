@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/task_respond_to_system_defined_performance_threshold_events.html 
+sidebar: sidebar 
+keywords: system-defined, performance, threshold, events 
+summary: 'È possibile utilizzare Unified Manager per analizzare gli eventi relativi alle prestazioni causati dal superamento di una soglia di avviso definita dal sistema da parte di un contatore delle prestazioni.  È anche possibile utilizzare Unified Manager per verificare lo stato del componente del cluster e verificare se gli eventi recenti rilevati sul componente hanno contribuito all"evento relativo alle prestazioni.' 
+---
+= Rispondere agli eventi di soglia delle prestazioni definiti dal sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare Unified Manager per analizzare gli eventi relativi alle prestazioni causati dal superamento di una soglia di avviso definita dal sistema da parte di un contatore delle prestazioni.  È anche possibile utilizzare Unified Manager per verificare lo stato del componente del cluster e verificare se gli eventi recenti rilevati sul componente hanno contribuito all'evento relativo alle prestazioni.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* Devono esserci eventi di performance nuovi o obsoleti.
+
+
+.Passi
+. Visualizza la pagina *Dettagli evento* per visualizzare le informazioni sull'evento.
+. Esaminare la *Descrizione*, che descrive la violazione della soglia che ha causato l'evento.
++
+Ad esempio, il messaggio "`Un valore di utilizzo del nodo del 90% ha attivato un evento di AVVISO in base all'impostazione della soglia dell'85%`" indica che si è verificato un evento di avviso di utilizzo del nodo per l'oggetto cluster.
+
+. Prendi nota dell'*Ora di attivazione dell'evento* in modo da poter verificare se altri eventi potrebbero essersi verificati contemporaneamente e aver contribuito a questo evento.
+. In *Diagnosi di sistema*, rivedere la breve descrizione del tipo di analisi che la policy definita dal sistema sta eseguendo sull'oggetto cluster.
++
+Per alcuni eventi, accanto alla diagnosi viene visualizzata un'icona verde o rossa per indicare se è stato rilevato un problema in quella particolare diagnosi.  Per altri tipi di eventi definiti dal sistema, i grafici dei contatori mostrano le prestazioni dell'oggetto.
+
+. In *Azioni suggerite*, fai clic sul collegamento *Aiutami a fare questo* per visualizzare le azioni suggerite che puoi eseguire per provare a risolvere autonomamente l'evento di prestazione.
+

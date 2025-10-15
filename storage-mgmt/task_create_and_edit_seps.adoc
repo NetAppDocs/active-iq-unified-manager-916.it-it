@@ -1,0 +1,58 @@
+---
+permalink: storage-mgmt/task_create_and_edit_seps.html 
+sidebar: sidebar 
+keywords: create, edit, storage, efficiency, policies 
+summary: 'Quando i criteri di efficienza dell"archiviazione definiti dal sistema non corrispondono ai requisiti del carico di lavoro, è possibile creare criteri di efficienza dell"archiviazione personalizzati, ottimizzati per i carichi di lavoro.' 
+---
+= Creare e modificare i criteri di efficienza dell'archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando i criteri di efficienza dell'archiviazione definiti dal sistema non corrispondono ai requisiti del carico di lavoro, è possibile creare criteri di efficienza dell'archiviazione personalizzati, ottimizzati per i carichi di lavoro.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di amministratore dell'applicazione.
+* Il nome del criterio di efficienza dell'archiviazione deve essere univoco e non è possibile utilizzare le seguenti parole chiave riservate:
++
+`High`, `Low` , `Unassigned` , `Learning` , `Idle` , `Default` , E `None` .
+
+
+
+È possibile creare e modificare criteri di efficienza di archiviazione personalizzati dalla pagina Criteri di efficienza di archiviazione definendo le caratteristiche di efficienza di archiviazione richieste per le applicazioni che accederanno all'archiviazione.
+
+[NOTE]
+====
+Non è possibile modificare un criterio di efficienza di archiviazione se è attualmente assegnato a un carico di lavoro.
+
+====
+.Passi
+. Nel riquadro di navigazione a sinistra, in *Impostazioni*, seleziona *Criteri* > *Efficienza di archiviazione*.
+. Nella pagina *Criteri di efficienza di archiviazione*, fare clic sul pulsante appropriato a seconda che si desideri creare un nuovo criterio di efficienza di archiviazione o modificarne uno esistente.
++
+|===
+| A... | Segui questi passaggi... 
+
+
+ a| 
+Crea una nuova politica di efficienza di archiviazione
+ a| 
+Fai clic su *Aggiungi*
+
+
+
+ a| 
+Modifica una politica di efficienza di archiviazione esistente
+ a| 
+Seleziona un criterio di efficienza di archiviazione esistente e fai clic su *Modifica*
+
+|===
++
+Viene visualizzata la pagina per aggiungere o modificare un criterio di efficienza di archiviazione.
+
+. Personalizzare la politica di efficienza di archiviazione specificando le caratteristiche di efficienza di archiviazione, quindi fare clic su *Invia* per salvare la politica di efficienza di archiviazione.
+
+
+È possibile applicare la nuova o modificata Storage Efficiency Policy ai carichi di lavoro (LUN, condivisioni file NFS, condivisioni CIFS) dalla pagina Carichi di lavoro o durante il provisioning di un nuovo carico di lavoro.

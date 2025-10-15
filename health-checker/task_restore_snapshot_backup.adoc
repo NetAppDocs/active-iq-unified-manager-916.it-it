@@ -1,0 +1,46 @@
+---
+permalink: health-checker/task_restore_snapshot_backup.html 
+sidebar: sidebar 
+keywords: restore, unified manager, snapshot copy, copies, 
+summary: In caso di perdita o danneggiamento dei dati, è possibile ripristinare Unified Manager allo stato stabile precedente con una perdita minima di dati.  È possibile ripristinare il database Unified Manager Snapshot su un sistema operativo locale o remoto utilizzando la console di manutenzione di Unified Manager. 
+---
+= Ripristina Unified Manager utilizzando copie Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In caso di perdita o danneggiamento dei dati, è possibile ripristinare Unified Manager allo stato stabile precedente con una perdita minima di dati.  È possibile ripristinare il database Unified Manager Snapshot su un sistema operativo locale o remoto utilizzando la console di manutenzione di Unified Manager.
+
+.Prima di iniziare
+* È necessario disporre delle credenziali utente root per l'host Linux e dei privilegi amministrativi per la macchina host Windows su cui è installato Unified Manager.
+* Per accedere alla console di manutenzione del server Unified Manager è necessario disporre di un ID utente e di una password autorizzati.
+
+
+La funzionalità di ripristino è specifica della piattaforma e della versione.  È possibile ripristinare un backup di Unified Manager solo sulla stessa versione di Unified Manager.
+
+.Passi
+. Connettersi all'indirizzo IP o al nome di dominio completo del sistema Unified Manager.
++
+** Linux: Shell sicura
+** Windows: Power Shell
+
+
+. Accedi al sistema con le credenziali dell'utente root.
+. Inserisci il comando `maintenance_console` e premere Invio.
+. Nel *Menu principale* della console di manutenzione, immettere 4 per l'opzione *Backup e ripristino*.
+. Immettere 2 per selezionare *Backup e ripristino tramite NetApp Snapshot*.
++
+Se si esegue un ripristino su un nuovo server, dopo aver installato Unified Manager non avviare l'interfaccia utente né configurare cluster, utenti o impostazioni di autenticazione al termine dell'installazione.  Immettere 1 per selezionare *Configura NetApp Snapshot Backup* e configurare le impostazioni per le copie Snapshot così come sono sul sistema originale.
+
+. Immettere 3 per selezionare *Ripristina tramite NetApp Snapshot*.
+. Selezionare la copia Snapshot da cui si desidera ripristinare Unified Manager.  Premere *Invio*.
+. Una volta completato il processo di ripristino, accedi all'interfaccia utente di Unified Manager.
+
+
+Dopo aver ripristinato il backup, se il server Workflow Automation non funziona, procedere come segue:
+
+. Sul server Workflow Automation, modificare l'indirizzo IP del server Unified Manager in modo che punti alla macchina più recente.
+. Sul server Unified Manager, reimpostare la password del database se l'acquisizione non riesce nel passaggio 1.
+

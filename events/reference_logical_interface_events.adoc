@@ -1,0 +1,157 @@
+---
+permalink: events/reference_logical_interface_events.html 
+sidebar: sidebar 
+keywords: 'network, interface, (lif) events, impact area, availability, configuration, performance' 
+summary: 'Gli eventi dell"interfaccia di rete forniscono informazioni sullo stato dell"interfaccia di rete (LIF), in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all"area di impatto e includono il nome dell"evento e della trappola, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi dell'interfaccia di rete (LIF)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi dell'interfaccia di rete forniscono informazioni sullo stato dell'interfaccia di rete (LIF), in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all'area di impatto e includono il nome dell'evento e della trappola, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Stato dell'interfaccia di rete inattivo (ocumEvtLifStatusDown)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Errore
+
+
+
+ a| 
+Stato dell'interfaccia di rete FC/FCoE inattivo (ocumEvtFCLifStatusDown)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Errore
+
+
+
+ a| 
+Failover dell'interfaccia di rete non possibile (ocumEvtLifFailoverNotPossible)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Avvertimento
+
+
+
+ a| 
+Porta dell'interfaccia di rete non presente a casa (ocumEvtLifNotAtHomePort)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Avvertimento
+
+|===
+
+
+== Area di impatto: configurazione
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Percorso dell'interfaccia di rete non configurato (non applicabile)
+ a| 
+Evento
+ a| 
+Interfaccia
+ a| 
+Informazioni
+
+|===
+
+
+== Area di impatto: prestazioni
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Soglia critica MB/s dell'interfaccia di rete violata (ocumNetworkLifMbpsIncident)
+ a| 
+Incidente
+ a| 
+Interfaccia
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso MB/s dell'interfaccia di rete violata (ocumNetworkLifMbpsWarning)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica MB/s dell'interfaccia di rete FC violata (ocumFcpLifMbpsIncident)
+ a| 
+Incidente
+ a| 
+Interfaccia
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso MB/s dell'interfaccia di rete FC violata (ocumFcpLifMbpsWarning)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica MB/s dell'interfaccia di rete NVMf FC violata (ocumNvmfFcLifMbpsIncident)
+ a| 
+Incidente
+ a| 
+Interfaccia
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso MB/s dell'interfaccia di rete NVMf FC violata (ocumNvmfFcLifMbpsWarning)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Avvertimento
+
+|===

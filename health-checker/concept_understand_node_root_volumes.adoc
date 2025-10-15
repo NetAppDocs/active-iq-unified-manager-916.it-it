@@ -1,0 +1,19 @@
+---
+permalink: health-checker/concept_understand_node_root_volumes.html 
+sidebar: sidebar 
+keywords: understand, node, root, volumes 
+summary: È possibile monitorare il volume radice del nodo utilizzando Unified Manager.  La prassi migliore è che il volume radice del nodo abbia una capacità sufficiente per impedire il blocco del nodo. 
+---
+= Comprendere i volumi radice del nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile monitorare il volume radice del nodo utilizzando Unified Manager.  La prassi migliore è che il volume radice del nodo abbia una capacità sufficiente per impedire il blocco del nodo.
+
+Quando la capacità utilizzata del volume radice del nodo supera l'80 percento della capacità totale del volume radice del nodo, viene generato l'evento Spazio volume radice del nodo quasi pieno.  È possibile configurare un avviso per l'evento per ricevere una notifica.  È possibile adottare misure appropriate per impedire che il nodo si interrompa utilizzando ONTAP System Manager o ONTAP CLI.
+
+
+NOTE: La funzionalità di monitoraggio dei volumi radice dei nodi non è disponibile se i cluster eseguono ONTAP versione 9.14.1 o successiva.

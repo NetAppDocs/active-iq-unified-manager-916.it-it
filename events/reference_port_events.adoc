@@ -1,0 +1,128 @@
+---
+permalink: events/reference_port_events.html 
+sidebar: sidebar 
+keywords: port, events, impact area, availability, performance 
+summary: Gli eventi delle porte forniscono informazioni sullo stato delle porte del cluster, in modo da poter monitorare modifiche o problemi sulla porta, ad esempio se la porta è inattiva. 
+---
+= Eventi portuali
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi delle porte forniscono informazioni sullo stato delle porte del cluster, in modo da poter monitorare modifiche o problemi sulla porta, ad esempio se la porta è inattiva.
+
+
+
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Stato della porta inattivo (ocumEvtPortStatusDown)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Critico
+
+|===
+
+
+== Area di impatto: prestazioni
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Soglia critica MB/s della porta di rete violata (ocumNetworkPortMbpsIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso MB/s della porta di rete violata (ocumNetworkPortMbpsWarning)
+ a| 
+Rischio
+ a| 
+Porta
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica MB/s della porta FCP violata (ocumFcpPortMbpsIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso MB/s della porta FCP violata (ocumFcpPortMbpsWarning)
+ a| 
+Rischio
+ a| 
+Porta
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica di utilizzo della porta di rete violata (ocumNetworkPortUtilizationIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso per l'utilizzo della porta di rete violata (ocumNetworkPortUtilizationWarning)
+ a| 
+Rischio
+ a| 
+Porta
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica di utilizzo della porta FCP violata (ocumFcpPortUtilizationIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso di utilizzo della porta FCP violata (ocumFcpPortUtilizationWarning)
+ a| 
+Rischio
+ a| 
+Porta
+ a| 
+Avvertimento
+
+|===

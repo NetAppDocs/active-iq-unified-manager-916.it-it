@@ -1,0 +1,21 @@
+---
+permalink: health-checker/concept_understand_capacity_events_and_thresholds_for_node.html 
+sidebar: sidebar 
+keywords: understand, events, thresholds, node, root, aggregates 
+summary: 'È possibile monitorare l"aggregato radice del nodo utilizzando Unified Manager.  La procedura migliore è quella di effettuare un provisioning approfondito del volume radice nell"aggregato radice per impedire l"arresto del nodo.' 
+---
+= Comprendere gli eventi e le soglie per gli aggregati radice del nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile monitorare l'aggregato radice del nodo utilizzando Unified Manager.  La procedura migliore è quella di effettuare un provisioning approfondito del volume radice nell'aggregato radice per impedire l'arresto del nodo.
+
+Per impostazione predefinita, gli eventi di capacità e prestazioni non vengono generati per gli aggregati radice.  Inoltre, i valori soglia utilizzati da Unified Manager non sono applicabili agli aggregati radice del nodo.  Solo un rappresentante del supporto tecnico può modificare le impostazioni per la generazione di questi eventi.  Quando le impostazioni vengono modificate dal rappresentante del supporto tecnico, i valori di soglia della capacità vengono applicati all'aggregato radice del nodo.
+
+È possibile adottare misure appropriate per impedire l'arresto del nodo utilizzando ONTAP System Manager o ONTAP CLI.
+
+
+NOTE: La funzionalità di monitoraggio degli aggregati radice dei nodi non è disponibile se i cluster eseguono ONTAP versione 9.14.1 o successiva.

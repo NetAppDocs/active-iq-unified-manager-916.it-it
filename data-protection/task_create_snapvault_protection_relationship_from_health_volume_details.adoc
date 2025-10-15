@@ -1,0 +1,48 @@
+---
+permalink: data-protection/task_create_snapvault_protection_relationship_from_health_volume_details.html 
+sidebar: sidebar 
+keywords: create, snapvault, protection, relationship, volume, health details page 
+summary: È possibile creare una relazione SnapVault utilizzando la pagina Dettagli volume/integrità in modo che i backup dei dati siano abilitati per scopi di protezione sui volumi. 
+---
+= Crea una relazione di protezione SnapVault dalla pagina dei dettagli Volume/Stato
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare una relazione SnapVault utilizzando la pagina Dettagli volume/integrità in modo che i backup dei dati siano abilitati per scopi di protezione sui volumi.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* Per eseguire questa attività è necessario aver configurato Workflow Automation.
+
+
+Il menu *Proteggi* non viene visualizzato nei seguenti casi:
+
+* Se le impostazioni RBAC non consentono questa azione: ad esempio, se si dispone solo dei privilegi di operatore
+* Quando l'ID del volume è sconosciuto: ad esempio, quando si ha una relazione intercluster e il cluster di destinazione non è ancora stato scoperto
+
+
+.Passi
+. Nella scheda *Protezione* della pagina dei dettagli *Volume/Integrità*, fare clic con il pulsante destro del mouse su un volume nella vista topologia che si desidera proteggere.
+. Selezionare *Proteggi* > * SnapVault* dal menu.
++
+Viene aperta la finestra di dialogo Configura protezione.
+
+. Fare clic su * SnapVault* per visualizzare la scheda * SnapVault* e configurare le informazioni sulle risorse secondarie.
+. Fare clic su *Avanzate* per impostare la deduplicazione, la compressione, l'aumento automatico e la garanzia dello spazio in base alle esigenze, quindi fare clic su *Applica*.
+. Completare l'area *Informazioni sulla destinazione* e l'area *Impostazioni relazione* nella finestra di dialogo *Configura protezione*.
+. Fare clic su *Applica*.
++
+Verrai reindirizzato alla pagina dei dettagli Volume/Salute.
+
+. Fare clic sul collegamento al processo di configurazione della protezione nella parte superiore della pagina dei dettagli *Volume / Integrità*.
++
+Viene visualizzata la pagina dei dettagli del lavoro.
+
+. Fare clic su *Aggiorna* per aggiornare l'elenco delle attività e i dettagli delle attività associati al processo di configurazione della protezione e per determinare quando il processo è completato.
++
+Una volta completate le attività di lavoro, le nuove relazioni vengono visualizzate nella vista topologica della pagina dei dettagli Volume/Stato.
+
+

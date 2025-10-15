@@ -1,0 +1,31 @@
+---
+permalink: api-automation/concept_storage_resource_model.html 
+sidebar: sidebar 
+keywords: storage, resource, ONTAP 
+summary: Le risorse di archiviazione in ONTAP possono essere ampiamente classificate in risorse di archiviazione fisiche e risorse di archiviazione logiche.  Per gestire in modo efficace i sistemi ONTAP utilizzando le API fornite in Active IQ Unified Manager, è necessario comprendere il modello delle risorse di archiviazione e la relazione tra le varie risorse di archiviazione. 
+---
+= Risorse di archiviazione in ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le risorse di archiviazione in ONTAP possono essere ampiamente classificate in _risorse di archiviazione fisiche_ e _risorse di archiviazione logiche_. Per gestire in modo efficace i sistemi ONTAP utilizzando le API fornite in Active IQ Unified Manager, è necessario comprendere il modello delle risorse di archiviazione e la relazione tra le varie risorse di archiviazione.
+
+* *Risorse di archiviazione fisica*
++
+Si riferisce agli oggetti di archiviazione fisica forniti da ONTAP.  Le risorse di archiviazione fisica includono dischi, cluster, controller di archiviazione, nodi e aggregati.
+
+* *Risorse di archiviazione logica*
++
+Si riferisce alle risorse di archiviazione fornite da ONTAP che non sono legate a una risorsa fisica.  Queste risorse sono associate a una macchina virtuale di archiviazione (SVM, precedentemente nota come Vserver) ed esistono indipendentemente da qualsiasi risorsa di archiviazione fisica specifica, come un disco, un array LUN o un aggregato.
+
++
+Le risorse di archiviazione logica includono volumi di tutti i tipi e qtree, nonché le funzionalità e le configurazioni che è possibile utilizzare con queste risorse, come copie snapshot, deduplicazione, compressione e quote.
+
+
+
+L'illustrazione seguente mostra le risorse di archiviazione in un cluster a 2 nodi:
+
+image::../media/storage_resource_model.gif[Uno screenshot dell'interfaccia utente che mostra le risorse di archiviazione in un cluster a 2 nodi.]

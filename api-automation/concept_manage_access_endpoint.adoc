@@ -1,0 +1,98 @@
+---
+permalink: api-automation/concept_manage_access_endpoint.html 
+sidebar: sidebar 
+keywords: manage, endpoints, access 
+summary: 'È necessario creare endpoint di accesso o interfacce logiche (LIF), necessari per il provisioning di macchine virtuali di archiviazione (SVM), LUN e condivisioni file.  È possibile visualizzare, creare, modificare ed eliminare gli endpoint di accesso per le SVM, le LUN o le condivisioni file nell"ambiente Active IQ Unified Manager .' 
+---
+= Gestisci gli endpoint di accesso utilizzando le API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario creare endpoint di accesso o interfacce logiche (LIF), necessari per il provisioning di macchine virtuali di archiviazione (SVM), LUN e condivisioni file.  È possibile visualizzare, creare, modificare ed eliminare gli endpoint di accesso per le SVM, le LUN o le condivisioni file nell'ambiente Active IQ Unified Manager .
+
+
+
+== Visualizza gli endpoint di accesso
+
+È possibile visualizzare un elenco degli endpoint di accesso nell'ambiente Unified Manager utilizzando il metodo seguente.  Per interrogare un elenco di endpoint di accesso di un particolare SVM, LUN o condivisione file, è necessario immettere l'identificatore univoco per l'SVM, la LUN o la condivisione file.  È anche possibile immettere la chiave univoca dell'endpoint di accesso per recuperare i dettagli di un determinato endpoint di accesso.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Sentiero 
+
+
+ a| 
+fornitore di storage
+ a| 
+OTTENERE
+ a| 
+`/storage-provider/access-endpoints`
+
+`/storage-provider/access-endpoints/\{key}`
+
+|===
+
+
+== Aggiungi endpoint di accesso
+
+È possibile creare endpoint di accesso personalizzati e assegnare loro le proprietà richieste.  È necessario immettere i dettagli dell'endpoint di accesso che si desidera creare come parametri di input.  È possibile utilizzare questa API, oppure System Manager o ONTAP CLI per creare un endpoint di accesso su ciascun nodo.  Per la creazione degli endpoint di accesso sono supportati sia gli indirizzi IPv4 che IPv6.
+
+[NOTE]
+====
+Per un provisioning corretto di LUN e condivisioni file, è necessario configurare l'SVM con un numero minimo di endpoint di accesso per nodo.  Dovresti configurare la tua SVM con almeno due endpoint di accesso per nodo, uno che supporti il protocollo CIFS e/o NFS, l'altro che supporti il protocollo iSCSI o FCP.
+
+====
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Sentiero 
+
+
+ a| 
+fornitore di storage
+ a| 
+INVIARE
+ a| 
+`/storage-provider/access-endpoints`
+
+|===
+
+
+== Elimina gli endpoint di accesso
+
+È possibile eliminare uno specifico endpoint di accesso utilizzando il metodo seguente.  Per eliminare un determinato endpoint di accesso, è necessario fornire la chiave dell'endpoint di accesso come parametro di input.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Sentiero 
+
+
+ a| 
+fornitore di storage
+ a| 
+ELIMINARE
+ a| 
+`/storage-provider/access-endpoints/\{key}`
+
+|===
+
+
+== Modificare gli endpoint di accesso
+
+È possibile modificare un endpoint di accesso e aggiornarne le proprietà utilizzando il metodo seguente.  Per modificare un determinato endpoint di accesso è necessario fornire la chiave dell'endpoint di accesso.  È inoltre necessario inserire la proprietà che si desidera aggiornare, insieme al suo valore.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Sentiero 
+
+
+ a| 
+fornitore di storage
+ a| 
+TOPPA
+ a| 
+`/storage-provider/access-endpoints/\{key}`
+
+|===

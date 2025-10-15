@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_monitor_storage_vm_disaster_recovery_relationships.html 
+sidebar: sidebar 
+keywords: disaster recovery, monitor, storage vm protection, relationships 
+summary: Active IQ Unified Manager supporta il monitoraggio delle relazioni di disaster recovery delle VM di storage, garantendo il disaster recovery con la granularità del livello di una VM di storage.  Il ripristino di emergenza della VM di archiviazione consente il ripristino dei dati presenti nei volumi costituenti della VM di archiviazione e il ripristino della configurazione della VM di archiviazione. 
+---
+= Monitorare le relazioni di protezione del ripristino di emergenza della VM di archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager supporta il monitoraggio delle relazioni di disaster recovery delle VM di storage, garantendo il disaster recovery con la granularità del livello di una VM di storage.  Il ripristino di emergenza della VM di archiviazione consente il ripristino dei dati presenti nei volumi costituenti della VM di archiviazione e il ripristino della configurazione della VM di archiviazione.
+
+Viene creata una relazione DR della VM di archiviazione dalla VM di archiviazione di origine alla VM di archiviazione di destinazione per fornire un ripristino di emergenza asincrono.  È possibile scegliere di replicare tutta o una parte della configurazione della VM di archiviazione (esclusa la configurazione di rete e protocollo) insieme ai volumi di dati in base alla configurazione del cluster.
+
+Dopo aver configurato la relazione di disaster recovery della VM di archiviazione, quando la VM di archiviazione di origine non è più disponibile a causa di un guasto hardware o di un disastro ambientale, viene avviata la VM di archiviazione di destinazione, che fornisce l'accesso ai dati con la minima interruzione.  Allo stesso modo, quando la VM di archiviazione di origine diventa disponibile, viene risincronizzata con la VM di archiviazione di destinazione e quindi la VM di origine si riavvia per fornire dati.  È possibile utilizzare i comandi SnapMirror per configurare e gestire la relazione di disaster recovery della VM di archiviazione.

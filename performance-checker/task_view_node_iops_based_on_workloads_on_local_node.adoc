@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/task_view_node_iops_based_on_workloads_on_local_node.html 
+sidebar: sidebar 
+keywords: view, node, iops, workloads, reside, only, local node 
+summary: 'Il grafico del contatore IOPS del nodo può evidenziare dove le operazioni passano solo attraverso il nodo locale utilizzando un LIF di rete per eseguire operazioni di lettura/scrittura su volumi su un nodo remoto.  I grafici IOPS - "Totale (Locale)" e "Ripartizione (Locale)" mostrano gli IOPS per i dati che risiedono solo nei volumi locali sul nodo corrente.' 
+---
+= Visualizza gli IOPS del nodo in base ai carichi di lavoro che risiedono solo sul nodo locale
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il grafico del contatore IOPS del nodo può evidenziare dove le operazioni passano solo attraverso il nodo locale utilizzando un LIF di rete per eseguire operazioni di lettura/scrittura su volumi su un nodo remoto.  I grafici IOPS - "`Totale (Locale)`" e "`Ripartizione (Locale)`" mostrano gli IOPS per i dati che risiedono solo nei volumi locali sul nodo corrente.
+
+Le versioni "`Locali`" di questi grafici dei contatori sono simili ai grafici dei nodi per Capacità e Utilizzo delle prestazioni, perché mostrano anche solo le statistiche per i dati che risiedono su volumi locali.
+
+Confrontando le versioni "Locali" di questi grafici dei contatori con le normali versioni Total di questi grafici dei contatori, è possibile vedere se c'è molto traffico in transito attraverso il nodo locale per accedere ai volumi sul nodo remoto.  Questa situazione potrebbe causare problemi di prestazioni, probabilmente indicati da un utilizzo elevato sul nodo, se ci sono troppe operazioni che passano attraverso il nodo locale per raggiungere un volume su un nodo remoto.  In questi casi potrebbe essere necessario spostare un volume sul nodo locale oppure creare un LIF sul nodo remoto in cui è possibile connettere il traffico proveniente dagli host che accedono a tale volume.
+
+.Passi
+. Nella pagina *Prestazioni/Esplora nodi* del nodo selezionato, dal grafico IOPS, seleziona *Totale* dal menu a discesa.
++
+Viene visualizzato il grafico IOPS - Totale.
+
+. Fare clic su *Zoom vista* per visualizzare una versione più grande del grafico in una nuova scheda del browser.
+. Tornando alla pagina *Prestazioni/Esplora nodi*, dal grafico IOPS, seleziona *Totale (Locale)* dal menu a discesa.
++
+Viene visualizzato il grafico IOPS - Totale (Locale).
+
+. Fare clic su *Zoom vista* per visualizzare una versione più grande del grafico in una nuova scheda del browser.
+. Osserva entrambi i grafici uno accanto all'altro e individua le aree in cui i valori IOPS sembrano essere piuttosto diversi.
+. Sposta il cursore su queste aree per confrontare gli IOPS locali e totali per un momento specifico.
+

@@ -1,0 +1,29 @@
+---
+permalink: health-checker/concept_backup_and_restore_on_virtual_appliance.html 
+sidebar: sidebar 
+keywords: backup, restore, unified manager, virtual, appliance, snapshot copy, copies 
+summary: 'Il modello di backup e ripristino per Unified Manager, quando installato su un"appliance virtuale, consiste nell"acquisire e ripristinare un"immagine dell"intera applicazione virtuale.' 
+---
+= Backup e ripristino per Unified Manager su appliance virtuale
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il modello di backup e ripristino per Unified Manager, quando installato su un'appliance virtuale, consiste nell'acquisire e ripristinare un'immagine dell'intera applicazione virtuale.
+
+Le seguenti attività consentono di completare un backup dell'appliance virtuale:
+
+. Spegnere la macchina virtuale ed eseguire uno snapshot VMware dell'appliance virtuale Unified Manager.
+. Creare una copia di NetApp Snapshot sul datastore per acquisire lo snapshot VMware.
++
+Se il datastore non è ospitato su un sistema che esegue il software ONTAP , seguire le linee guida del fornitore di storage per creare un backup dello snapshot VMware.
+
+. Replicare la copia dello snapshot NetApp , o l'equivalente dello snapshot, su un archivio alternativo.
+. Eliminare lo snapshot VMware.
+
+
+È necessario implementare una pianificazione di backup utilizzando queste attività per garantire che l'appliance virtuale Unified Manager sia protetta in caso di problemi.
+
+Per ripristinare la VM, puoi utilizzare lo snapshot VMware creato per ripristinare la VM allo stato di backup point-in-time.

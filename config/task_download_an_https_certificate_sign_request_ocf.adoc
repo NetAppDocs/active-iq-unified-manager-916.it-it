@@ -1,0 +1,25 @@
+---
+permalink: config/task_download_an_https_certificate_sign_request_ocf.html 
+sidebar: sidebar 
+keywords: download, https, certificate, signing, request 
+summary: 'È possibile scaricare una richiesta di firma della certificazione per l"attuale certificato di sicurezza HTTPS, in modo da poter fornire il file a un"autorità di certificazione per la firma.  Un certificato firmato da una CA aiuta a prevenire gli attacchi man-in-the-middle e offre una migliore protezione di sicurezza rispetto a un certificato autofirmato.' 
+---
+= Scarica una richiesta di firma del certificato HTTPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile scaricare una richiesta di firma della certificazione per l'attuale certificato di sicurezza HTTPS, in modo da poter fornire il file a un'autorità di certificazione per la firma.  Un certificato firmato da una CA aiuta a prevenire gli attacchi man-in-the-middle e offre una migliore protezione di sicurezza rispetto a un certificato autofirmato.
+
+.Prima di iniziare
+È necessario disporre del ruolo di amministratore dell'applicazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Generale* > *Certificato HTTPS*.
+. Fare clic su *Scarica richiesta di firma del certificato HTTPS*.
+. Salva il `<hostname>.csr` file.
+
+
+È possibile fornire il file a un'autorità di certificazione affinché lo firmi e quindi installare il certificato firmato.

@@ -1,0 +1,84 @@
+---
+permalink: events/reference_storage_services_events.html 
+sidebar: sidebar 
+keywords: storage, services, events, impact area, configuration, protection 
+summary: 'Gli eventi dei servizi di archiviazione forniscono informazioni sulla creazione e la sottoscrizione di servizi di archiviazione, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all"area di impatto e includono il nome dell"evento e della trappola, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi sui servizi di stoccaggio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi dei servizi di archiviazione forniscono informazioni sulla creazione e la sottoscrizione di servizi di archiviazione, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all'area di impatto e includono il nome dell'evento e della trappola, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+== Area di impatto: configurazione
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Servizio di archiviazione creato (non applicabile)
+ a| 
+Evento
+ a| 
+Servizio di deposito
+ a| 
+Informazioni
+
+
+
+ a| 
+Servizio di archiviazione sottoscritto (non applicabile)
+ a| 
+Evento
+ a| 
+Servizio di deposito
+ a| 
+Informazioni
+
+
+
+ a| 
+Servizio di archiviazione annullato (non applicabile)
+ a| 
+Evento
+ a| 
+Servizio di deposito
+ a| 
+Informazioni
+
+|===
+
+
+== Area di impatto: protezione
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Eliminazione imprevista di Managed SnapMirror RelationshipocumEvtStorageServiceUnsupportedRelationshipDeletion
+ a| 
+Rischio
+ a| 
+Servizio di deposito
+ a| 
+Avvertimento
+
+
+
+ a| 
+Eliminazione imprevista del volume membro del servizio di archiviazione (ocumEvtStorageServiceUnexpectedVolumeDeletion)
+ a| 
+Incidente
+ a| 
+Servizio di deposito
+ a| 
+Critico
+
+|===

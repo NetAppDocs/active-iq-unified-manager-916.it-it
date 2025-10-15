@@ -1,0 +1,51 @@
+---
+permalink: data-protection/task_create_snapmirror_relationship_with_version_flexible_replication.html 
+sidebar: sidebar 
+keywords: create, snapmirror, relationship, version-flexible, replication 
+summary: È possibile creare una relazione SnapMirror con replica flessibile in base alla versione.  La replica flessibile in base alla versione consente di implementare la protezione SnapMirror anche se i volumi di origine e di destinazione vengono eseguiti con versioni diverse di ONTAP. 
+---
+= Crea una relazione SnapMirror con replica flessibile in base alla versione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare una relazione SnapMirror con replica flessibile in base alla versione.  La replica flessibile in base alla versione consente di implementare la protezione SnapMirror anche se i volumi di origine e di destinazione vengono eseguiti con versioni diverse di ONTAP.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* È necessario aver configurato l'automazione del flusso di lavoro.
+* Sia la SVM di origine che quella di destinazione devono avere una licenza SnapMirror abilitata.
+* Le SVM di origine e di destinazione devono essere eseguite ciascuna su una versione del software ONTAP che supporti la replica flessibile in base alla versione.
+
+
+SnapMirror con replica flessibile in base alla versione consente di implementare la protezione SnapMirror anche in ambienti di archiviazione eterogenei in cui non tutti gli archivi vengono eseguiti con un'unica versione di ONTAP; tuttavia, le operazioni di mirroring eseguite con SnapMirror con replica flessibile in base alla versione non vengono eseguite con la stessa rapidità che avrebbero con la tradizionale replica a blocchi SnapMirror.
+
+.Passi
+. Visualizzare la finestra di dialogo *Configura protezione* per il volume che si desidera proteggere.
++
+** Se stai visualizzando la scheda Protezione della pagina Dettagli volume/integrità, fai clic con il pulsante destro del mouse nella vista topologia che contiene il nome del volume che desideri proteggere e seleziona *Proteggi* > * SnapMirror* dal menu.
+** Se si sta visualizzando la vista Integrità: Tutti i volumi, individuare il volume che si desidera proteggere e fare clic con il pulsante destro del mouse; quindi selezionare *Proteggi* > * SnapMirror* dal menu.  Viene visualizzata la finestra di dialogo Configura protezione.
+
+
+. Fare clic su * SnapMirror* per visualizzare la scheda * SnapMirror*.
+. Completare l'area *Informazioni sulla destinazione* e l'area *Impostazioni relazione* nella finestra di dialogo *Configura protezione*.
++
+Se si specifica una SVM di destinazione eseguita con una versione di ONTAP precedente a quella del volume di origine che si sta proteggendo e se tale versione precedente supporta la replica flessibile in base alla versione, questa attività configura automaticamente SnapMirror con la replica flessibile in base alla versione.
+
+. Se si specifica una SVM di destinazione che viene eseguita con la stessa versione di ONTAP del volume di origine, ma si desidera comunque configurare SnapMirror con la replica flessibile in base alla versione, fare clic su *Avanzate* per abilitare la replica flessibile in base alla versione, quindi fare clic su *Applica*.
+. Fare clic su *Applica*.
++
+Verrai reindirizzato alla pagina dei dettagli Volume/Salute.
+
+. Fare clic sul collegamento al processo di configurazione della protezione nella parte superiore della pagina dei dettagli *Volume / Integrità*.
++
+Le attività e i dettagli dei lavori vengono visualizzati nella pagina Dettagli lavoro.
+
+. Nella pagina dei dettagli *Job*, fare clic su *Aggiorna* per aggiornare l'elenco delle attività e i dettagli delle attività associati al job di configurazione della protezione e per determinare quando il job è completato.
+. Una volta completate le attività lavorative, fare clic su *Indietro* nel browser per tornare alla pagina dei dettagli *Volume / Salute*.
++
+La nuova relazione viene visualizzata nella vista topologica della pagina Dettagli volume/stato.
+
+

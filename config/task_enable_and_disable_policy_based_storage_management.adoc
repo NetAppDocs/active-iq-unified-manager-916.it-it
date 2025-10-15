@@ -1,0 +1,78 @@
+---
+permalink: config/task_enable_and_disable_policy_based_storage_management.html 
+sidebar: sidebar 
+keywords: provisioning, performance service levels, storage management, enable, disable, policy-based 
+summary: 'A partire da Unified Manager 9.7, è possibile eseguire il provisioning di carichi di lavoro di archiviazione (volumi e LUN) sui cluster ONTAP e gestire tali carichi di lavoro in base ai livelli di servizio delle prestazioni assegnati.  Questa funzionalità è simile alla creazione di carichi di lavoro in ONTAP System Manager e all"associazione di policy QoS, ma quando applicata tramite Unified Manager è possibile eseguire il provisioning e gestire i carichi di lavoro su tutti i cluster monitorati dall"istanza di Unified Manager.' 
+---
+= Abilitare e disabilitare la gestione dell'archiviazione basata su policy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partire da Unified Manager 9.7, è possibile eseguire il provisioning di carichi di lavoro di archiviazione (volumi e LUN) sui cluster ONTAP e gestire tali carichi di lavoro in base ai livelli di servizio delle prestazioni assegnati.  Questa funzionalità è simile alla creazione di carichi di lavoro in ONTAP System Manager e all'associazione di policy QoS, ma quando applicata tramite Unified Manager è possibile eseguire il provisioning e gestire i carichi di lavoro su tutti i cluster monitorati dall'istanza di Unified Manager.
+
+È necessario disporre del ruolo di amministratore dell'applicazione.
+
+Questa opzione è abilitata per impostazione predefinita, ma è possibile disabilitarla se non si desidera eseguire il provisioning e gestire i carichi di lavoro tramite Unified Manager.
+
+Se abilitata, questa opzione fornisce molti nuovi elementi nell'interfaccia utente:
+
+[cols="2*"]
+|===
+| Nuovi contenuti | Posizione 
+
+
+ a| 
+Una pagina per il provisioning di nuovi carichi di lavoro
+ a| 
+Disponibile da *Attività comuni* > *Provisioning*
+
+
+
+ a| 
+Una pagina per creare policy di livello di servizio delle prestazioni
+ a| 
+Disponibile da *Impostazioni* > *Criteri* > *Livelli di servizio delle prestazioni*
+
+
+
+ a| 
+Una pagina per creare policy di efficienza di archiviazione delle prestazioni
+ a| 
+Disponibile da *Impostazioni* > *Criteri* > *Efficienza di archiviazione*
+
+
+
+ a| 
+Pannelli che descrivono le prestazioni del carico di lavoro e gli IOPS del carico di lavoro attuali
+ a| 
+Disponibile dalla Dashboard
+
+|===
+Per maggiori informazioni su queste pagine e su questa funzionalità, consultare la guida in linea del prodotto.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Generale* > *Impostazioni funzionalità*.
+. Nella pagina *Impostazioni funzionalità*, disabilita o abilita la gestione dell'archiviazione basata su criteri scegliendo una delle seguenti opzioni:
++
+[cols="2*"]
+|===
+| Se lo desidera... | Allora fai così... 
+
+
+ a| 
+Disabilitare la gestione dell'archiviazione basata su policy
+ a| 
+Nel pannello *Gestione dell'archiviazione basata su criteri*, spostare il cursore verso sinistra.
+
+
+
+ a| 
+Abilita la gestione dell'archiviazione basata su policy
+ a| 
+Nel pannello *Gestione dell'archiviazione basata su criteri*, spostare il cursore verso destra.
+
+|===
+

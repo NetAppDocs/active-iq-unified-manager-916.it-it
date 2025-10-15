@@ -1,0 +1,27 @@
+---
+permalink: data-protection/task_view_protection_relationships_from_storage_vms_page.html 
+sidebar: sidebar 
+keywords: storage vm, viewing protection relationships 
+summary: Utilizzando la pagina VM di archiviazione, è possibile visualizzare lo stato delle relazioni di disaster recovery delle VM di archiviazione esistenti. 
+---
+= Visualizza le relazioni di protezione dalla pagina VM di archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzando la pagina VM di archiviazione, è possibile visualizzare lo stato delle relazioni di disaster recovery delle VM di archiviazione esistenti.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+È inoltre possibile esaminare i dettagli delle relazioni di protezione, tra cui lo stato di trasferimento e ritardo, nonché i dettagli di origine e destinazione.  È possibile pianificare report o scaricare report esistenti nel formato desiderato.  Il pulsante *Mostra/Nascondi* consente di aggiungere le colonne richieste ai report, poiché non vengono visualizzate per impostazione predefinita.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *ARCHIVIAZIONE* > *VM di archiviazione*.
+. Dal menu *VISUALIZZA*, seleziona *Relazione* > *Tutte le relazioni*.
++
+La vista Relazione: tutte le relazioni viene visualizzata con tutte le VM di archiviazione configurate.
+
+

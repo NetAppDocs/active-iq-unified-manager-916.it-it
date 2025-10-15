@@ -1,0 +1,53 @@
+---
+permalink: health-checker/task_define_schedule_for_snapshot_backups.html 
+sidebar: sidebar 
+keywords: define, backup, schedule, linux, windows, snapshot copy, copies 
+summary: 'È possibile configurare la pianificazione in base alla quale vengono create le copie di Unified Manager Snapshot tramite l"interfaccia utente di Unified Manager.' 
+---
+= Definisci una pianificazione di backup per Linux e Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare la pianificazione in base alla quale vengono create le copie di Unified Manager Snapshot tramite l'interfaccia utente di Unified Manager.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* È necessario aver configurato le impostazioni per la creazione di copie Snapshot dalla console di manutenzione per identificare la destinazione in cui verranno create le snapshot.
+
+
+Le copie snapshot vengono create in pochi minuti e il database di Unified Manager viene bloccato solo per pochi secondi.
+
+[NOTE]
+====
+Il backup effettuato durante i primi 15 giorni di aggiunta di un nuovo cluster potrebbe non essere sufficientemente accurato per ottenere i dati storici sulle prestazioni.
+
+====
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Generale* > *Backup del database*.
+. Nella pagina *Backup del database*, fare clic su *Impostazioni di backup*.
+. Immettere il numero massimo di copie Snapshot che si desidera conservare nel campo *Conteggio conservazione*.
++
+Il valore predefinito per il conteggio della conservazione è 10.  Il numero massimo di copie Snapshot è determinato dalla versione del software ONTAP sul cluster.  È possibile lasciare vuoto questo campo per implementare il valore massimo indipendentemente dalla versione ONTAP .
+
+. Selezionare il pulsante *Pianificato quotidianamente* o *Pianificato settimanalmente*, quindi specificare i dettagli della pianificazione.
+. Fare clic su *Applica*.
+
+
+Le copie snapshot vengono create in base alla pianificazione.  È possibile visualizzare i file di backup disponibili nella pagina Backup del database.
+
+Data l'importanza di questo volume e degli snapshot, potresti voler creare uno o due avvisi per questo volume, in modo da ricevere una notifica quando:
+
+* Lo spazio del volume è pieno al 90%.  Utilizzare l'evento *Spazio volume pieno* per impostare l'avviso.
++
+È possibile aggiungere capacità al volume utilizzando ONTAP System Manager o ONTAP CLI in modo che il database Unified Manager non esaurisca lo spazio.
+
+* Il numero di snapshot è prossimo a raggiungere il numero massimo.  Utilizzare l'evento *Troppe copie snapshot* per impostare l'avviso.
++
+È possibile eliminare gli snapshot più vecchi utilizzando ONTAP System Manager o ONTAP CLI in modo che ci sia sempre spazio per nuove copie di snapshot.
+
+
+
+È possibile configurare gli avvisi nella pagina Impostazione avvisi.

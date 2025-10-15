@@ -1,0 +1,39 @@
+---
+permalink: health-checker/task_perform_diagnotstic_actions_for_volume_offline_conditions.html 
+sidebar: sidebar 
+keywords: perform, diagnostic actions, volume, offline, conditions 
+summary: Dopo aver navigato alla pagina dei dettagli Volume/Stato di un volume segnalato come offline, è possibile cercare ulteriori informazioni utili per diagnosticare la condizione di offline del volume. 
+---
+= Eseguire azioni diagnostiche per le condizioni di volume offline
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver navigato alla pagina dei dettagli Volume/Stato di un volume segnalato come offline, è possibile cercare ulteriori informazioni utili per diagnosticare la condizione di offline del volume.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Se il volume segnalato come offline non è stato disattivato deliberatamente, tale volume potrebbe essere offline per diversi motivi.
+
+Partendo dalla pagina dei dettagli Volume/Stato del volume offline, è possibile passare ad altre pagine e riquadri per confermare o eliminare possibili cause:
+
+* Fare clic sui collegamenti della pagina dei dettagli *Volume/Stato* per determinare se il volume è offline perché il suo nodo host è inattivo e anche il failover dello storage sul suo partner di coppia HA non è riuscito.
++
+Vederelink:task_determine_if_volume_offline_condition_is_by_down_cluster_node.html["Determinare se una condizione di volume offline è causata da un nodo inattivo"] .
+
+* Fare clic sui collegamenti della pagina dei dettagli *Volume/Integrità* per determinare se il volume è offline e la sua macchina virtuale di archiviazione host (SVM) è arrestata perché il nodo che ospita il volume radice di tale SVM è inattivo.
++
+Vederelink:task_determine_if_volume_is_offline_and_its_svm_is_stopped.html["Determinare se un volume è offline e SVM è arrestato perché un nodo è inattivo"] .
+
+* Fare clic sui collegamenti della pagina dei dettagli *Volume/Integrità* per determinare se il volume è offline a causa di dischi danneggiati nel suo aggregato host.
++
+Vederelink:task_determine_if_volume_is_offline_because_of_broken_disks.html["Determinare se un volume è offline a causa di dischi danneggiati in un aggregato"] .
+
+
+
+*Informazioni correlate*
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Ruoli e capacità degli utenti di Unified Manager"]

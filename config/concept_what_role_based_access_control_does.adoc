@@ -1,0 +1,18 @@
+---
+permalink: config/concept_what_role_based_access_control_does.html 
+sidebar: sidebar 
+keywords: role-based, access, control 
+summary: 'Il controllo degli accessi basato sui ruoli (RBAC) consente agli amministratori di gestire gruppi di utenti definendo i ruoli.  Se è necessario limitare l"accesso a funzionalità specifiche ad amministratori selezionati, è necessario configurare per loro degli account amministratore.  Se si desidera limitare le informazioni che gli amministratori possono visualizzare e le operazioni che possono eseguire, è necessario applicare ruoli agli account amministratore creati.' 
+---
+= Cosa fa il controllo degli accessi basato sui ruoli
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il controllo degli accessi basato sui ruoli (RBAC) consente agli amministratori di gestire gruppi di utenti definendo i ruoli.  Se è necessario limitare l'accesso a funzionalità specifiche ad amministratori selezionati, è necessario configurare per loro degli account amministratore.  Se si desidera limitare le informazioni che gli amministratori possono visualizzare e le operazioni che possono eseguire, è necessario applicare ruoli agli account amministratore creati.
+
+Il server di gestione utilizza RBAC per l'accesso degli utenti e le autorizzazioni dei ruoli.  Se non hai modificato le impostazioni predefinite del server di gestione per l'accesso degli utenti amministrativi, non è necessario effettuare l'accesso per visualizzarle.
+
+Quando si avvia un'operazione che richiede privilegi specifici, il server di gestione richiede di effettuare l'accesso. Ad esempio, per creare account amministratore, è necessario accedere con l'account di amministratore dell'applicazione.

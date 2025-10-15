@@ -1,0 +1,55 @@
+---
+permalink: events/reference_storage_shelf_events.html 
+sidebar: sidebar 
+keywords: storage, shelf, events, impact area, availability 
+summary: 'Gli eventi sullo scaffale di stoccaggio ti informano se lo scaffale presenta anomalie, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all"area di impatto e includono il nome dell"evento e della trappola, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi sugli scaffali di stoccaggio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi sullo scaffale di stoccaggio ti informano se lo scaffale presenta anomalie, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all'area di impatto e includono il nome dell'evento e della trappola, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Intervallo di tensione anomalo (ocumEvtShelfVoltageAbnormal)
+ a| 
+Rischio
+ a| 
+Scaffale portaoggetti
+ a| 
+Avvertimento
+
+
+
+ a| 
+Intervallo di corrente anormale (ocumEvtShelfCurrentAbnormal)
+ a| 
+Rischio
+ a| 
+Scaffale portaoggetti
+ a| 
+Avvertimento
+
+
+
+ a| 
+Temperatura anomala (ocumEvtShelfTemperatureAbnormal)
+ a| 
+Rischio
+ a| 
+Scaffale portaoggetti
+ a| 
+Avvertimento
+
+|===

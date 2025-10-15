@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_verify_qos_policy_group.html 
+sidebar: sidebar 
+keywords: verify, volumes, qos, policy, group, unusually, high, activity 
+summary: 'È possibile esaminare i carichi di lavoro nel gruppo di policy Qualità del servizio \(QoS\) con la variazione di attività più elevata per determinare se l"evento è stato causato da più di un carico di lavoro.  È anche possibile verificare se altri carichi di lavoro superano ancora il limite di produttività impostato o se rientrano nell"intervallo di attività previsto.' 
+---
+= Verificare se altri volumi nel gruppo di policy QoS presentano un'attività insolitamente elevata
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile esaminare i carichi di lavoro nel gruppo di policy Qualità del servizio (QoS) con la variazione più elevata nell'attività per determinare se l'evento è stato causato da più di un carico di lavoro.  È anche possibile verificare se altri carichi di lavoro superano ancora il limite di produttività impostato o se rientrano nell'intervallo di attività previsto.
+
+Nella pagina Dettagli evento, nella sezione Diagnosi di sistema, è possibile ordinare i carichi di lavoro in base alla deviazione massima dell'attività per visualizzare i carichi di lavoro con la variazione di attività più elevata nella parte superiore della tabella.  Questi carichi di lavoro potrebbero essere i "bulli" la cui attività ha superato il limite stabilito e potrebbe aver causato l'evento.
+
+È possibile accedere alla pagina Analisi del carico di lavoro per ciascun carico di lavoro del volume per esaminarne l'attività IOPS.  Se il carico di lavoro prevede periodi di attività operativa molto intensa, potrebbe aver contribuito all'evento.  È possibile modificare le impostazioni del gruppo di policy per il carico di lavoro o spostare il carico di lavoro in un gruppo di policy diverso.
+
+È possibile utilizzare ONTAP System Manager o i comandi ONTAP CLI per gestire i gruppi di policy, come segue:
+
+* Creare un gruppo di policy.
+* Aggiungere o rimuovere carichi di lavoro in un gruppo di policy.
+* Spostare un carico di lavoro tra gruppi di policy.
+* Modificare il limite di throughput di un gruppo di policy.
+

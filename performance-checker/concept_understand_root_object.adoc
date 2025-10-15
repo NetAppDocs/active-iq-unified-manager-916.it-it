@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_understand_root_object.html 
+sidebar: sidebar 
+keywords: understand, root, object 
+summary: 'L"oggetto radice è la linea di base rispetto alla quale vengono effettuati i confronti con altri oggetti.  Ciò consente di visualizzare e confrontare i dati di altri oggetti con l"oggetto radice, fornendo un"analisi dei dati sulle prestazioni che aiuta a risolvere i problemi e a migliorare le prestazioni dell"oggetto.' 
+---
+= Comprendere l'oggetto radice
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'oggetto radice è la linea di base rispetto alla quale vengono effettuati i confronti con altri oggetti.  Ciò consente di visualizzare e confrontare i dati di altri oggetti con l'oggetto radice, fornendo un'analisi dei dati sulle prestazioni che aiuta a risolvere i problemi e a migliorare le prestazioni dell'oggetto.
+
+Il nome dell'oggetto radice viene visualizzato nella parte superiore del riquadro Confronto.  Gli oggetti aggiuntivi vengono visualizzati sotto l'oggetto radice.  Sebbene non vi sia alcun limite al numero di oggetti aggiuntivi che è possibile aggiungere al riquadro Confronto, è consentito un solo oggetto radice.  I dati per l'oggetto radice vengono visualizzati automaticamente nei grafici nel riquadro Grafici contatore.
+
+Non è possibile modificare l'oggetto radice; è sempre impostato sulla pagina dell'oggetto che si sta visualizzando.  Ad esempio, se si apre la pagina Volume Performance Explorer di Volume1, Volume1 è l'oggetto radice e non può essere modificato.  Se vuoi effettuare un confronto con un oggetto radice diverso, devi cliccare sul collegamento di un oggetto e aprire la relativa landing page.
+
+[NOTE]
+====
+Gli eventi e le soglie vengono visualizzati solo per gli oggetti radice.
+
+====

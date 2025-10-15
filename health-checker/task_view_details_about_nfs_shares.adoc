@@ -1,0 +1,48 @@
+---
+permalink: health-checker/task_view_details_about_nfs_shares.html 
+sidebar: sidebar 
+keywords: view, details, nfs shares 
+summary: 'È possibile visualizzare i dettagli su tutte le condivisioni NFS, ad esempio lo stato, il percorso associato al volume (volumi FlexGroup o volumi FlexVol ), i livelli di accesso dei client alle condivisioni NFS e la policy di esportazione definita per i volumi esportati.  Utilizzare la vista Integrità: Tutte le condivisioni NFS per visualizzare tutte le condivisioni NFS su tutti i cluster monitorati e utilizzare la pagina Dettagli VM di archiviazione/Integrità per visualizzare tutte le condivisioni NFS su una specifica macchina virtuale di archiviazione (SVM).' 
+---
+= Visualizza i dettagli sulle azioni NFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare i dettagli su tutte le condivisioni NFS, ad esempio lo stato, il percorso associato al volume (volumi FlexGroup o volumi FlexVol ), i livelli di accesso dei client alle condivisioni NFS e la policy di esportazione definita per i volumi esportati.  Utilizzare la vista Integrità: Tutte le condivisioni NFS per visualizzare tutte le condivisioni NFS su tutti i cluster monitorati e utilizzare la pagina Dettagli VM di archiviazione/Integrità per visualizzare tutte le condivisioni NFS su una specifica macchina virtuale di archiviazione (SVM).
+
+.Prima di iniziare
+* La licenza NFS deve essere abilitata sul cluster.
+* È necessario configurare le interfacce di rete che servono le condivisioni NFS.
+* È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+.Fare un passo
+. Nel riquadro di navigazione a sinistra, seguire i passaggi sottostanti a seconda che si desideri visualizzare tutte le condivisioni NFS o solo quelle per una particolare SVM.
++
+[cols="2*"]
+|===
+| A... | Segui questi passaggi... 
+
+
+ a| 
+Visualizza tutte le condivisioni NFS
+ a| 
+Fare clic su *Archiviazione* > *Condivisioni NFS*
+
+
+
+ a| 
+Visualizza le condivisioni NFS per singolo SVM
+ a| 
+.. Fare clic su *Archiviazione* > *VM di archiviazione*
+.. Fare clic sull'SVM di cui si desidera visualizzare i dettagli delle condivisioni NFS.
+.. Nella pagina dei dettagli Storage VM/Health, fare clic sulla scheda *Condivisioni NFS*.
+
+
+|===
+
+
+Per maggiori informazioni, vederelink:../storage-mgmt/task_provision_fileshares.html["Provisioning dei volumi di condivisione file"] Elink:../api-automation/concept_provision_file_share.html["Provisioning di condivisioni file CIFS e NFS tramite API"] .

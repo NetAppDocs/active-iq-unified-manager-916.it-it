@@ -1,0 +1,25 @@
+---
+permalink: health-checker/task_delete_annotation_rules.html 
+sidebar: sidebar 
+keywords: delete, annotation rules 
+summary: È possibile eliminare le regole di annotazione da Active IQ Unified Manager quando non sono più necessarie. 
+---
+= Elimina le regole di annotazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare le regole di annotazione da Active IQ Unified Manager quando non sono più necessarie.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Quando si elimina una regola di annotazione, l'annotazione viene dissociata e rimossa dagli oggetti di archiviazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Annotazioni*.
+. Nella scheda *Regole di annotazione*, seleziona la regola di annotazione che desideri eliminare, quindi fai clic su *Elimina*.
+. Nella finestra di dialogo *Avviso*, fare clic su *Sì* per confermare l'eliminazione.
+

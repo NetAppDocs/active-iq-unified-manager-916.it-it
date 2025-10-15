@@ -1,0 +1,159 @@
+---
+permalink: performance-checker/reference_types_of_system_defined_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: system-defined, performance, threshold, policies, cluster, node. aggregate, qos 
+summary: Unified Manager fornisce alcuni criteri di soglia standard che monitorano le prestazioni del cluster e generano automaticamente eventi.  Questi criteri sono abilitati per impostazione predefinita e generano eventi di avviso o informazione quando vengono superate le soglie di prestazioni monitorate. 
+---
+= Tipi di criteri di soglia delle prestazioni definiti dal sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager fornisce alcuni criteri di soglia standard che monitorano le prestazioni del cluster e generano automaticamente eventi.  Questi criteri sono abilitati per impostazione predefinita e generano eventi di avviso o informazione quando vengono superate le soglie di prestazioni monitorate.
+
+[NOTE]
+====
+I criteri di soglia delle prestazioni definiti dal sistema non sono abilitati sui sistemi Cloud Volumes ONTAP, ONTAP Edge o ONTAP Select .
+
+====
+Se si ricevono eventi non necessari da qualsiasi criterio di soglia delle prestazioni definito dal sistema, è possibile disattivare gli eventi per i singoli criteri dalla pagina Configurazione evento.
+
+
+
+== Criteri di soglia del cluster
+
+Per impostazione predefinita, i criteri di soglia delle prestazioni del cluster definiti dal sistema vengono assegnate a ogni cluster monitorato da Unified Manager:
+
+* *Squilibrio del carico del cluster*
++
+Identifica le situazioni in cui un nodo opera con un carico molto più elevato rispetto agli altri nodi del cluster, influenzando potenzialmente le latenze del carico di lavoro.
+
++
+Ciò avviene confrontando il valore della capacità prestazionale utilizzata per tutti i nodi di un cluster per verificare se un nodo ha superato il valore soglia del 30% per più di 24 ore.  Questo è un evento di avvertimento.
+
+* *Squilibrio della capacità del cluster*
++
+Identifica le situazioni in cui un aggregato ha una capacità utilizzata molto più elevata rispetto ad altri aggregati nel cluster e, pertanto, può potenzialmente influire sullo spazio necessario per le operazioni.
+
++
+Ciò avviene confrontando il valore della capacità utilizzata per tutti gli aggregati nel cluster per verificare se esiste una differenza del 70% tra gli aggregati.  Questo è un evento di avvertimento.
+
+
+
+
+
+== Criteri di soglia dei nodi
+
+Per impostazione predefinita, i criteri di soglia delle prestazioni dei nodi definiti dal sistema vengono assegnate a ogni nodo nei cluster monitorati da Unified Manager:
+
+* *Soglia di capacità prestazionale utilizzata superata*
++
+Identifica le situazioni in cui un singolo nodo opera oltre i limiti della sua efficienza operativa, influenzando potenzialmente le latenze del carico di lavoro.
+
++
+Lo fa cercando i nodi che utilizzano più del 100% della loro capacità prestazionale per più di 12 ore.  Questo è un evento di avvertimento.
+
+* *Coppia di nodi HA sovrautilizzata*
++
+Identifica le situazioni in cui i nodi in una coppia HA operano al di sopra dei limiti dell'efficienza operativa della coppia HA.
+
++
+Ciò avviene esaminando il valore della capacità prestazionale utilizzata per i due nodi nella coppia HA.  Se la capacità prestazionale combinata utilizzata dai due nodi supera il 200% per più di 12 ore, un failover del controller avrà un impatto sulle latenze del carico di lavoro.  Questo è un evento informativo.
+
+* *Frammentazione del disco del nodo*
++
+Identifica le situazioni in cui un disco o più dischi in un aggregato sono frammentati, rallentando i servizi di sistema chiave e potenzialmente influenzando le latenze del carico di lavoro su un nodo.
+
++
+Ciò avviene esaminando determinati rapporti di operazioni di lettura e scrittura su tutti gli aggregati su un nodo.  Questa policy potrebbe essere attivata anche durante la risincronizzazione SyncMirror o quando vengono rilevati errori durante le operazioni di pulizia del disco.  Questo è un evento di avvertimento.
+
++
+[NOTE]
+====
+Il criterio "`Frammentazione disco nodo`" analizza solo gli aggregati HDD; gli aggregati Flash Pool, SSD e FabricPool non vengono analizzati.
+
+====
+
+
+
+
+== Politiche di soglia aggregate
+
+La soglia di prestazioni aggregate definita dal sistema viene assegnata per impostazione predefinita a ogni aggregato nei cluster monitorati da Unified Manager:
+
+* *Dischi aggregati sovrautilizzati*
++
+Identifica le situazioni in cui un aggregato opera al di sopra dei limiti della sua efficienza operativa, influenzando potenzialmente le latenze del carico di lavoro.  Identifica queste situazioni cercando aggregati in cui i dischi nell'aggregato vengono utilizzati per oltre il 95% per più di 30 minuti.  Questa policy multi-condizione esegue quindi la seguente analisi per aiutare a determinare la causa del problema:
+
++
+** Un disco nell'aggregato è attualmente sottoposto ad attività di manutenzione in background?
++
+Alcune delle attività di manutenzione in background a cui potrebbe essere sottoposto un disco sono la ricostruzione del disco, la pulizia del disco, la risincronizzazione SyncMirror e la reparity.
+
+** Esiste un collo di bottiglia nelle comunicazioni nell'interconnessione Fibre Channel dello scaffale del disco?
+** C'è troppo poco spazio libero nell'aggregato?  Un evento di avviso viene emesso per questa policy solo se una (o più) delle tre policy subordinate vengono considerate violate.  Un evento di prestazione non viene attivato se solo i dischi nell'aggregato sono utilizzati per più del 95%.
+
+
+
+
+[NOTE]
+====
+Il criterio "`Dischi aggregati sovrautilizzati`" analizza gli aggregati solo HDD e gli aggregati Flash Pool (ibridi); gli aggregati SSD e FabricPool non vengono analizzati.
+
+====
+
+
+== Criteri di soglia di latenza del carico di lavoro
+
+I criteri di soglia di latenza del carico di lavoro definiti dal sistema vengono assegnati a qualsiasi carico di lavoro che abbia un criterio di livello di servizio delle prestazioni configurato con un valore di "`latenza prevista`" definito:
+
+* *Soglia di latenza del volume del carico di lavoro/LUN superata come definito dal livello di servizio delle prestazioni*
++
+Identifica i volumi (condivisioni file) e le LUN che hanno superato il limite di "latenza prevista" e che influiscono sulle prestazioni del carico di lavoro.  Questo è un evento di avvertimento.
+
++
+Lo fa cercando i carichi di lavoro che hanno superato il valore di latenza previsto per il 30% del tempo durante l'ora precedente.
+
+
+
+
+
+== Criteri di soglia QoS
+
+I criteri di soglia delle prestazioni QoS definiti dal sistema vengono assegnate a qualsiasi carico di lavoro per il quale è configurato un criterio di throughput massimo QoS ONTAP (IOPS, IOPS/TB o MB/s).  Unified Manager attiva un evento quando il valore della velocità effettiva del carico di lavoro è inferiore del 15% rispetto al valore QoS configurato:
+
+* *Soglia QoS Max IOPS o MB/s*
++
+Identifica i volumi e le LUN che hanno superato il limite massimo di IOPS QoS o di throughput MB/s e che influiscono sulla latenza del carico di lavoro.  Questo è un evento di avvertimento.
+
++
+Quando un singolo carico di lavoro viene assegnato a un gruppo di policy, questo avviene cercando i carichi di lavoro che hanno superato la soglia di throughput massima definita nel gruppo di policy QoS assegnato durante ogni periodo di raccolta per l'ora precedente.
+
++
+Quando più carichi di lavoro condividono un'unica policy QoS, questa viene eseguita sommando gli IOPS o MB/s di tutti i carichi di lavoro nella policy e confrontando tale totale con la soglia.
+
+* *QoS Picco IOPS/TB o IOPS/TB con soglia di dimensione del blocco*
++
+Identifica i volumi che hanno superato il limite di throughput IOPS/TB di picco QoS adattivo (o IOPS/TB con limite di dimensione del blocco) e che influiscono sulla latenza del carico di lavoro.  Questo è un evento di avvertimento.
+
++
+Ciò avviene convertendo la soglia di picco IOPS/TB definita nella policy QoS adattiva in un valore QoS massimo IOPS basato sulla dimensione di ciascun volume, quindi cerca i volumi che hanno superato il valore QoS massimo IOPS durante ciascun periodo di raccolta delle prestazioni per l'ora precedente.
+
++
+[NOTE]
+====
+Questa policy viene applicata ai volumi solo quando il cluster è installato con il software ONTAP 9.3 e versioni successive.
+
+====
++
+Quando l'elemento "`dimensione del blocco`" è stato definito nella policy QoS adattiva, la soglia viene convertita in un valore QoS massimo MB/s in base alla dimensione di ciascun volume.  Quindi cerca i volumi che hanno superato il QoS max MB/s durante ogni periodo di raccolta delle prestazioni per l'ora precedente.
+
++
+[NOTE]
+====
+Questa policy viene applicata ai volumi solo quando il cluster è installato con il software ONTAP 9.5 e versioni successive.
+
+====
+

@@ -1,0 +1,80 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_with_most_available_iops.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, available, IOPS 
+summary: Questo report mostra quali aggregati hanno il maggior numero di IOPS disponibili per tipo di aggregato su cui è possibile effettuare il provisioning di nuovi carichi di lavoro. 
+---
+= Crea un report per visualizzare gli aggregati che hanno il maggior numero di IOPS disponibili
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questo report mostra quali aggregati hanno il maggior numero di IOPS disponibili per tipo di aggregato su cui è possibile effettuare il provisioning di nuovi carichi di lavoro.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+Per aprire una vista Integrità: Tutti i volumi, scaricare la vista in Excel, creare un grafico della capacità disponibile, caricare il file Excel personalizzato e pianificare il report finale, procedere come segue.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Aggregati*.
+. Selezionare *Prestazioni: Tutti gli aggregati* dal menu a discesa *Visualizza*.
+. Seleziona *Mostra/Nascondi* per mostrare il `Available IOPS` colonna e nascondi il `Cluster FQDN, Inactive Data Reporting,` E `Threshold Policy` colonne.
+. Trascina e rilascia il `Available IOPS` E `Free Capacity` colonne accanto al `Type` colonna.
+. Assegna un nome e salva la vista personalizzata `Available IOPS Per Aggr.`
+. Selezionare *Report* > *Scarica Excel*.
++
+image::../media/download_excel_menu.png[Uno screenshot dell'interfaccia utente che mostra come scaricare Excel dai report.]
+
++
+A seconda del browser utilizzato, potrebbe essere necessario fare clic su *OK* per salvare il file.
+
+. Se necessario, fare clic su *Abilita modifica*.
+. In Excel, apri il file scaricato.
+. Nel foglio dati, fare clic sul piccolo triangolo in alto a sinistra per selezionare l'intero foglio.
+. Sulla barra multifunzione *Dati*, seleziona *Ordina* da `Sort & Filter area.`
+. Imposta i seguenti livelli di ordinamento:
++
+.. Specificare *Ordina per* come `Available IOPS` (IOPS), *Ordina su* come `Cell Values,` e l'*Ordine* come `Largest to Smallest.`
+.. Fare clic su *Aggiungi livello*.
+.. Specificare *Ordina per* come `Type` , *Ordina su* come `Cell Values,` e l'*Ordine* come `Z to A.`
+.. Fare clic su *Aggiungi livello*.
+.. Specificare *Ordina per* come `Free Capacity (GB),` *Ordina su* come `Cell Values,` e l'*Ordine* come `Largest to Smallest.`
+.. Fare clic su *OK*.
+
+
+. Salvare e chiudere il file Excel.
+. In Unified Manager, seleziona *Report* > *Carica Excel*.
++
+[NOTE]
+====
+Assicurati di essere nella stessa vista in cui hai scaricato il file Excel.
+
+====
+. Seleziona il file Excel che hai modificato, in questo caso `performance-aggregates-<date>.xlsx.`
+. Fare clic su *Apri*.
+. Fare clic su *Invia*.
++
+Accanto alla voce di menu *Report* > *Carica Excel* appare un segno di spunta.
+
++
+image::../media/upload_excel.png[Uno screenshot dell'interfaccia utente che mostra come caricare Excel nei report.]
+
+. Fare clic su *Report pianificati*.
+. Fare clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina Pianificazioni report, in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""] ) alla fine della riga.
++
+[NOTE]
+====
+Selezionare il formato *XLSX* per il report.
+
+====
++
+Il rapporto viene inviato immediatamente a scopo di verifica.  Successivamente, il report viene generato e inviato tramite e-mail ai destinatari elencati utilizzando la frequenza specificata.
+
+
+
+In base ai risultati mostrati nel report, potresti voler effettuare il provisioning di nuovi carichi di lavoro sugli aggregati che hanno il maggior numero di IOPS disponibili.

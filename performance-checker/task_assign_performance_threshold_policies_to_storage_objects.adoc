@@ -1,0 +1,78 @@
+---
+permalink: performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html 
+sidebar: sidebar 
+keywords: assign, performance, threshold, policies, storage, objects 
+summary: 'È possibile assegnare un criterio di soglia delle prestazioni definito dall"utente a un oggetto di archiviazione in modo che Unified Manager segnali un evento se il valore del contatore delle prestazioni supera l"impostazione del criterio.' 
+---
+= Assegnare criteri di soglia delle prestazioni agli oggetti di archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile assegnare un criterio di soglia delle prestazioni definito dall'utente a un oggetto di archiviazione in modo che Unified Manager segnali un evento se il valore del contatore delle prestazioni supera l'impostazione del criterio.
+
+.Prima di iniziare
+È necessario disporre del ruolo di amministratore dell'applicazione.
+
+Devono esistere i criteri di soglia delle prestazioni che si desidera applicare all'oggetto.
+
+È possibile applicare solo un criterio di prestazione alla volta a un oggetto o a un gruppo di oggetti.
+
+È possibile assegnare un massimo di tre criteri di soglia a ciascun oggetto di archiviazione.  Quando si assegnano policy a più oggetti, se a uno degli oggetti è già assegnato il numero massimo di policy, Unified Manager esegue le seguenti azioni:
+
+* Applica la policy a tutti gli oggetti selezionati che non hanno raggiunto il loro massimo
+* Ignora gli oggetti che hanno raggiunto il numero massimo di policy
+* Visualizza un messaggio che indica che il criterio non è stato assegnato a tutti gli oggetti
+
+
+.Passi
+. Dalla pagina Inventario delle prestazioni di qualsiasi oggetto di archiviazione, seleziona l'oggetto o gli oggetti a cui desideri assegnare un criterio di soglia:
++
+|===
+| Per assegnare soglie a... | Clic... 
+
+
+ a| 
+Un singolo oggetto
+ a| 
+La casella di controllo a sinistra di quell'oggetto.
+
+
+
+ a| 
+Oggetti multipli
+ a| 
+La casella di controllo a sinistra di ogni oggetto.
+
+
+
+ a| 
+Tutti gli oggetti sulla pagina
+ a| 
+ILimage:../media/select_dropdown_65_png.gif["seleziona l'icona a discesa"] casella a discesa e scegliere *Seleziona tutti gli oggetti in questa pagina*.
+
+
+
+ a| 
+Tutti gli oggetti dello stesso tipo
+ a| 
+ILimage:../media/select_dropdown_65_png.gif["seleziona l'icona a discesa"] casella a discesa e scegliere *Seleziona tutti gli oggetti*.
+
+|===
++
+È possibile utilizzare la funzionalità di ordinamento e filtraggio per perfezionare l'elenco degli oggetti nella pagina dell'inventario e semplificare l'applicazione di criteri di soglia a molti oggetti.
+
+. Effettua la tua selezione, quindi fai clic su *Assegna criterio soglia prestazioni*.
++
+Viene visualizzata la pagina Assegna criterio soglia prestazioni, che mostra un elenco dei criteri soglia esistenti per quel tipo specifico di oggetto di archiviazione.
+
+. Fare clic su ciascun criterio per visualizzare i dettagli delle impostazioni della soglia delle prestazioni per verificare di aver selezionato il criterio di soglia corretto.
+. Dopo aver selezionato il criterio di soglia appropriato, fare clic su *Assegna criterio*.
++
+Un messaggio di conferma nella parte superiore della pagina conferma che il criterio di soglia è stato assegnato all'oggetto o agli oggetti e fornisce un collegamento alla pagina Avvisi, in modo da poter configurare le impostazioni di avviso per questo oggetto e criterio.
+
+
+
+Se si desidera ricevere avvisi tramite e-mail o come trap SNMP per essere informati che è stato generato un particolare evento di prestazione, è necessario configurare le impostazioni di avviso nella pagina Configurazione avviso.

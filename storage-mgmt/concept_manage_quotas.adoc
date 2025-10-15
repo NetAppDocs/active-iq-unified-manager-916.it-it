@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_manage_quotas.html 
+sidebar: sidebar 
+keywords: manage, quotas 
+summary: 'È possibile utilizzare quote utente e di gruppo per limitare la quantità di spazio su disco o il numero di file che un utente o un gruppo di utenti può utilizzare.  È possibile visualizzare informazioni sulle quote degli utenti e dei gruppi di utenti, come l"utilizzo del disco e dei file e i vari limiti impostati sui dischi.' 
+---
+= Gestire le quote
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare quote utente e di gruppo per limitare la quantità di spazio su disco o il numero di file che un utente o un gruppo di utenti può utilizzare.  È possibile visualizzare informazioni sulle quote degli utenti e dei gruppi di utenti, come l'utilizzo del disco e dei file e i vari limiti impostati sui dischi.

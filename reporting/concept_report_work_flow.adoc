@@ -1,0 +1,16 @@
+---
+permalink: reporting/concept_report_work_flow.html 
+sidebar: sidebar 
+keywords: report, workflow 
+summary: Albero decisionale che descrive il flusso di lavoro del report. 
+---
+= Flusso di lavoro del report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Albero decisionale che descrive il flusso di lavoro del report.
+
+image::../media/reports_view_workflow.png[report visualizza flusso di lavoro]

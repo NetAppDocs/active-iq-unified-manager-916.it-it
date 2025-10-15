@@ -1,0 +1,14 @@
+---
+permalink: events/concept_how_object_status_is_computed.html 
+sidebar: sidebar 
+keywords: object, status, computed 
+summary: 'Lo stato dell"oggetto è determinato dall"evento più grave che attualmente presenta uno stato Nuovo o Riconosciuto.  Ad esempio, se lo stato di un oggetto è Errore, uno degli eventi dell"oggetto ha un tipo di gravità Errore.  Una volta intrapresa l"azione correttiva, lo stato dell"evento passa a Risolto.' 
+---
+= Come viene calcolato lo stato dell'oggetto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lo stato dell'oggetto è determinato dall'evento più grave che attualmente presenta uno stato Nuovo o Riconosciuto.  Ad esempio, se lo stato di un oggetto è Errore, uno degli eventi dell'oggetto ha un tipo di gravità Errore.  Una volta intrapresa l'azione correttiva, lo stato dell'evento passa a Risolto.

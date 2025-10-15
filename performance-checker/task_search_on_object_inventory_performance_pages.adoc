@@ -1,0 +1,36 @@
+---
+permalink: performance-checker/task_search_on_object_inventory_performance_pages.html 
+sidebar: sidebar 
+keywords: object, inventory, performance, pages 
+summary: 'È possibile cercare stringhe nelle pagine Prestazioni inventario oggetti.  Utilizzare il campo di ricerca situato in alto a destra della pagina per individuare rapidamente i dati in base al nome dell"oggetto o al nome della policy.  Ciò consente di individuare rapidamente oggetti specifici e i dati associati oppure di individuare rapidamente policy e visualizzare i dati degli oggetti policy associati.' 
+---
+= Cerca nelle pagine delle prestazioni dell'inventario degli oggetti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile cercare stringhe nelle pagine Prestazioni inventario oggetti.  Utilizzare il campo *Cerca* situato in alto a destra della pagina per individuare rapidamente i dati in base al nome dell'oggetto o al nome della policy.  Ciò consente di individuare rapidamente oggetti specifici e i dati associati oppure di individuare rapidamente policy e visualizzare i dati degli oggetti policy associati.
+
+.Fare un passo
+. Esegui una delle seguenti opzioni, in base alle tue esigenze di ricerca:
++
+|===
+| Per localizzare questo... | Scrivi questo... 
+
+
+ a| 
+Un oggetto specifico
+ a| 
+Inserisci il nome dell'oggetto nel campo *Cerca* e clicca su *Cerca*.  Vengono visualizzati l'oggetto cercato e i dati correlati.
+
+
+
+ a| 
+Una politica di soglia delle prestazioni definita dall'utente
+ a| 
+Inserisci tutto o parte del nome della policy nel campo *Cerca* e clicca su *Cerca*.  Vengono visualizzati gli oggetti assegnati alla policy ricercata.
+
+|===
+

@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_to_group_volume_relationships_by_issue.html 
+sidebar: sidebar 
+keywords: create, report, group, volume, relationships, issue 
+summary: È possibile creare un report che raggruppi le relazioni di volume in base al problema. 
+---
+= Creare un report per raggruppare le relazioni di volume in base al problema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un report che raggruppi le relazioni di volume in base al problema.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+Utilizzare i passaggi seguenti per creare una vista personalizzata che raggruppi le relazioni di volume in base al problema, quindi pianificare la generazione di un report per tale vista.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Volumi*.
+. Nel menu Visualizza, seleziona *Relazione* > *Tutte le relazioni*.
+. Selezionare *Mostra/Nascondi* per rimuovere le colonne che non si desiderano nel report.
+. Trascina la colonna "`Motivo non salutare`" vicino alla colonna "`Stato`".
+. Fare clic sulla parte superiore della colonna "`Motivo non corretto`" per raggruppare i volumi in base al problema.
+. Salva la vista con un nome specifico che rifletta ciò che la vista sta mostrando, ad esempio "`Relazioni tra volumi per problema`".
+. Fare clic sul pulsante *Rapporti pianificati* nella pagina dell'inventario.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""] ) alla fine della riga.
++
+Il rapporto viene inviato immediatamente a scopo di verifica.  Successivamente, il report viene generato e inviato tramite e-mail ai destinatari elencati utilizzando la frequenza specificata.
+
+
+
+Sulla base dei risultati mostrati nel report, è possibile analizzare l'origine e l'impatto di ogni tipo di problema.

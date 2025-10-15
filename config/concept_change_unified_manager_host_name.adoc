@@ -1,0 +1,16 @@
+---
+permalink: config/concept_change_unified_manager_host_name.html 
+sidebar: sidebar 
+keywords: change, unified manager, host, name 
+summary: 'A un certo punto, potresti voler modificare il nome host del sistema su cui hai installato Unified Manager.  Ad esempio, potresti voler rinominare l"host per identificare più facilmente i server Unified Manager in base al tipo, al gruppo di lavoro o al gruppo di cluster monitorati.' 
+---
+= Cambiare il nome host di Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A un certo punto, potresti voler modificare il nome host del sistema su cui hai installato Unified Manager.  Ad esempio, potresti voler rinominare l'host per identificare più facilmente i server Unified Manager in base al tipo, al gruppo di lavoro o al gruppo di cluster monitorati.
+
+I passaggi necessari per modificare il nome host sono diversi a seconda che Unified Manager sia in esecuzione su un server VMware ESXi, su un server Red Hat Linux o su un server Microsoft Windows.

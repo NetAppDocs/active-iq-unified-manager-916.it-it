@@ -1,0 +1,404 @@
+---
+permalink: events/reference_node_events.html 
+sidebar: sidebar 
+keywords: node, events, impact area, availability, capacity, configuration, performance, security 
+summary: 'Gli eventi del nodo forniscono informazioni sullo stato del nodo, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all"area di impatto e includono il nome dell"evento e della trappola, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi del nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi del nodo forniscono informazioni sullo stato del nodo, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all'area di impatto e includono il nome dell'evento e della trappola, il livello di impatto, il tipo di origine e la gravità.
+
+Un asterisco (*) identifica gli eventi EMS che sono stati convertiti in eventi Unified Manager.
+
+
+
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Spazio del volume radice del nodo quasi pieno (ocumEvtClusterNodeRootVolumeSpaceNearlyFull)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Cloud AWS MetaDataConnFail *(ocumCloudAwsMetadataConnFail)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Cloud AWS IAMCredsExpired *(ocumCloudAwsIamCredsExpired)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Cloud AWS IAMCredsInvalid *(ocumCloudAwsIamCredsInvalid)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Cloud AWS IAMCredsNotFound *(ocumCloudAwsIamCredsNotFound)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Cloud AWS IAMCredsNotInitialized *(ocumCloudAwsIamCredsNotInitialized)
+ a| 
+Evento
+ a| 
+Nodo
+ a| 
+Informazioni
+
+
+
+ a| 
+Cloud AWS IAMRoleInvalid *(ocumCloudAwsIamRoleInvalid)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Cloud AWS IAMRoleNotFound *(ocumCloudAwsIamRoleNotFound)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Host Cloud Tier non risolvibile *(ocumObjstoreHostUnresolvable)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Interfaccia di rete intercluster Cloud Tier inattiva *(ocumObjstoreInterClusterLifDown)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Uno dei pool NFSv4 esaurito *(nbladeNfsv4PoolEXhaust)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Critico
+
+
+
+ a| 
+Richiesta di mancata corrispondenza della firma del livello cloud *(oscSignatureMismatch)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+|===
+
+
+== Area di impatto: capacità
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Memoria monitor QoS raggiunta al massimo *(ocumQosMonitorMemoryMaxed)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Memoria monitor QoS ridotta *(ocumQosMonitorMemoryAbated)
+ a| 
+Evento
+ a| 
+Nodo
+ a| 
+Informazioni
+
+|===
+
+
+== Area di impatto: configurazione
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Nodo rinominato (non applicabile)
+ a| 
+Evento
+ a| 
+Nodo
+ a| 
+Informazioni
+
+|===
+
+
+== Area di impatto: prestazioni
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Soglia critica IOPS del nodo violata (ocumNodeIopsIncident)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso IOPS del nodo violata (ocumNodeIopsWarning)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica MB/s del nodo violata (ocumNodeMbpsIncident)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso MB/s del nodo violata (ocumNodeMbpsWarning)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica di latenza del nodo ms/op violata (ocumNodeLatencyIncident)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso di latenza del nodo ms/op violata (ocumNodeLatencyWarning)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Capacità di prestazioni del nodo utilizzata soglia critica violata (ocumNodePerfCapacityUsedIncident)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso relativa alla capacità di prestazioni del nodo utilizzata superata (ocumNodePerfCapacityUsedWarning)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Capacità di prestazioni del nodo utilizzata - Soglia critica di acquisizione violata (ocumNodePerfCapacityUsedTakeoverIncident)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Critico
+
+
+
+ a| 
+Capacità di prestazioni del nodo utilizzata - Soglia di avviso di acquisizione violata (ocumNodePerfCapacityUsedTakeoverWarning)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica di utilizzo del nodo violata (ocumNodeUtilizationIncident)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso di utilizzo del nodo superata (ocumNodeUtilizationWarning)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia di sovrautilizzo della coppia di nodi HA violata (ocumNodeHaPairOverUtilizedInformation)
+ a| 
+Evento
+ a| 
+Nodo
+ a| 
+Informazioni
+
+
+
+ a| 
+Soglia di frammentazione del disco del nodo violata (ocumNodeDiskFragmentationWarning)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Superata la soglia di capacità di prestazione utilizzata (ocumNodeOverUtilizedWarning)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia dinamica del nodo violata (ocumNodeDynamicEventWarning)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+|===
+
+
+== Area di impatto: sicurezza
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+ID avviso: NTAP-<__ID avviso__>(ocumx)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Critico
+
+|===

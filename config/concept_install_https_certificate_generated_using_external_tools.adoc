@@ -1,0 +1,120 @@
+---
+permalink: config/concept_install_https_certificate_generated_using_external_tools.html 
+sidebar: sidebar 
+keywords: install, HTTPS, certificate, generated from external tools 
+summary: È possibile installare certificati autofirmati o firmati da una CA e generati tramite uno strumento esterno come OpenSSL, BoringSSL, LetsEncrypt. 
+---
+= Installa un certificato HTTPS generato utilizzando strumenti esterni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile installare certificati autofirmati o firmati da una CA e generati tramite uno strumento esterno come OpenSSL, BoringSSL, LetsEncrypt.
+
+È necessario caricare la chiave privata insieme alla catena di certificati, poiché questi certificati sono coppie di chiavi pubblica-privata generate esternamente.  Gli algoritmi di coppia di chiavi consentiti sono "`RSA`" e "`EC`".  L'opzione *Installa certificato HTTPS* è disponibile nella pagina Certificati HTTPS nella sezione Generale.  Il file caricato deve essere nel seguente formato di input.
+
+. Chiave privata del server che appartiene all'host Active IQ Unified Manager
+. Certificato del server che corrisponde alla chiave privata
+. Certificato delle CA inverso fino alla radice, che vengono utilizzati per firmare il certificato di cui sopra
+
+
+
+
+== Formato per il caricamento di un certificato con una coppia di chiavi EC
+
+Le curve consentite sono "`prime256v1`" e "`secp384r1`".  Esempio di certificato con una coppia EC generata esternamente:
+
+[listing]
+----
+ -----BEGIN EC PRIVATE KEY-----
+<EC private key of Server>
+-----END EC PRIVATE KEY-----
+----
+[listing]
+----
+ -----BEGIN CERTIFICATE-----
+ <Server certificate>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #1 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #2 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Root signing certificate>
+ -----END CERTIFICATE-----
+----
+
+
+== Formato per il caricamento di un certificato con una coppia di chiavi RSA
+
+Le dimensioni delle chiavi consentite per la coppia di chiavi RSA appartenente al certificato host sono 2048, 3072 e 4096. certificato con una *coppia di chiavi RSA* generata esternamente:
+
+[listing]
+----
+-----BEGIN RSA PRIVATE KEY-----
+ <RSA private key of Server>
+ -----END RSA PRIVATE KEY-----
+ -----BEGIN CERTIFICATE-----
+ <Server certificate>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #1 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #2 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Root signing certificate>
+ -----END CERTIFICATE-----
+----
+Dopo aver caricato il certificato, è necessario riavviare l'istanza di Active IQ Unified Manager affinché le modifiche abbiano effetto.
+
+
+
+== Controlli durante il caricamento di certificati generati esternamente
+
+Il sistema esegue controlli durante il caricamento di un certificato generato tramite strumenti esterni.  Se uno qualsiasi dei controlli fallisce, il certificato viene rifiutato.  Sono incluse anche le convalide per i certificati generati dal CSR all'interno del prodotto e per i certificati generati tramite strumenti esterni.
+
+* La chiave privata nell'input viene convalidata rispetto al certificato host nell'input.
+* Il nome comune (CN) nel certificato host viene confrontato con l'FQDN dell'host.
+* Il nome comune (CN) del certificato host non deve essere vuoto e non deve essere impostato su localhost.
+* La data di inizio della validità del certificato non deve essere nel futuro e la data di scadenza della validità del certificato non deve essere nel passato.
+* Se esiste una CA intermedia o una CA, la data di inizio validità del certificato non deve essere futura e la data di scadenza della validità non deve essere passata.
+
+
+[NOTE]
+====
+La chiave privata nell'input non deve essere crittografata.  Se sono presenti chiavi private crittografate, queste vengono rifiutate dal sistema.
+
+====
+Esempio 1
+
+[listing]
+----
+----BEGIN ENCRYPTED PRIVATE KEY-----
+<Encrypted private key>
+-----END ENCRYPTED PRIVATE KEY-----
+----
+Esempio 2
+
+[listing]
+----
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+<content here>
+-----END RSA PRIVATE KEY-----
+----
+Esempio 3
+
+[listing]
+----
+-----BEGIN EC PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+<content here>
+-----END EC PRIVATE KEY-----
+----
+Se l'installazione del certificato non riesce, consultare l'articolo della Knowledge Base (KB):https://kb.netapp.com/mgmt/AIQUM/AIQUM_fails_to_install_externally_generated_certificate["ActiveIQ Unified Manager non riesce a installare un certificato generato esternamente"^]

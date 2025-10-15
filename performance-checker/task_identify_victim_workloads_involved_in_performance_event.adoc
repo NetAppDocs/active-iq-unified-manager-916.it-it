@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/task_identify_victim_workloads_involved_in_performance_event.html 
+sidebar: sidebar 
+keywords: identify, victim workloads, dynamic, performance, event 
+summary: 'In Unified Manager è possibile identificare quali carichi di lavoro di volume presentano la deviazione più elevata nel tempo di risposta (latenza) causata da un componente di archiviazione in contesa.  Identificare questi carichi di lavoro aiuta a capire perché le applicazioni client che vi accedono sono più lente del solito.' 
+---
+= Identificare i carichi di lavoro delle vittime coinvolti in un evento di prestazioni dinamiche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In Unified Manager è possibile identificare quali carichi di lavoro di volume presentano la deviazione più elevata nel tempo di risposta (latenza) causata da un componente di archiviazione in contesa.  Identificare questi carichi di lavoro aiuta a capire perché le applicazioni client che vi accedono sono più lente del solito.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* Devono esserci eventi di performance dinamica nuovi, riconosciuti o obsoleti.
+
+
+La pagina Dettagli evento visualizza un elenco dei carichi di lavoro definiti dall'utente e dal sistema, classificati in base alla deviazione più elevata nell'attività o nell'utilizzo del componente o maggiormente interessati dall'evento.  I valori si basano sui picchi identificati da Unified Manager quando ha rilevato e analizzato per l'ultima volta l'evento.
+
+.Passi
+. Visualizza la pagina *Dettagli evento* per visualizzare le informazioni sull'evento.
+. Nei grafici Latenza del carico di lavoro e Attività del carico di lavoro, selezionare *Carichi di lavoro delle vittime*.
+. Passa il cursore sui grafici per visualizzare i principali carichi di lavoro definiti dall'utente che interessano il componente e il nome del carico di lavoro interessato.
+

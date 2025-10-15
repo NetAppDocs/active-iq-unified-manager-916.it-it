@@ -1,0 +1,20 @@
+---
+permalink: reporting/concept_schedule_reports.html 
+sidebar: sidebar 
+keywords: scheduling, reports 
+summary: Dopo aver creato una vista che desideri riutilizzare e condividere come report, puoi pianificarla utilizzando Active IQ Unified Manager.  È possibile gestire i report programmati, modificando i destinatari e la frequenza di distribuzione per ogni pianificazione del report. 
+---
+= Pianifica i report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver creato una vista che desideri riutilizzare e condividere come report, puoi pianificarla utilizzando Active IQ Unified Manager.  È possibile gestire i report programmati, modificando i destinatari e la frequenza di distribuzione per ogni pianificazione del report.
+
+In Unified Manager è possibile pianificare la maggior parte delle visualizzazioni o delle pagine di inventario.  Le eccezioni sono gli eventi, ovvero report che è possibile scaricare come file CSV, ma non è possibile pianificare eventi per la rigenerazione e la condivisione.  Non è inoltre possibile scaricare o pianificare i dashboard, i preferiti o le pagine di configurazione.
+
+A partire da Active IQ Unified Manager 9.8, è possibile scaricare le visualizzazioni in formato Microsoft® Excel e personalizzarle.  È possibile utilizzare funzionalità avanzate di Excel, quali ordinamenti complessi, filtri a livelli, tabelle pivot e grafici.  Una volta ottenuto il report Excel desiderato, è possibile caricare il file Excel per utilizzarlo ogni volta che il report viene pianificato e condiviso.
+
+È possibile programmare le viste integrate o quelle personalizzate.  Puoi scegliere il tipo di file da inviare: CSV, PDF o XSLX.  Quando pianifichi un report per la prima volta, puoi scaricarlo e impostarti come unico destinatario a visualizzarlo, così come lo vedranno i tuoi destinatari.

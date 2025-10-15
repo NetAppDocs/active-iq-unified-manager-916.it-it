@@ -1,0 +1,40 @@
+---
+permalink: storage-mgmt/task_create_rules_to_generate_email_addresses.html 
+sidebar: sidebar 
+keywords: create, rules, generate, email, addresses 
+summary: 'È possibile creare regole per specificare l"indirizzo e-mail in base alla quota utente associata a cluster, macchine virtuali di archiviazione (SVM), volumi, qtree, utenti o gruppi di utenti.  In caso di violazione della quota, viene inviata una notifica all"indirizzo e-mail specificato.' 
+---
+= Crea regole per generare indirizzi email
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare regole per specificare l'indirizzo e-mail in base alla quota utente associata a cluster, macchine virtuali di archiviazione (SVM), volumi, qtree, utenti o gruppi di utenti.  In caso di violazione della quota, viene inviata una notifica all'indirizzo e-mail specificato.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* È necessario aver esaminato le linee guida nella pagina Regole per generare indirizzi email per quote utente e gruppo.
+
+
+È necessario definire le regole per gli indirizzi e-mail quotati e inserirle nell'ordine in cui si desidera eseguirle.  Ad esempio, se si desidera utilizzare l'indirizzo email abc@xyz.com per ricevere notifiche sulle violazioni delle quote per abc e utilizzare l'indirizzo email dl-$GROUP@$DOMAIN per tutti gli altri gruppi, le regole devono essere elencate nel seguente ordine:
+
+* se ( $USER == 'abc' ) allora abc@xyz.com
+* se ( $GROUP == * ) allora dl-$GROUP@$DOMAIN
+
+
+Se nessuno dei criteri per le regole specificate viene soddisfatto, viene utilizzata la regola predefinita:
+
+se ( $USER_OR_GROUP == * ) allora $USER_OR_GROUP@$DOMAIN
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Generale* > *Regole e-mail per le quote*.
+. Inserisci la regola in base ai tuoi criteri.
+. Fare clic su *Convalida* per convalidare la sintassi della regola.
++
+Se la sintassi della regola non è corretta, viene visualizzato un messaggio di errore.  È necessario correggere la sintassi e fare nuovamente clic su *Convalida*.
+
+. Fare clic su *Salva*.
+. Verifica che l'indirizzo email creato sia visualizzato nella scheda *Quote utente e gruppo* della pagina dei dettagli *VM/Stato* di archiviazione.
+

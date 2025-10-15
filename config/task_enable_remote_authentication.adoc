@@ -1,0 +1,76 @@
+---
+permalink: config/task_enable_remote_authentication.html 
+sidebar: sidebar 
+keywords: enable, remote, authentication 
+summary: 'È possibile abilitare l"autenticazione remota in modo che il server Unified Manager possa comunicare con i server di autenticazione.  Gli utenti del server di autenticazione possono accedere all"interfaccia grafica di Unified Manager per gestire gli oggetti di archiviazione e i dati.' 
+---
+= Abilita l'autenticazione remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile abilitare l'autenticazione remota in modo che il server Unified Manager possa comunicare con i server di autenticazione.  Gli utenti del server di autenticazione possono accedere all'interfaccia grafica di Unified Manager per gestire gli oggetti di archiviazione e i dati.
+
+.Prima di iniziare
+È necessario disporre del ruolo di amministratore dell'applicazione.
+
+[NOTE]
+====
+Il server Unified Manager deve essere connesso direttamente al server di autenticazione.  È necessario disattivare tutti i client LDAP locali, ad esempio SSSD (System Security Services Daemon) o NSLCD (Name Service LDAP Caching Daemon).
+
+====
+È possibile abilitare l'autenticazione remota utilizzando Open LDAP o Active Directory.  Se l'autenticazione remota è disabilitata, gli utenti remoti non possono accedere a Unified Manager.
+
+L'autenticazione remota è supportata tramite LDAP e LDAPS (Secure LDAP).  Unified Manager utilizza 389 come porta predefinita per le comunicazioni non sicure e 636 come porta predefinita per le comunicazioni sicure.
+
+[NOTE]
+====
+Il certificato utilizzato per autenticare gli utenti deve essere conforme al formato X.509.
+
+====
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Generale* > *Autenticazione remota*.
+. Seleziona la casella *Abilita autenticazione remota...*.
+. Nel campo Servizio di autenticazione, seleziona il tipo di servizio e configura il servizio di autenticazione.
++
+[cols="2*"]
+|===
+| Per il tipo di autenticazione... | Inserisci le seguenti informazioni... 
+
+
+ a| 
+Directory attiva
+ a| 
+** Nome dell'amministratore del server di autenticazione in uno dei seguenti formati:
++
+*** `domainname\username`
+*** `username@domainname`
+*** `Bind Distinguished Name`(utilizzando la notazione LDAP appropriata)
+
+
+** Password dell'amministratore
+** Nome distinto di base (utilizzando la notazione LDAP appropriata)
+
+
+
+
+ a| 
+Apri LDAP
+ a| 
+** Associa nome distinto (nella notazione LDAP appropriata)
+** Password di collegamento
+** Nome distinto di base
+
+
+|===
++
+Se l'autenticazione di un utente di Active Directory richiede molto tempo o scade, è probabile che il server di autenticazione stia impiegando molto tempo a rispondere.  La disattivazione del supporto per i gruppi nidificati in Unified Manager potrebbe ridurre il tempo di autenticazione.
+
++
+Se si seleziona l'opzione Usa connessione protetta per il server di autenticazione, Unified Manager comunica con il server di autenticazione tramite il protocollo Secure Sockets Layer (SSL).
+
+. *Facoltativo:* Aggiungi server di autenticazione e testa l'autenticazione.
+. Fare clic su *Salva*.
+

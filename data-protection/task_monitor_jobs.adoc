@@ -1,0 +1,29 @@
+---
+permalink: data-protection/task_monitor_jobs.html 
+sidebar: sidebar 
+keywords: monitor, jobs 
+summary: 'È possibile utilizzare la pagina Lavori per monitorare lo stato dei lavori e visualizzare le proprietà dei lavori, ad esempio il tipo di servizio di archiviazione, lo stato, l"ora di invio e l"ora di completamento, per determinare se un lavoro è stato completato correttamente o meno.' 
+---
+= Monitorare i lavori
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la pagina Lavori per monitorare lo stato dei lavori e visualizzare le proprietà dei lavori, ad esempio il tipo di servizio di archiviazione, lo stato, l'ora di invio e l'ora di completamento, per determinare se un lavoro è stato completato correttamente o meno.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Protezione* > *Lavori*.
++
+Viene visualizzata la pagina Lavori.
+
+. Visualizza la colonna *Stato* per determinare lo stato dei processi attualmente in esecuzione.
+. Fare clic sul nome di un lavoro per visualizzarne i dettagli.
++
+Viene visualizzata la pagina dei dettagli del lavoro.
+
+

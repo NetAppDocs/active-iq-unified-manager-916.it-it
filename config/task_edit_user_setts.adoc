@@ -1,0 +1,30 @@
+---
+permalink: config/task_edit_user_setts.html 
+sidebar: sidebar 
+keywords: edit, user, settings 
+summary: 'È possibile modificare le impostazioni utente, come l"indirizzo email e il ruolo, specificate per ciascun utente.  Ad esempio, potresti voler modificare il ruolo di un utente che è un operatore di archiviazione e assegnare all"utente privilegi di amministratore di archiviazione.' 
+---
+= Modifica le impostazioni utente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare le impostazioni utente, come l'indirizzo email e il ruolo, specificate per ciascun utente.  Ad esempio, potresti voler modificare il ruolo di un utente che è un operatore di archiviazione e assegnare all'utente privilegi di amministratore di archiviazione.
+
+.Prima di iniziare
+È necessario disporre del ruolo di amministratore dell'applicazione.
+
+Quando si modifica il ruolo assegnato a un utente, le modifiche vengono applicate quando si verifica una delle seguenti azioni:
+
+* L'utente si disconnette e accede nuovamente a Unified Manager.
+* È stato raggiunto il timeout di 24 ore della sessione.
+
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Generale* > *Utenti*.
+. Nella pagina Utenti, seleziona l'utente per il quale desideri modificare le impostazioni e fai clic su *Modifica*.
+. Nella finestra di dialogo Modifica utente, modificare le impostazioni appropriate specificate per l'utente.
+. Fare clic su *Salva*.
+

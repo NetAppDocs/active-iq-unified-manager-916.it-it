@@ -1,0 +1,71 @@
+---
+permalink: performance-checker/task_move_workloads_to_different_aggregate.html 
+sidebar: sidebar 
+keywords: move, workloads, different, aggregate 
+summary: È possibile utilizzare Unified Manager per identificare un aggregato meno occupato rispetto a quello in cui risiedono attualmente i carichi di lavoro, quindi è possibile spostare i volumi o le LUN selezionati su tale aggregato.  Spostando i carichi di lavoro ad alte prestazioni su un aggregato meno utilizzato o su un aggregato con storage flash abilitato, è possibile ottenere prestazioni più efficienti del carico di lavoro. 
+---
+= Spostare i carichi di lavoro su un aggregato diverso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare Unified Manager per identificare un aggregato meno occupato rispetto a quello in cui risiedono attualmente i carichi di lavoro, quindi è possibile spostare i volumi o le LUN selezionati su tale aggregato.  Spostando i carichi di lavoro ad alte prestazioni su un aggregato meno utilizzato o su un aggregato con storage flash abilitato, è possibile ottenere prestazioni più efficienti del carico di lavoro.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* Devi aver registrato il nome dell'aggregato che presenta attualmente un problema di prestazioni.
+* È necessario aver registrato la data e l'ora in cui l'aggregato ha ricevuto l'evento.
+* Unified Manager deve aver raccolto e analizzato almeno un mese di dati sulle prestazioni.
+
+
+Questi passaggi ti aiutano a identificare le seguenti risorse in modo da poter spostare i carichi di lavoro ad alte prestazioni su un aggregato meno utilizzato:
+
+* Gli aggregati sullo stesso cluster che sono meno utilizzati
+* I volumi più performanti sull'aggregato attuale
+
+
+.Passi
+. Identificare l'aggregato nel cluster che è meno utilizzato:
++
+.. Dalla pagina dei dettagli *Evento*, fare clic sul nome del cluster su cui risiede l'aggregato.
++
+I dettagli del cluster vengono visualizzati nella pagina di destinazione Prestazioni/Cluster.
+
+.. Nella pagina *Riepilogo*, fare clic su *Aggregati* nel riquadro *Oggetti gestiti*.
++
+Viene visualizzato l'elenco degli aggregati presenti in questo cluster.
+
+.. Fare clic sulla colonna *Utilizzo* per ordinare gli aggregati in base al loro utilizzo minore.
++
+È anche possibile identificare gli aggregati che hanno la maggiore *Capacità libera*.  Viene fornito un elenco di potenziali aggregati su cui potresti voler spostare i carichi di lavoro.
+
+.. Annotare il nome dell'aggregato su cui si desidera spostare i carichi di lavoro.
+
+
+. Identificare i volumi ad alte prestazioni dall'aggregato che ha ricevuto l'evento:
++
+.. Fare clic sull'aggregato che presenta il problema di prestazioni.
++
+I dettagli aggregati vengono visualizzati nella pagina Performance/Aggregate Explorer.
+
+.. Dal selettore *Intervallo di tempo*, seleziona *Ultimi 30 giorni*, quindi fai clic su *Applica intervallo*.
++
+Ciò consente di visualizzare un periodo di cronologia delle prestazioni più lungo rispetto alle 72 ore predefinite.  Si desidera spostare un volume che utilizza molte risorse in modo continuativo, non solo nelle ultime 72 ore.
+
+.. Dal controllo *Visualizza e confronta*, seleziona *Volumi su questo aggregato*.
++
+Viene visualizzato un elenco dei volumi FlexVol e dei volumi costituenti FlexGroup su questo aggregato.
+
+.. Ordina i volumi in base al valore MB/s più alto e poi in base al valore IOPS più alto per visualizzare i volumi con le prestazioni più elevate.
+.. Annotare i nomi dei volumi che si desidera spostare in un aggregato diverso.
+
+
+. Sposta i volumi ad alte prestazioni nell'aggregato che hai identificato come a basso utilizzo.
++
+È possibile eseguire l'operazione di spostamento utilizzando ONTAP System Manager, OnCommand Workflow Automation, i comandi ONTAP o una combinazione di questi strumenti.
+
+
+
+Dopo alcuni giorni, controlla se stai ricevendo lo stesso tipo di eventi da questo nodo o aggregato.

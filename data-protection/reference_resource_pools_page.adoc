@@ -1,0 +1,216 @@
+---
+permalink: data-protection/reference_resource_pools_page.html 
+sidebar: sidebar 
+keywords: resource, pools, page 
+summary: La pagina Pool di risorse visualizza i pool di risorse esistenti e i relativi membri e consente di creare, monitorare e gestire i pool di risorse per scopi di provisioning. 
+---
+= Pagina Pool di risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Pool di risorse visualizza i pool di risorse esistenti e i relativi membri e consente di creare, monitorare e gestire i pool di risorse per scopi di provisioning.
+
+
+
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti attività:
+
+* *Creare*
++
+Avvia la finestra di dialogo Crea pool di risorse, che puoi utilizzare per creare pool di risorse.
+
+* *Modificare*
++
+Consente di modificare il nome e la descrizione dei pool di risorse creati.
+
+* *Eliminare*
++
+Consente di eliminare uno o più pool di risorse.
+
+
+
+
+
+== Elenco dei pool di risorse
+
+L'elenco Pool di risorse visualizza (in formato tabellare) le proprietà dei pool di risorse esistenti.
+
+* *Pool di risorse*
++
+Visualizza il nome del pool di risorse.
+
+* *Descrizione*
++
+Descrive il pool di risorse.
+
+* * Tipo SnapLock *
++
+Visualizza il tipo di SnapLock utilizzato dagli aggregati nel pool di risorse.  I valori validi per il tipo SnapLock sono Conformità, Azienda e Non- SnapLock.  Un pool di risorse può contenere aggregati di un solo tipo SnapLock .
+
+* *Capacità totale*
++
+Visualizza la capacità totale (in MB, GB e così via) del pool di risorse.
+
+* *Capacità utilizzata*
++
+Visualizza la quantità di spazio (in MB, GB e così via) utilizzata nel pool di risorse.
+
+* *Capacità disponibile*
++
+Visualizza la quantità di spazio (in MB, GB e così via) disponibile nel pool di risorse.
+
+* *Usato %*
++
+Visualizza la percentuale di spazio utilizzato nel pool di risorse.
+
+
+
+
+
+== Pulsanti di comando dell'elenco dei membri
+
+I pulsanti di comando dell'elenco Membri consentono di eseguire le seguenti attività:
+
+* *Aggiungere*
++
+Consente di aggiungere membri al pool di risorse.
+
+* *Eliminare*
++
+Consente di eliminare uno o più membri dal pool di risorse.
+
+
+
+
+
+== Elenco dei membri
+
+L'elenco Membri visualizza (in formato tabellare) i membri del pool di risorse e le relative proprietà quando viene selezionato un pool di risorse.
+
+* *Stato*
++
+Visualizza lo stato attuale dell'aggregato dei membri.  Lo stato può essere Critico (image:../media/sev_critical_um60.png[""] ), Errore (image:../media/sev_error_um60.png[""] ), Avvertimento (image:../media/sev_warning_um60.png[""] ), o Normale (image:../media/sev_normal_um60.png[""] ).
+
+* *Nome aggregato*
++
+Visualizza il nome dell'aggregato dei membri.
+
+* *Stato*
++
+Visualizza lo stato corrente dell'aggregato, che può essere uno dei seguenti:
+
++
+** Fuori linea
++
+L'accesso in lettura o scrittura non è consentito.
+
+** In linea
++
+È consentito l'accesso in lettura e scrittura ai volumi ospitati su questo aggregato.
+
+** Limitato
++
+Sono consentite operazioni limitate (come la ricostruzione della parità), ma non è consentito l'accesso ai dati.
+
+** Creazione
++
+L'aggregato è in fase di creazione.
+
+** Distruggendo
++
+L'aggregato viene distrutto.
+
+** Fallito
++
+L'aggregato non può essere messo online.
+
+** Congelato
++
+L'aggregato (temporaneamente) non sta elaborando le richieste.
+
+** Incoerente
++
+L'aggregato è stato contrassegnato come danneggiato; contattare l'assistenza tecnica.
+
+** Ferro limitato
++
+Gli strumenti diagnostici non possono essere eseguiti in modo aggregato.
+
+** Montaggio
++
+L'aggregato è in fase di montaggio.
+
+** Parziale
++
+È stato trovato almeno un disco per l'aggregato, ma ne mancano due o più.
+
+** Quiescenza
++
+L'aggregato è in fase di sospensione.
+
+** Quieced
++
+L'aggregato è inattivo.
+
+** Ripristinato
++
+Il ripristino di un aggregato è completato.
+
+** Smontato
++
+L'aggregato è stato smontato.
+
+** Smontaggio
++
+L'aggregato verrà disattivato.
+
+** Sconosciuto
++
+L'aggregato è stato rilevato, ma le informazioni aggregate non sono ancora state recuperate dal server Unified Manager.
+
+
+
++
+Per impostazione predefinita, questa colonna è nascosta.
+
+* *Grappolo*
++
+Visualizza il nome del cluster a cui appartiene l'aggregato.
+
+* *Nodo*
++
+Visualizza il nome del nodo su cui risiede l'aggregato.
+
+* *Capacità totale*
++
+Visualizza la capacità totale (in MB, GB e così via) dell'aggregato.
+
+* *Capacità utilizzata*
++
+Visualizza la quantità di spazio (in MB, GB e così via) utilizzata nell'aggregato.
+
+* *Capacità disponibile*
++
+Visualizza la quantità di spazio (in MB, GB e così via) disponibile in totale.
+
+* *Usato %*
++
+Visualizza la percentuale di spazio utilizzata nell'aggregato.
+
+* *Tipo di disco*
++
+Visualizza il tipo di configurazione RAID, che può essere uno dei seguenti:
+
++
+** RAID0: tutti i gruppi RAID sono di tipo RAID0.
+** RAID4: Tutti i gruppi RAID sono di tipo RAID4.
+** RAID-DP: Tutti i gruppi RAID sono di tipo RAID-DP.
+** RAID-TEC: Tutti i gruppi RAID sono di tipo RAID-TEC.
+** RAID misto: l'aggregato contiene gruppi RAID di diversi tipi RAID (RAID0, RAID4, RAID-DP e RAID-TEC).  Per impostazione predefinita, questa colonna è nascosta.
+
+
+

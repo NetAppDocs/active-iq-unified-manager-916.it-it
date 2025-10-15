@@ -1,0 +1,85 @@
+---
+permalink: storage-mgmt/concept_manage_storage_efficiency_policies.html 
+sidebar: sidebar 
+keywords: manage, storage, efficiency, policies, guidelines, create, custom 
+summary: 'Una politica di efficienza di archiviazione (SEP) consente di definire le caratteristiche di efficienza di archiviazione di un carico di lavoro.  È possibile assegnare un SEP a un carico di lavoro durante la creazione iniziale del carico di lavoro oppure in seguito modificandolo.' 
+---
+= Gestire le policy di efficienza dello storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una politica di efficienza di archiviazione (SEP) consente di definire le caratteristiche di efficienza di archiviazione di un carico di lavoro.  È possibile assegnare un SEP a un carico di lavoro durante la creazione iniziale del carico di lavoro oppure in seguito modificandolo.
+
+L'efficienza dello storage prevede l'utilizzo di tecnologie quali thin provisioning, deduplicazione e compressione dei dati che aumentano l'utilizzo dello storage e ne riducono i costi.  Durante la creazione di SEP, è possibile utilizzare queste tecnologie salvaspazio singolarmente o insieme per ottenere la massima efficienza di archiviazione.  Quando si associano i criteri ai carichi di lavoro di archiviazione, vengono loro assegnate le impostazioni dei criteri specificati.  Unified Manager consente di assegnare SEP definiti dal sistema e dall'utente per ottimizzare le risorse di storage nel data center.
+
+Unified Manager fornisce due SEP definiti dal sistema: Alto e Basso.  Questi SEP sono applicabili alla maggior parte dei carichi di lavoro di archiviazione in un data center; tuttavia, è possibile creare policy personalizzate se gli SEP definiti dal sistema non soddisfano i requisiti.
+
+Non è possibile modificare un SEP definito dal sistema o attualmente assegnato a un carico di lavoro.  Non è possibile eliminare un SEP assegnato a un carico di lavoro o se è l'unico SEP disponibile.
+
+La pagina Criteri di efficienza dell'archiviazione elenca i SEP disponibili e consente di aggiungere, modificare ed eliminare i SEP personalizzati.  Questa pagina visualizza le seguenti informazioni:
+
+|===
+| Campo | Descrizione 
+
+
+ a| 
+Nome
+ a| 
+Nome del SEP.
+
+
+
+ a| 
+Tipo
+ a| 
+Se la policy è definita dal sistema o dall'utente.
+
+
+
+ a| 
+Riserva spaziale
+ a| 
+Se il volume è sottoposto a thin provisioning o thick provisioning.
+
+
+
+ a| 
+Deduplicazione
+ a| 
+Se la deduplicazione è abilitata sul carico di lavoro:
+
+* Inline: la deduplicazione avviene durante la scrittura sul carico di lavoro
+* Contesto: la deduplicazione avviene nel carico di lavoro
+* Disabilita: la deduplicazione è disabilitata sul carico di lavoro
+
+
+
+
+ a| 
+Compressione
+ a| 
+Se la compressione dei dati è abilitata sul carico di lavoro:
+
+* Inline: la compressione dei dati avviene durante la scrittura sul carico di lavoro
+* Contesto: la compressione dei dati avviene nel carico di lavoro
+* Disabilita: la compressione dei dati è disabilitata sul carico di lavoro
+
+
+
+
+ a| 
+Carichi di lavoro
+ a| 
+Numero di carichi di lavoro di archiviazione a cui è stato assegnato il SEP
+
+|===
+
+
+== Linee guida per la creazione di una politica di efficienza di archiviazione personalizzata
+
+Se gli SEP esistenti non soddisfano i requisiti dei criteri per i carichi di lavoro di archiviazione, è possibile creare un SEP personalizzato.  Tuttavia, si consiglia di provare a utilizzare gli SEP definiti dal sistema per i carichi di lavoro di archiviazione e di creare SEP personalizzati solo se necessario.
+
+È possibile visualizzare l'SEP assegnato ai carichi di lavoro nella pagina Tutti i carichi di lavoro e nella pagina Dettagli volume/integrità.  È possibile visualizzare il rapporto di riduzione dei dati a livello di cluster (senza copie Snapshot) in base a queste efficienze di archiviazione nel pannello Capacità della Dashboard e nella vista Capacità: Tutti i cluster.

@@ -1,0 +1,38 @@
+---
+permalink: storage-mgmt/task_change_time_um_retains_event_performance_data.html 
+sidebar: sidebar 
+keywords: change, length, time, unified manager, retains, event, performance, data 
+summary: Per impostazione predefinita, Unified Manager archivia i dati degli eventi e i dati sulle prestazioni per 6 mesi per tutti i cluster monitorati.  Trascorso questo periodo, i dati più vecchi vengono automaticamente eliminati per fare spazio ai nuovi dati.  Questo intervallo di tempo predefinito funziona bene per la maggior parte delle configurazioni, ma per configurazioni molto grandi con molti cluster e nodi potrebbe essere necessario ridurre il periodo di conservazione in modo che Unified Manager funzioni in modo ottimale. 
+---
+= Modificare la durata del periodo di conservazione dei dati sugli eventi e sulle prestazioni da parte di Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per impostazione predefinita, Unified Manager archivia i dati degli eventi e i dati sulle prestazioni per 6 mesi per tutti i cluster monitorati.  Trascorso questo periodo, i dati più vecchi vengono automaticamente eliminati per fare spazio ai nuovi dati.  Questo intervallo di tempo predefinito funziona bene per la maggior parte delle configurazioni, ma per configurazioni molto grandi con molti cluster e nodi potrebbe essere necessario ridurre il periodo di conservazione in modo che Unified Manager funzioni in modo ottimale.
+
+.Prima di iniziare
+È necessario disporre del ruolo di amministratore dell'applicazione.
+
+È possibile modificare i periodi di conservazione per questi due tipi di dati nella pagina Conservazione dei dati.  Queste impostazioni influiscono sulla conservazione dei dati di tutti i cluster monitorati da questa istanza di Unified Manager.
+
+[NOTE]
+====
+Unified Manager raccoglie statistiche sulle prestazioni ogni 5 minuti.  Ogni giorno le statistiche di 5 minuti vengono riepilogate in statistiche sulle prestazioni orarie.  Conserva 30 giorni di dati storici sulle prestazioni ogni 5 minuti e 6 mesi di dati riepilogativi sulle prestazioni ogni ora (per impostazione predefinita).
+
+====
+Dovresti ridurre il periodo di conservazione solo se lo spazio a disposizione sta per esaurirsi o se il backup e altre operazioni richiedono molto tempo per essere completate.  La riduzione del periodo di conservazione ha i seguenti effetti:
+
+* I vecchi dati sulle prestazioni vengono eliminati dal database di Unified Manager dopo mezzanotte.
+* I vecchi dati degli eventi vengono eliminati immediatamente dal database di Unified Manager.
+* Gli eventi precedenti al periodo di conservazione non saranno più visualizzabili nell'interfaccia utente.
+* Le posizioni nell'interfaccia utente in cui vengono visualizzate le statistiche sulle prestazioni orarie saranno vuote prima del periodo di conservazione.
+* Se il periodo di conservazione dell'evento supera il periodo di conservazione dei dati sulle prestazioni, verrà visualizzato un messaggio sotto il cursore delle prestazioni, che avvisa che gli eventi sulle prestazioni più vecchi potrebbero non avere dati di supporto nei grafici associati.
+
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Criteri* > *Conservazione dati*.
+. Nella pagina *Conservazione dati*, seleziona lo strumento cursore nell'area Conservazione eventi o Conservazione dati prestazioni e spostalo sul numero di mesi per cui i dati devono essere conservati, quindi fai clic su *Salva*.
+

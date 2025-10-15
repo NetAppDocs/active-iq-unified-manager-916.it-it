@@ -1,0 +1,101 @@
+---
+permalink: storage-mgmt/task_add_clusters.html 
+sidebar: sidebar 
+keywords: add cluster 
+summary: È possibile aggiungere un cluster ad Active IQ Unified Manager in modo da poterlo monitorare.  Ciò include la possibilità di ottenere informazioni sul cluster, quali integrità, capacità, prestazioni e configurazione del cluster, in modo da poter individuare e risolvere eventuali problemi che potrebbero verificarsi. 
+---
+= Aggiungi cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere un cluster ad Active IQ Unified Manager in modo da poterlo monitorare.  Ciò include la possibilità di ottenere informazioni sul cluster, quali integrità, capacità, prestazioni e configurazione del cluster, in modo da poter individuare e risolvere eventuali problemi che potrebbero verificarsi.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o di Amministratore dell'archiviazione.
+* È necessario disporre delle seguenti informazioni:
++
+** Unified Manager supporta cluster ONTAP on-premise, ONTAP Select Cloud Volumes ONTAP.
+** È necessario disporre del nome host o dell'indirizzo IP di gestione del cluster (IPv4 o IPv6) per il cluster.
++
+Quando si utilizza il nome host, è necessario risolverlo nell'indirizzo IP di gestione del cluster per il LIF di gestione del cluster.  Se si utilizza un LIF di gestione dei nodi, l'operazione fallisce.
+
+** Per accedere al cluster è necessario disporre del nome utente e della password.
++
+Questo account deve avere il ruolo _admin_ con accesso all'applicazione impostato su _ontapi_, _console_ e _http_.
+
+** È necessario conoscere il numero di porta per connettersi al cluster tramite il protocollo HTTPS (in genere la porta 443).
+** Il cluster deve eseguire il software ONTAP versione 9.9 o successiva.
+** È necessario disporre di spazio adeguato sul server Unified Manager.  Non è possibile aggiungere un cluster al server quando è già stato utilizzato più del 90% dello spazio.
+** Hai i certificati richiesti:
++
+*Certificato SSL (HTTPS)*: Questo certificato è di proprietà di Unified Manager.  Con una nuova installazione di Unified Manager viene generato un certificato SSL autofirmato predefinito (HTTPS).  NetApp consiglia di aggiornarlo al certificato firmato da una CA per una maggiore sicurezza.  Se il certificato del server scade, è necessario rigenerarlo e riavviare Unified Manager affinché i servizi incorporino il nuovo certificato.  Per ulteriori informazioni sulla rigenerazione del certificato SSL, vederelink:../config/task_generate_an_https_security_certificate_ocf.html["Generazione di un certificato di sicurezza HTTPS"] .
+
++
+*Certificato EMS*: Questo certificato è di proprietà di Unified Manager.  Viene utilizzato durante l'autenticazione per le notifiche EMS ricevute da ONTAP.
+
++
+*Certificati per la comunicazione TLS reciproca*: utilizzati durante la comunicazione TLS reciproca tra Unified Manager e ONTAP.  L'autenticazione basata su certificato è abilitata per un cluster, in base alla versione ONTAP .  Se il cluster che esegue la versione ONTAP è precedente alla 9.5, l'autenticazione basata su certificato non è abilitata.
+
++
+L'autenticazione basata su certificato non viene abilitata automaticamente per un cluster se si aggiorna una versione precedente di Unified Manager.  Tuttavia, è possibile abilitarlo modificando e salvando i dettagli del cluster.  Se il certificato scade, è necessario rigenerarlo per incorporare il nuovo certificato.  Per ulteriori informazioni sulla visualizzazione e la rigenerazione del certificato, vederelink:../storage-mgmt/task_edit_clusters.html["Modifica dei cluster"] .
+
++
+[NOTE]
+====
+*** È possibile aggiungere un cluster dall'interfaccia utente Web e l'autenticazione basata su certificato verrà abilitata automaticamente.
+*** È possibile aggiungere un cluster tramite Unified Manager CLI; l'autenticazione basata su certificato non è abilitata per impostazione predefinita.  Se si aggiunge un cluster tramite Unified Manager CLI, è necessario modificare il cluster tramite l'interfaccia utente di Unified Manager.  Puoi vederelink:https://docs.netapp.com/us-en/active-iq-unified-manager/events/reference_supported_unified_manager_cli_commands.html["Comandi CLI di Unified Manager supportati"] per aggiungere un cluster utilizzando Unified Manager CLI.
+*** Se per un cluster è abilitata l'autenticazione basata su certificato e si esegue il backup di Unified Manager da un server e lo si ripristina su un altro server Unified Manager in cui il nome host o l'indirizzo IP è stato modificato, il monitoraggio del cluster potrebbe non riuscire.  Per evitare il fallimento, modificare e salvare i dettagli del cluster.  Per ulteriori informazioni sulla modifica dei dettagli del cluster, vederelink:../storage-mgmt/task_edit_clusters.html["Modifica dei cluster"] .
+*** A livello di cluster, l'interfaccia Active IQ aggiunge due nuove voci di gruppo utenti per il metodo di autenticazione "cert".
+
+
+====
++
+*Certificati cluster*: Questo certificato è di proprietà di ONTAP.  Non è possibile aggiungere un cluster a Unified Manager con un certificato scaduto e, se il certificato è già scaduto, è necessario rigenerarlo prima di aggiungere il cluster.  Per informazioni sulla generazione del certificato, consultare l'articolo della knowledge base (KB) https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_renew_an_SSL_certificate_in_ONTAP_9["Come rinnovare un certificato autofirmato ONTAP nell'interfaccia utente di System Manager"^] .
+
+
+
+* Una singola istanza di Unified Manager può supportare un numero specifico di nodi.  Se è necessario monitorare un ambiente che supera il numero di nodi supportati, è necessario installare un'istanza aggiuntiva di Unified Manager per monitorare alcuni cluster.  Per visualizzare l'elenco dei conteggi dei nodi supportati, vedere https://www.netapp.com/media/13504-tr4621.pdf["Guida alle migliori pratiche di Unified Manager"^] .
+
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Configurazione cluster*.
+. Nella pagina Configurazione cluster, fare clic su *Aggiungi*.
+. Nella finestra di dialogo Aggiungi cluster, specificare i valori richiesti, quindi fare clic su *Invia*.
+. Nella finestra di dialogo Autorizza host, fare clic su *Visualizza certificato* per visualizzare le informazioni sul certificato del cluster.
+. Fare clic su *Sì*.
++
+Dopo aver salvato i dettagli del cluster, è possibile visualizzare il certificato per la comunicazione TLS reciproca per un cluster.
+
++
+Se l'autenticazione basata su certificato non è abilitata, Unified Manager controlla il certificato solo quando il cluster viene aggiunto inizialmente.  Unified Manager non controlla il certificato per ogni chiamata API a ONTAP.
+
+
+
+Dopo aver individuato tutti gli oggetti per un nuovo cluster, Unified Manager inizia a raccogliere dati storici sulle prestazioni dei 15 giorni precedenti.  Queste statistiche vengono raccolte utilizzando la funzionalità di raccolta della continuità dei dati.  Questa funzionalità fornisce informazioni sulle prestazioni di un cluster per oltre due settimane, subito dopo la sua aggiunta.  Una volta completato il ciclo di raccolta della continuità dei dati, i dati sulle prestazioni del cluster in tempo reale vengono raccolti, per impostazione predefinita, ogni cinque minuti.
+
+[NOTE]
+====
+* La raccolta di dati sulle prestazioni per 15 giorni richiede un uso intensivo della CPU. NetApp consiglia di scaglionare l'aggiunta di nuovi cluster in modo che i poll di raccolta della continuità dei dati non vengano eseguiti contemporaneamente su troppi cluster. Inoltre, se si riavvia Unified Manager durante il periodo di raccolta della continuità dei dati, la raccolta viene interrotta e si noteranno delle lacune nei grafici delle prestazioni per il periodo di tempo mancante.
+* Quando si aggiunge un cluster ONTAP con versione 9.14.1 o successiva, la comunicazione avviene tramite la funzionalità agente cloud. ONTAP crea automaticamente un utente con account di servizio interno con privilegi di sola lettura (ad esempio, clus-agent-xxxx). Unified Manager interrompe la raccolta dei dati da tali cluster se `clus-agent` l'utente è stato eliminato.
+
+
+====
+[TIP]
+====
+Se ricevi un messaggio di errore che indica che non è possibile aggiungere il cluster, verifica se si verificano i seguenti problemi:
+
+* Se gli orologi sui due sistemi non sono sincronizzati e la data di inizio del certificato HTTPS di Unified Manager è successiva alla data sul cluster.  È necessario assicurarsi che gli orologi siano sincronizzati tramite NTP o un servizio simile.
+* Se il cluster ha raggiunto il numero massimo di destinazioni di notifica EMS, non è possibile aggiungere l'indirizzo Unified Manager.  Per impostazione predefinita, è possibile definire solo 20 destinazioni di notifica EMS sul cluster.
+
+
+====
+*Informazioni correlate*
+
+link:../config/task_add_users.html["Aggiunta di utenti"]
+
+link:../health-checker/task_view_cluster_list_and_details.html["Visualizzazione dell'elenco e dei dettagli dei cluster"]
+
+link:../config/task_install_ca_signed_and_returned_https_certificate.html#example-certificate-chain["Installazione di un certificato HTTPS firmato e restituito da una CA"]

@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_use_performance_capacity_used_counter.html 
+sidebar: sidebar 
+keywords: performance, capacity, counter, manage, performance 
+summary: 'In genere, le organizzazioni desiderano operare con una percentuale di capacità prestazionale utilizzata inferiore al 100%, in modo che le risorse vengano utilizzate in modo efficiente, riservando al contempo una certa capacità prestazionale aggiuntiva per supportare le richieste dei periodi di picco.  È possibile utilizzare criteri di soglia per personalizzare il momento in cui vengono inviati gli avvisi per i valori di capacità ad alte prestazioni utilizzati.' 
+---
+= Utilizzare il contatore della capacità di prestazione utilizzata per gestire le prestazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In genere, le organizzazioni desiderano operare con una percentuale di capacità prestazionale utilizzata inferiore al 100%, in modo che le risorse vengano utilizzate in modo efficiente, riservando al contempo una certa capacità prestazionale aggiuntiva per supportare le richieste dei periodi di picco.  È possibile utilizzare criteri di soglia per personalizzare il momento in cui vengono inviati gli avvisi per i valori di capacità ad alte prestazioni utilizzati.
+
+Puoi stabilire obiettivi specifici in base ai tuoi requisiti di prestazione.  Ad esempio, le società di servizi finanziari potrebbero riservare una maggiore capacità di performance per garantire l'esecuzione tempestiva delle negoziazioni.  Queste aziende potrebbero voler stabilire soglie di capacità prestazionale utilizzata nell'intervallo 70-80 percento.  Le aziende manifatturiere con margini più ridotti potrebbero scegliere di riservare una minore capacità di prestazione se sono disposte a rischiare le prestazioni per gestire meglio i costi IT.  Queste aziende potrebbero stabilire soglie di capacità di prestazione utilizzate comprese tra l'85 e il 95 percento.
+
+Quando il valore della capacità di prestazione utilizzata supera la percentuale impostata in un criterio di soglia definito dall'utente, Unified Manager invia un'e-mail di avviso e aggiunge l'evento alla pagina Inventario eventi.  Ciò consente di gestire potenziali problemi prima che incidano sulle prestazioni.  Questi eventi possono essere utilizzati anche come indicatori della necessità di apportare modifiche e spostamenti del carico di lavoro all'interno dei nodi e degli aggregati.

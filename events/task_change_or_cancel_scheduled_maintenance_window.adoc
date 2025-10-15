@@ -1,0 +1,60 @@
+---
+permalink: events/task_change_or_cancel_scheduled_maintenance_window.html 
+sidebar: sidebar 
+keywords: change, cancel, scheduled, maintenance, window 
+summary: Se hai configurato una finestra di manutenzione di Unified Manager che si verificherà in futuro, puoi modificare gli orari di inizio e fine oppure annullare la finestra di manutenzione. 
+---
+= Modificare o annullare una finestra di manutenzione programmata
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se hai configurato una finestra di manutenzione di Unified Manager che si verificherà in futuro, puoi modificare gli orari di inizio e fine oppure annullare la finestra di manutenzione.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+L'annullamento di una finestra di manutenzione in esecuzione è utile se è stata completata la manutenzione del cluster prima dell'orario di fine della finestra di manutenzione programmata e si desidera iniziare nuovamente a ricevere eventi e avvisi dal cluster.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Configurazione cluster*.
+. Nella colonna *Modalità di manutenzione* del cluster:
++
+|===
+| Se lo desidera... | Esegui questo passaggio... 
+
+
+ a| 
+Modificare l'intervallo di tempo per una finestra di manutenzione programmata
+ a| 
+.. Fare clic sul testo "Programmato" accanto al pulsante del cursore.
+.. Modifica la data e l'ora di inizio e/o fine e fai clic su *Applica*.
+
+
+
+
+ a| 
+Estendere la durata di una finestra di manutenzione attiva
+ a| 
+.. Fare clic sul testo "Attivo" accanto al pulsante del cursore.
+.. Modifica la data e l'ora di fine e fai clic su *Applica*.
+
+
+
+
+ a| 
+Annullare una finestra di manutenzione programmata
+ a| 
+Selezionare il pulsante del cursore e spostarlo verso sinistra.
+
+
+
+ a| 
+Annulla una finestra di manutenzione attiva
+ a| 
+Selezionare il pulsante del cursore e spostarlo verso sinistra.
+
+|===
+

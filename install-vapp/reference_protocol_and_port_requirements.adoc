@@ -1,0 +1,267 @@
+---
+permalink: install-vapp/reference_protocol_and_port_requirements.html 
+sidebar: sidebar 
+keywords: unified manager, protocol, port, requirements, server, connections 
+summary: Le porte e i protocolli richiesti consentono la comunicazione tra il server Unified Manager e i sistemi di archiviazione gestiti, i server e altri componenti. 
+---
+= Requisiti di protocollo e porta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le porte e i protocolli richiesti consentono la comunicazione tra il server Unified Manager e i sistemi di archiviazione gestiti, i server e altri componenti.
+
+
+
+== Connessioni al server Unified Manager
+
+Nelle installazioni tipiche non è necessario specificare i numeri di porta quando ci si connette all'interfaccia utente Web di Unified Manager, perché vengono sempre utilizzate le porte predefinite.  Ad esempio, poiché Unified Manager tenta sempre di essere eseguito sulla sua porta predefinita, è possibile immettere `+https://<host>+` invece di `+https://<host>:443+` .
+
+Il server Unified Manager utilizza protocolli specifici per accedere alle seguenti interfacce:
+
+[cols="4*"]
+|===
+| Interfaccia | Protocollo | Porta | Descrizione 
+
+
+ a| 
+Interfaccia utente web di Unified Manager
+ a| 
+HTTP
+ a| 
+80
+ a| 
+Utilizzato per accedere all'interfaccia utente Web di Unified Manager; reindirizza automaticamente alla porta protetta 443.
+
+
+
+ a| 
+Interfaccia utente Web di Unified Manager e programmi che utilizzano API
+ a| 
+HTTPS
+ a| 
+443
+ a| 
+Utilizzato per accedere in modo sicuro all'interfaccia utente Web di Unified Manager o per effettuare chiamate API; le chiamate API possono essere effettuate solo tramite HTTPS.
+
+
+
+ a| 
+Console di manutenzione
+ a| 
+SSH/SFTP
+ a| 
+22
+ a| 
+Utilizzato per accedere alla console di manutenzione e recuperare i pacchetti di supporto.
+
+
+
+ a| 
+Riga di comando di Linux
+ a| 
+SSH/SFTP
+ a| 
+22
+ a| 
+Utilizzato per accedere alla riga di comando di Red Hat Enterprise Linux e recuperare i bundle di supporto.
+
+
+
+ a| 
+Registro di sistema
+ a| 
+UDP
+ a| 
+514
+ a| 
+Utilizzato per accedere ai messaggi EMS basati su abbonamento dai sistemi ONTAP e per creare eventi basati sui messaggi.
+
+
+
+ a| 
+RIPOSO
+ a| 
+HTTPS
+ a| 
+9443
+ a| 
+Utilizzato per accedere in tempo reale agli eventi EMS basati su REST API dai sistemi ONTAP autenticati.
+
+
+
+ a| 
+database MySQL
+ a| 
+MySQL
+ a| 
+3306
+ a| 
+Utilizzato per abilitare l'accesso di OnCommand Workflow Automation e OnCommand API Services a Unified Manager.
+
+
+
+ a| 
+Broker AMQP QPID
+ a| 
+TCP/IP
+ a| 
+56072
+ a| 
+Utilizzato per la comunicazione di messaggi interni.
+
+
+
+ a| 
+Broker AMQP QPID
+ a| 
+WebSocket su TCP
+ a| 
+56080
+ a| 
+Utilizzato per ascoltare su questa porta i messaggi ricevuti da ONTAP (agente cloud).
+
+
+
+ a| 
+Broker AMQP QPID
+ a| 
+WebSocket su TCP
+ a| 
+56443
+ a| 
+Utilizzato per ascoltare su questa porta i messaggi ricevuti da ONTAP (agente cloud).  La comunicazione tramite questa porta supporta la crittografia fornita da TLS o SSL.
+
+|===
+[NOTE]
+====
+La porta predefinita per MySQL, 3306, è limitata solo a localhost durante l'installazione di Unified Manager sui sistemi VMware vSphere.  Ciò non ha alcun impatto sugli scenari di aggiornamento in cui viene mantenuta la configurazione precedente.  Questa configurazione può essere modificata e la connessione può essere resa disponibile ad altri host utilizzando `Control access to MySQL port 3306` opzione sulla console di manutenzione.  Per informazioni, vederelink:../config/reference_additional_menu_options.html["Opzioni di menu aggiuntive"] .  Le porte utilizzate per la comunicazione HTTP e HTTPS (porte 80 e 443) possono essere modificate tramite la console di manutenzione di Unified Manager. Per maggiori informazioni, vedere link:../config/concept_maintenance_console_menu.html["Menu della console di manutenzione"].
+
+====
+
+
+== Connessioni dal server Unified Manager
+
+È necessario configurare il firewall in modo da aprire le porte che consentono la comunicazione tra il server Unified Manager e i sistemi di archiviazione gestiti, i server e altri componenti.  Se una porta non è aperta, la comunicazione fallisce.
+
+A seconda dell'ambiente, è possibile scegliere di modificare le porte e i protocolli utilizzati dal server Unified Manager per connettersi a destinazioni specifiche.
+
+Il server Unified Manager si connette tramite i seguenti protocolli e porte ai sistemi di archiviazione gestiti, ai server e ad altri componenti:
+
+[cols="4*"]
+|===
+| Destinazione | Protocollo | Porta | Descrizione 
+
+
+ a| 
+Sistema di archiviazione
+ a| 
+HTTPS
+ a| 
+443/TCP
+ a| 
+Utilizzato per monitorare e gestire i sistemi di archiviazione.
+
+
+NOTE: Se si utilizza questa porta o qualsiasi altra porta per connettersi al server VMware vCenter o ESXi, assicurarsi che la porta sia disponibile e possa essere connessa in un sito protetto.
+
+
+
+ a| 
+Sistema di archiviazione
+ a| 
+NDMP
+ a| 
+10000/TCP
+ a| 
+Utilizzato per determinate operazioni di ripristino Snapshot.
+
+
+
+ a| 
+Server AutoSupport
+ a| 
+HTTPS
+ a| 
+443
+ a| 
+Utilizzato per inviare informazioni AutoSupport .  Per eseguire questa funzione è necessario l'accesso a Internet.
+
+
+
+ a| 
+Server di autenticazione
+ a| 
+LDAP
+ a| 
+389
+ a| 
+Utilizzato per effettuare richieste di autenticazione e richieste di ricerca di utenti e gruppi.
+
+
+
+ a| 
+LDAPS
+ a| 
+636
+ a| 
+Utilizzato per comunicazioni LDAP sicure.
+
+
+
+ a| 
+Server di posta
+ a| 
+SMTP
+ a| 
+25
+ a| 
+Utilizzato per inviare e-mail di notifica di avviso.
+
+
+
+ a| 
+Mittente trap SNMP
+ a| 
+SNMPv1 o SNMPv3
+ a| 
+162/UDP
+ a| 
+Utilizzato per inviare trap SNMP di notifica di avviso.
+
+
+
+ a| 
+Server fornitore di dati esterno
+ a| 
+TCP
+ a| 
+2003
+ a| 
+Utilizzato per inviare dati sulle prestazioni a un fornitore di dati esterno, come Graphite.
+
+
+
+ a| 
+server NTP
+ a| 
+NTP
+ a| 
+123/UDP
+ a| 
+Utilizzato per sincronizzare l'ora sul server Unified Manager con un server orario NTP esterno.  (Solo sistemi VMware)
+
+
+
+ a| 
+Registro di sistema
+ a| 
+UDP
+ a| 
+514
+ a| 
+Utilizzato da Unified Manager per inviare registri di controllo a un server syslog remoto.
+
+|===

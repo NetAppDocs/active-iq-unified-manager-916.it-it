@@ -1,0 +1,29 @@
+---
+permalink: data-protection/task_configure_protection_destination_settings.html 
+sidebar: sidebar 
+keywords: configure, destination, efficiency, settings 
+summary: 'È possibile configurare le impostazioni di efficienza della destinazione, quali deduplicazione, compressione, aumento automatico e garanzia dello spazio su una destinazione di protezione, utilizzando la finestra di dialogo Impostazioni di destinazione avanzate.  Utilizzare queste impostazioni quando si desidera massimizzare l"utilizzo dello spazio su un volume di destinazione o secondario.' 
+---
+= Configurare le impostazioni di efficienza della destinazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare le impostazioni di efficienza della destinazione, quali deduplicazione, compressione, aumento automatico e garanzia dello spazio su una destinazione di protezione, utilizzando la finestra di dialogo Impostazioni di destinazione avanzate.  Utilizzare queste impostazioni quando si desidera massimizzare l'utilizzo dello spazio su un volume di destinazione o secondario.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Per impostazione predefinita, le impostazioni di efficienza corrispondono a quelle del volume sorgente, ad eccezione delle impostazioni di compressione in una relazione SnapVault , che sono disabilitate per impostazione predefinita.
+
+.Passi
+. Fare clic sulla scheda * SnapMirror* o sulla scheda * SnapVault* nella finestra di dialogo *Configura protezione*, a seconda del tipo di relazione che si sta configurando.
+. Fare clic su *Avanzate* nell'area *Informazioni sulla destinazione*.
++
+Si apre la finestra di dialogo Impostazioni avanzate destinazione.
+
+. Abilita o disabilita le impostazioni di efficienza per deduplicazione, compressione, aumento automatico e garanzia dello spazio, a seconda delle necessità.
+. Fare clic su *Applica* per salvare le selezioni e tornare alla finestra di dialogo *Configura protezione*.
+

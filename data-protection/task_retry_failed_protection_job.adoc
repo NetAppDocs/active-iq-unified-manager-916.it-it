@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_retry_failed_protection_job.html 
+sidebar: sidebar 
+keywords: retry, failed, protection job 
+summary: 'Dopo aver adottato misure per risolvere un processo di protezione non riuscito, è possibile utilizzare Riprova per eseguire nuovamente il processo.  Riprovando un processo, viene creato un nuovo processo utilizzando l"ID processo originale.' 
+---
+= Riprova un processo di protezione non riuscito
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver adottato misure per risolvere un processo di protezione non riuscito, è possibile utilizzare *Riprova* per eseguire nuovamente il processo.  Riprovando un processo, viene creato un nuovo processo utilizzando l'ID processo originale.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+È possibile riprovare solo un lavoro non riuscito alla volta.  Selezionando più di un lavoro il pulsante *Riprova* viene disattivato.  È possibile ripetere l'operazione solo per i processi di tipo Configurazione di protezione e Operazione di relazione di protezione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Protezione* > *Lavori*.
+. Dall'elenco dei processi, selezionare un singolo processo di tipo Configurazione di protezione o Operazione di relazione di protezione non riuscito.
++
+Il pulsante *Riprova* è abilitato.
+
+. Fare clic su *Riprova*.
++
+Il lavoro viene riavviato.
+
+

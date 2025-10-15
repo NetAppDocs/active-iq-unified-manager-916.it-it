@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_graphical_interface_and_navigational_paths.html 
+sidebar: sidebar 
+keywords: graphical, interface, navigational, paths 
+summary: Unified Manager offre una grande flessibilità e consente di svolgere più attività in vari modi.  Sono molti i percorsi di navigazione che scoprirai lavorando in Unified Manager.  Sebbene non siano mostrate tutte le possibili combinazioni di navigazione, dovresti avere familiarità con alcuni degli scenari più comuni. 
+---
+= Interfaccia grafica e percorsi di navigazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager offre una grande flessibilità e consente di svolgere più attività in vari modi.  Sono molti i percorsi di navigazione che scoprirai lavorando in Unified Manager.  Sebbene non siano mostrate tutte le possibili combinazioni di navigazione, dovresti avere familiarità con alcuni degli scenari più comuni.

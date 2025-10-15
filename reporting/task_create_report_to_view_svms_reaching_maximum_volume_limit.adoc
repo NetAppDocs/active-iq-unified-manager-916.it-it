@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_to_view_svms_reaching_maximum_volume_limit.html 
+sidebar: sidebar 
+keywords: create, report, view, storage VMs, volume, limit 
+summary: È possibile creare un report per individuare le SVM che raggiungono il limite massimo del volume. 
+---
+= Crea un report per visualizzare le VM di archiviazione che raggiungono il limite massimo del volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un report per individuare le SVM che raggiungono il limite massimo del volume.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+Per creare una vista personalizzata che mostri le VM di archiviazione che stanno raggiungendo il limite massimo del volume, utilizzare i passaggi seguenti, quindi pianificare la generazione di un report per tale vista.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *VM di archiviazione*.
+. Selezionare *Mostra/Nascondi* per rimuovere le colonne che non si desiderano nel report.
+. Trascinare le colonne "`Numero volumi`" e "`Numero massimo di volumi consentiti`" vicino alla colonna "`VM di archiviazione`".
+. Fare clic sulla parte superiore della colonna "Volumi massimi consentiti" per ordinare i risultati in base al numero più alto di volumi.
+. Salvare la vista con un nome specifico che rifletta ciò che la vista sta mostrando, ad esempio "`SVM che raggiungono i volumi massimi`" e fare clic sul segno di spunta (image:../media/blue_check.gif[""] ).
+. Fare clic sul pulsante *Rapporti pianificati* nella pagina dell'inventario.
+. Fare clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina *Pianificazioni report* in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""] ) alla fine della riga.
++
+Il rapporto viene inviato immediatamente a scopo di verifica.  Successivamente, il report viene generato e inviato tramite e-mail ai destinatari elencati utilizzando la frequenza specificata.
+
+
+
+In base ai risultati mostrati nel report, potrebbe essere opportuno bilanciare i volumi assegnati alle VM di archiviazione o, se possibile, utilizzare ONTAP System Manager per modificare i volumi massimi consentiti.

@@ -1,0 +1,47 @@
+---
+permalink: performance-checker/task_select_performance_charts_to_display.html 
+sidebar: sidebar 
+keywords: select, performance, charts, display 
+summary: 'L"elenco a discesa Scegli grafici consente di selezionare i tipi di grafici dei contatori delle prestazioni da visualizzare nel riquadro Grafici dei contatori.  Ciò consente di visualizzare dati e contatori specifici, in base ai requisiti di prestazioni.' 
+---
+= Seleziona i grafici delle prestazioni da visualizzare
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'elenco a discesa Scegli grafici consente di selezionare i tipi di grafici dei contatori delle prestazioni da visualizzare nel riquadro Grafici dei contatori.  Ciò consente di visualizzare dati e contatori specifici, in base ai requisiti di prestazioni.
+
+.Passi
+. Nel riquadro *Grafici contatore*, fare clic sull'elenco a discesa *Scegli grafici*.
+. Aggiungere o rimuovere grafici:
++
+|===
+| A... | Fai questo... 
+
+
+ a| 
+Aggiungere o rimuovere singoli grafici
+ a| 
+Fai clic sulle caselle di controllo accanto ai grafici che desideri mostrare o nascondere
+
+
+
+ a| 
+Aggiungi tutti i grafici
+ a| 
+Fai clic su *Seleziona tutto*
+
+
+
+ a| 
+Rimuovi tutti i grafici
+ a| 
+Fai clic su *Deseleziona tutto*
+
+|===
++
+Le selezioni del grafico vengono visualizzate nel riquadro Grafici contatore.  Tieni presente che quando aggiungi grafici, i nuovi grafici vengono inseriti nel riquadro Grafici contatore in modo che corrispondano all'ordine dei grafici elencati nell'elenco a discesa Scegli grafici.  La selezione di grafici aggiuntivi potrebbe richiedere uno scorrimento aggiuntivo.
+
+

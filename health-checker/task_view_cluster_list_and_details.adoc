@@ -1,0 +1,36 @@
+---
+permalink: health-checker/task_view_cluster_list_and_details.html 
+sidebar: sidebar 
+keywords: view, cluster list, details 
+summary: 'È possibile utilizzare la vista Integrità: Tutti i cluster per visualizzare l"inventario dei cluster.  La vista Capacità: tutti i cluster consente di visualizzare informazioni riepilogative sulla capacità di archiviazione e sull"utilizzo in tutti i cluster.' 
+---
+= Visualizza l'elenco e i dettagli dei cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la vista Integrità: Tutti i cluster per visualizzare l'inventario dei cluster.  La vista Capacità: tutti i cluster consente di visualizzare informazioni riepilogative sulla capacità di archiviazione e sull'utilizzo in tutti i cluster.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+È inoltre possibile visualizzare i dettagli dei singoli cluster, ad esempio lo stato di integrità, la capacità, la configurazione, i LIF, i nodi e i dischi del cluster, utilizzando la pagina Dettagli cluster/stato di integrità.
+
+I dettagli nella vista Integrità: Tutti i cluster, nella vista Capacità: Tutti i cluster e nella pagina Dettagli cluster/Integrità ti aiutano a pianificare l'archiviazione.  Ad esempio, prima di effettuare il provisioning di un nuovo aggregato, è possibile selezionare un cluster specifico dalla vista Integrità: Tutti i cluster e ottenere i dettagli sulla capacità per determinare se il cluster dispone dello spazio richiesto.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Cluster*.
+. Nel menu Visualizza, seleziona la vista *Integrità: tutti i cluster* per visualizzare le informazioni sullo stato oppure la vista *Capacità: tutti i cluster* per visualizzare i dettagli sulla capacità di archiviazione e l'utilizzo in tutti i cluster.
+. Fare clic sul nome di un cluster per visualizzare i dettagli completi del cluster nella pagina dei dettagli *Cluster / Integrità*.
+
+
+*Informazioni correlate*
+
+* link:../health-checker/reference_health_cluster_details_page.html["Pagina dei dettagli del cluster/salute"]
+* link:../performance-checker/performance-view-all.html#performance-all-clusters-view["Prestazioni: visualizzazione di tutti i cluster"]
+* link:../storage-mgmt/task_monitor_metrocluster_configurations.html["Monitoraggio delle configurazioni MetroCluster"]
+* link:../health-checker/task_view_detailed_security_status_for_clusters_and_svms.html["Visualizzazione dello stato di sicurezza per cluster e VM di archiviazione"]
+* link:../health-checker/concept_what_security_criteria_is_being_evaluated.html["Quali criteri di sicurezza vengono valutati"]
+

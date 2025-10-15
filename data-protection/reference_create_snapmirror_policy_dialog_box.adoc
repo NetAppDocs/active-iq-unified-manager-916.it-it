@@ -1,0 +1,67 @@
+---
+permalink: data-protection/reference_create_snapmirror_policy_dialog_box.html 
+sidebar: sidebar 
+keywords: create, snapmirror, policy, dialog box 
+summary: 'La finestra di dialogo Crea criterio SnapMirror consente di creare un criterio per impostare la priorità per i trasferimenti SnapMirror .  Si utilizzano policy per massimizzare l"efficienza dei trasferimenti dall"origine alla destinazione.' 
+---
+= Finestra di dialogo Crea criterio SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Crea criterio SnapMirror consente di creare un criterio per impostare la priorità per i trasferimenti SnapMirror .  Si utilizzano policy per massimizzare l'efficienza dei trasferimenti dall'origine alla destinazione.
+
+* *Cluster di destinazione*
++
+Il nome del cluster selezionato nella scheda SnapMirror della finestra di dialogo Configura protezione.
+
+* *Destinazione SVM*
++
+Il nome dell'SVM selezionato nella scheda SnapMirror della finestra di dialogo Configura protezione.
+
+* *Nome della polizza*
++
+Il nome che fornisci per la nuova polizza.  I nomi delle policy possono essere composti dai caratteri dalla A alla Z, dalla a alla z, dallo 0 al 9, dal punto (.), dal trattino (-) e dal carattere di sottolineatura (_).
+
+* *Priorità di trasferimento*
++
+Priorità con cui viene eseguito un trasferimento per operazioni asincrone.  È possibile selezionare Normale o Basso.  Le relazioni di trasferimento con policy che specificano una priorità di trasferimento normale vengono eseguite prima di quelle con policy che specificano una priorità di trasferimento bassa.
+
+* *Commento*
++
+Campo facoltativo in cui è possibile aggiungere commenti sulla policy.
+
+* *Riavvio del trasferimento*
++
+Indica quale azione di riavvio intraprendere quando un trasferimento viene interrotto da un'operazione di annullamento o da qualsiasi tipo di errore, come un'interruzione della rete.  Puoi selezionare una delle seguenti opzioni:
+
++
+** Sempre
++
+Specifica che viene creata una nuova copia Snapshot prima di riavviare un trasferimento, quindi, se ne esiste una, il trasferimento viene riavviato da un checkpoint, seguito da un trasferimento incrementale dalla copia Snapshot appena creata.
+
+** Mai
++
+Specifica che i trasferimenti interrotti non vengono mai riavviati.
+
+
+
+
+
+
+
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti attività:
+
+* *Cancellare*
++
+Annulla le selezioni e chiude la finestra di dialogo Configura protezione.
+
+* *Fare domanda a*
++
+Applica le selezioni e avvia il processo di protezione.
+
+

@@ -1,0 +1,87 @@
+---
+permalink: events/task_add_alerts.html 
+sidebar: sidebar 
+keywords: add, alerts 
+summary: 'È possibile configurare degli avvisi per essere avvisati quando viene generato un evento specifico.  È possibile configurare gli avvisi per una singola risorsa, per un gruppo di risorse o per eventi di un tipo di gravità specifico.  È possibile specificare la frequenza con cui si desidera ricevere la notifica e associare uno script all"avviso.' 
+---
+= Aggiungi avvisi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare degli avvisi per essere avvisati quando viene generato un evento specifico.  È possibile configurare gli avvisi per una singola risorsa, per un gruppo di risorse o per eventi di un tipo di gravità specifico.  È possibile specificare la frequenza con cui si desidera ricevere la notifica e associare uno script all'avviso.
+
+.Prima di iniziare
+* È necessario aver configurato le impostazioni di notifica, quali l'indirizzo e-mail dell'utente, il server SMTP e l'host trap SNMP, per consentire al server Active IQ Unified Manager di utilizzare queste impostazioni per inviare notifiche agli utenti quando viene generato un evento.
+* È necessario conoscere le risorse e gli eventi per i quali si desidera attivare l'avviso, nonché i nomi utente o gli indirizzi e-mail degli utenti a cui si desidera inviare la notifica.
+* Se si desidera che uno script venga eseguito in base all'evento, è necessario aver aggiunto lo script a Unified Manager tramite la pagina Script.
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+È possibile creare un avviso direttamente dalla pagina Dettagli evento dopo aver ricevuto un evento, oltre a creare un avviso dalla pagina Impostazione avviso, come descritto qui.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Configurazione avvisi*.
+. Nella pagina *Impostazione avviso*, fare clic su *Aggiungi*.
+. Nella finestra di dialogo *Aggiungi avviso*, fare clic su *Nome* e immettere un nome e una descrizione per l'avviso.
+. Fare clic su *Risorse* e selezionare le risorse da includere o escludere dall'avviso.
++
+È possibile impostare un filtro specificando una stringa di testo nel campo *Il nome contiene* per selezionare un gruppo di risorse.  In base alla stringa di testo specificata, l'elenco delle risorse disponibili visualizza solo le risorse che corrispondono alla regola del filtro.  La stringa di testo specificata è sensibile alla distinzione tra maiuscole e minuscole.
+
++
+Se una risorsa è conforme sia alle regole di inclusione che a quelle di esclusione specificate, la regola di esclusione ha la precedenza sulla regola di inclusione e l'avviso non viene generato per gli eventi correlati alla risorsa esclusa.
+
+. Fare clic su *Eventi* e selezionare gli eventi in base al nome dell'evento o al tipo di gravità dell'evento per cui si desidera attivare un avviso.
++
+[TIP]
+====
+Per selezionare più di un evento, premere il tasto Ctrl mentre si effettuano le selezioni.
+
+====
+. Fare clic su *Azioni* e selezionare gli utenti a cui si desidera inviare la notifica, scegliere la frequenza della notifica, scegliere se inviare una trap SNMP al ricevitore della trap e assegnare uno script da eseguire quando viene generato un avviso.
++
+[NOTE]
+====
+Se si modifica l'indirizzo email specificato per l'utente e si riapre l'avviso per modificarlo, il campo Nome appare vuoto perché l'indirizzo email modificato non è più associato all'utente precedentemente selezionato.  Inoltre, se hai modificato l'indirizzo email dell'utente selezionato dalla pagina Utenti, l'indirizzo email modificato non verrà aggiornato per l'utente selezionato.
+
+====
++
+È anche possibile scegliere di avvisare gli utenti tramite trap SNMP.
+
+. Fare clic su *Salva*.
+
+
+
+
+== Esempio di aggiunta di un avviso
+
+Questo esempio mostra come creare un avviso che soddisfi i seguenti requisiti:
+
+* Nome avviso: HealthTest
+* Risorse: include tutti i volumi il cui nome contiene "abc" ed esclude tutti i volumi il cui nome contiene "xyz"
+* Eventi: include tutti gli eventi sanitari critici
+* Azioni: include "sample@domain.com", uno script "Test" e l'utente deve essere avvisato ogni 15 minuti
+
+
+Eseguire i seguenti passaggi nella finestra di dialogo Aggiungi avviso:
+
+. Fai clic su *Nome* e inserisci*`HealthTest` * nel campo *Nome avviso*.
+. Fare clic su *Risorse* e, nella scheda Includi, selezionare *Volumi* dall'elenco a discesa.
++
+.. Entra*`abc` * nel campo *Il nome contiene* per visualizzare i volumi il cui nome contiene "abc".
+.. Seleziona *+<<All Volumes whose name contains 'abc'>> +* dall'area Risorse disponibili e spostarlo nell'area Risorse selezionate.
+.. Fai clic su *Escludi* e inserisci*`xyz` * nel campo *Il nome contiene*, quindi fare clic su *Aggiungi*.
+
+
+. Fare clic su *Eventi* e selezionare *Critico* dal campo Gravità evento.
+. Seleziona *Tutti gli eventi critici* dall'area Eventi corrispondenti e spostalo nell'area Eventi selezionati.
+. Fai clic su *Azioni* e inserisci*`sample@domain.com` * nel campo Avvisa questi utenti.
+. Seleziona *Ricorda ogni 15 minuti* per avvisare l'utente ogni 15 minuti.
++
+È possibile configurare un avviso in modo che invii ripetutamente notifiche ai destinatari per un periodo di tempo specificato.  È necessario stabilire l'orario a partire dal quale la notifica dell'evento è attiva per l'avviso.
+
+. Nel menu Seleziona script da eseguire, seleziona script *Test*.
+. Fare clic su *Salva*.
+

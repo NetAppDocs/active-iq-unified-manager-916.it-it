@@ -1,0 +1,29 @@
+---
+permalink: events/reference_what_system_diagnosis_section_displays.html 
+sidebar: sidebar 
+keywords: system, diagnosis, section, displays 
+summary: 'La sezione Diagnosi di sistema della pagina Dettagli evento fornisce informazioni che possono aiutarti a diagnosticare i problemi che potrebbero essere stati la causa dell"evento.' 
+---
+= Cosa visualizza la sezione Diagnosi di sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sezione Diagnosi di sistema della pagina Dettagli evento fornisce informazioni che possono aiutarti a diagnosticare i problemi che potrebbero essere stati la causa dell'evento.
+
+Questa area viene visualizzata solo per alcuni eventi.
+
+Alcuni eventi di performance forniscono grafici pertinenti all'evento specifico che è stato attivato.  In genere include un grafico IOPS o MBps e un grafico della latenza per i dieci giorni precedenti.  In questo modo è possibile vedere quali componenti di archiviazione incidono maggiormente sulla latenza o sono maggiormente interessati dalla latenza quando l'evento è attivo.
+
+Per gli eventi di prestazioni dinamiche vengono visualizzati i seguenti grafici:
+
+* Latenza del carico di lavoro: visualizza la cronologia della latenza per i carichi di lavoro principali di tipo vittima, bullo o squalo nel componente in competizione.
+* Attività del carico di lavoro: visualizza i dettagli sull'utilizzo del carico di lavoro del componente del cluster in competizione.
+* Attività delle risorse: visualizza le statistiche storiche sulle prestazioni del componente del cluster in competizione.
+
+
+Altri grafici vengono visualizzati quando alcuni componenti del cluster sono in conflitto.
+
+Altri eventi forniscono una breve descrizione del tipo di analisi che il sistema sta eseguendo sull'oggetto di archiviazione.  In alcuni casi saranno presenti una o più righe, una per ogni componente analizzato, per le policy di prestazione definite dal sistema che analizzano più contatori di prestazione.  In questo scenario, accanto alla diagnosi viene visualizzata un'icona verde o rossa per indicare se è stato rilevato un problema o meno in quella particolare diagnosi.

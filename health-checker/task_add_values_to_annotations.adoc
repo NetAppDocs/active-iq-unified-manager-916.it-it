@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_add_values_to_annotations.html 
+sidebar: sidebar 
+keywords: add, values, annotations 
+summary: 'È possibile aggiungere valori alle annotazioni e quindi associare gli oggetti di archiviazione a una specifica coppia nome-valore dell"annotazione.  L"aggiunta di valori alle annotazioni consente di gestire gli oggetti di archiviazione in modo più efficace.' 
+---
+= Aggiungi valori alle annotazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere valori alle annotazioni e quindi associare gli oggetti di archiviazione a una specifica coppia nome-valore dell'annotazione.  L'aggiunta di valori alle annotazioni consente di gestire gli oggetti di archiviazione in modo più efficace.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Non è possibile aggiungere valori alle annotazioni predefinite.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Annotazioni*.
+. Nella pagina *Annotazioni*, seleziona l'annotazione a cui vuoi aggiungere un valore, quindi fai clic su *Aggiungi* nella sezione *Valori*.
+. Nella finestra di dialogo *Aggiungi valore annotazione*, specificare un valore per l'annotazione.
++
+Il valore specificato deve essere univoco per l'annotazione selezionata.
+
+. Fare clic su *Aggiungi*.
+

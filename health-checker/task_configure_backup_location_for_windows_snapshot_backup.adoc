@@ -1,0 +1,48 @@
+---
+permalink: health-checker/task_configure_backup_location_for_windows_snapshot_backup.html 
+sidebar: sidebar 
+keywords: configure, backup, location, windows, snapshot copy, copies 
+summary: 'Dopo aver eseguito il backup di Unified Manager su Windows, è necessario configurare il volume per l"archiviazione delle copie Snapshot.' 
+---
+= Configurare la posizione di backup per Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver eseguito il backup di Unified Manager su Windows, è necessario configurare il volume per l'archiviazione delle copie Snapshot.
+
+.Prima di iniziare
+Il cluster, la VM di archiviazione e il volume devono soddisfare i seguenti requisiti:
+
+* Requisiti del cluster:
++
+** È necessario installare ONTAP 9.3 o versione successiva
+** Dovrebbe essere geograficamente vicino al server Unified Manager
+** È monitorato da Unified Manager
+
+
+* Requisiti della VM di archiviazione:
++
+** Connettività iSCSI sul cluster ONTAP
+** Il protocollo iSCSI deve essere abilitato per la macchina configurata
+** Dovresti avere un volume e una LUN dedicati per la configurazione del backup.  Il volume selezionato deve contenere solo una LUN e nient'altro.
+** La dimensione del LUN deve essere almeno il doppio della dimensione dei dati che si prevede di gestire in Active IQ Unified Manager 9.9.
++
+Ciò stabilisce anche lo stesso requisito di dimensione per il volume.
+
+** Assicurati che sia selezionato l'accesso in lettura/scrittura completo
+** Assicurati che l'accesso Superuser sia impostato su "`any`" nella policy di esportazione
+
+
+* Requisiti di volume e LUN:
++
+** Il volume deve essere almeno il doppio della dimensione della directory dati MySQL di Unified Manager.
+** Lo stile di sicurezza deve essere impostato su Windows
+** Il criterio di snapshot locale deve essere disabilitato
+** Il dimensionamento automatico del volume dovrebbe essere abilitato
+** Il livello di servizio delle prestazioni dovrebbe essere impostato su una politica con IOPS elevati e bassa latenza, ad esempio "`Extreme`"
+
+
+

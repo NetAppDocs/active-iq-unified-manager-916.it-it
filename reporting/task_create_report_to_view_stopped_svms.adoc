@@ -1,0 +1,41 @@
+---
+permalink: reporting/task_create_report_to_view_stopped_svms.html 
+sidebar: sidebar 
+keywords: create, report, view, stopped, storage VMs 
+summary: È possibile creare un report per visualizzare un elenco di tutte le SVM arrestate. 
+---
+= Crea un report per visualizzare le VM di archiviazione arrestate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un report per visualizzare un elenco di tutte le SVM arrestate.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+Per creare una vista personalizzata che mostri le VM di archiviazione arrestate, attenersi alla seguente procedura e quindi pianificare la generazione di un report per tale vista.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *VM di archiviazione*.
+. Nel menu Visualizza, seleziona *Integrità* > *Tutte le VM di archiviazione*.
+. Selezionare *Mostra/Nascondi* per rimuovere le colonne che non si desidera visualizzare nel report.
+. Trascinare la colonna "`Stato`" vicino alla colonna "`VM di archiviazione`".
+. Fare clic sull'icona del filtro, aggiungere il seguente filtro e quindi fare clic su *Applica filtro*:
++
+** Lo stato è fermo
+
+
+. Salvare la vista con un nome specifico che rifletta ciò che la vista sta mostrando, ad esempio "`SVM arrestate`" e fare clic sul segno di spunta (image:../media/blue_check.gif[""] ).
+. Fare clic sul pulsante *Rapporti pianificati* nella pagina dell'inventario.
+. Fare clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina *Pianificazioni report* in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""] ) alla fine della riga.
++
+Il rapporto viene inviato immediatamente a scopo di verifica.  Successivamente, il report viene generato e inviato tramite e-mail ai destinatari elencati utilizzando la frequenza specificata.
+
+
+
+In base ai risultati mostrati nel report, potresti voler indagare sul motivo per cui l'SVM è stato arrestato per vedere se è necessario riavviare gli SVM arrestati.

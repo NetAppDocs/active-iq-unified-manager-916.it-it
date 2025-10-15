@@ -1,0 +1,52 @@
+---
+permalink: reporting/task_search_for_scheduled_report.html 
+sidebar: sidebar 
+keywords: search, schedule, report 
+summary: È possibile cercare i report pianificati per nome, nome della vista, tipo di oggetto o destinatari. 
+---
+= Cerca un report programmato
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile cercare i report pianificati per nome, nome della vista, tipo di oggetto o destinatari.
+
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Pianificazioni report*.
+. Utilizzare il campo di testo *Cerca report pianificati*.
++
+[cols="2*"]
+|===
+| Per trovare i resoconti di ... | Tentativo ... 
+
+
+ a| 
+Nome della pianificazione
+ a| 
+Digitare parte del nome della pianificazione del report.
+
+
+
+ a| 
+Visualizza nome
+ a| 
+Digitare parte del nome della vista del report.  Nell'elenco delle visualizzazioni vengono visualizzate le visualizzazioni predefinite e personalizzate.
+
+
+
+ a| 
+Destinatario
+ a| 
+Digita parte dell'indirizzo email.
+
+
+
+ a| 
+Tipo di file
+ a| 
+Digita "PDF", "CSV" o "XLSX".
+
+|===
+. È possibile fare clic su un'intestazione di colonna per ordinare i report in ordine crescente o decrescente in base a quella colonna, ad esempio in base al nome della pianificazione o al formato.
+

@@ -1,0 +1,21 @@
+---
+permalink: performance-checker/task_display_counter_charts_zoom_view.html 
+sidebar: sidebar 
+keywords: display, counter charts, zoom, view 
+summary: La vista zoom dei grafici contatore fornisce un livello di dettaglio più preciso per il grafico contatore selezionato e la relativa cronologia.  In questo modo i dati del grafico del contatore vengono ingranditi, consentendo di avere una visione più nitida degli eventi di performance e delle relative cause sottostanti. 
+---
+= Visualizza la vista zoom dei grafici del contatore
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La vista zoom dei grafici contatore fornisce un livello di dettaglio più preciso per il grafico contatore selezionato e la relativa cronologia.  In questo modo i dati del grafico del contatore vengono ingranditi, consentendo di avere una visione più nitida degli eventi di performance e delle relative cause sottostanti.
+
+È possibile visualizzare la vista zoom dei grafici dei contatori per qualsiasi grafico dei contatori.
+
+.Passi
+. Fare clic su *Zoom vista* per aprire il grafico selezionato in una nuova finestra del browser.
+. Se si visualizza un grafico analitico e si fa clic su *Visualizzazione zoom*, il grafico analitico viene visualizzato in visualizzazione zoom.  Puoi selezionare *Totale* mentre sei in Visualizzazione zoom se vuoi cambiare l'opzione di visualizzazione.
+

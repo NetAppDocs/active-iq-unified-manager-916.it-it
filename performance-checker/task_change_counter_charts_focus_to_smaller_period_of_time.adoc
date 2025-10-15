@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/task_change_counter_charts_focus_to_smaller_period_of_time.html 
+sidebar: sidebar 
+keywords: change, counter, charts, focus, shorter, period, time 
+summary: 'È possibile utilizzare il mouse per ridurre l"intervallo di tempo e concentrarsi su un periodo di tempo specifico nel riquadro Grafico contatore o nella finestra Visualizzazione zoom dei grafici contatore.  Ciò consente di avere una visione più granulare e microscopica di qualsiasi parte della cronologia dei dati sulle prestazioni, degli eventi e delle soglie.' 
+---
+= Cambia il focus dei grafici dei contatori in un periodo di tempo più breve
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare il mouse per ridurre l'intervallo di tempo e concentrarsi su un periodo di tempo specifico nel riquadro Grafico contatore o nella finestra Visualizzazione zoom dei grafici contatore.  Ciò consente di avere una visione più granulare e microscopica di qualsiasi parte della cronologia dei dati sulle prestazioni, degli eventi e delle soglie.
+
+.Prima di iniziare
+Per indicare che questa funzionalità è attiva, il cursore deve trasformarsi in una lente di ingrandimento.
+
+[NOTE]
+====
+Quando si utilizza questa funzione, che modifica la sequenza temporale per visualizzare valori che corrispondono alla visualizzazione più granulare, l'intervallo di data e ora nel selettore *Intervallo di tempo* non cambia rispetto ai valori originali del grafico.
+
+====
+.Passi
+. Per ingrandire un periodo di tempo specifico, fare clic con la lente di ingrandimento e trascinare il mouse per evidenziare l'area che si desidera visualizzare in dettaglio.
++
+I valori del contatore per il periodo di tempo selezionato riempiono il grafico del contatore.
+
+. Per tornare al periodo di tempo originale impostato nel selettore *Intervallo di tempo*, fare clic sul pulsante *Reimposta zoom grafico*.
++
+Il grafico del contatore viene visualizzato nel suo stato originale.
+
+

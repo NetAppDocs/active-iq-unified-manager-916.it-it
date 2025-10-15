@@ -1,0 +1,35 @@
+---
+permalink: performance-checker/concept_how_storage_qos_can_control_workload_throughput.html 
+sidebar: sidebar 
+keywords: storage, qos, control, workload, throughput 
+summary: 'È possibile creare un gruppo di policy di qualità del servizio (QoS) per controllare il limite di I/O al secondo (IOPS) o di throughput (MB/s) per i carichi di lavoro in esso contenuti.  Se i carichi di lavoro si trovano in un gruppo di policy senza limiti impostati, ad esempio il gruppo di policy predefinito, o se il limite impostato non soddisfa le proprie esigenze, è possibile aumentare il limite o spostare i carichi di lavoro in un gruppo di policy nuovo o esistente che abbia il limite desiderato.' 
+---
+= Come la qualità del servizio di archiviazione può controllare la produttività del carico di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un gruppo di policy di qualità del servizio (QoS) per controllare il limite di I/O al secondo (IOPS) o di throughput (MB/s) per i carichi di lavoro in esso contenuti.  Se i carichi di lavoro si trovano in un gruppo di policy senza limiti impostati, ad esempio il gruppo di policy predefinito, o se il limite impostato non soddisfa le proprie esigenze, è possibile aumentare il limite o spostare i carichi di lavoro in un gruppo di policy nuovo o esistente che abbia il limite desiderato.
+
+I gruppi di policy QoS "tradizionali" possono essere assegnati a singoli carichi di lavoro, ad esempio a un singolo volume o LUN.  In questo caso il carico di lavoro può utilizzare il limite di throughput completo.  I gruppi di policy QoS possono anche essere assegnati a più carichi di lavoro; in tal caso il limite di throughput viene "`condiviso`" tra i carichi di lavoro.  Ad esempio, un limite QoS di 9.000 IOPS assegnato a tre carichi di lavoro impedirebbe che gli IOPS combinati superino i 9.000 IOPS.
+
+I gruppi di policy QoS "`Adaptive`" possono essere assegnati anche a carichi di lavoro singoli o a più carichi di lavoro.  Tuttavia, anche quando assegnato a più carichi di lavoro, ogni carico di lavoro ottiene il limite di throughput completo anziché condividere il valore di throughput con altri carichi di lavoro.  Inoltre, i criteri QoS adattivi regolano automaticamente l'impostazione della velocità effettiva in base alle dimensioni del volume, per carico di lavoro, mantenendo così il rapporto tra IOPS e terabyte al variare delle dimensioni del volume.  Ad esempio, se il picco è impostato su 5.000 IOPS/TB in una policy QoS adattiva, un volume da 10 TB avrà una velocità massima di elaborazione di 50.000 IOPS.  Se il volume viene successivamente ridimensionato a 20 TB, la QoS adattiva regola il massimo a 100.000 IOPS.
+
+A partire da ONTAP 9.5 è possibile includere la dimensione del blocco quando si definisce una policy QoS adattiva.  In questo modo, la policy viene convertita da una soglia IOPS/TB a una soglia MB/s nei casi in cui i carichi di lavoro utilizzano blocchi di dimensioni molto grandi e, in definitiva, una percentuale elevata di throughput.
+
+Per le policy QoS di gruppo condivise, quando gli IOPS o gli MB/s di tutti i carichi di lavoro in un gruppo di policy superano il limite impostato, il gruppo di policy limita i carichi di lavoro per limitarne l'attività, il che può ridurre le prestazioni di tutti i carichi di lavoro nel gruppo di policy.  Se un evento di prestazioni dinamiche viene generato dalla limitazione del gruppo di policy, la descrizione dell'evento visualizza il nome del gruppo di policy coinvolto.
+
+Nella vista Prestazioni: tutti i volumi, è possibile ordinare i volumi interessati in base a IOPS e MB/s per vedere quali carichi di lavoro hanno l'utilizzo più elevato che potrebbe aver contribuito all'evento.  Nella pagina Performance/Volumes Explorer è possibile selezionare altri volumi o LUN sul volume per confrontarli con l'utilizzo di IOPS o MBps del carico di lavoro interessato.
+
+Assegnando i carichi di lavoro che stanno utilizzando eccessivamente le risorse del nodo a un'impostazione di gruppo di policy più restrittiva, il gruppo di policy limita i carichi di lavoro per limitarne l'attività, il che può ridurre l'utilizzo delle risorse su quel nodo.  Tuttavia, se si desidera che il carico di lavoro possa utilizzare più risorse del nodo, è possibile aumentare il valore del gruppo di policy.
+
+È possibile utilizzare System Manager, i comandi ONTAP o Unified Manager Performance Service Levels per gestire i gruppi di policy, incluse le seguenti attività:
+
+* Creazione di un gruppo di policy
+* Aggiunta o rimozione di carichi di lavoro in un gruppo di policy
+* Spostamento di un carico di lavoro tra gruppi di policy
+* Modifica del limite di throughput di un gruppo di policy
+* Spostamento di un carico di lavoro su un aggregato e/o nodo diverso
+

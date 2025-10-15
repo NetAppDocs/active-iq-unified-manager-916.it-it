@@ -1,0 +1,115 @@
+---
+permalink: health-checker/concept_how_annotation_rules_work_in_unified_manager.html 
+sidebar: sidebar 
+keywords: annotation rules, work, unified manager 
+summary: 'Una regola di annotazione è un criterio definito per annotare gli oggetti di archiviazione (volumi, cluster o macchine virtuali di archiviazione (SVM)).  Per definire le regole di annotazione è possibile utilizzare sia gruppi di condizioni che condizioni.' 
+---
+= Come funzionano le regole di annotazione in Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una regola di annotazione è un criterio definito per annotare gli oggetti di archiviazione (volumi, cluster o macchine virtuali di archiviazione (SVM)).  Per definire le regole di annotazione è possibile utilizzare sia gruppi di condizioni che condizioni.
+
+* È necessario associare una regola di annotazione a un'annotazione.
+* È necessario associare un tipo di oggetto per una regola di annotazione; è possibile associare solo un tipo di oggetto per una regola di annotazione.
+* Unified Manager aggiunge o rimuove annotazioni dagli oggetti di archiviazione dopo ogni ciclo di monitoraggio o quando una regola viene creata, modificata, eliminata o riordinata.
+* Una regola di annotazione può avere uno o più gruppi di condizioni e ogni gruppo di condizioni può avere una o più condizioni.
+* Gli oggetti di archiviazione possono avere più annotazioni.  Una regola di annotazione per una particolare annotazione può anche utilizzare annotazioni diverse nelle condizioni della regola per aggiungere un'altra annotazione agli oggetti già annotati.
+
+
+
+
+== Condizioni
+
+È possibile creare più gruppi di condizioni e ogni gruppo di condizioni può avere una o più condizioni.  È possibile applicare tutti i gruppi di condizioni definiti in una regola di annotazione di un'annotazione per annotare gli oggetti di archiviazione.
+
+Le condizioni all'interno di un gruppo di condizioni vengono eseguite utilizzando l'operatore logico AND.  Devono essere soddisfatte tutte le condizioni di un gruppo di condizioni.  Quando si crea o si modifica una regola di annotazione, viene creata una condizione che applica, seleziona e annota solo gli oggetti di archiviazione che soddisfano tutte le condizioni nel gruppo di condizioni.  È possibile utilizzare più condizioni all'interno di un gruppo di condizioni quando si desidera restringere l'ambito degli oggetti di archiviazione da annotare.
+
+È possibile creare condizioni con oggetti di archiviazione utilizzando i seguenti operandi e operatori e specificando il valore richiesto.
+
+[cols="2*"]
+|===
+| Tipo di oggetto di archiviazione | Operandi applicabili 
+
+
+ a| 
+Volume
+ a| 
+* Nome dell'oggetto
+* Nome del cluster proprietario
+* Possedere il nome SVM
+* Annotazioni
+
+
+
+
+ a| 
+SVM
+ a| 
+* Nome dell'oggetto
+* Nome del cluster proprietario
+* Annotazioni
+
+
+
+
+ a| 
+Grappolo
+ a| 
+* Nome dell'oggetto
+* Annotazioni
+
+
+|===
+Quando si seleziona l'annotazione come operando per un qualsiasi oggetto di archiviazione, è disponibile l'operatore "`Is`".  Per tutti gli altri operandi, è possibile selezionare come operatore "`Is`" o "`Contains`".  Quando si seleziona l'operatore "`Is`", la condizione viene valutata per verificare la corrispondenza esatta del valore dell'operando con il valore fornito per l'operando selezionato.  Quando si seleziona l'operatore "`Contiene`", la condizione viene valutata in modo che soddisfi uno dei seguenti criteri:
+
+* Il valore dell'operando corrisponde esattamente al valore dell'operando selezionato.
+* Il valore dell'operando contiene il valore fornito per l'operando selezionato.
+
+
+
+
+== Esempio di una regola di annotazione con condizioni
+
+Si consideri una regola di annotazione con un gruppo di condizioni per un volume con le due condizioni seguenti:
+
+* Il nome contiene "`vol`"
+* Il nome SVM è "`data_svm`"
+
+
+Questa regola di annotazione annota tutti i volumi che includono "`vol`" nei loro nomi e che sono ospitati su SVM con il nome "`data_svm`" con l'annotazione selezionata e il tipo di annotazione.
+
+
+
+== Gruppi di condizioni
+
+I gruppi di condizioni vengono eseguiti utilizzando l'operatore logico OR e quindi applicati agli oggetti di archiviazione.  Gli oggetti di archiviazione devono soddisfare i requisiti di uno dei gruppi di condizioni da annotare.  Vengono annotati gli oggetti di archiviazione che soddisfano le condizioni di tutti i gruppi di condizioni.  È possibile utilizzare gruppi di condizioni per ampliare l'ambito degli oggetti di archiviazione da annotare.
+
+
+
+== Esempio di una regola di annotazione con gruppi di condizioni
+
+Si consideri una regola di annotazione con due gruppi di condizioni per un volume; ogni gruppo contiene le due condizioni seguenti:
+
+* Gruppo di condizioni 1
++
+** Il nome contiene "`vol`"
+** Il nome SVM è "`data_svm`". Questo gruppo di condizioni annota tutti i volumi che includono "`vol`" nei loro nomi e che sono ospitati su SVM con il nome "`data_svm`".
+
+
+* Gruppo di condizioni 2
++
+** Il nome contiene "`vol`"
+** Il valore di annotazione di data-priority è "`critical`". Questo gruppo di condizioni annota tutti i volumi che includono "`vol`" nei loro nomi e che sono annotati con il valore di annotazione data-priority come "`critical`".
+
+
+
+
+Quando una regola di annotazione contenente questi due gruppi di condizioni viene applicata agli oggetti di archiviazione, vengono annotati i seguenti oggetti di archiviazione:
+
+* Tutti i volumi che includono "`vol`" nei loro nomi e che sono ospitati su SVM con il nome "`data_svm`".
+* Tutti i volumi che includono "`vol`" nei loro nomi e che sono annotati con il valore di annotazione data-priority come "`critical`".
+

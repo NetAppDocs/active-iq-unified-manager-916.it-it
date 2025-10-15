@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_understand_performance_events_and_alerts.html 
+sidebar: sidebar 
+keywords: understand, performance, events, alerts 
+summary: Gli eventi di prestazione sono notifiche che Unified Manager genera automaticamente quando si verifica una condizione predefinita o quando il valore di un contatore di prestazioni supera una soglia.  Gli eventi aiutano a identificare i problemi di prestazioni nei cluster monitorati. 
+---
+= Comprendere gli eventi e gli avvisi sulle prestazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi prestazionali sono incidenti correlati alle prestazioni del carico di lavoro su un cluster.  Ti aiutano a identificare i carichi di lavoro con tempi di risposta lenti.  Considerando anche gli eventi sanitari verificatisi contemporaneamente, è possibile determinare i problemi che potrebbero aver causato o contribuito ai lenti tempi di risposta.
+
+Quando Unified Manager rileva più occorrenze della stessa condizione di evento per lo stesso componente del cluster, tratta tutte le occorrenze come un singolo evento, non come eventi separati.
+
+È possibile configurare gli avvisi per inviare automaticamente notifiche e-mail quando si verificano eventi di prestazioni di determinati tipi di gravità.

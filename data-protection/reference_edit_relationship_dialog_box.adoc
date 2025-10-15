@@ -1,0 +1,71 @@
+---
+permalink: data-protection/reference_edit_relationship_dialog_box.html 
+sidebar: sidebar 
+keywords: edit, relationship, dialog box 
+summary: È possibile modificare una relazione di protezione esistente per cambiare la velocità di trasferimento massima, la politica di protezione o la pianificazione della protezione. 
+---
+= Finestra di dialogo Modifica relazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare una relazione di protezione esistente per cambiare la velocità di trasferimento massima, la politica di protezione o la pianificazione della protezione.
+
+
+
+== Informazioni sulla destinazione
+
+* *Cluster di destinazione*
++
+Nome del cluster di destinazione selezionato.
+
+* *Destinazione SVM*
++
+Il nome dell'SVM selezionato
+
+* *Impostazioni della relazione*
++
+Consente di specificare la velocità di trasferimento massima, la politica SnapMirror e la pianificazione utilizzata dalla relazione di protezione:
+
++
+** Velocità massima di trasferimento
++
+Specifica la velocità massima alla quale i dati di base vengono trasferiti tra cluster sulla rete.  Se selezionata, la larghezza di banda della rete è limitata al valore specificato.  È possibile immettere un valore numerico e quindi selezionare kilobyte al secondo (KBps), megabyte al secondo (MBps), gigabyte al secondo (GBps) o terabyte al secondo (TBps).  La velocità di trasferimento massima specificata deve essere maggiore di 1 KBps e minore di 4 TBps.  Se si sceglie di non utilizzare una velocità di trasferimento massima, il trasferimento di base tra le relazioni è illimitato.  Se il cluster primario e quello secondario sono uguali, questa impostazione è disabilitata.
+
+** Politica SnapMirror
++
+Specifica la policy ONTAP SnapMirror per la relazione.  L'impostazione predefinita è DPDefault.
+
+** Crea politica
++
+Avvia la finestra di dialogo Crea criterio SnapMirror , che consente di creare e utilizzare un nuovo criterio SnapMirror .
+
+** Programma SnapMirror
++
+Specifica la policy ONTAP SnapMirror per la relazione.  Le pianificazioni disponibili includono Nessuna, 5 minuti, 8 ore, giornaliera, oraria e settimanale.  L'impostazione predefinita è Nessuno, a indicare che alla relazione non è associata alcuna pianificazione.  Le relazioni senza pianificazioni non hanno valori di stato di ritardo, a meno che non appartengano a un servizio di archiviazione.
+
+** Crea programma
++
+Avvia la finestra di dialogo Crea pianificazione, che consente di creare una nuova pianificazione SnapMirror .
+
+
+
+
+
+
+
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti attività:
+
+* *Cancellare*
++
+Annulla le selezioni e chiude la finestra di dialogo Configura protezione.
+
+* *Invia*
++
+Applica le selezioni e chiude la finestra di dialogo Modifica relazione.
+
+

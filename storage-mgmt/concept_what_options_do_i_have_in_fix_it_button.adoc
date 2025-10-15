@@ -1,0 +1,81 @@
+---
+permalink: storage-mgmt/concept_what_options_do_i_have_in_fix_it_button.html 
+sidebar: sidebar 
+keywords: fix it,fix all 
+summary: La pagina Azioni di gestione fornisce il pulsante Risolvi o Risolvi tutto per risolvere i problemi di cui Unified Manager è stato informato tramite un evento. 
+---
+= Quali opzioni ho quando vedo il pulsante Correggi o Correggi tutto?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Azioni di gestione fornisce il pulsante *Correggi* o *Correggi tutto* per risolvere i problemi di cui Unified Manager è stato informato tramite un evento.
+
+Ti consigliamo di cliccare sui pulsanti per risolvere un problema, se necessario.  Tuttavia, se non sei sicuro di voler risolvere il problema come consigliato da Unified Manager, puoi eseguire le seguenti azioni:
+
+|===
+| Cosa vuoi fare? | *Azione* 
+
+
+ a| 
+Chiedere a Unified Manager di risolvere il problema su tutti gli oggetti identificati.
+ a| 
+Fare clic sul pulsante *Correggi tutto*.
+
+
+
+ a| 
+Non risolvere il problema per nessuno degli oggetti identificati in questo momento e nascondi questa azione di gestione finché l'evento non verrà generato nuovamente.
+ a| 
+Fare clic sulla freccia rivolta verso il basso e quindi su *Ignora tutto*.
+
+
+
+ a| 
+Risolvi il problema solo su alcuni degli oggetti identificati.
+ a| 
+Fare clic sul nome dell'azione di gestione per espandere l'elenco e visualizzare tutte le singole azioni *Correggi*. Quindi seguire i passaggi per correggere o ignorare le singole azioni di gestione.
+
+|===
+|===
+| Cosa vuoi fare? | Azione 
+
+
+ a| 
+Chiedi a Unified Manager di risolvere il problema.
+ a| 
+Fare clic sul pulsante *Correggi*.
+
+
+
+ a| 
+Non risolvere il problema in questo momento e nascondi questa azione di gestione finché l'evento non verrà generato di nuovo.
+ a| 
+Fare clic sulla freccia rivolta verso il basso e quindi su *Ignora*.
+
+
+
+ a| 
+Visualizza i dettagli di questo evento per comprendere meglio il problema.
+ a| 
+* Fare clic sul pulsante *Correggi* e verificare la correzione che verrà applicata nella finestra di dialogo visualizzata.
+* Fare clic sulla freccia rivolta verso il basso e quindi su *Visualizza dettagli evento* per visualizzare la pagina dei dettagli dell'evento.
+
+
+Quindi fai clic su *Correggi* da una delle pagine risultanti se vuoi risolvere il problema.
+
+
+
+ a| 
+Visualizza i dettagli di questo oggetto di archiviazione per comprendere meglio il problema.
+ a| 
+Fare clic sul nome dell'oggetto di archiviazione per visualizzarne i dettagli nella pagina Performance Explorer o Health Details.
+
+|===
+In alcuni casi la correzione viene riflessa nel successivo sondaggio di configurazione di 15 minuti.  In altri casi potrebbero volerci diverse ore prima che la modifica alla configurazione venga verificata e l'evento diventi obsoleto.
+
+Per visualizzare l'elenco delle azioni di gestione completate o in corso, fare clic sull'icona del filtro e selezionare *Completate* o *In corso*.
+
+Correzione Tutte le operazioni vengono eseguite in serie, quindi quando visualizzi il pannello *In corso* alcuni oggetti avranno lo stato *In corso* mentre altri avranno lo stato *Pianificato*; ciò significa che sono ancora in attesa di essere implementati.

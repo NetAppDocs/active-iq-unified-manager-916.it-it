@@ -1,0 +1,14 @@
+---
+permalink: config/concept_manage_user_access.html 
+sidebar: sidebar 
+keywords: manage, user, access 
+summary: 'È possibile creare ruoli e assegnare capacità per controllare l"accesso degli utenti agli oggetti cluster selezionati.  È possibile identificare gli utenti che dispongono delle capacità richieste per accedere agli oggetti selezionati all"interno di un cluster.  Solo a questi utenti viene concesso l"accesso per gestire gli oggetti del cluster.' 
+---
+= Gestisci l'accesso degli utenti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare ruoli e assegnare capacità per controllare l'accesso degli utenti ad Active IQ Unified Manager.  È possibile identificare gli utenti che dispongono delle capacità richieste per accedere agli oggetti selezionati all'interno di Unified Manager.  Solo gli utenti che dispongono di questi ruoli e capacità possono gestire gli oggetti in Unified Manager.

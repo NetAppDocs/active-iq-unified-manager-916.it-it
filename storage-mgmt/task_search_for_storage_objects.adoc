@@ -1,0 +1,59 @@
+---
+permalink: storage-mgmt/task_search_for_storage_objects.html 
+sidebar: sidebar 
+keywords: search, storage, objects 
+summary: Per accedere rapidamente a un oggetto specifico, è possibile utilizzare il campo Cerca tutti gli oggetti di archiviazione nella parte superiore della barra dei menu.  Questo metodo di ricerca globale su tutti gli oggetti consente di individuare rapidamente oggetti specifici in base al tipo.  I risultati della ricerca vengono ordinati in base al tipo di oggetto di archiviazione ed è possibile filtrarli ulteriormente per oggetto utilizzando il menu a discesa. 
+---
+= Cerca oggetti di archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per accedere rapidamente a un oggetto specifico, puoi utilizzare il campo *Cerca tutti gli oggetti di archiviazione* nella parte superiore della barra dei menu.  Questo metodo di ricerca globale su tutti gli oggetti consente di individuare rapidamente oggetti specifici in base al tipo.  I risultati della ricerca vengono ordinati in base al tipo di oggetto di archiviazione ed è possibile filtrarli ulteriormente per oggetto utilizzando il menu a discesa.
+
+.Prima di iniziare
+* Per eseguire questa attività è necessario disporre di uno dei seguenti ruoli: Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* Una ricerca valida deve contenere almeno tre caratteri.
+
+
+Utilizzando il valore del menu a discesa "Tutti", la ricerca globale visualizza il numero totale di risultati trovati in tutte le categorie di oggetti, con un massimo di 25 risultati di ricerca per ciascuna categoria di oggetti.  È possibile selezionare un tipo di oggetto specifico dal menu a discesa per restringere la ricerca all'interno di un tipo di oggetto specifico.  In questo caso l'elenco restituito non è limitato ai primi 25 oggetti.
+
+I tipi di oggetti che puoi cercare includono:
+
+* Cluster
+* Nodi
+* VM di archiviazione
+* Aggregati
+* Volumi
+* Qtrees
+* Azioni SMB
+* Azioni NFS
+* Quote utente o gruppo
+* LUN
+* Spazi dei nomi NVMe
+* Gruppi iniziatori
+* Iniziatori
+* Gruppo di coerenza
+
+
+Immettendo un nome di carico di lavoro viene restituito l'elenco dei carichi di lavoro nella categoria Volumi o LUN appropriata.
+
+È possibile fare clic su qualsiasi oggetto nei risultati della ricerca per passare alla pagina dei dettagli sulla salute per quell'oggetto.  Se non è presente una pagina di stato diretta per un oggetto, viene visualizzata la pagina Stato dell'oggetto padre.  Ad esempio, quando si cerca una LUN specifica, viene visualizzata la pagina dei dettagli SVM in cui risiede la LUN.
+
+[NOTE]
+====
+Le porte e i LIF non sono ricercabili nella barra di ricerca globale.
+
+====
+.Passi
+. Seleziona un tipo di oggetto dal menu per restringere i risultati della ricerca per un solo tipo di oggetto.
+. Digitare almeno tre caratteri del nome dell'oggetto nel campo *Cerca tutti gli oggetti di archiviazione*.
++
+In questo esempio, nella casella a discesa è selezionato il tipo di oggetto Volumi.  Digitando "vol1" nel campo *Cerca tutti gli oggetti di archiviazione* viene visualizzato un elenco di tutti i volumi i cui nomi contengono questi caratteri.
+
++
+image::../media/opm_search_field_jpg.gif[Campo di ricerca in Unified Manager]
+
+

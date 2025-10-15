@@ -1,0 +1,26 @@
+---
+permalink: data-protection/task_verify_um_data_source_caching_in_workflow_automation.html 
+sidebar: sidebar 
+keywords: verify, unified manager, data source, cache, workflow automation 
+summary: 'È possibile determinare se la memorizzazione nella cache dell"origine dati di Unified Manager funziona correttamente verificando se l"acquisizione dell"origine dati è riuscita in Workflow Automation.  È possibile farlo quando si integra Workflow Automation con Unified Manager per garantire che la funzionalità Workflow Automation sia disponibile dopo l"integrazione.' 
+---
+= Verificare la memorizzazione nella cache della fonte dati di Unified Manager in Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile determinare se la memorizzazione nella cache dell'origine dati di Unified Manager funziona correttamente verificando se l'acquisizione dell'origine dati è riuscita in Workflow Automation.  È possibile farlo quando si integra Workflow Automation con Unified Manager per garantire che la funzionalità Workflow Automation sia disponibile dopo l'integrazione.
+
+.Prima di iniziare
+Per eseguire questa attività, è necessario disporre del ruolo di Amministratore o di Architetto in Workflow Automation.
+
+.Passi
+. Dall'interfaccia utente di Workflow Automation, seleziona *Esecuzione* > *Origini dati*.
+. Fare clic con il pulsante destro del mouse sul nome dell'origine dati di Unified Manager, quindi selezionare *Acquisisci ora*.
+. Verificare che l'acquisizione abbia esito positivo senza errori.
++
+Per garantire la corretta integrazione di Workflow Automation con Unified Manager, è necessario risolvere gli errori di acquisizione.
+
+

@@ -1,0 +1,38 @@
+---
+permalink: health-checker/task_configure_global_aggregate_health_threshold_values.html 
+sidebar: sidebar 
+keywords: configure, global, aggregate, health, threshold values 
+summary: È possibile configurare valori di soglia di integrità globali per tutti gli aggregati per monitorare qualsiasi violazione della soglia.  In caso di superamento delle soglie vengono generati eventi appropriati e sulla base di questi eventi è possibile adottare misure preventive.  È possibile configurare i valori globali in base alle impostazioni delle best practice per le soglie che si applicano a tutti gli aggregati monitorati. 
+---
+= Configurare i valori soglia globali di integrità aggregata
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare valori di soglia di integrità globali per tutti gli aggregati per monitorare qualsiasi violazione della soglia.  In caso di superamento delle soglie vengono generati eventi appropriati e sulla base di questi eventi è possibile adottare misure preventive.  È possibile configurare i valori globali in base alle impostazioni delle best practice per le soglie che si applicano a tutti gli aggregati monitorati.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Quando si configurano le opzioni a livello globale, i valori predefiniti degli oggetti vengono modificati.  Tuttavia, se i valori predefiniti sono stati modificati a livello di oggetto, i valori globali non vengono modificati.
+
+Le opzioni di soglia hanno valori predefiniti per un monitoraggio migliore; tuttavia, è possibile modificare i valori per adattarli ai requisiti del proprio ambiente.
+
+Quando Autogrow è abilitato sui volumi che risiedono nell'aggregato, le soglie di capacità dell'aggregato vengono considerate superate in base alla dimensione massima del volume impostata da Autogrow, non in base alla dimensione del volume originale.
+
+[NOTE]
+====
+I valori di soglia di integrità non sono applicabili all'aggregato radice del nodo.
+
+====
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Soglie evento* > *Aggregazione*.
+. Configurare i valori soglia appropriati per capacità, crescita e copie Snapshot.
+. Fare clic su *Salva*.
+
+
+*Informazioni correlate*
+
+link:../config/task_add_users.html["Aggiunta di utenti"]

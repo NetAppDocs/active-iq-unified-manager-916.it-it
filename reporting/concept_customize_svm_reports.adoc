@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_svm_reports.html 
+sidebar: sidebar 
+keywords: customize, storage, vm reports 
+summary: 'È possibile creare report sulle VM di archiviazione per analizzare le informazioni sui volumi e visualizzare lo stato generale di integrità e la disponibilità dell"archiviazione.  Ad esempio, è possibile creare report per visualizzare le SVM che raggiungono il conteggio massimo del volume e per analizzare le SVM arrestate.' 
+---
+= Personalizza i report delle VM di archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare report sulle VM di archiviazione per analizzare le informazioni sui volumi e visualizzare lo stato generale di integrità e la disponibilità dell'archiviazione.  Ad esempio, è possibile creare report per visualizzare le SVM che raggiungono il conteggio massimo del volume e per analizzare le SVM arrestate.

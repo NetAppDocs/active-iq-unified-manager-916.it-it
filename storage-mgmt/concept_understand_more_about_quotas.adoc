@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_understand_more_about_quotas.html 
+sidebar: sidebar 
+keywords: understand, more, quotas 
+summary: Comprendere i concetti relativi alle quote ti aiuta a gestire in modo efficiente le quote utente e le quote dei gruppi di utenti. 
+---
+= Scopri di più sulle quote
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Comprendere i concetti relativi alle quote ti aiuta a gestire in modo efficiente le quote utente e le quote dei gruppi di utenti.

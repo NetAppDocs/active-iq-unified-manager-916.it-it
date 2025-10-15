@@ -1,0 +1,44 @@
+---
+permalink: data-protection/task_create_snapmirror_and_snapvault_schedules.html 
+sidebar: sidebar 
+keywords: create, snapmirror, snapvault, schedules 
+summary: È possibile creare pianificazioni SnapMirror e SnapVault di base o avanzate per abilitare i trasferimenti automatici di protezione dei dati su un volume di origine o primario, in modo che i trasferimenti avvengano più o meno frequentemente, a seconda della frequenza con cui i dati cambiano sui volumi. 
+---
+= Crea pianificazioni SnapMirror e SnapVault
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare pianificazioni SnapMirror e SnapVault di base o avanzate per abilitare i trasferimenti automatici di protezione dei dati su un volume di origine o primario, in modo che i trasferimenti avvengano più o meno frequentemente, a seconda della frequenza con cui i dati cambiano sui volumi.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* È necessario aver già completato l'area Informazioni sulla destinazione nella finestra di dialogo Configura protezione.
+* Per eseguire questa attività è necessario aver configurato Workflow Automation.
+
+
+.Passi
+. Dalla scheda * SnapMirror* o * SnapVault* della finestra di dialogo *Configura protezione*, fare clic sul collegamento *Crea pianificazione* nell'area *Impostazioni relazione*.
++
+Viene visualizzata la finestra di dialogo Crea pianificazione.
+
+. Nel campo *Nome pianificazione*, digita il nome che desideri assegnare alla pianificazione.
+. Seleziona una delle seguenti opzioni:
++
+** *Di base*
++
+Seleziona se vuoi creare una programmazione di base in stile intervallo.
+
+** *Avanzato*
++
+Seleziona se vuoi creare una pianificazione in stile cron.
+
+
+
+. Fare clic su *Crea*.
++
+La nuova pianificazione viene visualizzata nell'elenco a discesa Pianificazione SnapMirror o Pianificazione SnapVault .
+
+

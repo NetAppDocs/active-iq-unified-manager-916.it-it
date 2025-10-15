@@ -1,0 +1,99 @@
+---
+permalink: events/reference_qtree_events.html 
+sidebar: sidebar 
+keywords: qtree, events, impact area, capacity 
+summary: 'Gli eventi Qtree forniscono informazioni sulla capacità di Qtree e sui limiti di file e dischi, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all"area di impatto e includono il nome dell"evento e della trappola, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi Qtree
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi Qtree forniscono informazioni sulla capacità di Qtree e sui limiti di file e dischi, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all'area di impatto e includono il nome dell'evento e della trappola, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+== Area di impatto: capacità
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Spazio Qtree quasi pieno (ocumEvtQtreeSpaceNearlyFull)
+ a| 
+Rischio
+ a| 
+Qtree
+ a| 
+Avvertimento
+
+
+
+ a| 
+Spazio Qtree pieno (ocumEvtQtreeSpaceFull)
+ a| 
+Rischio
+ a| 
+Qtree
+ a| 
+Errore
+
+
+
+ a| 
+Qtree Space Normal(ocumEvtQtreeSpaceThresholdOk)
+ a| 
+Evento
+ a| 
+Qtree
+ a| 
+Informazioni
+
+
+
+ a| 
+Limite massimo dei file Qtree raggiunto (ocumEvtQtreeFilesHardLimitReached)
+ a| 
+Incidente
+ a| 
+Qtree
+ a| 
+Critico
+
+
+
+ a| 
+Limite flessibile dei file Qtree violato (ocumEvtQtreeFilesSoftLimitBreached)
+ a| 
+Rischio
+ a| 
+Qtree
+ a| 
+Avvertimento
+
+
+
+ a| 
+Limite massimo di spazio Qtree raggiunto (ocumEvtQtreeSpaceHardLimitReached)
+ a| 
+Incidente
+ a| 
+Qtree
+ a| 
+Critico
+
+
+
+ a| 
+Limite flessibile dello spazio Qtree violato (ocumEvtQtreeSpaceSoftLimitBreached)
+ a| 
+Rischio
+ a| 
+Qtree
+ a| 
+Avvertimento
+
+|===

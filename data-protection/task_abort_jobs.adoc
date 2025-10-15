@@ -1,0 +1,23 @@
+---
+permalink: data-protection/task_abort_jobs.html 
+sidebar: sidebar 
+keywords: abort, jobs 
+summary: È possibile utilizzare la pagina Lavori per annullare un lavoro se impiega troppo tempo per essere completato, riscontra troppi errori o non è più necessario.  È possibile annullare un processo solo se il suo stato e il suo tipo lo consentono.  È possibile interrompere qualsiasi processo in esecuzione. 
+---
+= Interrompere i lavori
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la pagina Lavori per annullare un lavoro se impiega troppo tempo per essere completato, riscontra troppi errori o non è più necessario.  È possibile annullare un processo solo se il suo stato e il suo tipo lo consentono.  È possibile interrompere qualsiasi processo in esecuzione.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Protezione* > *Lavori*.
+. Dall'elenco dei lavori, selezionarne uno, quindi fare clic su *Interrompi*.
+. Alla richiesta di conferma, fare clic su *Sì* per annullare il processo selezionato.
+

@@ -1,0 +1,89 @@
+---
+permalink: health-checker/task_generate_and_upload_support_bundle.html 
+sidebar: sidebar 
+keywords: generate, upload, support bundle 
+summary: È possibile generare un pacchetto di supporto contenente informazioni diagnostiche, in modo da poterlo inviare al supporto tecnico per ottenere assistenza nella risoluzione dei problemi.  È anche possibile caricare il pacchetto di supporto su NetApp dalla console di manutenzione. 
+---
+= Genera e carica un pacchetto di supporto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile generare un pacchetto di supporto contenente informazioni diagnostiche, in modo da poterlo inviare al supporto tecnico per ottenere assistenza nella risoluzione dei problemi.
+
+A partire da Unified Manager 9.8, se il server Unified Manager è connesso a Internet, è anche possibile caricare il pacchetto di supporto su NetApp dalla console di manutenzione.
+
+.Prima di iniziare
+È necessario avere accesso alla console di manutenzione come utente addetto alla manutenzione.
+
+Poiché alcuni tipi di dati di supporto possono utilizzare una grande quantità di risorse del cluster o richiedere molto tempo per essere completati, quando si seleziona il bundle di supporto completo è possibile specificare i tipi di dati da includere o escludere per ridurre le dimensioni del bundle di supporto.  È inoltre possibile creare un pacchetto di supporto leggero che contiene solo 30 giorni di log e record del database di configurazione, escludendo i dati sulle prestazioni, i file di registrazione delle acquisizioni e il dump dell'heap del server.
+
+Unified Manager memorizza solo i due bundle di supporto generati più di recente.  I vecchi pacchetti di supporto vengono eliminati dal sistema.
+
+.Passi
+. Nel *Menu principale* della console di manutenzione, selezionare *Supporto/Diagnostica*.
+. Selezionare *Genera pacchetto di supporto leggero* o *Genera pacchetto di supporto* a seconda del livello di dettaglio che si desidera avere nel pacchetto di supporto.
+. Se si sceglie il pacchetto di supporto completo, selezionare o deselezionare i seguenti tipi di dati da includere o escludere nel pacchetto di supporto:
++
+** *svuotamento del database*
++
+Un dump del database MySQL Server.
+
+** *cumulo di rifiuti*
++
+Un'istantanea dello stato dei principali processi del server Unified Manager.  Questa opzione è disabilitata per impostazione predefinita e dovrebbe essere selezionata solo quando richiesto dall'assistenza clienti.
+
+** *registrazioni di acquisizione*
++
+Una registrazione di tutte le comunicazioni tra Unified Manager e i cluster monitorati.
+
+
+
++
+[NOTE]
+====
+Se deselezioni tutti i tipi di dati, il pacchetto di supporto verrà comunque generato con altri dati di Unified Manager.
+
+====
+. Tipo `g` , quindi premere Invio per generare il pacchetto di supporto.
++
+Poiché la generazione di un bundle di supporto è un'operazione che richiede molta memoria, ti verrà chiesto di verificare se sei sicuro di voler generare il bundle di supporto in questo momento.
+
+. Tipo `y` , quindi premere Invio per generare il pacchetto di supporto.
++
+Se non si desidera generare il pacchetto di supporto in questo momento, digitare `n` e quindi premere Invio.
+
+. Se hai incluso i file di dump del database nel pacchetto di supporto completo, ti verrà chiesto di specificare il periodo di tempo per il quale desideri includere le statistiche sulle prestazioni.  L'inclusione delle statistiche sulle prestazioni può richiedere molto tempo e spazio, quindi è possibile anche eseguire il dump del database senza includere le statistiche sulle prestazioni:
++
+.. Inserire la data di inizio nel formato AAAAMMGG.
++
+Ad esempio, inserisci `20210101` per il 1° gennaio 2021.  Entra `n` se non si desidera che vengano incluse le statistiche sulle prestazioni.
+
+.. Inserire il numero di giorni di statistiche da includere, a partire dalle ore 00:00 della data di inizio specificata.
++
+È possibile immettere un numero compreso tra 1 e 10.
+
+
+
++
+Se si includono statistiche sulle prestazioni, il sistema visualizza il periodo di tempo per il quale verranno raccolte tali statistiche.
+
+. Dopo aver creato il pacchetto di supporto, ti verrà chiesto se desideri caricarlo su NetApp.  Tipo `y` e quindi premere Invio.
++
+Ti verrà chiesto di inserire il numero del tuo caso di supporto.
+
+. Se si dispone già di un numero di pratica, inserirlo e premere Invio.  Altrimenti basta premere Invio.
++
+Il pacchetto di supporto viene caricato su NetApp.
+
+
+
+Se il server Unified Manager non è connesso a Internet o se per qualsiasi altro motivo non riesci a caricare il pacchetto di supporto, puoi recuperarlo e inviarlo manualmente.  È possibile recuperarlo utilizzando un client SFTP oppure i comandi CLI di UNIX o Linux.  Nelle installazioni Windows è possibile utilizzare Desktop remoto (RDP) per recuperare il pacchetto di supporto.
+
+Il pacchetto di supporto generato si trova nella directory /support sui sistemi VMware, in /opt/netapp/data/support/ sui sistemi Linux e in ProgramData\ NetApp\OnCommandAppData\ocum\support sui sistemi Windows.
+
+*Informazioni correlate*
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Ruoli e capacità degli utenti di Unified Manager"]

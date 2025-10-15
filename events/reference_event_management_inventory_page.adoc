@@ -1,0 +1,174 @@
+---
+permalink: events/reference_event_management_inventory_page.html 
+sidebar: sidebar 
+keywords: event, management, inventory, page, filter, components, xommand buttons, list 
+summary: 'La pagina dell"inventario Gestione eventi consente di visualizzare un elenco degli eventi correnti e delle relative proprietà.  È possibile eseguire attività quali il riconoscimento, la risoluzione e l"assegnazione di eventi.  Puoi anche aggiungere un avviso per eventi specifici.' 
+---
+= Pagina dell'inventario di gestione degli eventi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina dell'inventario Gestione eventi consente di visualizzare un elenco degli eventi correnti e delle relative proprietà.  È possibile eseguire attività quali il riconoscimento, la risoluzione e l'assegnazione di eventi.  Puoi anche aggiungere un avviso per eventi specifici.
+
+Le informazioni presenti in questa pagina vengono aggiornate automaticamente ogni 5 minuti per garantire che vengano visualizzati gli eventi più recenti.
+
+
+
+== Componenti del filtro
+
+Consente di personalizzare le informazioni visualizzate nell'elenco degli eventi.  È possibile perfezionare l'elenco degli eventi visualizzati utilizzando i seguenti componenti:
+
+* Visualizza il menu per selezionare da un elenco predefinito di selezioni di filtri.
++
+Ciò include elementi quali tutti gli eventi attivi (nuovi e riconosciuti), gli eventi di prestazioni attivi, gli eventi assegnati a me (l'utente registrato) e tutti gli eventi generati durante tutte le finestre di manutenzione.
+
+* Riquadro di ricerca per restringere l'elenco degli eventi inserendo termini completi o parziali.
+* Pulsante Filtro che avvia il riquadro Filtri, in modo da poter selezionare tutti i campi e gli attributi di campo disponibili per perfezionare l'elenco degli eventi.
+
+
+
+
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti attività:
+
+* *Assegna a*
++
+Consente di selezionare l'utente a cui assegnare l'evento.  Quando assegni un evento a un utente, il nome utente e l'ora in cui hai assegnato l'evento vengono aggiunti all'elenco degli eventi selezionati.
+
++
+** Me
++
+Assegna l'evento all'utente attualmente connesso.
+
+** Un altro utente
++
+Visualizza la finestra di dialogo Assegna proprietario, che consente di assegnare o riassegnare l'evento ad altri utenti.  È anche possibile annullare l'assegnazione degli eventi lasciando vuoto il campo della proprietà.
+
+
+
+* *Riconoscere*
++
+Riconosce gli eventi selezionati.
+
++
+Quando si riconosce un evento, il nome utente e l'ora in cui è stato riconosciuto l'evento vengono aggiunti all'elenco degli eventi selezionati.  Quando riconosci un evento, sei responsabile della gestione di quell'evento.
+
++
+[NOTE]
+====
+Non è possibile riconoscere gli eventi informativi.
+
+====
+* *Segna come risolto*
++
+Consente di modificare lo stato dell'evento in risolto.
+
++
+Quando risolvi un evento, il tuo nome utente e l'ora in cui hai risolto l'evento vengono aggiunti all'elenco degli eventi selezionati.  Dopo aver adottato misure correttive per l'evento, è necessario contrassegnare l'evento come risolto.
+
+* *Aggiungi avviso*
++
+Visualizza la finestra di dialogo Aggiungi avviso, che consente di aggiungere avvisi per gli eventi selezionati.
+
+* *Segnalazioni*
++
+Consente di esportare i dettagli della vista dell'evento corrente in un file con valori separati da virgole (.csv) o in un documento PDF.
+
+* *Mostra/Nascondi selettore di colonna*
++
+Consente di scegliere le colonne da visualizzare sulla pagina e di selezionare l'ordine in cui visualizzarle.
+
+
+
+
+
+== Elenco degli eventi
+
+Visualizza i dettagli di tutti gli eventi ordinati in base all'ora di attivazione.
+
+Per impostazione predefinita, viene visualizzata la vista Tutti gli eventi attivi per mostrare gli eventi Nuovi e Riconosciuti dei sette giorni precedenti che hanno un Livello di impatto di Incidente o Rischio.
+
+* *Tempo di attivazione*
++
+Ora in cui è stato generato l'evento.
+
+* *Gravità*
++
+Gravità dell'evento: Critico (image:../media/sev_critical_um60.png[""] ), Errore (image:../media/sev_error_um60.png[""] ), Avvertimento (image:../media/sev_warning_um60.png[""] ), e Informazioni (image:../media/sev_information_um60.gif[""] ).
+
+* *Stato*
++
+Stato dell'evento: Nuovo, Riconosciuto, Risolto o Obsoleto.
+
+* *Livello di impatto*
++
+Livello di impatto dell'evento: incidente, rischio, evento o aggiornamento.
+
+* *Area di impatto*
++
+Area di impatto dell'evento: disponibilità, capacità, prestazioni, protezione, configurazione o sicurezza.
+
+* *Nome*
++
+Il nome dell'evento.  È possibile selezionare il nome per visualizzare la pagina dei dettagli dell'evento.
+
+* *Fonte*
++
+Il nome dell'oggetto su cui si è verificato l'evento.  È possibile selezionare il nome per visualizzare la pagina dei dettagli sullo stato o sulle prestazioni di quell'oggetto.
+
++
+Quando si verifica una violazione della policy QoS condivisa, in questo campo viene visualizzato solo l'oggetto del carico di lavoro che consuma più IOPS o MB/s.  I carichi di lavoro aggiuntivi che utilizzano questo criterio vengono visualizzati nella pagina Dettagli evento.
+
+* *Tipo di fonte*
++
+Tipo di oggetto (ad esempio, Storage VM, Volume o Qtree) a cui è associato l'evento.
+
+* *Assegnato a*
++
+Il nome dell'utente a cui è assegnato l'evento.
+
+* *Origine dell'evento*
++
+Se l'evento ha avuto origine dal "Portale Active IQ " o direttamente da "Active IQ Unified Manager".
+
+* *Nome dell'annotazione*
++
+Nome dell'annotazione assegnata all'oggetto di archiviazione.
+
+* *Note*
++
+Numero di note aggiunte per un evento.
+
+* *Giorni eccezionali*
++
+Numero di giorni trascorsi dalla prima generazione dell'evento.
+
+* *Tempo assegnato*
++
+Tempo trascorso da quando l'evento è stato assegnato a un utente.  Se il tempo trascorso supera una settimana, viene visualizzato il timestamp in cui l'evento è stato assegnato a un utente.
+
+* *Riconosciuto da*
++
+Il nome dell'utente che ha riconosciuto l'evento.  Il campo è vuoto se l'evento non è riconosciuto.
+
+* *Ora riconosciuta*
++
+Il tempo trascorso da quando l'evento è stato riconosciuto.  Se il tempo trascorso supera una settimana, viene visualizzato il timestamp in cui l'evento è stato riconosciuto.
+
+* *Risolto da*
++
+Il nome dell'utente che ha risolto l'evento.  Il campo è vuoto se l'evento non viene risolto.
+
+* *Tempo di risoluzione*
++
+Il tempo trascorso da quando l'evento è stato risolto.  Se il tempo trascorso supera una settimana, viene visualizzato il timestamp in cui l'evento è stato risolto.
+
+* *Tempo obsoleto*
++
+Il momento in cui lo stato dell'evento è diventato Obsoleto.
+
+

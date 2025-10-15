@@ -1,0 +1,51 @@
+---
+permalink: storage-mgmt/task_edit_user_and_group_quota_email_addresses.html 
+sidebar: sidebar 
+keywords: edit, user, group, quota, email, addresses 
+summary: 'È possibile modificare gli indirizzi e-mail in base alla quota utente associata a cluster, macchine virtuali di archiviazione (SVM), volumi, qtree, utenti o gruppi di utenti.  È possibile modificare l"indirizzo e-mail quando si desidera sovrascrivere l"indirizzo e-mail generato dalle regole specificate nella finestra di dialogo Regole per generare indirizzi e-mail per quote utente e gruppo.' 
+---
+= Modifica gli indirizzi email delle quote utente e gruppo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare gli indirizzi e-mail in base alla quota utente associata a cluster, macchine virtuali di archiviazione (SVM), volumi, qtree, utenti o gruppi di utenti.  È possibile modificare l'indirizzo e-mail quando si desidera sovrascrivere l'indirizzo e-mail generato dalle regole specificate nella finestra di dialogo Regole per generare indirizzi e-mail per quote utente e gruppo.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* Devi aver esaminato illink:reference_rules_to_generate_user_and_group_quota.html["linee guida per la creazione di regole"] .
+
+
+Se modifichi un indirizzo email, le regole per generare gli indirizzi email delle quote utente e gruppo non saranno più applicabili alla quota.  Per inviare le notifiche all'indirizzo email generato dalle regole specificate, è necessario eliminare l'indirizzo email e salvare la modifica.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *SVM*.
+. Nella vista *Integrità: tutte le VM di archiviazione*, selezionare una SVM e quindi fare clic sulla scheda *Quote utente e gruppo*.
+. Fare clic su *Modifica indirizzo e-mail* sotto la riga di schede.
+. Nella finestra di dialogo *Modifica indirizzo email*, eseguire l'azione appropriata:
++
+|===
+| Se... | Poi... 
+
+
+ a| 
+Desideri che le notifiche vengano inviate all'indirizzo email generato dalle regole specificate
+ a| 
+.. Eliminare l'indirizzo email nel campo *Indirizzo email*.
+.. Fare clic su *Salva*.
+.. Aggiorna il browser premendo F5 per ricaricare la finestra di dialogo Modifica indirizzo email.  L'indirizzo email generato dalla regola specificata viene visualizzato nel campo *Indirizzo email*.
+
+
+
+
+ a| 
+Desideri che le notifiche vengano inviate a un indirizzo email specificato
+ a| 
+.. Modificare l'indirizzo email nel campo *Indirizzo email*.
+.. Fare clic su *Salva*. Le regole per generare gli indirizzi email delle quote utente e gruppo non sono più applicabili alla quota.
+
+
+|===
+

@@ -1,0 +1,26 @@
+---
+permalink: health-checker/task_add_groups.html 
+sidebar: sidebar 
+keywords: add, groups 
+summary: 'È possibile creare gruppi per combinare cluster, volumi e macchine virtuali di archiviazione (SVM) per semplificare la gestione.' 
+---
+= Aggiungi gruppi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare gruppi per combinare cluster, volumi e macchine virtuali di archiviazione (SVM) per semplificare la gestione.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+È possibile definire regole di gruppo per aggiungere o rimuovere membri dal gruppo e per modificare le azioni di gruppo per il gruppo.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Gruppi*.
+. Nella scheda *Gruppi*, fare clic su *Aggiungi*.
+. Nella finestra di dialogo *Aggiungi gruppo*, immettere un nome e una descrizione per il gruppo.
+. Fare clic su *Aggiungi*.
+

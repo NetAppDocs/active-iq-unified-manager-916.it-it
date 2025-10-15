@@ -1,0 +1,59 @@
+---
+permalink: events/reference_disable_events_dialog_box.html 
+sidebar: sidebar 
+keywords: disable, events, dialog box, properties, area, command buttons 
+summary: 'Nella finestra di dialogo Disabilita eventi viene visualizzato l"elenco dei tipi di evento per i quali è possibile disabilitare gli eventi.  È possibile disabilitare gli eventi per un tipo di evento in base a una particolare gravità o per un insieme di eventi.' 
+---
+= Finestra di dialogo Disabilita eventi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nella finestra di dialogo Disabilita eventi viene visualizzato l'elenco dei tipi di evento per i quali è possibile disabilitare gli eventi.  È possibile disabilitare gli eventi per un tipo di evento in base a una particolare gravità o per un insieme di eventi.
+
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+
+== Area Proprietà evento
+
+L'area Proprietà evento specifica le seguenti proprietà dell'evento:
+
+* *Gravità dell'evento*
++
+Consente di selezionare gli eventi in base al tipo di gravità, che può essere Critico, Errore, Avviso o Informazione.
+
+* *Il nome dell'evento contiene*
++
+Consente di filtrare gli eventi il cui nome contiene i caratteri specificati.
+
+* *Eventi corrispondenti*
++
+Visualizza l'elenco degli eventi che corrispondono al tipo di gravità dell'evento e alla stringa di testo specificata.
+
+* *Disabilita eventi*
++
+Visualizza l'elenco degli eventi selezionati per la disattivazione.
+
++
+Insieme al nome dell'evento viene visualizzata anche la gravità.
+
+
+
+
+
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti attività per gli eventi selezionati:
+
+* *Salva e chiudi*
++
+Disabilita il tipo di evento e chiude la finestra di dialogo.
+
+* *Cancellare*
++
+Annulla le modifiche e chiude la finestra di dialogo.
+
+

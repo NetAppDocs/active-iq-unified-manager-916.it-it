@@ -1,0 +1,44 @@
+---
+permalink: reporting/task_download_reports.html 
+sidebar: sidebar 
+keywords: download, reports 
+summary: 'È possibile scaricare i report e salvare i dati su un"unità locale o di rete come file CSV (valori separati da virgole), file Microsoft Excel (.XLSX) o file PDF.  È possibile aprire file CSV e XLSX con applicazioni per fogli di calcolo, come Microsoft Excel, e file PDF con lettori come Adobe Acrobat.' 
+---
+= Scarica i report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile scaricare i report e salvare i dati su un'unità locale o di rete come file CSV (valori separati da virgole), file Microsoft Excel (.XLSX) o file PDF.  È possibile aprire file CSV e XLSX con applicazioni per fogli di calcolo, come Microsoft Excel, e file PDF con lettori come Adobe Acrobat.
+
+.Passi
+. Fare clic sul pulsante *Report* per scaricare il report in uno dei seguenti modi:
++
+[cols="2*"]
+|===
+| Scegliere | A... 
+
+
+ a| 
+Scarica CSV
+ a| 
+Salvare il report come file CSV (valori separati da virgole).
+
+
+
+ a| 
+Scarica PDF
+ a| 
+Salvare il report come file .pdf.
+
+
+
+ a| 
+Scarica Excel
+ a| 
+Salvare il report come file Microsoft Excel (XLSX).
+
+|===
+

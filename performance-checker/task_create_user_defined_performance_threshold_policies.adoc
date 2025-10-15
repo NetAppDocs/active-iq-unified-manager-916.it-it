@@ -1,0 +1,78 @@
+---
+permalink: performance-checker/task_create_user_defined_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: create, user-defined, performance, threshold, policies 
+summary: 'È possibile creare criteri di soglia delle prestazioni per gli oggetti di archiviazione in modo che vengano inviate notifiche quando un contatore delle prestazioni supera un valore specifico.  La notifica dell"evento indica che il cluster sta riscontrando un problema di prestazioni.' 
+---
+= Creare criteri di soglia delle prestazioni definiti dall'utente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare criteri di soglia delle prestazioni per gli oggetti di archiviazione in modo che vengano inviate notifiche quando un contatore delle prestazioni supera un valore specifico.  La notifica dell'evento indica che il cluster sta riscontrando un problema di prestazioni.
+
+.Prima di iniziare
+È necessario disporre del ruolo di amministratore dell'applicazione.
+
+È possibile creare criteri di soglia delle prestazioni immettendo i valori di soglia nella pagina Crea criterio di soglia delle prestazioni.  È possibile creare nuove policy definendo tutti i valori delle policy in questa pagina oppure è possibile creare una copia di una policy esistente e modificare i valori nella copia (operazione denominata _clonazione_).
+
+I valori di soglia validi sono compresi tra 0,001 e 10.000.000 per i numeri, tra 0,001 e 100 per le percentuali e tra 0,001 e 200 per le percentuali di capacità di prestazione utilizzata.
+
+[NOTE]
+====
+La versione corrente fornisce soglie che inviano eventi quando il valore di un contatore supera l'impostazione della soglia.  Non è possibile impostare soglie che inviano eventi quando il valore di un contatore scende al di sotto di una soglia impostata.
+
+====
+.Passi
+. Nel riquadro di navigazione a sinistra, seleziona *Soglie eventi* > *Prestazioni*.
++
+Viene visualizzata la pagina Soglie di prestazione.
+
+. Fare clic sul pulsante appropriato a seconda che si desideri creare una nuova policy o clonare una policy simile e modificare la versione clonata.
++
+|===
+| A... | Clic... 
+
+
+ a| 
+Crea una nuova politica
+ a| 
+*Creare*
+
+
+
+ a| 
+Clona una policy esistente
+ a| 
+Seleziona una policy esistente e fai clic su *Clona*
+
+|===
++
+Viene visualizzata la pagina Crea criterio soglia prestazioni o Clona criterio soglia prestazioni.
+
+. Definisci la policy di soglia specificando i valori di soglia del contatore delle prestazioni che desideri impostare per oggetti di archiviazione specifici:
++
+.. Selezionare il tipo di oggetto di archiviazione e specificare un nome e una descrizione per il criterio.
+.. Selezionare il contatore delle prestazioni da monitorare e specificare i valori limite che definiscono gli eventi di avviso e critici.
++
+È necessario definire almeno un limite di avviso o un limite critico.  Non è necessario definire entrambi i tipi di limiti.
+
+.. Selezionare un contatore delle prestazioni secondario, se necessario, e specificare i valori limite per gli eventi di avviso e critici.
++
+Per includere un contatore secondario è necessario che entrambi i contatori superino i valori limite prima che la soglia venga superata e venga segnalato un evento.  Solo determinati oggetti e contatori possono essere configurati utilizzando una policy di combinazione.
+
+.. Selezionare la durata di tempo per la quale i valori limite devono essere superati affinché venga inviato un evento.
+
+
++
+Quando si clona una policy esistente, è necessario immettere un nuovo nome per la policy.
+
+. Fare clic su *Salva* per salvare la policy.
++
+Verrai reindirizzato alla pagina Soglie di prestazione.  Un messaggio di successo nella parte superiore della pagina conferma che il criterio di soglia è stato creato e fornisce un collegamento alla pagina Inventario per quel tipo di oggetto, in modo da poter applicare immediatamente il nuovo criterio agli oggetti di archiviazione.
+
+
+
+Se si desidera applicare la nuova politica di soglia agli oggetti di archiviazione in questo momento, è possibile fare clic sul collegamento *Vai a object_type ora* per andare alla pagina Inventario.

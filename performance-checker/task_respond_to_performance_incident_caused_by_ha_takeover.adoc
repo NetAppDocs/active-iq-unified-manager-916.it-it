@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/task_respond_to_performance_incident_caused_by_ha_takeover.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, ha, takeover 
+summary: 'È possibile utilizzare Unified Manager per analizzare un evento di prestazioni causato da un"elaborazione dati elevata su un nodo del cluster che si trova in una coppia ad alta disponibilità (HA).  È anche possibile utilizzare Unified Manager per verificare lo stato di integrità dei nodi e verificare se eventuali eventi di integrità rilevati di recente sui nodi hanno contribuito all"evento di prestazioni.' 
+---
+= Rispondere a un evento di prestazioni dinamiche causato dall'acquisizione di HA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare Unified Manager per analizzare un evento di prestazioni causato da un'elaborazione dati elevata su un nodo del cluster che si trova in una coppia ad alta disponibilità (HA).  È anche possibile utilizzare Unified Manager per verificare lo stato di integrità dei nodi e verificare se eventuali eventi di integrità rilevati di recente sui nodi hanno contribuito all'evento di prestazioni.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* Devono esserci eventi di performance nuovi, riconosciuti o obsoleti.
+
+
+.Passi
+. Visualizza la pagina *Dettagli evento* per visualizzare le informazioni sull'evento.
+. Leggere la *Descrizione*, che descrive i carichi di lavoro coinvolti nell'evento e il componente del cluster in competizione.
++
+Esiste un volume vittima la cui latenza è stata influenzata dal componente cluster in conflitto.  Il nodo di elaborazione dati, che ha preso in carico tutti i carichi di lavoro dal suo nodo partner, è il componente del cluster in competizione.  In Componente in conflitto, l'icona Data Processing è evidenziata in rosso e il nome del nodo che gestiva l'elaborazione dati al momento dell'evento è visualizzato tra parentesi.
+
+. Nella *Descrizione*, fare clic sul nome del volume.
++
+Viene visualizzata la pagina Volume Performance Explorer.  Nella parte superiore della pagina, nella cronologia degli eventi, un'icona di modifica dell'evento (image:../media/opm_change_icon.gif["Cambia icona evento"] ) indica l'ora in cui Unified Manager ha rilevato l'inizio del takeover HA.
+
+. Posiziona il cursore sull'icona dell'evento di modifica per l'acquisizione HA e i dettagli sull'acquisizione HA verranno visualizzati nel testo passante.
++
+Nel grafico Latenza, un evento indica che il volume selezionato ha superato la soglia di prestazioni a causa dell'elevata latenza più o meno nello stesso momento dell'acquisizione HA.
+
+. Fare clic su *Zoom vista* per visualizzare il grafico della latenza in una nuova pagina.
+. Nel menu Visualizza, seleziona *Componenti del cluster* per visualizzare la latenza totale per componente del cluster.
+. Punta il cursore del mouse sull'icona dell'evento di modifica per l'avvio dell'acquisizione HA e confronta la latenza per l'elaborazione dei dati con la latenza totale.
++
+Al momento dell'acquisizione di HA, si è verificato un picco nell'elaborazione dei dati dovuto all'aumento del carico di lavoro richiesto sul nodo di elaborazione dati.  L'aumento dell'utilizzo della CPU ha aumentato la latenza e ha attivato l'evento.
+
+. Dopo aver riparato il nodo guasto, utilizzare ONTAP System Manager per eseguire un giveback HA, che sposta i carichi di lavoro dal nodo partner al nodo riparato.
+. Una volta completato il giveback HA, dopo la successiva individuazione della configurazione in Unified Manager (circa 15 minuti), individuare l'evento e il carico di lavoro attivati dal takeover HA nella pagina dell'inventario *Gestione eventi*.
++
+L'evento attivato dall'acquisizione HA ha ora uno stato obsoleto, che indica che l'evento è stato risolto.  La latenza nel componente di elaborazione dei dati è diminuita, con conseguente diminuzione della latenza totale.  Il nodo che il volume selezionato sta utilizzando per l'elaborazione dei dati ha risolto l'evento.
+
+

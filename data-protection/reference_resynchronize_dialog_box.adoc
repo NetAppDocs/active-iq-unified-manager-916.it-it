@@ -1,0 +1,68 @@
+---
+permalink: data-protection/reference_resynchronize_dialog_box.html 
+sidebar: sidebar 
+keywords: resynchronize, dialog box 
+summary: La finestra di dialogo Risincronizza consente di risincronizzare i dati su una relazione SnapMirror o SnapVault precedentemente interrotta e in seguito trasformata in un volume di lettura/scrittura.  È anche possibile risincronizzare quando una copia Snapshot comune richiesta sul volume di origine viene eliminata, causando il fallimento degli aggiornamenti di SnapMirror o SnapVault . 
+---
+= Finestra di dialogo Risincronizza
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Risincronizza consente di risincronizzare i dati su una relazione SnapMirror o SnapVault precedentemente interrotta e in seguito trasformata in un volume di lettura/scrittura.  È anche possibile risincronizzare quando una copia Snapshot comune richiesta sul volume di origine viene eliminata, causando il fallimento degli aggiornamenti di SnapMirror o SnapVault .
+
+
+
+== Scheda Opzioni di risincronizzazione
+
+La scheda Opzioni di risincronizzazione consente di impostare la priorità di trasferimento e la velocità di trasferimento massima per la relazione di protezione che si sta risincronizzando.
+
+* *Priorità di trasferimento*
++
+La priorità con cui viene eseguito il trasferimento.  È possibile selezionare Normale o Basso.  Le relazioni con policy che specificano una priorità di trasferimento normale vengono eseguite prima di quelle con policy che specificano una priorità di trasferimento bassa.
+
+* *Velocità di trasferimento massima*
++
+Specifica la velocità massima alla quale i dati vengono trasferiti tra cluster sulla rete.  Se selezionata, la larghezza di banda della rete è limitata al valore specificato.  È possibile immettere un valore numerico e quindi selezionare kilobyte al secondo (KBps), megabyte al secondo (MBps), gigabyte al secondo (GBps) o TBps.  Se si sceglie di non utilizzare una velocità di trasferimento massima, il trasferimento di base tra le relazioni è illimitato.
+
+
+
+
+
+== Scheda Copie snapshot di origine
+
+La scheda Copie snapshot di origine visualizza le seguenti informazioni sulla copia snapshot di origine utilizzata per il trasferimento di base:
+
+* *Volume sorgente*
++
+Visualizza i nomi dei volumi sorgente corrispondenti.
+
+* *Volume di destinazione*
++
+Visualizza i nomi dei volumi di destinazione selezionati.
+
+* *Tipo di fonte*
++
+Visualizza il tipo di volume: Lettura/scrittura o Protezione dati.
+
+* *Copia istantanea*
++
+Visualizza la copia Snapshot utilizzata per il trasferimento dei dati.  Facendo clic sul valore Copia snapshot viene visualizzata la finestra di dialogo Seleziona copia snapshot di origine, in cui è possibile selezionare una copia snapshot specifica per il trasferimento, a seconda del tipo di relazione di protezione e dell'operazione che si sta eseguendo.
+
+
+
+
+
+== Pulsanti di comando
+
+* *Invia*
++
+Avvia il processo di risincronizzazione e chiude la finestra di dialogo Risincronizza.
+
+* *Cancellare*
++
+Annulla le selezioni e chiude la finestra di dialogo Risincronizza.
+
+

@@ -1,0 +1,110 @@
+---
+permalink: storage-mgmt/task_add_space_to_data_directory_of_um_linux_host.html 
+sidebar: sidebar 
+keywords: add, space, data directory, linux host 
+summary: 'Se hai assegnato spazio su disco insufficiente al `/opt/netapp/data` directory per supportare Unified Manager quando hai originariamente configurato l"host Linux e poi installato Unified Manager, puoi aggiungere spazio su disco dopo l"installazione aumentando lo spazio su disco su `/opt/netapp/data` elenco.' 
+---
+= Aggiungere spazio alla directory dati dell'host Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se hai assegnato spazio su disco insufficiente al `/opt/netapp/data` directory per supportare Unified Manager quando hai originariamente configurato l'host Linux e poi installato Unified Manager, puoi aggiungere spazio su disco dopo l'installazione aumentando lo spazio su disco su `/opt/netapp/data` elenco.
+
+.Prima di iniziare
+È necessario disporre dell'accesso come utente root al computer Red Hat Enterprise Linux su cui è installato Unified Manager.
+
+Si consiglia di eseguire il backup del database di Unified Manager prima di aumentare le dimensioni della directory dei dati.
+
+.Passi
+. Accedi come utente root al computer Linux su cui desideri aggiungere spazio su disco.
+. Arrestare il servizio Unified Manager e il software MySQL associato nell'ordine mostrato: `systemctl stop ocieau ocie mysqld`
+. Creare una cartella di backup temporanea (ad esempio, `/backup-data` ) con spazio su disco sufficiente a contenere i dati nella versione corrente `/opt/netapp/data` elenco.
+. Copia il contenuto e la configurazione dei privilegi dell'esistente `/opt/netapp/data` directory nella directory dei dati di backup:
++
+`cp -arp /opt/netapp/data/* /backup-data`
+
+. Se SE Linux è abilitato:
++
+.. Ottieni il tipo SE Linux per le cartelle esistenti `/opt/netapp/data` cartella:
++
+`se_type=`ls -Z /opt/netapp/data| awk '{print $4}'| awk -F: '{print $3}'| head -1`
+
++
+Il sistema restituisce una conferma simile alla seguente:
+
++
+[listing]
+----
+echo $se_type
+mysqld_db_t
+----
+.. Esegui il `chcon` comando per impostare il tipo SE Linux per la directory di backup:
++
+`chcon -R --type=mysqld_db_t /backup-data`
+
+
+
+. Rimuovere il contenuto del `/opt/netapp/data` elenco:
++
+.. `cd /opt/netapp/data`
+.. `rm -rf *`
+
+
+. Espandi le dimensioni del `/opt/netapp/data` directory a un minimo di 150 GB tramite comandi LVM o aggiungendo dischi extra.
++
+[NOTE]
+====
+Se hai creato `/opt/netapp/data` da un disco, allora non dovresti provare a montarlo `/opt/netapp/data` come quota NFS o CIFS.  Perché, in questo caso, se si tenta di espandere lo spazio su disco, alcuni comandi LVM, come `resize` E `extend` potrebbe non funzionare come previsto.
+
+====
+. Confermare che il `/opt/netapp/data` il proprietario della directory (mysql) e il gruppo (root) rimangono invariati:
++
+`ls -ltr /opt/netapp/ | grep data`
+
++
+Il sistema restituisce una conferma simile alla seguente:
+
++
+[listing]
+----
+drwxr-xr-x.  17 mysql root  4096 Aug 28 13:08 data
+----
+. Se SE Linux è abilitato, confermare che il contesto per `/opt/netapp/data` la directory è ancora impostata su mysqld_db_t:
++
+.. `touch /opt/netapp/data/abc`
+.. `ls -Z /opt/netapp/data/abc`
++
+Il sistema restituisce una conferma simile alla seguente:
+
++
+[listing]
+----
+-rw-r--r--. root root unconfined_u:object_r:mysqld_db_t:s0 /opt/netapp/data/abc
+----
+
+
+. Elimina il file `abc` in modo che questo file estraneo non causi un errore del database in futuro.
+. Copia il contenuto da `backup-data` torna all'espansione `/opt/netapp/data` elenco:
++
+`cp -arp /backup-data/* /opt/netapp/data/`
+
+. Se SE Linux è abilitato, eseguire il seguente comando:
++
+`chcon -R --type=mysqld_db_t /opt/netapp/data`
+
+. Avviare il servizio MySQL:
++
+`systemctl start mysqld`
+
+. Dopo aver avviato il servizio MySQL, avviare i servizi ocie e ocieau nell'ordine mostrato:
++
+`systemctl start ocie ocieau`
+
+. Dopo aver avviato tutti i servizi, eliminare la cartella di backup `/backup-data` :
++
+`rm -rf /backup-data`
+
+

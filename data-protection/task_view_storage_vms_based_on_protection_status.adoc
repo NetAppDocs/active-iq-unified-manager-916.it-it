@@ -1,0 +1,62 @@
+---
+permalink: data-protection/task_view_storage_vms_based_on_protection_status.html 
+sidebar: sidebar 
+keywords: storage vm, view protection status 
+summary: 'È possibile utilizzare la pagina VM di archiviazione dell"inventario per visualizzare tutte le VM di archiviazione in Active IQ Unified Manager e filtrare le VM di archiviazione in base al loro stato di protezione.' 
+---
+= Visualizza le VM di archiviazione in base allo stato di protezione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la pagina VM di archiviazione dell'inventario per visualizzare tutte le VM di archiviazione in Active IQ Unified Manager e filtrare le VM di archiviazione in base al loro stato di protezione.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Alla vista delle VM di archiviazione è stata aggiunta una nuova colonna Ruolo di protezione che fornisce informazioni sul fatto che la VM di archiviazione sia protetta o meno.
+
+[NOTE]
+====
+Se un cluster di origine non viene aggiunto ad Active IQ Unified Manager, tutte le informazioni relative a tale cluster non saranno disponibili nelle griglie.
+
+====
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *ARCHIVIAZIONE* > *VM di archiviazione*.
+. Dal menu *VISUALIZZA*, seleziona *Integrità* > *Tutte le VM di archiviazione*.
++
+Viene visualizzata la schermata Integrità: tutte le VM di archiviazione.
+
+. Fare clic su *Filtro* per visualizzare una delle seguenti VM di archiviazione.
++
+[cols="2*"]
+|===
+| Per visualizzare | Valore del filtro 
+
+
+ a| 
+*VM con archiviazione protetta*
+ a| 
+*Ruolo di protezione* è *Protetto*
+
+
+
+ a| 
+*VM di archiviazione non protette*
+ a| 
+*Il ruolo di protezione* è *non protetto*
+
+|===
++
+[NOTE]
+====
+Non è possibile visualizzare contemporaneamente sia le VM di archiviazione protette che quelle non protette.  Sarà necessario cancellare il filtro esistente per riapplicare una nuova opzione di filtro.
+
+====
+. Fare clic su *Applica filtro*.
++
+La vista Non salvate mostra tutte le VM di archiviazione protette o non protette dal ripristino di emergenza delle VM di archiviazione in base alle selezioni dei filtri.
+
+

@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_edit_group_rules.html 
+sidebar: sidebar 
+keywords: edit, group rules 
+summary: 'È possibile modificare le regole di gruppo per modificare i gruppi di condizioni e le condizioni all"interno di un gruppo di condizioni per aggiungere o rimuovere oggetti di archiviazione da o verso un gruppo specifico.' 
+---
+= Modifica le regole del gruppo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare le regole di gruppo per modificare i gruppi di condizioni e le condizioni all'interno di un gruppo di condizioni per aggiungere o rimuovere oggetti di archiviazione da o verso un gruppo specifico.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Gruppi*.
+. Nella scheda *Regole di gruppo*, seleziona la regola di gruppo che desideri modificare, quindi fai clic su *Modifica*.
+. Nella finestra di dialogo *Modifica regola di gruppo*, modificare il nome della regola di gruppo, il nome del gruppo associato, i gruppi di condizioni e le condizioni come richiesto.
++
+[NOTE]
+====
+Non è possibile modificare il tipo di oggetto di destinazione per una regola di gruppo.
+
+====
+. Fare clic su *Salva*.
+

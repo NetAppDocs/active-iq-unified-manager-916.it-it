@@ -1,0 +1,126 @@
+---
+permalink: data-protection/reference_job_details_page.html 
+sidebar: sidebar 
+keywords: job, details, page 
+summary: 'La pagina Dettagli processo consente di visualizzare lo stato e altre informazioni su specifiche attività di protezione in esecuzione, in coda o completate.  È possibile utilizzare queste informazioni per monitorare l"avanzamento dei processi di protezione e per risolvere i problemi relativi ai processi non riusciti.' 
+---
+= Pagina dei dettagli del lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Dettagli processo consente di visualizzare lo stato e altre informazioni su specifiche attività di protezione in esecuzione, in coda o completate.  È possibile utilizzare queste informazioni per monitorare l'avanzamento dei processi di protezione e per risolvere i problemi relativi ai processi non riusciti.
+
+
+
+== Riepilogo del lavoro
+
+Il riepilogo del lavoro mostra le seguenti informazioni:
+
+* ID lavoro
+* Tipo
+* Stato
+* Ora di invio
+* Tempo di completamento
+* Durata
+
+
+
+
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti attività:
+
+* *Aggiorna*
++
+Aggiorna l'elenco delle attività e le proprietà associate a ciascuna attività.
+
+* *Visualizza lavori*
++
+Ti riporta alla pagina Lavori.
+
+
+
+
+
+== Elenco delle attività lavorative
+
+L'elenco delle attività di lavoro visualizza in una tabella tutte le attività associate a un lavoro specifico e le proprietà relative a ciascuna attività.
+
+* *Ora di inizio*
++
+Visualizza il giorno e l'ora di inizio dell'attività.  Per impostazione predefinita, le attività più recenti vengono visualizzate nella parte superiore della colonna, mentre quelle più vecchie vengono visualizzate nella parte inferiore.
+
+* *Tipo*
++
+Visualizza il tipo di attività.
+
+* *Stato*
++
+Lo stato di un compito particolare:
+
++
+** *Completato*
++
+Il compito è terminato.
+
+** *In coda*
++
+L'attività sta per essere eseguita.
+
+** *Corsa*
++
+L'attività è in esecuzione.
+
+** *In attesa*
++
+È stato inviato un lavoro e alcune attività associate sono in attesa di essere messe in coda ed eseguite.
+
+
+
+* *Stato*
++
+Visualizza lo stato dell'attività:
+
++
+** *Errore (image:../media/sev_error.gif[""] )*
++
+Il compito è fallito.
+
+** *Normale (image:../media/sev_normal.gif[""] )*
++
+Il compito è riuscito.
+
+** *Saltato (image:../media/icon_skipped.gif[""] )*
++
+Un'attività non è riuscita e le attività successive sono state saltate.
+
+
+
+* *Durata*
++
+Visualizza il tempo trascorso dall'inizio dell'attività.
+
+* *Ora completata*
++
+Visualizza l'ora in cui l'attività è stata completata.  Per impostazione predefinita, questa colonna è nascosta.
+
+* *ID attività*
++
+Visualizza il GUID che identifica una singola attività per un lavoro.  La colonna può essere ordinata e filtrata.  Per impostazione predefinita, questa colonna è nascosta.
+
+* *Ordine di dipendenza*
++
+Visualizza un numero intero che rappresenta la sequenza delle attività in un grafico, assegnando zero alla prima attività.  Per impostazione predefinita, questa colonna è nascosta.
+
+* *Riquadro Dettagli attività*
++
+Visualizza informazioni aggiuntive su ogni attività lavorativa, tra cui il nome dell'attività, la descrizione dell'attività e, se l'attività non è riuscita, il motivo dell'errore.
+
+* *Riquadro Messaggi attività*
++
+Visualizza messaggi specifici per l'attività selezionata.  I messaggi potrebbero includere il motivo dell'errore e suggerimenti per risolverlo.  Non tutte le attività visualizzano messaggi di attività.
+
+

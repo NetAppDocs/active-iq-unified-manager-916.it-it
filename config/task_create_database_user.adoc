@@ -1,0 +1,47 @@
+---
+permalink: config/task_create_database_user.html 
+sidebar: sidebar 
+keywords: create, database, user 
+summary: 'Per supportare una connessione tra Workflow Automation e Unified Manager o per accedere alle viste del database, è necessario prima creare un utente del database con il ruolo Schema di integrazione o Schema di report nell"interfaccia utente Web di Unified Manager.' 
+---
+= Creare un utente del database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per supportare una connessione tra Workflow Automation e Unified Manager o per accedere alle viste del database, è necessario prima creare un utente del database con il ruolo Schema di integrazione o Schema di report nell'interfaccia utente Web di Unified Manager.
+
+.Prima di iniziare
+È necessario disporre del ruolo di amministratore dell'applicazione.
+
+Gli utenti del database forniscono l'integrazione con Workflow Automation e l'accesso a viste del database specifiche per report.  Gli utenti del database non hanno accesso all'interfaccia utente Web di Unified Manager o alla console di manutenzione e non possono eseguire chiamate API.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Generale* > *Utenti*.
+. Nella pagina Utenti, fare clic su *Aggiungi*.
+. Nella finestra di dialogo Aggiungi utente, seleziona *Utente database* nell'elenco a discesa *Tipo*.
+. Digitare un nome e una password per l'utente del database.
+. Nell'elenco a discesa *Ruolo*, seleziona il ruolo appropriato.
++
+[cols="2*"]
+|===
+| Se sei... | Scegli questo ruolo 
+
+
+ a| 
+Collegamento di Unified Manager con l'automazione del flusso di lavoro
+ a| 
+Schema di integrazione
+
+
+
+ a| 
+Accesso ai report e ad altre viste del database
+ a| 
+Schema del report
+
+|===
+. Fare clic su *Aggiungi*.
+

@@ -1,0 +1,27 @@
+---
+permalink: events/task_edit_alerts.html 
+sidebar: sidebar 
+keywords: edit, alerts 
+summary: 'È possibile modificare le proprietà dell"avviso, ad esempio la risorsa a cui è associato l"avviso, gli eventi, i destinatari, le opzioni di notifica, la frequenza di notifica e gli script associati.' 
+---
+= Modifica avvisi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare le proprietà dell'avviso, ad esempio la risorsa a cui è associato l'avviso, gli eventi, i destinatari, le opzioni di notifica, la frequenza di notifica e gli script associati.
+
+.Prima di iniziare
+È necessario disporre del ruolo di amministratore dell'applicazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Configurazione avvisi*.
+. Nella pagina *Impostazione avviso*, seleziona l'avviso che desideri modificare e fai clic su *Modifica*.
+. Nella finestra di dialogo *Modifica avviso*, modifica le sezioni nome, risorse, eventi e azioni, come richiesto.
++
+È possibile modificare o rimuovere lo script associato all'avviso.
+
+. Fare clic su *Salva*.
+

@@ -1,0 +1,23 @@
+---
+permalink: data-protection/task_view_job_details.html 
+sidebar: sidebar 
+keywords: view, job, details 
+summary: 'Dopo aver avviato un lavoro, puoi seguirne l"avanzamento dalla pagina dei dettagli del lavoro e monitorare le attività associate per individuare eventuali errori.' 
+---
+= Visualizza i dettagli del lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver avviato un lavoro, puoi seguirne l'avanzamento dalla pagina dei dettagli del lavoro e monitorare le attività associate per individuare eventuali errori.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Protezione* > *Lavori*.
+. Nella pagina Lavori, fare clic sul nome di un lavoro nella colonna *Nome* per visualizzare l'elenco delle attività associate al lavoro.
+. Fare clic su un'attività per visualizzare informazioni aggiuntive nel riquadro *Dettagli attività* e nel riquadro *Messaggi attività* a destra dell'elenco attività.
+

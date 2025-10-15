@@ -1,0 +1,45 @@
+---
+permalink: install-windows/task_upgrade_openjdk_on_windows_ocum.html 
+sidebar: sidebar 
+keywords: openjdk, jre, upgrade 
+summary: 'È possibile eseguire l"aggiornamento a una versione più recente di OpenJDK sul server Windows su cui è installato Unified Manager per ottenere correzioni per le vulnerabilità di sicurezza.' 
+---
+= Aggiorna OpenJDK
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire l'aggiornamento a una versione più recente di OpenJDK sul server Windows su cui è installato Unified Manager per ottenere correzioni per le vulnerabilità di sicurezza.
+
+.Prima di iniziare
+È necessario disporre dei privilegi di amministratore Windows per il sistema su cui è installato Unified Manager.
+
+È possibile aggiornare le versioni di OpenJDK all'interno delle famiglie di versioni.  Ad esempio, è possibile eseguire l'aggiornamento da OpenJDK 11.0.16 a OpenJDK 11.0.18, ma non è possibile eseguire l'aggiornamento direttamente da OpenJDK 11 a OpenJDK 12.
+
+.Passi
+. Accedi come utente amministratore sul computer host di Unified Manager.
+. Scaricare la versione appropriata di OpenJDK (64 bit) dal sito OpenJDK sul sistema di destinazione.
++
+Ad esempio, scarica `jdk-11.0.18_windows-x64_bin.zip from https://www.oracle.com/in/java/technologies/javase/jdk11-archive-downloads.html` .
+
++
+
+NOTE: Per scaricare il file è necessario un account Oracle.  Se non hai un account Oracle, vai alink:https://login.oracle.com/mysso/signon.jsp?request_id=007["Accesso all'account Oracle"] pagina per crearne una.
+
+. Utilizzare la console dei servizi Windows per arrestare i seguenti servizi di Unified Manager:
++
+** Servizio di acquisizione NetApp Active IQ (Ocie-au)
+** Servizio NetApp Active IQ Management Server (Oncommandsvc)
+
+
+. Espandi il `zip` file.
+. Copiare le directory e i file dal file risultante `jdk` directory (ad esempio, `jdk-11.0.18` alla posizione in cui è installato Java.  Esempio: `C:\Program Files\NetApp\JDK\`
+. Avviare i servizi Unified Manager utilizzando la console Servizi Windows:
++
+** Servizio NetApp Active IQ Management Server (Oncommandsvc)
+** Servizio di acquisizione NetApp Active IQ (Ocie-au)
+
+
+

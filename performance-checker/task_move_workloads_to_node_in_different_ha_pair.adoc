@@ -1,0 +1,95 @@
+---
+permalink: performance-checker/task_move_workloads_to_node_in_different_ha_pair.html 
+sidebar: sidebar 
+keywords: move, workloads, node, different, ha pair 
+summary: 'È possibile utilizzare Unified Manager per identificare un aggregato su un nodo in una coppia ad alta disponibilità (HA) diversa che dispone di una maggiore capacità di prestazioni libera rispetto alla coppia HA in cui sono attualmente in esecuzione i carichi di lavoro.  È quindi possibile spostare i volumi selezionati negli aggregati sulla nuova coppia HA.' 
+---
+= Spostare i carichi di lavoro su un nodo in una coppia HA diversa
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare Unified Manager per identificare un aggregato su un nodo in una coppia ad alta disponibilità (HA) diversa che dispone di una maggiore capacità di prestazioni libera rispetto alla coppia HA in cui sono attualmente in esecuzione i carichi di lavoro.  È quindi possibile spostare i volumi selezionati negli aggregati sulla nuova coppia HA.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* Il tuo cluster deve essere composto da almeno due coppie HA
++
+Non è possibile utilizzare questo processo di correzione se nel cluster è presente una sola coppia HA.
+
+* È necessario aver registrato i nomi dei due nodi nella coppia HA che presentano attualmente un problema di prestazioni.
+* È necessario aver registrato la data e l'ora in cui i nodi hanno ricevuto l'evento di prestazione.
+* Unified Manager deve aver raccolto e analizzato i dati sulle prestazioni per un mese o più.
+
+
+Spostando i carichi di lavoro ad alte prestazioni su un aggregato su un nodo con maggiore capacità di prestazioni libera, i carichi di lavoro su entrambi i nodi funzionano in modo più efficiente.  Questa procedura consente di identificare le seguenti risorse in modo da poter spostare carichi di lavoro ad alte prestazioni su un nodo con maggiore capacità di prestazioni libera su una coppia HA diversa:
+
+* I nodi in una coppia HA diversa sullo stesso cluster che hanno la maggiore capacità di prestazioni libera
+* Gli aggregati sui nuovi nodi che hanno la maggiore capacità di prestazioni libere
+* I volumi più performanti sui nodi attuali
+
+
+.Passi
+. Identificare i nodi che fanno parte di una diversa coppia HA sullo stesso cluster:
++
+.. Nella pagina *Dettagli evento*, fare clic sul nome del cluster in cui risiedono i nodi.
++
+I dettagli del cluster vengono visualizzati nella pagina di destinazione Prestazioni/Cluster.
+
+.. Nella pagina *Riepilogo*, fare clic su *Nodi* nel riquadro *Oggetti gestiti*.
++
+L'elenco dei nodi su questo cluster viene visualizzato nella vista Prestazioni: Tutti i nodi.
+
+.. Annotare i nomi dei nodi che si trovano in coppie HA diverse dalla coppia HA che attualmente presenta un problema di prestazioni.
+
+
+. Identificare un nodo nella nuova coppia HA che abbia la maggiore capacità di prestazioni libera:
++
+.. Nella vista *Prestazioni: tutti i nodi*, fare clic sulla colonna *Capacità di prestazioni utilizzata* per ordinare i nodi in base alla percentuale minima utilizzata.
++
+Viene fornito un elenco di potenziali nodi su cui potresti voler spostare i carichi di lavoro.
+
+.. Annotare il nome del nodo su una coppia HA diversa su cui si desidera spostare i carichi di lavoro.
+
+
+. Identificare un aggregato sul nuovo nodo che abbia la maggiore capacità di prestazioni libera:
++
+.. Nella vista *Prestazioni: Tutti i nodi*, fare clic sul nodo.
++
+I dettagli del nodo vengono visualizzati nella pagina Prestazioni/Esplora nodi.
+
+.. Nel menu *Visualizza e confronta*, seleziona *Aggregati su questo nodo*.
++
+Gli aggregati su questo nodo vengono visualizzati nella griglia.
+
+.. Fare clic sulla colonna *Capacità di prestazione utilizzata* per ordinare gli aggregati in base a quelli meno utilizzati.
++
+Viene fornito un elenco di potenziali aggregati su cui potresti voler spostare i carichi di lavoro.
+
+.. Annotare il nome dell'aggregato su cui si desidera spostare i carichi di lavoro.
+
+
+. Identificare i carichi di lavoro ad alte prestazioni dai nodi che hanno ricevuto l'evento:
++
+.. Torna alla pagina dei dettagli dell'evento.
+.. Nel campo *Volumi interessati*, fare clic sul collegamento per il numero di volumi per il primo nodo.
++
+La vista Prestazioni: Tutti i volumi viene visualizzata con un elenco filtrato dei volumi su quel nodo.
+
+.. Fare clic sulla colonna *Capacità totale* per ordinare i volumi in base allo spazio allocato più grande.
++
+Viene fornito un elenco di potenziali volumi che potresti voler spostare.
+
+.. Annotare i nomi dei volumi che si desidera spostare e i nomi degli aggregati correnti su cui risiedono.
+.. Eseguire i passaggi 4c e 4d per il secondo nodo che faceva parte di questo evento per identificare anche i possibili volumi che si desidera spostare da quel nodo.
+
+
+. Spostare i volumi negli aggregati identificati come dotati della maggiore capacità di prestazioni libere sul nuovo nodo.
++
+È possibile eseguire l'operazione di spostamento utilizzando ONTAP System Manager, OnCommand Workflow Automation, i comandi ONTAP o una combinazione di questi strumenti.
+
+
+
+Dopo alcuni giorni, puoi verificare se stai ricevendo lo stesso tipo di eventi da questo nodo o aggregato.

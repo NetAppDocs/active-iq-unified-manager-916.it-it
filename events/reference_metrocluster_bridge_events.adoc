@@ -1,0 +1,44 @@
+---
+permalink: events/reference_metrocluster_bridge_events.html 
+sidebar: sidebar 
+keywords: metrocluster, bridge, events, impact area, availability 
+summary: 'Gli eventi MetroCluster Bridge forniscono informazioni sullo stato dei ponti, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all"area di impatto e includono il nome dell"evento e della trappola, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi MetroCluster Bridge
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi MetroCluster Bridge forniscono informazioni sullo stato dei bridge, in modo da poter monitorare potenziali problemi in una configurazione MetroCluster su FC.  Gli eventi sono raggruppati in base all'area di impatto e includono il nome dell'evento e della trappola, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Ponte irraggiungibile (ocumEvtBridgeUnreachable)
+ a| 
+Incidente
+ a| 
+Ponte MetroCluster
+ a| 
+Critico
+
+
+
+ a| 
+Temperatura del ponte anomala (ocumEvtBridgeTemperatureAbnormal)
+ a| 
+Incidente
+ a| 
+Ponte MetroCluster
+ a| 
+Critico
+
+|===

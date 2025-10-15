@@ -1,0 +1,28 @@
+---
+permalink: data-protection/task_delete_resource_pools.html 
+sidebar: sidebar 
+keywords: delete, resource, pools 
+summary: È possibile eliminare i pool di risorse quando non sono più necessari.  Ad esempio, potresti voler ridistribuire gli aggregati dei membri da un pool di risorse a diversi altri pool di risorse, rendendo obsoleto il pool di risorse originale. 
+---
+= Elimina pool di risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare i pool di risorse quando non sono più necessari.  Ad esempio, potresti voler ridistribuire gli aggregati dei membri da un pool di risorse a diversi altri pool di risorse, rendendo obsoleto il pool di risorse originale.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Il pulsante *Elimina* è abilitato solo quando è selezionato almeno un pool di risorse.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Protezione* > *Pool di risorse*.
+. Seleziona il pool di risorse che desideri eliminare.
+. Fare clic su *Elimina*.
++
+Il pool di risorse viene rimosso dall'elenco dei pool di risorse e i suoi aggregati vengono rimossi dall'elenco dei membri.
+
+

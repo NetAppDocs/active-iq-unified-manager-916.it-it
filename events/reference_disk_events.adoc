@@ -1,0 +1,66 @@
+---
+permalink: events/reference_disk_events.html 
+sidebar: sidebar 
+keywords: disks, events, impact area, availability 
+summary: 'Gli eventi dei dischi forniscono informazioni sullo stato dei dischi, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all"area di impatto e includono il nome dell"evento e della trappola, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi dei dischi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi dei dischi forniscono informazioni sullo stato dei dischi, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all'area di impatto e includono il nome dell'evento e della trappola, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Dischi Flash - Blocchi di riserva quasi consumati (ocumEvtClusterFlashDiskFewerSpareBlockError)
+ a| 
+Rischio
+ a| 
+Grappolo
+ a| 
+Errore
+
+
+
+ a| 
+Dischi flash - Nessun blocco di riserva (ocumEvtClusterFlashDiskNoSpareBlockCritical)
+ a| 
+Incidente
+ a| 
+Grappolo
+ a| 
+Critico
+
+
+
+ a| 
+Alcuni dischi non assegnati (ocumEvtClusterUnassignedDisksSome)
+ a| 
+Rischio
+ a| 
+Grappolo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Alcuni dischi guasti (ocumEvtDisksSomeFailed)
+ a| 
+Incidente
+ a| 
+Grappolo
+ a| 
+Critico
+
+|===

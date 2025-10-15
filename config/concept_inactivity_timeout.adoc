@@ -1,0 +1,22 @@
+---
+permalink: config/concept_inactivity_timeout.html 
+sidebar: sidebar 
+keywords: inactivity timeout, feature settings 
+summary: 'È possibile specificare il valore di timeout di inattività per Active IQ Unified Manager.  Dopo un periodo di inattività pari al tempo specificato, l"applicazione viene automaticamente disconnessa. Questa opzione è abilitata per impostazione predefinita.' 
+---
+= Specificare il timeout di inattività
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile specificare il valore di timeout di inattività per Active IQ Unified Manager.  Dopo un periodo di inattività pari al tempo specificato, l'applicazione viene automaticamente disconnessa. Questa opzione è abilitata per impostazione predefinita.
+
+È possibile disattivare questa funzione o modificare il tempo da *Generale* > *Impostazioni funzione* > *Timeout di inattività*.  Una volta attivata questa funzione, è necessario specificare il limite di tempo di inattività (in minuti) nel campo *DISCONNETTITI DOPO*, dopo il quale il sistema si disconnetterà automaticamente.  Il valore predefinito è 4320 minuti (72 ore).
+
+[NOTE]
+====
+Questa opzione non è disponibile se è abilitata l'autenticazione Security Assertion Markup Language (SAML).
+
+====

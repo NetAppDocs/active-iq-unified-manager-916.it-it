@@ -1,0 +1,222 @@
+---
+permalink: performance-checker/performance-view-all.html 
+sidebar: sidebar 
+keywords: performance view 
+summary: visualizzazione delle prestazioni di tutti gli oggetti di archiviazione 
+---
+= Visualizza le pagine dell'inventario delle prestazioni per tutti gli oggetti di archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare le pagine Inventario prestazioni per visualizzare un riepilogo delle informazioni sulle prestazioni relative a ciascuno degli oggetti di archiviazione disponibili, ad esempio cluster, aggregati, volumi e così via.  È possibile collegarsi alle pagine dei dettagli dell'oggetto Performance per visualizzare informazioni dettagliate su un oggetto specifico.
+
+Per impostazione predefinita, gli oggetti nelle pagine di visualizzazione vengono ordinati in base alla criticità dell'evento.  Gli oggetti con eventi critici vengono elencati per primi, mentre gli oggetti con eventi di avviso vengono elencati per secondi.  Ciò fornisce un'indicazione visiva immediata dei problemi che devono essere affrontati.
+
+È possibile esportare i dati da queste pagine in valori separati da virgole(`.csv` ) file, file Microsoft Excel(`.xlsx` ), O(`.pdf` ) documento utilizzando il pulsante *Report* e quindi utilizzare i dati esportati per creare report.  Inoltre, puoi personalizzare la pagina e quindi programmare la creazione e l'invio periodico di un report tramite e-mail utilizzando il pulsante *Report programmati*.
+
+Tutti i campi di queste pagine possono essere utilizzati nelle visualizzazioni personalizzate e nei report.  Alcuni campi sono collegati a pagine correlate, consentendo una visualizzazione più dettagliata.
+
+
+
+== Prestazioni: visualizzazione di tutti i cluster
+
+La vista Prestazioni: tutti i cluster mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ciascun cluster monitorato da un'istanza di Unified Manager.  Questa pagina consente di monitorare le prestazioni dei cluster e di risolvere i problemi relativi alle prestazioni e agli eventi di soglia.
+
+È possibile assegnare o cancellare criteri di soglia delle prestazioni a qualsiasi oggetto nelle pagine dell'inventario degli oggetti utilizzando i pulsanti *Assegna criterio di soglia delle prestazioni* e *Cancella criterio di soglia delle prestazioni*.
+
+Di seguito sono riportati alcuni campi importanti nella vista Prestazioni: tutti i cluster.
+
+* FQDN del cluster: nome di dominio completo (FQDN) del cluster.
+* IOPS: operazioni di input/output al secondo sul cluster.
+* MB/s: la velocità effettiva del cluster, misurata in MiB al secondo.
+* Campi capacità: capacità libera e totale in GiB.
+* Nome host o indirizzo IP: nome host o indirizzo IP (IPv4 o IPv6) del LIF di gestione del cluster.
+* Versione del sistema operativo: la versione del software ONTAP installata sul cluster.
++
+
+NOTE: Se sui nodi del cluster sono installate diverse versioni del software ONTAP , viene elencato il numero di versione più basso.  È possibile visualizzare la versione ONTAP installata su ciascun nodo dalla vista Prestazioni: Tutti i nodi.
+
+* Criterio di soglia: il criterio o i criteri di soglia delle prestazioni definiti dall'utente attivi su questo oggetto di archiviazione.  È possibile posizionare il cursore sui nomi delle policy contenenti puntini di sospensione (...) per visualizzare il nome completo della policy o l'elenco dei nomi delle policy assegnati.  I pulsanti Assegna criterio soglia prestazioni e Cancella criterio soglia prestazioni rimangono disabilitati finché non si selezionano uno o più oggetti facendo clic sulle caselle di controllo situate all'estrema sinistra.
+
+
+
+
+== Prestazioni: visualizzazione di tutti i volumi
+
+La vista Prestazioni: tutti i volumi mostra una panoramica degli eventi relativi alle prestazioni, dei dati dei contatori e delle informazioni di configurazione per ciascun FlexVol volume e FlexGroup monitorato da un'istanza di Unified Manager.  Ciò consente di monitorare rapidamente le prestazioni dei volumi e di risolvere i problemi di prestazioni e gli eventi di soglia.
+
+Se vuoi analizzare la latenza e la produttività di un oggetto specifico, fai clic sul pulsante Altre opzioniimage:icon_kabob.gif[""] quindi *Analizza carico di lavoro* e potrai visualizzare grafici di prestazioni e capacità nella pagina Analisi del carico di lavoro.  È possibile visualizzare i dettagli su System Manager, a condizione di disporre di credenziali valide per System Manager.
+
+
+NOTE: Per i volumi di protezione dei dati (DP), vengono visualizzati solo i valori del contatore per il traffico generato dall'utente.  I volumi radice non vengono visualizzati in questa pagina.
+
+Di seguito sono riportati alcuni campi importanti nella vista Prestazioni: Tutti i volumi.
+
+* Stile: FlexVol o FlexGroup.
+* Latenza: per i volumi FlexVol , questo è il tempo di risposta medio del volume per tutte le richieste di I/O, espresso in millisecondi per operazione.  Per i volumi FlexGroup , questa è la latenza media di tutti i volumi costituenti.
+* IOPS/TB: numero di operazioni di input/output elaborate al secondo in base allo spazio totale consumato dal carico di lavoro, in terabyte.  Questo contatore misura la quantità di prestazioni che può essere fornita da una determinata quantità di capacità di archiviazione.
+* IOPS: per i volumi FlexVol , questo è il numero di operazioni di input/output al secondo per il volume.  Per i volumi FlexGroup , questa è la somma degli IOPS per tutti i volumi costituenti.
+* MB/s: per i volumi FlexVol , questa è la velocità effettiva del volume, misurata in megabyte al secondo.  Per i volumi FlexGroup , questa è la somma di MB/s per tutti i volumi costituenti.
+* Campi capacità: capacità libera e totale in GiB.
+
+
+Per maggiori informazioni consultare i seguenti link:
+
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["Assegnazione di criteri di soglia delle prestazioni agli oggetti di archiviazione"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["Rimozione dei criteri di soglia delle prestazioni dagli oggetti di archiviazione"]
+* link:../performance-checker/concept_types_of_workloads_monitored_by_unified_manager.html["Tipi di carichi di lavoro monitorati da Unified Manager"]
+* link:../performance-checker/task_view_qos_policy_group_settings_for_volumes_or_luns.html["Visualizzazione delle impostazioni del gruppo di criteri QoS applicate a volumi o LUN specifici"]
+* link:../performance-checker/concept_understand_um_recommendations_to_tier_data_to_cloud.html["Comprendere le raccomandazioni di Unified Manager per suddividere i dati nel cloud"]
+* link:../performance-checker/task_view_performance_charts_to_compare_volumes_or_luns_in_qos_policy.html["Visualizzazione dei grafici delle prestazioni per confrontare volumi o LUN che si trovano nello stesso gruppo di policy QoS"]
+
+
+
+
+== Prestazioni: visualizzazione di tutti gli aggregati
+
+La vista Prestazioni: tutti gli aggregati mostra una panoramica degli eventi di prestazioni, dei dati e delle informazioni di configurazione per ciascun aggregato monitorato da un'istanza di Unified Manager.  Questa pagina consente di monitorare le prestazioni dei tuoi aggregati e di risolvere problemi di prestazioni ed eventi di soglia.
+
+Di seguito sono riportati alcuni campi importanti nella vista Prestazioni: Tutti gli aggregati.
+
+* Tipo: Il tipo di aggregato:
++
+** Disco rigido
+** Ibrido.  Combina HDD e SSD, ma Flash Pool non è stato abilitato.
+** Ibrido (Flash Pool).  Combina HDD e SSD e Flash Pool è stato abilitato.
+** SSD
+** SSD (FabricPool).  Combina SSD e un livello cloud
+** HDD (FabricPool).  Combina HDD e un livello cloud
+** VMDisk (SDS).  Dischi virtuali all'interno di una macchina virtuale
+** VMDisk (FabricPool).  Combina dischi virtuali e un livello cloud
+** LUN (FlexArray)
+
+
+* Segnalazione dati inattivi: indica se la funzionalità di segnalazione dati inattivi è abilitata o disabilitata su questo aggregato.  Se abilitata, i volumi di questo aggregato visualizzano la quantità di dati inattivi nella vista Prestazioni: Tutti i volumi.  Il valore in questo campo è "N/D" quando la versione di ONTAP non supporta la segnalazione dei dati inattivi.
+* Criterio di soglia: il criterio o i criteri di soglia delle prestazioni definiti dall'utente attivi su questo oggetto di archiviazione.  È possibile posizionare il cursore sui nomi delle policy contenenti puntini di sospensione (...) per visualizzare il nome completo della policy o l'elenco dei nomi delle policy assegnati.  I pulsanti Assegna criterio soglia prestazioni e Cancella criterio soglia prestazioni rimangono disabilitati finché non si selezionano uno o più oggetti facendo clic sulle caselle di controllo situate all'estrema sinistra.  Per maggiori informazioni consultare i seguenti link:
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["Assegnazione di criteri di soglia delle prestazioni agli oggetti di archiviazione"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["Rimozione dei criteri di soglia delle prestazioni dagli oggetti di archiviazione"]
+
+
+
+
+== Prestazioni: visualizzazione di tutti i nodi
+
+La vista Prestazioni: tutti i nodi mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ciascun nodo monitorato da un'istanza di Unified Manager.  Ciò consente di monitorare rapidamente le prestazioni dei nodi e di risolvere i problemi di prestazioni e gli eventi di soglia.
+
+
+NOTE: Flash Cache Reads restituisce la percentuale di operazioni di lettura sul nodo soddisfatte dalla cache, anziché essere restituite dal disco.  I dati della Flash Cache vengono visualizzati solo per i nodi e solo quando nel nodo è installato un modulo Flash Cache.
+
+Nel menu *Report*, l'opzione *Report inventario hardware* è disponibile quando Unified Manager e i cluster da esso gestiti sono installati in un sito senza connettività di rete esterna.  Questo pulsante genera un file .csv contenente un elenco completo delle informazioni sui cluster e sui nodi, come numeri di modello e numeri di serie dell'hardware, tipi e conteggi dei dischi, licenze installate e altro ancora.  Questa funzionalità di reporting è utile per il rinnovo dei contratti all'interno di siti sicuri che non sono connessi alla piattaforma NetApp Active IQ .  È possibile assegnare o cancellare criteri di soglia delle prestazioni a qualsiasi oggetto nelle pagine dell'inventario degli oggetti utilizzando i pulsanti *Assegna criterio di soglia delle prestazioni* e *Cancella criterio di soglia delle prestazioni*.
+
+Per maggiori informazioni consultare i seguenti link:
+
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["Assegnazione di criteri di soglia delle prestazioni agli oggetti di archiviazione"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["Rimozione dei criteri di soglia delle prestazioni dagli oggetti di archiviazione"]
+* link:../health-checker/task_generate_hardware_inventory_report_for_contract_renewal.html["Generazione di un report di inventario hardware per il rinnovo del contratto"]
+
+
+
+
+== Prestazioni: visualizzazione di tutte le VM di archiviazione
+
+La vista Prestazioni: tutte le VM di storage mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ciascuna macchina virtuale di storage (SVM) monitorata da un'istanza di Unified Manager.  Ciò consente di monitorare rapidamente le prestazioni delle SVM e di risolvere problemi di prestazioni ed eventi di soglia.  Il campo Latenza in questa pagina riporta il tempo medio di risposta per tutte le richieste di I/O, espresso in millisecondi per operazione.
+
+
+NOTE: Gli SVM elencati in questa pagina includono solo gli SVM Data e Cluster.  Unified Manager non utilizza né visualizza le SVM di amministrazione o di nodo.
+
+Per maggiori informazioni consultare i seguenti link:
+
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["Assegnazione di criteri di soglia delle prestazioni agli oggetti di archiviazione"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["Rimozione dei criteri di soglia delle prestazioni dagli oggetti di archiviazione"]
+
+
+
+
+== Prestazioni: visualizzazione di tutti i LUN
+
+La vista Prestazioni: tutte le LUN mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ciascuna LUN monitorata da un'istanza di Unified Manager.  Ciò consente di monitorare rapidamente le prestazioni dei LUN e di risolvere problemi di prestazioni ed eventi di soglia.
+
+Se vuoi analizzare la latenza e la produttività di un oggetto specifico, fai clic sull'icona Altroimage:icon_kabob.gif[""] , quindi *Analizza carico di lavoro* e potrai visualizzare grafici di prestazioni e capacità nella pagina *Analisi del carico di lavoro*.
+
+Per maggiori informazioni consultare i seguenti link:
+
+* link:../data-protection/view-lun-relationships.html["Monitoraggio delle LUN in una relazione di gruppo di coerenza"]
+* link:../storage-mgmt/task_provision_luns.html["Provisioning di LUN"]
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["Assegnazione di criteri di soglia delle prestazioni agli oggetti di archiviazione"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["Rimozione dei criteri di soglia delle prestazioni dagli oggetti di archiviazione"]
+* link:../performance-checker/task_view_volumes_or_luns_in_same_qos_policy_group.html["Visualizzazione di volumi o LUN che si trovano nello stesso gruppo di policy QoS"].
+* link:../performance-checker/task_view_qos_policy_group_settings_for_volumes_or_luns.html["Visualizzazione delle impostazioni del gruppo di criteri QoS applicate a volumi o LUN specifici"]
+* link:../api-automation/concept_provision_luns.html["Provisioning di LUN tramite API"]
+
+
+
+
+== Prestazioni: visualizzazione di tutti gli spazi dei nomi NVMe
+
+La vista Prestazioni: tutti gli spazi dei nomi NVMe mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ogni spazio dei nomi NVMe monitorato da un'istanza di Unified Manager.  Ciò consente di monitorare rapidamente le prestazioni e lo stato di salute dei tuoi Namespace e di risolvere problemi ed eventi di soglia.
+
+Tra le altre informazioni, vengono riportate le seguenti: Lo stato attuale dello spazio dei nomi.  * Offline: l'accesso in lettura o scrittura allo spazio dei nomi non è consentito.  * Online - È consentito l'accesso in lettura e scrittura allo spazio dei nomi.  * NVFail - Lo spazio dei nomi è stato automaticamente portato offline a causa di un errore NVRAM .  * Errore di spazio: lo spazio nello spazio dei nomi è esaurito.
+
+Per maggiori informazioni consultare i seguenti link:
+
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["Assegnazione di criteri di soglia delle prestazioni agli oggetti di archiviazione"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["Rimozione dei criteri di soglia delle prestazioni dagli oggetti di archiviazione"]
+
+
+
+
+== Prestazioni: visualizzazione di tutte le interfacce di rete
+
+La vista Prestazioni: tutte le interfacce di rete mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ciascuna interfaccia di rete (LIF) monitorata da questa istanza di Unified Manager.  Questa pagina consente di monitorare rapidamente le prestazioni delle interfacce e di risolvere i problemi di prestazioni e gli eventi di soglia.  Di seguito sono riportati alcuni campi importanti nella vista Prestazioni: tutte le interfacce di rete.
+
+* IOPS: operazioni di input/output al secondo.  IOPS non è applicabile ai LIF NFS e ai LIF CIFS e per questi tipi viene visualizzato come N/D.
+* Latenza: tempo medio di risposta per tutte le richieste di I/O, espresso in millisecondi per operazione.  La latenza non è applicabile ai LIF NFS e ai LIF CIFS e per questi tipi viene visualizzata come N/D.
+* Posizione iniziale: la posizione iniziale dell'interfaccia, visualizzata come nome del nodo e nome della porta, separati da due punti (:).  Se la posizione viene visualizzata con dei puntini di sospensione (...), puoi posizionare il cursore sul nome della posizione per visualizzarla per intero.
+* Posizione corrente: la posizione corrente dell'interfaccia, visualizzata come nome del nodo e nome della porta, separati da due punti (:).  Se la posizione viene visualizzata con dei puntini di sospensione (...), puoi posizionare il cursore sul nome della posizione per visualizzarla per intero.
+* Ruolo: ruolo dell'interfaccia: dati, cluster, gestione nodi o intercluster.
+
+
+
+NOTE: Le interfacce elencate in questa pagina includono LIF dati, LIF cluster, LIF gestione nodi e LIF intercluster.  Unified Manager non utilizza né visualizza i LIF di sistema.
+
+
+
+== Prestazioni: visualizzazione di tutte le porte
+
+La vista Prestazioni: tutte le porte mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ciascuna porta monitorata da un'istanza di Unified Manager.  Ciò consente di monitorare rapidamente le prestazioni delle porte e di risolvere problemi di prestazioni ed eventi di soglia.  Per un ruolo di porta, viene visualizzata la funzione della porta di rete: Dati o Cluster.  Le porte FCP non possono avere un ruolo e il ruolo viene visualizzato come N/D.
+
+
+NOTE: I valori del contatore delle prestazioni vengono visualizzati solo per le porte fisiche.  I valori dei contatori non vengono visualizzati per le VLAN o i gruppi di interfacce.
+
+Per maggiori informazioni consultare i seguenti link:
+
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["Assegnazione di criteri di soglia delle prestazioni agli oggetti di archiviazione"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["Rimozione dei criteri di soglia delle prestazioni dagli oggetti di archiviazione"]
+
+
+
+
+== Prestazioni: visualizzazione Gruppi di criteri QoS
+
+La vista Gruppi di policy QoS mostra i gruppi di policy QoS disponibili nei cluster monitorati da Unified Manager.  Ciò include policy QoS tradizionali, policy QoS adattive e policy QoS assegnate tramite livelli di servizio delle prestazioni.
+
+Di seguito sono riportati alcuni campi importanti nella vista Prestazioni: Gruppi di criteri QoS.
+
+* Gruppo di criteri QoS: nome del gruppo di criteri QoS.  Per le policy NetApp Service Level Manager (NSLM) 1.3 importate in Unified Manager 9.7 o versioni successive, il nome visualizzato qui include il nome SVM e altre informazioni non presenti nel nome quando è stato definito Performance Service Level in NSLM.  Ad esempio, il nome "NSLM_vs6_Performance_2_0" significa che si tratta del criterio PSL "Performance" definito dal sistema NSLM, creato su SVM "vs6" con una latenza prevista di "2 ms/op".
+* SVM: la VM di archiviazione (SVM) a cui appartiene il gruppo di policy QoS.  È possibile fare clic sul nome della VM di archiviazione per accedere alla pagina dei dettagli della VM di archiviazione.  Si noti che questo campo è vuoto se il criterio QoS è stato creato sulla VM di archiviazione amministrativa, poiché questo tipo di VM di archiviazione rappresenta il cluster.
+* Throughput minimo: il throughput minimo, in IOPS, che il gruppo di policy è tenuto a fornire.  Per i criteri adattivi, si tratta del numero minimo di IOPS previsto per TB allocato al volume o LUN, in base alle dimensioni allocate all'oggetto di archiviazione.
+* Velocità massima: la velocità massima, in IOPS e/o MB/s, che il gruppo di policy non deve superare.  Quando questo campo è vuoto significa che la lunghezza massima definita in ONTAP è infinita.  Per i criteri adattivi, questo è il massimo (picco) possibile IOPS per TB allocato al volume o LUN, in base alla dimensione allocata all'oggetto di archiviazione o alla dimensione utilizzata per l'oggetto di archiviazione.
+* IOPS minimo assoluto: per i criteri adattivi, questo è il valore IOPS minimo assoluto utilizzato come override quando gli IOPS previsti sono inferiori a questo valore.
+* Dimensione del blocco: la dimensione del blocco specificata per la policy adattiva QoS.
+* Assegnazione minima: se per determinare la velocità massima (picco) IOPS viene utilizzato lo "spazio allocato" o lo "spazio utilizzato".
+* Latenza prevista: latenza media prevista per le operazioni di input/output dell'archiviazione.
+* Condiviso: per le policy QoS tradizionali, indica se i valori di throughput definiti nel gruppo di policy sono condivisi tra più oggetti.
+* Oggetti associati: numero di carichi di lavoro assegnati al gruppo di policy QoS.  Puoi cliccare sul pulsante Espandi (image:../media/chevron_down.gif[""] ) accanto al nome del gruppo di policy QoS per visualizzare maggiori dettagli sul gruppo di policy.
+* Capacità allocata: quantità di spazio attualmente utilizzata dagli oggetti presenti nel gruppo di policy QoS.
+* Oggetti associati: numero di carichi di lavoro assegnati al gruppo di policy QoS, separati in volumi e LUN.  È possibile fare clic sul numero per passare a una pagina che fornisce maggiori dettagli sui volumi o LUN selezionati.
+
+
+Per maggiori informazioni consultare gli argomenti sottolink:..//performance-checker/concept_manage_performance_using_qos_policy_group_information.html["Gestione delle prestazioni mediante le informazioni del gruppo di policy QoS"] .

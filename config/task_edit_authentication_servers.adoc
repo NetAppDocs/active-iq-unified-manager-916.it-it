@@ -1,0 +1,25 @@
+---
+permalink: config/task_edit_authentication_servers.html 
+sidebar: sidebar 
+keywords: edit, authentication servers 
+summary: È possibile modificare la porta utilizzata dal server Unified Manager per comunicare con il server di autenticazione. 
+---
+= Modifica i server di autenticazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare la porta utilizzata dal server Unified Manager per comunicare con il server di autenticazione.
+
+.Prima di iniziare
+È necessario disporre del ruolo di amministratore dell'applicazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Generale* > *Autenticazione remota*.
+. Selezionare la casella *Disabilita ricerca gruppi annidati*.
+. Nell'area *Server di autenticazione*, seleziona il server di autenticazione che desideri modificare, quindi fai clic su *Modifica*.
+. Nella finestra di dialogo *Modifica server di autenticazione*, modificare i dettagli della porta.
+. Fare clic su *Salva*.
+

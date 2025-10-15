@@ -1,0 +1,103 @@
+---
+permalink: api-automation/concept_manage_sep.html 
+sidebar: sidebar 
+keywords: manage, storage, efficiency, policy 
+summary: 'È possibile visualizzare, creare, modificare ed eliminare i criteri di efficienza dell"archiviazione utilizzando le API del provider di archiviazione.' 
+---
+= Gestire le policy di efficienza dello storage utilizzando le API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare, creare, modificare ed eliminare i criteri di efficienza dell'archiviazione utilizzando le API del provider di archiviazione.
+
+[NOTE]
+====
+Si prega di notare i seguenti punti:
+
+* Non è obbligatorio assegnare una policy di efficienza dell'archiviazione durante la creazione di un carico di lavoro su Unified Manager.
+* Non è possibile annullare l'assegnazione di un criterio di efficienza di archiviazione a un carico di lavoro dopo che gli è stato assegnato un criterio.
+* Se un carico di lavoro presenta alcune impostazioni di archiviazione specificate sui volumi ONTAP , come la deduplicazione e la compressione, tali impostazioni possono essere sovrascritte dalle impostazioni specificate nei criteri di efficienza dell'archiviazione applicati quando si aggiungono i carichi di lavoro di archiviazione su Unified Manager.
+
+
+====
+
+
+== Visualizza le policy di efficienza di archiviazione
+
+È possibile utilizzare il metodo seguente per visualizzare i criteri di efficienza dell'archiviazione prima di assegnarli ai carichi di lavoro di archiviazione.  Questa API elenca tutte le policy di efficienza di archiviazione definite dal sistema e create dall'utente e recupera gli attributi di tutte le policy di efficienza di archiviazione.  Se si desidera interrogare una specifica politica di efficienza di archiviazione, è necessario immettere l'ID univoco della politica per recuperarne i dettagli.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Sentiero 
+
+
+ a| 
+fornitore di storage
+ a| 
+OTTENERE
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+== Aggiungi criteri di efficienza di archiviazione
+
+È possibile utilizzare il metodo seguente per creare criteri di efficienza di archiviazione personalizzati e assegnarli ai carichi di lavoro di archiviazione se i criteri definiti dal sistema non soddisfano i requisiti di provisioning per i carichi di lavoro di archiviazione.  Immettere i dettagli della politica di efficienza di archiviazione che si desidera creare come parametri di input.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Sentiero 
+
+
+ a| 
+fornitore di storage
+ a| 
+INVIARE
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+|===
+
+
+== Elimina i criteri di efficienza dell'archiviazione
+
+È possibile utilizzare il seguente metodo per eliminare uno specifico criterio di efficienza di archiviazione.  Non è possibile eliminare un criterio di efficienza di archiviazione se è assegnato a un carico di lavoro o se è l'unico criterio di efficienza di archiviazione disponibile.  Per eliminare una determinata Policy di efficienza di archiviazione, è necessario fornire l'ID univoco della Policy di efficienza di archiviazione come parametro di input.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Sentiero 
+
+
+ a| 
+fornitore di storage
+ a| 
+ELIMINARE
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+== Modificare le policy di efficienza di archiviazione
+
+È possibile utilizzare il metodo seguente per modificare un criterio di efficienza di archiviazione e aggiornarne le proprietà.  Non è possibile modificare un criterio di efficienza dell'archiviazione definito dal sistema o assegnato a un carico di lavoro.  Per modificare una determinata politica di efficienza di archiviazione, è necessario fornire l'ID univoco della politica di efficienza di archiviazione.  Inoltre, è necessario fornire l'immobile che si desidera aggiornare, insieme al suo valore.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Sentiero 
+
+
+ a| 
+fornitore di storage
+ a| 
+TOPPA
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===

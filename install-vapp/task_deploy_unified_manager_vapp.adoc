@@ -1,0 +1,46 @@
+---
+permalink: install-vapp/task_deploy_unified_manager_vapp.html 
+sidebar: sidebar 
+keywords: deploy, unified manager 
+summary: 'L"implementazione di Unified Manager include il download del software, l"implementazione dell"appliance virtuale, la creazione di un nome utente e di una password per la manutenzione e l"esecuzione della configurazione iniziale nell"interfaccia utente Web.' 
+---
+= Distribuisci Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'implementazione di Unified Manager include il download del software, l'implementazione dell'appliance virtuale, la creazione di un nome utente e di una password per la manutenzione e l'esecuzione della configurazione iniziale nell'interfaccia utente Web.
+
+.Prima di iniziare
+* È necessario verificare e completare i requisiti di sistema per la distribuzione.
++
+Vederelink:concept_requirements_for_installing_unified_manager.html["Requisiti di sistema"] .
+
+* Assicurati di avere le seguenti informazioni:
++
+** Credenziali di accesso per il sito di supporto NetApp
+** Credenziali per l'accesso a VMware vCenter Server e vSphere Web Client
+** Indirizzo IP del server ESXi su cui si sta distribuendo l'appliance virtuale Unified Manager
+** Dettagli sul data center, come lo spazio di archiviazione nel datastore e i requisiti di memoria
+** Se si prevede di utilizzare l'indirizzamento IPv6, è necessario abilitare IPv6 sull'host.
+
+
+
+
+È possibile distribuire Unified Manager come appliance virtuale su un server VMware ESXi.
+
+Dovresti accedere alla console di manutenzione tramite la console VMware e non tramite SSH.
+
+[NOTE]
+====
+A partire da Unified Manager 9.8, VMware Tools è stato sostituito da Open VM Tools `open-vm-tools` ).  Non è più necessario installare VMware Tools come parte dell'installazione perché `open-vm-tools` è incluso nel pacchetto di installazione di Unified Manager.
+
+====
+Dopo aver completato la distribuzione e la configurazione iniziale, è possibile aggiungere cluster o configurare impostazioni di rete aggiuntive nella console di manutenzione, quindi accedere all'interfaccia utente Web.
+
+.Passi
+. Segui i passaggi inlink:task_download_unified_manager_ova_file.html["Scarica Unified Manager"] .
+. Inoltre, seguire i passaggi inlink:task_deploy_unified_manager_virtual_appliance_vapp.html["Distribuisci l'appliance virtuale Unified Manager"] .
+

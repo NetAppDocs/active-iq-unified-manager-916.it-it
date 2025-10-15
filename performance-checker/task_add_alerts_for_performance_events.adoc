@@ -1,0 +1,40 @@
+---
+permalink: performance-checker/task_add_alerts_for_performance_events.html 
+sidebar: sidebar 
+keywords: add, alerts, performance, events 
+summary: 'È possibile configurare avvisi per singoli eventi di prestazioni, proprio come per qualsiasi altro evento ricevuto da Unified Manager.  Inoltre, se vuoi trattare tutti gli eventi di performance allo stesso modo e inviare un"e-mail alla stessa persona, puoi creare un singolo avviso per essere avvisato quando vengono attivati eventi di performance critici o di avvertenza.' 
+---
+= Aggiungi avvisi per eventi di performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare avvisi per singoli eventi di prestazioni, proprio come per qualsiasi altro evento ricevuto da Unified Manager.  Inoltre, se vuoi trattare tutti gli eventi di performance allo stesso modo e inviare un'e-mail alla stessa persona, puoi creare un singolo avviso per essere avvisato quando vengono attivati eventi di performance critici o di avvertenza.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+L'esempio seguente mostra come creare un evento per tutti gli eventi critici di latenza, IOPS e MBps.  È possibile utilizzare la stessa metodologia per selezionare gli eventi da tutti i contatori delle prestazioni e per tutti gli eventi di avviso.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Configurazione avvisi*.
+. Nella pagina Impostazione avvisi, fare clic su *Aggiungi*.
+. Nella finestra di dialogo Aggiungi avviso, fare clic su *Nome* e immettere un nome e una descrizione per l'avviso.
+. Non selezionare alcuna risorsa nella pagina *Risorse*.
++
+Poiché non è selezionata alcuna risorsa, l'avviso viene applicato a tutti i cluster, aggregati, volumi e così via per i quali vengono ricevuti questi eventi.
+
+. Fare clic su *Eventi* ed eseguire le seguenti azioni:
++
+.. Nell'elenco Gravità evento, selezionare *Critico*.
+.. Nel campo Il nome dell'evento contiene, immettere `*latency*` e poi clicca sulla freccia per selezionare tutti gli eventi corrispondenti.
+.. Nel campo Il nome dell'evento contiene, immettere `*iops*` e poi clicca sulla freccia per selezionare tutti gli eventi corrispondenti.
+.. Nel campo Il nome dell'evento contiene, immettere `*mbps*` e poi clicca sulla freccia per selezionare tutti gli eventi corrispondenti.
+
+
+. Fare clic su *Azioni* e quindi selezionare il nome dell'utente che riceverà l'e-mail di avviso nel campo *Avvisa questi utenti*.
+. Configurare qualsiasi altra opzione in questa pagina per l'emissione di tap SNMP e l'esecuzione di uno script.
+. Fare clic su *Salva*.
+

@@ -1,0 +1,408 @@
+---
+permalink: events/reference_aggregate_events.html 
+sidebar: sidebar 
+keywords: aggregate events, impact, area, availability, capacity, configuration, performance 
+summary: 'Gli eventi aggregati forniscono informazioni sullo stato degli aggregati, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all"area di impatto e includono il nome dell"evento e della trappola, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi aggregati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi aggregati forniscono informazioni sullo stato degli aggregati, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all'area di impatto e includono il nome dell'evento e della trappola, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+== Area di impatto: disponibilità
+
+Un asterisco (*) identifica gli eventi EMS che sono stati convertiti in eventi Unified Manager.
+
+|===
+| Nome evento (nome trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Aggregato offline (ocumEvtAggregateStateOffline)
+ a| 
+Incidente
+ a| 
+Aggregato
+ a| 
+Critico
+
+
+
+ a| 
+Aggregato non riuscito (ocumEvtAggregateStateFailed)
+ a| 
+Incidente
+ a| 
+Aggregato
+ a| 
+Critico
+
+
+
+ a| 
+Aggregato limitato (ocumEvtAggregateStateRestricted)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+
+
+ a| 
+Ricostruzione aggregata (ocumEvtAggregateRaidStateReconstructing)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+
+
+ a| 
+Aggregato degradato (ocumEvtAggregateRaidStateDegraded)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+
+
+ a| 
+Livello cloud parzialmente raggiungibile (ocumEventCloudTierPartiallyReachable)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+
+
+ a| 
+Livello cloud non raggiungibile (ocumEventCloudTierUnreachable)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Errore
+
+
+
+ a| 
+Accesso al livello cloud negato per la rilocazione dell'aggregato *(arlNetraCaCheckFailed)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Errore
+
+
+
+ a| 
+Accesso al livello cloud negato per la rilocazione dell'aggregato durante il failover dell'archiviazione *(gbNetraCaCheckFailed)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Errore
+
+
+
+ a| 
+Aggregato MetroCluster lasciato indietro (ocumEvtMetroClusterAggregateLeftBehind)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Errore
+
+
+
+ a| 
+Mirroring aggregato MetroCluster degradato (ocumEvtMetroClusterAggregateMirrorDegraded)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Errore
+
+|===
+
+
+== Area di impatto: capacità
+
+|===
+| Nome evento (nome trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Spazio aggregato quasi pieno (ocumEvtAggregateNearlyFull)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+
+
+ a| 
+Spazio aggregato pieno (ocumEvtAggregateFull)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Errore
+
+
+
+ a| 
+Giorni aggregati fino al riempimento (ocumEvtAggregateDaysUntilFullSoon)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Errore
+
+
+
+ a| 
+Aggregato sovracommesso (ocumEvtAggregateOvercommitted)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Errore
+
+
+
+ a| 
+Aggregato quasi sovracommesso (ocumEvtAggregateAlmostOvercommitted)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+
+
+ a| 
+Riserva snapshot aggregata completa (ocumEvtAggregateSnapReserveFull)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+
+
+ a| 
+Tasso di crescita aggregato anomalo (ocumEvtAggregateGrowthRateAbnormal)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+|===
+
+
+== Area di impatto: configurazione
+
+|===
+| Nome evento (nome trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Aggregato scoperto (non applicabile)
+ a| 
+Evento
+ a| 
+Aggregato
+ a| 
+Informazioni
+
+
+
+ a| 
+Aggregato rinominato (non applicabile)
+ a| 
+Evento
+ a| 
+Aggregato
+ a| 
+Informazioni
+
+
+
+ a| 
+Aggregato eliminato (non applicabile)
+ a| 
+Evento
+ a| 
+Nodo
+ a| 
+Informazioni
+
+|===
+
+
+== Area di impatto: prestazioni
+
+|===
+| Nome evento (nome trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Soglia critica IOPS aggregata violata (ocumAggregateIopsIncident)
+ a| 
+Incidente
+ a| 
+Aggregato
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso IOPS aggregati violata (ocumAggregateIopsWarning)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica aggregata MB/s violata (ocumAggregateMbpsIncident)
+ a| 
+Incidente
+ a| 
+Aggregato
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso MB/s aggregato violata (ocumAggregateMbpsWarning)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica di latenza aggregata violata (ocumAggregateLatencyIncident)
+ a| 
+Incidente
+ a| 
+Aggregato
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso di latenza aggregata violata (ocumAggregateLatencyWarning)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+
+
+ a| 
+Capacità di prestazioni aggregate utilizzata soglia critica violata (ocumAggregatePerfCapacityUsedIncident)
+ a| 
+Incidente
+ a| 
+Aggregato
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso per la capacità di prestazioni aggregate utilizzata superata (ocumAggregatePerfCapacityUsedWarning)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica di utilizzo aggregato violata (ocumAggregateUtilizationIncident)
+ a| 
+Incidente
+ a| 
+Aggregato
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso di utilizzo aggregato superata (ocumAggregateUtilizationWarning)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+
+
+ a| 
+Superata la soglia di utilizzo eccessivo dei dischi aggregati (ocumAggregateDisksOverUtilizedWarning)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia dinamica aggregata violata (ocumAggregateDynamicEventWarning)
+ a| 
+Rischio
+ a| 
+Aggregato
+ a| 
+Avvertimento
+
+|===

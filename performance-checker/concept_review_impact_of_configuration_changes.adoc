@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_review_impact_of_configuration_changes.html 
+sidebar: sidebar 
+keywords: review, impact, configuration, changes, workload, performance 
+summary: Le modifiche alla configurazione del cluster, come un disco guasto, un failover HA o uno spostamento di volume, potrebbero avere un impatto negativo sulle prestazioni del volume e causare una maggiore latenza. 
+---
+= Esaminare l'impatto delle modifiche alla configurazione sulle prestazioni del carico di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le modifiche alla configurazione del cluster, come un disco guasto, un failover HA o uno spostamento di volume, potrebbero avere un impatto negativo sulle prestazioni del volume e causare una maggiore latenza.
+
+In Unified Manager, è possibile esaminare la pagina Analisi del carico di lavoro per vedere quando si è verificata una recente modifica alla configurazione e confrontarla con le operazioni e la latenza (tempo di risposta) per verificare se si è verificata una modifica nell'attività per il carico di lavoro del volume selezionato.
+
+Le pagine delle prestazioni di Unified Manager possono rilevare solo un numero limitato di eventi di modifica.  Le pagine relative allo stato di salute forniscono avvisi per altri eventi causati da modifiche alla configurazione.  È possibile cercare il volume in Unified Manager per visualizzare la cronologia degli eventi.

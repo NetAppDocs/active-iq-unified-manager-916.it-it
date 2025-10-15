@@ -1,0 +1,63 @@
+---
+permalink: data-protection/task_restore_data_use_health_volume_details_page.html 
+sidebar: sidebar 
+keywords: restore, data, volume, health details page, console 
+summary: È possibile ripristinare file, directory o un intero volume sovrascritti o eliminati da una copia Snapshot utilizzando la funzionalità di ripristino nella pagina Dettagli volume/integrità. 
+---
+= Ripristinare i dati utilizzando le pagine Volume e Dettagli volume/integrità
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile ripristinare file, directory o un intero volume sovrascritti o eliminati da una copia Snapshot utilizzando la funzionalità di ripristino nelle pagine Volume e Dettagli volume/integrità.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+NOTE: Si prega di notare i seguenti punti:
+
+* Non è possibile ripristinare i flussi di file NTFS.
+* L'opzione di ripristino non è disponibile quando:
++
+** L'ID del volume è sconosciuto: ad esempio, quando si ha una relazione intercluster e il cluster di destinazione non è ancora stato individuato.
+** Il volume è configurato per la replica sincrona SnapMirror .
+
+
+
+
+.Passi
+. Dal riquadro di navigazione a sinistra, vai a *Archiviazione > Volumi*.
+. Selezionare il volume e fare clic sul pulsante *Ripristina*.  In alternativa, fare clic sul volume per andare a *Dettagli volume/integrità > Azioni > Ripristina*.  Viene visualizzata la finestra di dialogo Ripristina.  Per informazioni su questa pagina, vederelink:../data-protection/reference_restore_dialog_box.html["Finestra di dialogo Ripristina"] .
+. Selezionare il volume e la copia Snapshot da cui si desidera ripristinare i dati, se diversi da quelli predefiniti.
+. Selezionare gli elementi che si desidera ripristinare, ad esempio il LUN di origine.
++
+È possibile ripristinare l'intero volume oppure specificare le cartelle e i file che si desidera ripristinare.
+
+. Selezionare la posizione in cui si desidera ripristinare gli elementi selezionati: *Posizione originale* o *Posizione alternativa esistente*.
+. Se selezioni una posizione alternativa esistente, esegui una delle seguenti operazioni:
++
+** Nel campo di testo Percorso di ripristino, digitare il percorso della posizione in cui si desidera ripristinare i dati, quindi fare clic su *Seleziona directory*.
+** Fare clic su *Sfoglia* per avviare la finestra di dialogo Sfoglia directory e completare i seguenti passaggi:
++
+... Selezionare il cluster di destinazione, la VM di archiviazione (SVM) e il volume su cui si desidera effettuare il ripristino.
+... Nella tabella Nome, selezionare il nome della directory che si desidera ripristinare.
+... Fare clic su *Seleziona directory*.
+
+
+
+
+. Fare clic su *Ripristina*.
++
+Inizia il processo di ripristino.  Per completare il processo di ripristino viene creato un processo nel backend.
+
+. Se si desidera visualizzare l'avanzamento del processo, dal riquadro di navigazione a sinistra, andare su *Protezione > Processi* per visualizzare lo stato del processo di ripristino dall'elenco dei processi.
++
+[NOTE]
+====
+Se un'operazione di ripristino tra cluster Cloud Volumes ONTAP HA non riesce con un errore NDMP, potrebbe essere necessario aggiungere una route AWS esplicita nel cluster di destinazione in modo che la destinazione possa comunicare con il LIF di gestione del cluster del sistema di origine.  Per eseguire questa fase di configurazione, utilizzare la NetApp Console.
+
+====
+

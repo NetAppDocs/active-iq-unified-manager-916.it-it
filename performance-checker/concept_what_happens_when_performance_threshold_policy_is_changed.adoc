@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_happens_when_performance_threshold_policy_is_changed.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policy, changed 
+summary: Se si modifica il valore del contatore o la durata di un criterio di soglia delle prestazioni esistente, la modifica del criterio viene applicata a tutti gli oggetti di archiviazione che utilizzano il criterio.  La nuova impostazione viene applicata immediatamente e Unified Manager inizia a confrontare i valori del contatore delle prestazioni con le nuove impostazioni di soglia per tutti i dati sulle prestazioni appena raccolti. 
+---
+= Cosa succede quando viene modificata una politica di soglia di prestazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si modifica il valore del contatore o la durata di un criterio di soglia delle prestazioni esistente, la modifica del criterio viene applicata a tutti gli oggetti di archiviazione che utilizzano il criterio.  La nuova impostazione viene applicata immediatamente e Unified Manager inizia a confrontare i valori del contatore delle prestazioni con le nuove impostazioni di soglia per tutti i dati sulle prestazioni appena raccolti.
+
+Se sono presenti eventi attivi per oggetti che utilizzano la policy di soglia modificata, gli eventi vengono contrassegnati come obsoleti e la policy di soglia inizia a monitorare il contatore come una policy di soglia appena definita.
+
+Quando si visualizza il contatore a cui è stata applicata la soglia nella vista dettagliata dei grafici dei contatori, le linee delle soglie critiche e di avviso riflettono le impostazioni correnti delle soglie.  Le impostazioni di soglia originali non vengono visualizzate in questa pagina, anche se si visualizzano i dati storici relativi al periodo in cui era in vigore la vecchia impostazione di soglia.
+
+[NOTE]
+====
+Poiché le impostazioni di soglia precedenti non vengono visualizzate nella vista dettagliata dei grafici dei contatori, potresti vedere eventi storici che compaiono al di sotto delle linee di soglia correnti.
+
+====

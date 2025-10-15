@@ -1,0 +1,44 @@
+---
+permalink: reporting/task_create_report_volume_relationships_source_of_failure.html 
+sidebar: sidebar 
+keywords: create, report, group, volume, relationships, source, failure 
+summary: È possibile creare un report che raggruppa i volumi in base al motivo per cui la relazione non è in uno stato corretto. 
+---
+= Creare un report per raggruppare le relazioni di volume in base all'origine dell'errore
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un report che raggruppa i volumi in base al motivo per cui la relazione non è in uno stato corretto.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+Utilizzare i passaggi seguenti per creare una vista personalizzata che raggruppi i volumi in base all'origine dell'errore e quindi pianificare la generazione di un report per tale vista.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Volumi*.
+. Nel menu Visualizza, seleziona *Relazione* > *Tutte le relazioni*.
+. Selezionare *Mostra/Nascondi* per assicurarsi che le colonne "`Stato della relazione`" e "`Motivo non corretto`" vengano visualizzate nella vista.
++
+Aggiungi o rimuovi altre colonne per creare una visualizzazione importante per il tuo report.
+
+. Trascina le colonne "`Salute della relazione`" e "`Motivo malsano`" vicino alla colonna "`Stato`".
+. Fare clic sull'icona del filtro, aggiungere il seguente filtro e quindi fare clic su *Applica filtro*:
++
+** La salute delle relazioni è pessima
+
+
+. Fare clic sulla parte superiore della colonna "`Motivo non corretto`" per raggruppare le relazioni di volume in base all'origine dell'errore.
+. Salva la vista con un nome specifico che rifletta ciò che la vista sta mostrando, ad esempio "`Relazioni di volume per errore`".
+. Fare clic sul pulsante *Rapporti pianificati* nella pagina dell'inventario.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""] ) alla fine della riga.
++
+Il rapporto viene inviato immediatamente a scopo di verifica.  Successivamente, il report viene generato e inviato tramite e-mail ai destinatari elencati utilizzando la frequenza specificata.
+
+
+
+Sulla base dei risultati mostrati nel report, è possibile analizzare l'origine e l'impatto di ciascun tipo di errore.

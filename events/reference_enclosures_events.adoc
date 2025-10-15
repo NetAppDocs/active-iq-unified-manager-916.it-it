@@ -1,0 +1,101 @@
+---
+permalink: events/reference_enclosures_events.html 
+sidebar: sidebar 
+keywords: enclosures, events, impact area, availability, configuration 
+summary: 'Gli eventi degli enclosure forniscono informazioni sullo stato degli enclosure degli scaffali dei dischi nel data center, in modo da poter monitorare potenziali problemi.  Gli eventi sono raggruppati in base all"area di impatto e includono il nome dell"evento e della trappola, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi di recinti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi degli enclosure forniscono informazioni sullo stato degli enclosure degli scaffali dei dischi nel data center, in modo da poter monitorare potenziali problemi.  Gli eventi sono raggruppati in base all'area di impatto e includono il nome dell'evento e della trappola, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Ventole del ripiano del disco guaste (ocumEvtShelfFanFailed)
+ a| 
+Incidente
+ a| 
+Scaffale portaoggetti
+ a| 
+Critico
+
+
+
+ a| 
+Alimentatori dello scaffale del disco guasti (ocumEvtShelfPowerSupplyFailed)
+ a| 
+Incidente
+ a| 
+Scaffale portaoggetti
+ a| 
+Critico
+
+
+
+ a| 
+Disk Shelf Multipath non configurato (ocumDiskShelfConnectivityNotInMultiPath)
+
+Questo evento non si applica a:
+
+* Cluster che si trovano in una configurazione MetroCluster
+* Le seguenti piattaforme: FAS2554, FAS2552, FAS2520 e FAS2240
+
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Errore del percorso dello scaffale del disco (ocumDiskShelfConnectivityPathFailure)
+ a| 
+Rischio
+ a| 
+Scaffale portaoggetti
+ a| 
+Avvertimento
+
+|===
+
+
+== Area di impatto: configurazione
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Ripiano del disco scoperto (non applicabile)
+ a| 
+Evento
+ a| 
+Nodo
+ a| 
+Informazioni
+
+
+
+ a| 
+Ripiani per dischi rimossi (non applicabile)
+ a| 
+Evento
+ a| 
+Nodo
+ a| 
+Informazioni
+
+|===

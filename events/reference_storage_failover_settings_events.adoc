@@ -1,0 +1,99 @@
+---
+permalink: events/reference_storage_failover_settings_events.html 
+sidebar: sidebar 
+keywords: storage, failover, settings, events, impact area, availability 
+summary: 'Gli eventi delle impostazioni di failover dell"archiviazione (SFO) forniscono informazioni sulla disattivazione o meno del failover dell"archiviazione, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all"area di impatto e includono il nome dell"evento e della trappola, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi delle impostazioni di failover dell'archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi delle impostazioni di failover dell'archiviazione (SFO) forniscono informazioni sulla disattivazione o meno del failover dell'archiviazione, in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all'area di impatto e includono il nome dell'evento e della trappola, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Interconnessione failover di archiviazione Uno o più collegamenti inattivi (ocumEvtSfoInterconnectOneOrMoreLinksDown)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Failover di archiviazione disabilitato (ocumEvtSfoSettingsDisabled)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Failover di archiviazione non configurato (ocumEvtSfoSettingsNotConfigured)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Stato di failover dell'archiviazione - Takeover(ocumEvtSfoStateTakeover)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Stato di failover dell'archiviazione - Restituzione parziale (ocumEvtSfoStatePartialGiveback)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Stato del nodo di failover di archiviazione inattivo (ocumEvtSfoNodeStatusDown)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Acquisizione del failover di archiviazione non possibile (ocumEvtSfoTakeoverNotPossible)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+|===

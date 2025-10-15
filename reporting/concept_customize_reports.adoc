@@ -1,0 +1,26 @@
+---
+permalink: reporting/concept_customize_reports.html 
+sidebar: sidebar 
+keywords: customize, reports 
+summary: Esistono molti modi per personalizzare le visualizzazioni in modo da creare un report contenente tutte le informazioni necessarie per gestire i cluster ONTAP . 
+---
+= Personalizza i report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esistono molti modi per personalizzare le visualizzazioni in modo da creare un report contenente tutte le informazioni necessarie per gestire i cluster ONTAP .
+
+Inizia con una pagina di inventario predefinita o una vista personalizzata, quindi personalizzala aggiungendo o rimuovendo colonne, modificando l'ordine delle colonne, filtrando i dati o ordinando una colonna specifica in ordine crescente o decrescente.
+
+A partire da Unified Manager 9.8, è anche possibile scaricare la visualizzazione in Excel per personalizzarla utilizzando funzionalità avanzate.  Al termine, carica il file Excel personalizzato.  Se si pianifica un report utilizzando tale visualizzazione, il file Excel personalizzato viene utilizzato per creare report affidabili che è possibile condividere.
+
+Per ulteriori informazioni sulla personalizzazione dei report tramite Excel, vedere _Esempi di report Microsoft Excel_.
+
+[NOTE]
+====
+Per gestire i report è necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+====

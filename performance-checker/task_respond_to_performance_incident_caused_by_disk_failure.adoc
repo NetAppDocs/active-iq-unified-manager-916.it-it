@@ -1,0 +1,48 @@
+---
+permalink: performance-checker/task_respond_to_performance_incident_caused_by_disk_failure.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, disk, failure 
+summary: 'È possibile utilizzare Unified Manager per analizzare un evento di prestazioni causato da carichi di lavoro che utilizzano eccessivamente un aggregato.  È anche possibile utilizzare Unified Manager per verificare lo stato di integrità dell"aggregato e verificare se gli eventi di integrità recenti rilevati sull"aggregato hanno contribuito all"evento di prestazioni.' 
+---
+= Rispondere a un evento di prestazioni dinamiche causato da un guasto del disco
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare Unified Manager per analizzare un evento di prestazioni causato da carichi di lavoro che utilizzano eccessivamente un aggregato.  È anche possibile utilizzare Unified Manager per verificare lo stato di integrità dell'aggregato e verificare se gli eventi di integrità recenti rilevati sull'aggregato hanno contribuito all'evento di prestazioni.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+* Devono esserci eventi di performance nuovi, riconosciuti o obsoleti.
+
+
+.Passi
+. Visualizza la pagina *Dettagli evento* per visualizzare le informazioni sull'evento.
+. Leggere la *Descrizione*, che descrive i carichi di lavoro coinvolti nell'evento e il componente del cluster in competizione.
++
+Sono presenti più volumi vittima la cui latenza è stata influenzata dal componente cluster in conflitto.  L'aggregato, che si trova nel mezzo di una ricostruzione RAID per sostituire il disco guasto con un disco di riserva, è il componente del cluster in competizione.  In Componente in contesa, l'icona Aggregato è evidenziata in rosso e il nome dell'aggregato è visualizzato tra parentesi.
+
+. Nel grafico Utilizzo del carico di lavoro, seleziona *Carichi di lavoro pesanti*.
+. Passa il cursore sul grafico per visualizzare i carichi di lavoro più intensi che incidono sul componente.
++
+Nella parte superiore del grafico vengono visualizzati i carichi di lavoro principali con il picco di utilizzo più elevato da quando è stato rilevato l'evento.  Uno dei carichi di lavoro principali è il carico di lavoro Disk Health definito dal sistema, che indica una ricostruzione RAID.  La ricostruzione è il processo interno che consiste nel ricostruire l'aggregato con il disco di riserva.  Il carico di lavoro Disk Health, insieme ad altri carichi di lavoro sull'aggregato, ha probabilmente causato il conflitto sull'aggregato e l'evento associato.
+
+. Dopo aver confermato che l'attività del carico di lavoro Disk Health ha causato l'evento, attendere circa 30 minuti affinché la ricostruzione venga completata e Unified Manager analizzi l'evento e rilevi se l'aggregato è ancora in conflitto.
+. Aggiorna i *Dettagli dell'evento*.
++
+Una volta completata la ricostruzione del RAID, verificare che lo Stato sia obsoleto, a indicare che l'evento è stato risolto.
+
+. Nel grafico Utilizzo del carico di lavoro, selezionare *Carichi di lavoro elevati* per visualizzare i carichi di lavoro aggregati in base al picco di utilizzo.
+. Nell'area *Azioni suggerite*, fare clic sul pulsante *Analizza carico di lavoro* per il carico di lavoro principale.
+. Nella pagina *Analisi del carico di lavoro*, impostare l'intervallo di tempo per visualizzare le ultime 24 ore (1 giorno) di dati per il volume selezionato.
++
+Nella cronologia degli eventi, un punto rosso (image:../media/opm_incident_icon_png.gif["Icona incidente di Performance Manager"] ) indica quando si è verificato l'evento di errore del disco.
+
+. Nel grafico Utilizzo nodi e aggregati, nascondere la linea per le statistiche dei nodi in modo che rimanga solo la linea Aggregata.
+. Confronta i dati in questo grafico con i dati al momento dell'evento nel grafico *Latenza*.
++
+Al momento dell'evento, l'Utilizzo Aggregato mostra un'elevata quantità di attività di lettura e scrittura, causata dai processi di ricostruzione RAID, che hanno aumentato la latenza del volume selezionato.  Poche ore dopo l'evento, sia le letture che le scritture e la latenza sono diminuite, confermando che l'aggregato non è più in competizione.
+
+

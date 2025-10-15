@@ -1,0 +1,36 @@
+---
+permalink: data-protection/task_add_resource_pool_members.html 
+sidebar: sidebar 
+keywords: add, resource, pool, members 
+summary: Un pool di risorse è costituito da un certo numero di aggregati di membri.  È possibile aggiungere aggregati ai pool di risorse esistenti per aumentare la quantità di spazio disponibile per il provisioning del volume secondario. 
+---
+= Aggiungi membri al pool di risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un pool di risorse è costituito da un certo numero di aggregati di membri.  È possibile aggiungere aggregati ai pool di risorse esistenti per aumentare la quantità di spazio disponibile per il provisioning del volume secondario.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Non è possibile aggiungere più di 200 aggregati contemporaneamente a un pool di risorse.  Gli aggregati mostrati nella finestra di dialogo Aggregati non appartengono ad alcun altro pool di risorse.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Protezione* > *Pool di risorse*.
+. Selezionare un pool di risorse dall'elenco *Pool di risorse*.
++
+I membri del pool di risorse vengono visualizzati nell'area sottostante l'elenco del pool di risorse.
+
+. Nell'area membri del pool di risorse, fare clic su *Aggiungi*.
++
+Viene visualizzata la finestra di dialogo Aggregati.
+
+. Selezionare uno o più aggregati.
+. Fare clic su *Aggiungi*.
++
+La finestra di dialogo viene chiusa e gli aggregati vengono visualizzati nell'elenco dei membri per il pool di risorse selezionato.
+
+

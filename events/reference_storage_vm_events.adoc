@@ -1,0 +1,452 @@
+---
+permalink: events/reference_storage_vm_events.html 
+sidebar: sidebar 
+keywords: storage, vm events, impact area, availability, configuration, performance, security 
+summary: 'Gli eventi delle VM di archiviazione forniscono informazioni sullo stato delle VM di archiviazione (SVM), in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all"area di impatto e includono il nome dell"evento e della trappola, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi VM di archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi Storage VM (macchina virtuale di archiviazione, nota anche come SVM) forniscono informazioni sullo stato delle VM di archiviazione (SVM), in modo da poter monitorare eventuali problemi.  Gli eventi sono raggruppati in base all'area di impatto e includono il nome dell'evento e della trappola, il livello di impatto, il tipo di origine e la gravità.
+
+Un asterisco (*) identifica gli eventi EMS che sono stati convertiti in eventi Unified Manager.
+
+
+
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Servizio CIFS VM di archiviazione inattivo (ocumEvtVserverCifsServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Critico
+
+
+
+ a| 
+Servizio CIFS SVM non configurato (non applicabile)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informazioni
+
+
+
+ a| 
+Tentativi di connessione a condivisione CIFS inesistente *(nbladeCifsNoPrivShare)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Critico
+
+
+
+ a| 
+Conflitto di nomi NetBIOS CIFS *(nbladeCifsNbNameConflict)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Errore
+
+
+
+ a| 
+Operazione di copia shadow CIFS non riuscita *(cifsShadowCopyFailure)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Errore
+
+
+
+ a| 
+Molte connessioni CIFS *(nbladeCifsManyAuths)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Errore
+
+
+
+ a| 
+Numero massimo di connessioni CIFS superato *(nbladeCifsMaxOpenSameFile)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Errore
+
+
+
+ a| 
+Numero massimo di connessioni CIFS per utente superato *(nbladeCifsMaxSessPerUsrConn)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Errore
+
+
+
+ a| 
+Servizio SVM FC/FCoE inattivo (ocumEvtVserverFcServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Critico
+
+
+
+ a| 
+Servizio iSCSI SVM inattivo (ocumEvtVserverIscsiServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Critico
+
+
+
+ a| 
+Servizio NFS VM di archiviazione inattivo (ocumEvtVserverNfsServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Critico
+
+
+
+ a| 
+Servizio SVM FC/FCoE non configurato (non applicabile)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informazioni
+
+
+
+ a| 
+Servizio iSCSI SVM non configurato (non applicabile)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informazioni
+
+
+
+ a| 
+Servizio NFS SVM non configurato (non applicabile)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informazioni
+
+
+
+ a| 
+VM di archiviazione arrestata (ocumEvtVserverDown)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Avvertimento
+
+
+
+ a| 
+Il server AV è troppo occupato per accettare una nuova richiesta di scansione *(nbladeVscanConnBackPressure)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Errore
+
+
+
+ a| 
+Nessuna connessione al server AV per la scansione antivirus *(nbladeVscanNoScannerConn)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Critico
+
+
+
+ a| 
+Nessun server AV registrato *(nbladeVscanNoRegdScanner)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Errore
+
+
+
+ a| 
+Nessuna connessione al server AV reattivo *(nbladeVscanConnInactive)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informazioni
+
+
+
+ a| 
+Tentativo di accesso non autorizzato al server AV *(nbladeVscanBadUserPrivAccess)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Errore
+
+
+
+ a| 
+Virus trovato dal server AV *(nbladeVscanVirusDetected)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Errore
+
+|===
+
+
+== Area di impatto: configurazione
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+SVM scoperto (non applicabile)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informazioni
+
+
+
+ a| 
+SVM eliminato (non applicabile)
+ a| 
+Evento
+ a| 
+Grappolo
+ a| 
+Informazioni
+
+
+
+ a| 
+SVM rinominato (non applicabile)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informazioni
+
+|===
+
+
+== Area di impatto: prestazioni
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Soglia critica SVM IOPS violata (ocumSvmIopsIncident)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso IOPS SVM violata (ocumSvmIopsWarning)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica SVM MB/s violata (ocumSvmMbpsIncident)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso MB/s SVM violata (ocumSvmMbpsWarning)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica di latenza SVM violata (ocumSvmLatencyIncident)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso di latenza SVM violata (ocumSvmLatencyWarning)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Avvertimento
+
+|===
+
+
+== Area di impatto: sicurezza
+
+|===
+| Nome dell'evento (nome della trappola) | Livello di impatto | Tipo di fonte | Gravità 
+
+
+ a| 
+Registro di controllo disabilitato (ocumVserverAuditLogDisabled)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Avvertimento
+
+
+
+ a| 
+Banner di accesso disabilitato (ocumVserverLoginBannerDisabled)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Avvertimento
+
+
+
+ a| 
+SSH utilizza cifrari non sicuri (ocumVserverSSHInsecure)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Avvertimento
+
+
+
+ a| 
+Banner di accesso modificato (ocumVserverLoginBannerChanged)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Avvertimento
+
+
+
+ a| 
+Il monitoraggio anti-ransomware della VM di archiviazione è disabilitato (antiRansomwareSvmStateDisabled)
+ a| 
+Rischio
+ a| 
+SVM
+ a| 
+Avvertimento
+
+
+
+ a| 
+Il monitoraggio anti-ransomware della VM di archiviazione è abilitato (modalità di apprendimento) (antiRansomwareSvmStateDryrun)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informazioni
+
+
+
+ a| 
+VM di archiviazione adatta al monitoraggio anti-ransomware (modalità di apprendimento) (ocumEvtSvmArwCandidate)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informazioni
+
+|===

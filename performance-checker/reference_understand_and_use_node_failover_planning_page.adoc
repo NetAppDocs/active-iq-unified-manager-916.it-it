@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/reference_understand_and_use_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: understanding, node, failover, planning page 
+summary: 'La pagina Pianificazione del failover dei nodi/prestazioni stima l"impatto sulle prestazioni di un nodo in caso di guasto del nodo partner ad alta disponibilità (HA).  Unified Manager basa le stime sulle prestazioni storiche dei nodi nella coppia HA.' 
+---
+= Comprendere e utilizzare la pagina Pianificazione del failover dei nodi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Pianificazione del failover dei nodi/prestazioni stima l'impatto sulle prestazioni di un nodo in caso di guasto del nodo partner ad alta disponibilità (HA).  Unified Manager basa le stime sulle prestazioni storiche dei nodi nella coppia HA.
+
+La stima dell'impatto sulle prestazioni di un failover aiuta a pianificare nei seguenti scenari:
+
+* Se un failover riduce sistematicamente le prestazioni stimate del nodo di acquisizione a un livello inaccettabile, è possibile prendere in considerazione l'adozione di misure correttive per ridurre l'impatto sulle prestazioni dovuto al failover.
+* Prima di avviare un failover manuale per eseguire attività di manutenzione hardware, è possibile stimare in che modo il failover influisce sulle prestazioni del nodo di acquisizione, per determinare il momento migliore per eseguire l'attività.
+

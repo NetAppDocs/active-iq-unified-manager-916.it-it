@@ -1,0 +1,67 @@
+---
+permalink: health-checker/task_migrate_um_virtual_appliance_to_rhel_system.html 
+sidebar: sidebar 
+keywords: unified manager, migrate, virtual, appliance, linux system 
+summary: 'È possibile ripristinare un backup dump del database MySQL di Unified Manager da un"appliance virtuale a un sistema Red Hat Enterprise Linux se si desidera modificare il sistema operativo host su cui è in esecuzione Unified Manager.' 
+---
+= Migrare un'appliance virtuale Unified Manager su un sistema Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile ripristinare un backup dump del database MySQL di Unified Manager da un'appliance virtuale a un sistema Red Hat Enterprise Linux se si desidera modificare il sistema operativo host su cui è in esecuzione Unified Manager.
+
+.Prima di iniziare
+* Sull'appliance virtuale:
++
+** È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+** È necessario conoscere il nome dell'utente addetto alla manutenzione di Unified Manager per l'operazione di ripristino.
+
+
+* Sul sistema Linux:
++
+** È necessario aver installato Unified Manager su un server Linux seguendo le istruzioni inlink:../install-linux/concept_install_unified_manager_on_rhel.html["Installazione di Unified Manager su sistemi Linux"] .
+** La versione di Unified Manager su questo server deve essere la stessa della versione presente sull'appliance virtuale da cui si sta utilizzando il file di backup.
+** Non avviare l'interfaccia utente né configurare cluster, utenti o impostazioni di autenticazione sul sistema Linux dopo l'installazione.  Il file di backup inserisce queste informazioni durante il processo di ripristino.
+** È necessario disporre delle credenziali utente root per l'host Linux.
+
+
+
+
+Questi passaggi descrivono come creare un file di backup sull'appliance virtuale, copiare i file di backup su Red Hat Enterprise Linux e quindi ripristinare il backup del database sul nuovo sistema.
+
+.Passi
+. Sull'appliance virtuale, fare clic su *Gestione* > *Backup del database*.
+. Nella pagina *Backup del database*, fare clic su *Impostazioni di backup*.
+. Modificare il percorso di backup in /jail/support.
+. Nella sezione Pianificazione, seleziona *Pianificato quotidianamente* e inserisci un orario di qualche minuto successivo all'orario corrente, in modo che il backup venga creato il prima possibile.
+. Fare clic su *Applica*.
+. Attendi qualche ora affinché il backup venga generato.
++
+Un backup completo può avere dimensioni superiori a 1 GB e può richiedere dalle tre alle quattro ore per essere completato.
+
+. Accedi come utente root all'host Linux su cui è installato Unified Manager e copia i file di backup da /support sull'appliance virtuale utilizzando SCP.`root@<rhel_server>:/# scp -r admin@<vapp_server_ip_address>:/support/* .`
++
+`root@ocum_rhel-21:/# scp -r admin@10.10.10.10:/support/* .`
+
++
+Assicurati di aver copiato il file di backup .7z e tutti i file del repository .7z nella sottodirectory /database-dumps-repo.
+
+. Al prompt dei comandi, ripristinare il backup: `um backup restore -f /<backup_file_path>/<backup_file_name>`
++
+`um backup restore -f /UM_9.7.N151113.1348_backup_unix_02-12-2019-04-16.7z`
+
+. Una volta completata l'operazione di ripristino, accedi all'interfaccia utente Web di Unified Manager.
+
+
+Dovresti svolgere le seguenti attività:
+
+* Generare un nuovo certificato di sicurezza HTTPS e riavviare il server Unified Manager.
+* Modificare il percorso di backup con l'impostazione predefinita per il sistema Linux (/data/ocum-backup) oppure con un nuovo percorso a scelta, poiché sul sistema Linux non esiste alcun percorso /jail/support.
+* Se si utilizza WFA, riconfigurare entrambi i lati della connessione Workflow Automation.
+* Se si utilizza SAML, riconfigurare le impostazioni di autenticazione SAML.
+
+
+Dopo aver verificato che tutto funzioni come previsto sul sistema Linux, è possibile arrestare e rimuovere l'appliance virtuale Unified Manager.

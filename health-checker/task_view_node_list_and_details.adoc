@@ -1,0 +1,54 @@
+---
+permalink: health-checker/task_view_node_list_and_details.html 
+sidebar: sidebar 
+keywords: view, node list, details 
+summary: 'È possibile utilizzare la vista Integrità: Tutti i nodi per visualizzare l"elenco dei nodi nei cluster.  È possibile utilizzare la pagina Dettagli cluster/integrità per visualizzare informazioni dettagliate sui nodi che fanno parte del cluster monitorato.' 
+---
+= Visualizza l'elenco dei nodi e i dettagli
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la vista Integrità: Tutti i nodi per visualizzare l'elenco dei nodi nei cluster.  È possibile utilizzare la pagina Dettagli cluster/integrità per visualizzare informazioni dettagliate sui nodi che fanno parte del cluster monitorato.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+È possibile visualizzare dettagli quali lo stato del nodo, il cluster che contiene il nodo, i dettagli della capacità aggregata (utilizzata e totale) e i dettagli della capacità grezza (utilizzabile, di riserva e totale).  È inoltre possibile ottenere informazioni sulle coppie HA, sugli scaffali dei dischi e sulle porte.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Nodi*.
+. Nella vista *Stato: Tutti i nodi*, fare clic sul nodo di cui si desidera visualizzare i dettagli.
++
+Le informazioni dettagliate sul nodo selezionato vengono visualizzate nella pagina Dettagli cluster/stato.  Nel riquadro di sinistra viene visualizzato l'elenco delle coppie HA.  Per impostazione predefinita, la finestra Dettagli HA è aperta e mostra i dettagli sullo stato HA e gli eventi correlati alla coppia HA selezionata.
+
+. Per visualizzare altri dettagli sul nodo, eseguire l'azione appropriata:
++
+[cols="2*"]
+|===
+| Per visualizzare... | Clic... 
+
+
+ a| 
+Dettagli sugli scaffali dei dischi
+ a| 
+*Scaffali per dischi*.
+
+
+
+ a| 
+Informazioni relative al porto
+ a| 
+*Porte*.
+
+|===
+
+
+Per maggiori informazioni, vedere:
+
+* link:../performance-checker/performance-view-all.html#performance-all-nodes-view["Prestazioni: visualizzazione di tutti i nodi"]
+* link:../performance-checker/concept_view_node_and_aggregate_available_iops_values.html["Visualizzazione dei valori IOPS disponibili del nodo e dell'aggregato"]
+* link:../performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html["Visualizzazione dei valori utilizzati per la capacità di prestazione aggregata e del nodo"]
+

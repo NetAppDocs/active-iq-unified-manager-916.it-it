@@ -1,0 +1,20 @@
+---
+permalink: events/concept_what_um_maintenance_window_is.html 
+sidebar: sidebar 
+keywords: unified manager, maintenance, window 
+summary: 'È possibile definire una finestra di manutenzione di Unified Manager per sopprimere eventi e avvisi per un intervallo di tempo specifico quando è stata pianificata la manutenzione del cluster e non si desidera ricevere un"ondata di notifiche indesiderate.' 
+---
+= Cos'è una finestra di manutenzione di Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile definire una finestra di manutenzione di Unified Manager per sopprimere eventi e avvisi per un intervallo di tempo specifico quando è stata pianificata la manutenzione del cluster e non si desidera ricevere un'ondata di notifiche indesiderate.
+
+All'avvio della finestra di manutenzione, nella pagina dell'inventario di Gestione eventi viene pubblicato l'evento "Finestra di manutenzione oggetto avviata".  Questo evento diventa automaticamente obsoleto al termine della finestra di manutenzione.
+
+Durante una finestra di manutenzione, gli eventi relativi a tutti gli oggetti su quel cluster vengono comunque generati, ma non vengono visualizzati in nessuna pagina dell'interfaccia utente e non vengono inviati avvisi o altri tipi di notifiche per questi eventi.  Tuttavia, è possibile visualizzare gli eventi generati per tutti gli oggetti di archiviazione durante una finestra di manutenzione selezionando una delle opzioni Visualizza nella pagina Inventario Gestione eventi.
+
+È possibile pianificare l'avvio di una finestra di manutenzione in futuro, modificare gli orari di inizio e fine di una finestra di manutenzione pianificata e annullare una finestra di manutenzione pianificata.

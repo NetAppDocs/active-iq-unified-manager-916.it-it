@@ -1,0 +1,23 @@
+---
+permalink: api-automation/concept_rest_api_versioning_in_unified_manager_apis.html 
+sidebar: sidebar 
+keywords: api, version, active iq, unified, manager 
+summary: 'Gli URI dell"API REST in Active IQ Unified Manager specificano un numero di versione.  Ad esempio, /v2/datacenter/svm/svms.  Il numero di versione v2 in /v2/datacenter/svm/svms indica la versione API utilizzata in una release specifica.  Il numero di versione riduce al minimo l"impatto delle modifiche API sul software client inviando una risposta che il client può elaborare.' 
+---
+= Versione API in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli URI dell'API REST in Active IQ Unified Manager specificano un numero di versione.  Per esempio, `/v2/datacenter/svm/svms.` Il numero di versione `v2` In `/v2/datacenter/svm/svms` indica la versione API utilizzata in una versione specifica.  Il numero di versione riduce al minimo l'impatto delle modifiche API sul software client inviando una risposta che il client può elaborare.
+
+La parte numerica di questo numero di versione è incrementale rispetto alle release.  Gli URI con un numero di versione forniscono un'interfaccia coerente che mantiene la compatibilità con le versioni precedenti nelle versioni future.  Ad esempio, puoi trovare le stesse API anche senza una versione `/datacenter/svm/svms,` che indicano le API di base senza una versione.  Le API di base sono sempre la versione più recente delle API.
+
+[NOTE]
+====
+Nell'angolo in alto a destra dell'interfaccia Swagger puoi selezionare la versione dell'API da utilizzare.  Per impostazione predefinita viene selezionata la versione più alta.  Si consiglia di utilizzare la versione più elevata di una determinata API (rispetto all'intero incrementale) disponibile nella propria istanza di Unified Manager.
+
+====
+Per tutte le richieste, è necessario richiedere esplicitamente la versione API che si desidera utilizzare.  Quando viene specificato il numero di versione, il servizio non restituisce elementi di risposta che l'applicazione non è progettata per gestire.  Nelle richieste REST, dovresti includere il parametro versione.  Dopo alcune release, le versioni precedenti delle API vengono deprecate.  In questa versione, il `v1` la versione delle API è obsoleta.

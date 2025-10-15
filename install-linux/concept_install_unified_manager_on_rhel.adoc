@@ -1,0 +1,14 @@
+---
+permalink: install-linux/concept_install_unified_manager_on_rhel.html 
+sidebar: sidebar 
+keywords: install, unified manager, linux systems 
+summary: È importante comprendere che la sequenza dei passaggi per scaricare e installare Unified Manager varia a seconda dello scenario di installazione. 
+---
+= Installa Unified Manager sui sistemi Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È importante comprendere che la sequenza dei passaggi per scaricare e installare Unified Manager varia a seconda dello scenario di installazione.

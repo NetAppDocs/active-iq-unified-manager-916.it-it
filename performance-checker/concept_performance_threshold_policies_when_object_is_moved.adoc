@@ -1,0 +1,50 @@
+---
+permalink: performance-checker/concept_performance_threshold_policies_when_object_is_moved.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policies, object, moved 
+summary: 'Poiché i criteri di soglia delle prestazioni vengono assegnate agli oggetti di archiviazione, se si sposta un oggetto, tutti i criteri di soglia assegnati rimangono associati all"oggetto una volta completato lo spostamento.  Ad esempio, se si sposta un volume o una LUN in un aggregato diverso, i criteri di soglia rimangono attivi per il volume o la LUN nel nuovo aggregato.' 
+---
+= Cosa succede alle policy di soglia delle prestazioni quando un oggetto viene spostato
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Poiché i criteri di soglia delle prestazioni vengono assegnate agli oggetti di archiviazione, se si sposta un oggetto, tutti i criteri di soglia assegnati rimangono associati all'oggetto una volta completato lo spostamento.  Ad esempio, se si sposta un volume o una LUN in un aggregato diverso, i criteri di soglia rimangono attivi per il volume o la LUN nel nuovo aggregato.
+
+Se esiste una condizione di contatore secondaria per la policy di soglia (una policy di combinazione), ad esempio se una condizione aggiuntiva è assegnata a un aggregato o a un nodo, la condizione di contatore secondaria viene applicata al nuovo aggregato o nodo in cui è stato spostato il volume o la LUN.
+
+Se sono presenti nuovi eventi attivi per gli oggetti che utilizzano la policy di soglia modificata, gli eventi vengono contrassegnati come obsoleti e la policy di soglia inizia a monitorare il contatore come una policy di soglia appena definita.
+
+Un'operazione di spostamento del volume fa sì che ONTAP invii un evento di modifica informativo.  Un'icona di evento di modifica viene visualizzata nella cronologia Eventi nella pagina Performance Explorer e nella pagina Workload Analysis per indicare l'ora in cui è stata completata l'operazione di spostamento.
+
+[NOTE]
+====
+Se si sposta un oggetto in un cluster diverso, la policy di soglia definita dall'utente viene rimossa dall'oggetto.  Se necessario, è necessario assegnare un criterio di soglia all'oggetto dopo il completamento dell'operazione di spostamento.  I criteri di soglia dinamici e definiti dal sistema, invece, vengono applicati automaticamente a un oggetto dopo che è stato spostato in un nuovo cluster.
+
+====
+
+
+== Funzionalità della politica di soglia durante l'acquisizione e la restituzione dell'HA
+
+Quando si verifica un'operazione di acquisizione o restituzione in una configurazione ad alta disponibilità (HA), gli oggetti che vengono spostati da un nodo all'altro mantengono le proprie policy di soglia nello stesso modo delle operazioni di spostamento manuale.  Poiché Unified Manager verifica le modifiche alla configurazione del cluster ogni 15 minuti, l'impatto del passaggio al nuovo nodo non viene identificato fino al successivo polling della configurazione del cluster.
+
+[NOTE]
+====
+Se si verificano sia un'operazione di acquisizione che di restituzione entro il periodo di raccolta delle modifiche alla configurazione di 15 minuti, è possibile che le statistiche sulle prestazioni non vengano spostate da un nodo all'altro.
+
+====
+
+
+== Funzionalità della politica di soglia durante la rilocazione aggregata
+
+Se si sposta un aggregato da un nodo a un altro nodo utilizzando `aggregate relocation start` comando, sia le policy di soglia singole che quelle combinate vengono mantenute su tutti gli oggetti e la parte del nodo della policy di soglia viene applicata al nuovo nodo.
+
+
+
+== Funzionalità della politica di soglia durante il passaggio a MetroCluster
+
+Gli oggetti che si spostano da un cluster a un altro in una configurazione MetroCluster non mantengono le impostazioni dei criteri di soglia definiti dall'utente.  Se necessario, è possibile applicare criteri di soglia sui volumi e sulle LUN spostati nel cluster partner.  Dopo che un oggetto è stato riportato al suo cluster originale, la politica di soglia definita dall'utente viene riapplicata automaticamente.
+
+Per informazioni, vederelink:../storage-mgmt/concept_volume_behavior_during_switchover_and_switchback.html["Comportamento del volume durante la commutazione e la commutazione indietro"] .

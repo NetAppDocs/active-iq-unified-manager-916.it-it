@@ -1,0 +1,51 @@
+---
+permalink: storage-mgmt/reference_cluster_connectivity_status_definitions.html 
+sidebar: sidebar 
+keywords: cluster, connectivity, status, definitions 
+summary: 'La connettività tra i cluster in una configurazione MetroCluster può avere uno dei seguenti stati: Ottimale, Interessato o Inattivo.  La comprensione degli stati di connettività consente di gestire in modo efficace le configurazioni MetroCluster .' 
+---
+= Definizioni dello stato di connettività del cluster per MetroCluster sulla configurazione FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La connettività tra i cluster in una configurazione MetroCluster su FC può avere uno dei seguenti stati: Ottimale, Interessato o Inattivo.  La comprensione degli stati di connettività consente di gestire in modo efficace le configurazioni MetroCluster .
+
+|===
+| Stato di connettività | Descrizione | Icona visualizzata 
+
+
+ a| 
+Ottimale
+ a| 
+La connettività tra i cluster nella configurazione MetroCluster è normale.
+ a| 
+image:../media/metrocluster_connectivity_optimal.gif["icona ottimale della connettività del metrocluster"]
+
+
+
+ a| 
+Impattato
+ a| 
+Uno o più errori compromettono lo stato di disponibilità del failover; tuttavia, entrambi i cluster nella configurazione MetroCluster sono ancora attivi.  Ad esempio, quando il collegamento ISL è inattivo, quando il collegamento IP intercluster è inattivo o quando il cluster partner non è raggiungibile.
+ a| 
+image:../media/metrocluster_connectivity_impacted.gif["icona di connettività metrocluster interessata"]
+
+
+
+ a| 
+Giù
+ a| 
+La connettività tra i cluster nella configurazione MetroCluster è interrotta perché uno o entrambi i cluster sono inattivi oppure sono in modalità failover.  Ad esempio, quando il cluster partner è inattivo a causa di un disastro o quando è pianificato un passaggio a fini di test.
+ a| 
+Commutazione con errori:
+
+image::../media/metrocluster_connectivity_down.gif[icona di connettività metrocluster inattiva]
+
+Passaggio riuscito:
+
+image::../media/metrocluster_connectivity_failover.gif[icona di failover della connettività metrocluster]
+
+|===

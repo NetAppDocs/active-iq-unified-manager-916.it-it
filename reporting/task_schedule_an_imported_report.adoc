@@ -1,0 +1,40 @@
+---
+permalink: reporting/task_schedule_an_imported_report.html 
+sidebar: sidebar 
+keywords: schedule, imported, reports 
+summary: È possibile pianificare report esistenti creati e importati in una versione precedente di Unified Manager. 
+---
+= Pianifica i report .rptdesign importati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile pianificare report esistenti creati e importati in una versione precedente di Unified Manager.
+
+Per pianificare i report importati è necessario quanto segue:
+
+* report di file .rptdesign progettati da BIRT importati in una versione precedente di Unified Manager
+* applicabile durante l'aggiornamento a Unified Manager 9.6 GA o versione successiva
+
+
+Dopo l'aggiornamento a Unified Manager 9.6 GA o versione successiva, la pagina Pianificazioni report elenca i report importati.  È possibile modificare la pianificazione di questi report specificando gli indirizzi e-mail dei destinatari, la frequenza e il formato (PDF o CSV).  In caso contrario, questi report non potranno essere modificati o visualizzati nell'interfaccia utente di Unified Manager.
+
+.Passi
+. Aprire la pagina Pianificazioni report.  Se hai importato dei report, verrà visualizzato un messaggio.
++
+image::../media/message_non_scehduled_reports.png[Se sono presenti report importati, viene visualizzata una schermata dell'interfaccia utente che mostra il messaggio.]
+
+. Fare clic sul nome *Visualizza* per visualizzare la query SQL utilizzata per generare il report.
++
+image::../media/importedreport1.png[Uno screenshot dell'interfaccia utente che mostra la query SQL utilizzata per generare il report.]
+
+. Clicca sull'icona "Altro"image:../media/more_icon.gif[""] , fare clic su *Modifica*, definire i dettagli della pianificazione del report e salvare il report.
++
+[NOTE]
+====
+Puoi anche eliminare eventuali segnalazioni indesiderate dall'icona Altroimage:../media/more_icon.gif[""] .
+
+====
+

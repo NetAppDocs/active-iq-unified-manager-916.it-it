@@ -1,0 +1,78 @@
+---
+permalink: performance-checker/reference_components_of_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: components, node, failover, planning page, performance, statistics, grid 
+summary: 'I componenti della pagina Pianificazione del failover dei nodi/prestazioni vengono visualizzati in una griglia e nel riquadro Confronto.  Queste sezioni consentono di valutare l"impatto del failover di un nodo sulle prestazioni del nodo di acquisizione.' 
+---
+= Componenti della pagina Pianificazione del failover del nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I componenti della pagina Pianificazione del failover dei nodi/prestazioni vengono visualizzati in una griglia e nel riquadro Confronto.  Queste sezioni consentono di valutare l'impatto del failover di un nodo sulle prestazioni del nodo di acquisizione.
+
+
+
+== Griglia delle statistiche delle prestazioni
+
+La pagina Pianificazione del failover dei nodi/prestazioni visualizza una griglia contenente statistiche su latenza, IOPS, utilizzo e capacità prestazionale utilizzata.
+
+[NOTE]
+====
+I valori di latenza e IOPS visualizzati in questa pagina e nella pagina Prestazioni/Esplora prestazioni nodo potrebbero non corrispondere perché vengono utilizzati contatori delle prestazioni diversi per calcolare i valori per prevedere il failover del nodo.
+
+====
+Nella griglia, a ciascun nodo viene assegnato uno dei seguenti ruoli:
+
+* Primario
++
+Il nodo che subentra al partner HA quando quest'ultimo fallisce.  L'oggetto radice è sempre il nodo primario.
+
+* Partner
++
+Il nodo che fallisce nello scenario di failover.
+
+* Acquisizione stimata
++
+Lo stesso del nodo primario.  Le statistiche sulle prestazioni visualizzate per questo nodo mostrano le prestazioni del nodo di acquisizione dopo aver acquisito il partner non riuscito.
+
+
+
+[NOTE]
+====
+Sebbene il carico di lavoro del nodo di acquisizione sia equivalente ai carichi di lavoro combinati di entrambi i nodi dopo un failover, le statistiche per il nodo di acquisizione stimata non sono la somma delle statistiche del nodo primario e del nodo partner.  Ad esempio, se la latenza del nodo primario è di 2 ms/op e la latenza del nodo partner è di 3 ms/op, il nodo Estimated Takeover potrebbe avere una latenza di 4 ms/op.  Questo valore è un calcolo eseguito da Unified Manager.
+
+====
+È possibile fare clic sul nome del nodo Partner se si desidera che diventi l'oggetto radice.  Dopo aver visualizzato la pagina Performance/Node Performance Explorer, è possibile fare clic sulla scheda *Failover Planning* per vedere come cambiano le prestazioni in questo scenario di errore del nodo.  Ad esempio, se Nodo1 è il nodo primario e Nodo2 è il nodo partner, è possibile fare clic su Nodo2 per renderlo primario.  In questo modo è possibile vedere come le prestazioni stimate cambiano a seconda del nodo che si guasta.
+
+
+
+== riquadro di confronto
+
+L'elenco seguente descrive i componenti visualizzati per impostazione predefinita nel riquadro Confronto:
+
+* *Grafici degli eventi*
++
+Vengono visualizzati nello stesso formato di quelli nella pagina Performance/Node Performance Explorer.  Riguardano solo il nodo primario.
+
+* *Grafici di contropartita*
++
+Visualizzano le statistiche storiche per il contatore delle prestazioni mostrato nella griglia.  In ogni grafico, il grafico per il nodo Takeover stimato mostra le prestazioni stimate se si fosse verificato un failover in un dato momento.
+
++
+Ad esempio, supponiamo che il grafico di utilizzo mostri il 73% per il nodo di acquisizione stimata alle 11:00 dell'8 febbraio.  Se in quel momento si fosse verificato un failover, l'utilizzo del nodo di acquisizione sarebbe stato del 73%.
+
++
+Le statistiche storiche aiutano a individuare il momento ottimale per avviare un failover, riducendo al minimo la possibilità di sovraccaricare il nodo di acquisizione.  È possibile pianificare un failover solo nei momenti in cui le prestazioni previste del nodo di acquisizione sono accettabili.
+
+
+
+Per impostazione predefinita, le statistiche per l'oggetto radice e per il nodo partner vengono visualizzate nel riquadro Confronto.  A differenza della pagina Performance/Node Performance Explorer, questa pagina non visualizza il pulsante *Aggiungi* per aggiungere oggetti per il confronto delle statistiche.
+
+È possibile personalizzare il riquadro Confronto nello stesso modo in cui si personalizza la pagina Prestazioni/Esplora prestazioni nodo.  L'elenco seguente mostra esempi di personalizzazione dei grafici:
+
+* Fare clic sul nome di un nodo per mostrare o nascondere le statistiche del nodo nei grafici Contatore.
+* Fare clic su *Zoom vista* per visualizzare un grafico dettagliato per un contatore specifico in una nuova finestra.
+

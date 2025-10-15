@@ -1,0 +1,20 @@
+---
+permalink: install-windows/concept_introduction_to_unified_manager.html 
+sidebar: sidebar 
+keywords: introduction, active iq unified manager 
+summary: 'Active IQ Unified Manager (in precedenza OnCommand Unified Manager) consente di monitorare e gestire lo stato e le prestazioni dei sistemi di archiviazione ONTAP da un"unica interfaccia.  È possibile distribuire Unified Manager su un server Linux, su un server Windows o come appliance virtuale su un host VMware.' 
+---
+= Introduzione ad Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager (in precedenza OnCommand Unified Manager) consente di monitorare e gestire lo stato e le prestazioni dei sistemi di archiviazione ONTAP da un'unica interfaccia.  È possibile distribuire Unified Manager su un server Linux, su un server Windows o come appliance virtuale su un host VMware.
+
+Dopo aver completato l'installazione e aver aggiunto i cluster che si desidera gestire, Unified Manager fornisce un'interfaccia grafica che visualizza la capacità, la disponibilità, la protezione e lo stato delle prestazioni dei sistemi di storage monitorati.
+
+*Informazioni correlate*
+
+https://mysupport.netapp.com/matrix["Strumento matrice di interoperabilità NetApp"^]

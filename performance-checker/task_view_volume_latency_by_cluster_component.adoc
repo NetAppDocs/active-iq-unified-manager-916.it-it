@@ -1,0 +1,41 @@
+---
+permalink: performance-checker/task_view_volume_latency_by_cluster_component.html 
+sidebar: sidebar 
+keywords: view, volume, latency, cluster, component 
+summary: 'È possibile visualizzare informazioni dettagliate sulla latenza di un volume utilizzando la pagina Volume Performance Explorer.  Il grafico del contatore Latenza - Totale mostra la latenza totale sul volume, mentre il grafico del contatore Latenza - Ripartizione è utile per determinare l"impatto della latenza di lettura e scrittura sul volume.' 
+---
+= Visualizza la latenza del volume per componente del cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare informazioni dettagliate sulla latenza di un volume utilizzando la pagina Volume Performance Explorer.  Il grafico del contatore Latenza - Totale mostra la latenza totale sul volume, mentre il grafico del contatore Latenza - Ripartizione è utile per determinare l'impatto della latenza di lettura e scrittura sul volume.
+
+Inoltre, il grafico Latenza - Componenti del cluster mostra un confronto dettagliato della latenza di ciascun componente del cluster per aiutare a determinare in che modo ciascun componente contribuisce alla latenza totale sul volume.  Vengono visualizzati i seguenti componenti del cluster:
+
+* Rete
+* Limite QoS massimo
+* Limite minimo QoS
+* Elaborazione di rete
+* Interconnessione del cluster
+* Data Processing
+* Operazioni aggregate
+* Attivazione del volume
+* Risorse MetroCluster
+* Latenza del cloud
+* Sincronizza SnapMirror
+
+
+.Passi
+. Nella pagina *Volume Performance Explorer* per il volume selezionato, dal grafico Latenza, seleziona *Componenti cluster* dal menu a discesa.
++
+Viene visualizzato il grafico Latenza - Componenti del cluster.
+
+. Per visualizzare una versione più grande del grafico, seleziona *Zoom vista*.
++
+Viene visualizzato il grafico comparativo dei componenti del cluster.  È possibile limitare il confronto deselezionando o selezionando l'opzioneimage:../media/eye_icon.gif["icona dell'occhio"] associato a ciascun componente del cluster.
+
+. Per visualizzare i valori specifici, sposta il cursore nell'area del grafico per visualizzare la finestra popup.
+

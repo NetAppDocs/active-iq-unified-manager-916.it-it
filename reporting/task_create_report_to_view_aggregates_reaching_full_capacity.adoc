@@ -1,0 +1,41 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_reaching_full_capacity.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, reaching, full capacity 
+summary: È possibile creare un report per individuare gli aggregati che stanno raggiungendo la piena capacità, in modo da poter aggiungere ulteriore capacità o spostare i carichi di lavoro su altri aggregati. 
+---
+= Crea un report per visualizzare gli aggregati che raggiungono la piena capacità
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un report per individuare gli aggregati che stanno raggiungendo la piena capacità, in modo da poter aggiungere ulteriore capacità o spostare i carichi di lavoro su altri aggregati.
+
+.Prima di iniziare
+* È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+
+Per creare una vista personalizzata che mostri gli aggregati che raggiungono la piena capacità, utilizzare i passaggi seguenti, quindi pianificare la generazione di un report per tale vista.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Aggregati*.
+. Nel menu Visualizza, seleziona *Capacità* > *Tutti gli aggregati*.
+. Selezionare *Mostra/Nascondi* per rimuovere le colonne che non si desiderano nel report.
+. Fare clic sull'icona del filtro, aggiungere il seguente filtro e quindi fare clic su *Applica filtro*:
++
+** Giorni per completare meno di 45 giorni
+
+
+. Fare clic sulla parte superiore della colonna "Giorni rimanenti al raggiungimento della piena capacità" per ordinare i risultati in base al numero minimo di giorni rimanenti per raggiungere la piena capacità.
+. Salvare la vista con un nome specifico che rifletta ciò che la vista sta mostrando, ad esempio "`Giorni per raggiungere la piena capacità aggregata`", e fare clic sul segno di spunta (image:../media/blue_check.gif[""] ).
+. Fare clic sul pulsante *Rapporti pianificati* nella pagina dell'inventario.
+. Fare clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina *Pianificazioni report* in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""] ) alla fine della riga.
++
+Il rapporto viene inviato immediatamente a scopo di verifica.  Successivamente, il report viene generato e inviato tramite e-mail ai destinatari elencati utilizzando la frequenza specificata.
+
+
+
+In base ai risultati mostrati nel report, potresti voler aumentare lo spazio di archiviazione sugli aggregati che raggiungono la piena capacità.  Inoltre, potresti voler aumentare la soglia Giorni fino al raggiungimento della capacità completa a un valore superiore ai 7 giorni predefiniti, in modo da ricevere eventi che offrano più tempo per reagire alla scarsità di spazio sugli aggregati.

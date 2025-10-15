@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_what_jobs_are.html 
+sidebar: sidebar 
+keywords: jobs 
+summary: Un lavoro è una serie di attività che è possibile monitorare tramite Unified Manager.  Visualizzando i lavori e le attività associate è possibile stabilire se sono stati completati correttamente. 
+---
+= Quali sono i lavori
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un lavoro è una serie di attività che è possibile monitorare tramite Unified Manager.  Visualizzando i lavori e le attività associate è possibile stabilire se sono stati completati correttamente.
+
+I processi vengono avviati quando si creano relazioni SnapMirror e SnapVault , quando si esegue un'operazione di relazione (interruzione, modifica, disattivazione, rimozione, ripresa, risincronizzazione e risincronizzazione inversa), quando si eseguono attività di ripristino dei dati, quando si accede a un cluster e così via.
+
+Quando si avvia un lavoro, è possibile utilizzare la pagina Lavori e la pagina Dettagli lavoro per monitorare il lavoro e l'avanzamento delle attività associate.

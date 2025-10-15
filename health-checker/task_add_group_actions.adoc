@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_add_group_actions.html 
+sidebar: sidebar 
+keywords: add, group, actions 
+summary: È possibile configurare le azioni di gruppo che si desidera applicare agli oggetti di archiviazione in un gruppo.  La configurazione delle azioni per un gruppo consente di risparmiare tempo, poiché non è necessario aggiungere queste azioni a ciascun oggetto singolarmente. 
+---
+= Aggiungi azioni di gruppo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare le azioni di gruppo che si desidera applicare agli oggetti di archiviazione in un gruppo.  La configurazione delle azioni per un gruppo consente di risparmiare tempo, poiché non è necessario aggiungere queste azioni a ciascun oggetto singolarmente.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Gruppi*.
+. Nella scheda *Azioni di gruppo*, fare clic su *Aggiungi*.
+. Nella finestra di dialogo *Aggiungi azione di gruppo*, immettere un nome e una descrizione per l'azione.
+. Dal menu *Gruppo*, seleziona un gruppo per il quale desideri configurare l'azione.
+. Dal menu *Tipo di azione*, seleziona un tipo di azione.
++
+La finestra di dialogo si espande, consentendo di configurare il tipo di azione selezionato con i parametri richiesti.
+
+. Immettere i valori appropriati per i parametri richiesti per configurare un'azione di gruppo.
+. Fare clic su *Aggiungi*.
+

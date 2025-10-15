@@ -1,0 +1,42 @@
+---
+permalink: events/task_manage_host_system_resource_events.html 
+sidebar: sidebar 
+keywords: manage, host, system, resource, events 
+summary: 'Unified Manager include un servizio che monitora i problemi relativi alle risorse sul sistema host su cui è installato Unified Manager.  Problemi quali la mancanza di spazio disponibile su disco o la mancanza di memoria sul sistema host possono attivare eventi della stazione di gestione che vengono visualizzati come messaggi banner nella parte superiore dell"interfaccia utente.' 
+---
+= Gestire gli eventi delle risorse del sistema host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager include un servizio che monitora i problemi relativi alle risorse sul sistema host su cui è installato Unified Manager.  Problemi quali la mancanza di spazio disponibile su disco o la mancanza di memoria sul sistema host possono attivare eventi della stazione di gestione che vengono visualizzati come messaggi banner nella parte superiore dell'interfaccia utente.
+
+Gli eventi della stazione di gestione indicano un problema con il sistema host su cui è installato Unified Manager.  Esempi di problemi della stazione di gestione includono lo spazio su disco insufficiente sul sistema host, la mancanza di un ciclo regolare di raccolta dati da parte di Unified Manager e il mancato completamento, o il completamento tardivo, dell'analisi delle statistiche perché è stato avviato il successivo poll di raccolta.
+
+A differenza di tutti gli altri messaggi di evento di Unified Manager, questi particolari avvisi e eventi critici della stazione di gestione vengono visualizzati nei messaggi banner.
+
+.Fare un passo
+. Per visualizzare le informazioni sugli eventi della stazione di gestione, eseguire le seguenti azioni:
++
+|===
+| Se lo desidera... | Fai questo... 
+
+
+ a| 
+Visualizza i dettagli dell'evento
+ a| 
+Fare clic sul banner dell'evento per visualizzare la pagina dei dettagli dell'evento, che include le soluzioni suggerite per il problema.
+
+
+
+ a| 
+Visualizza tutti gli eventi della stazione di gestione
+ a| 
+.. Nel riquadro di navigazione a sinistra, fare clic su *Gestione eventi*.
+.. Nel riquadro Filtri della pagina Inventario Gestione eventi, fare clic sulla casella Stazione di gestione nell'elenco Tipo di origine.
+
+
+|===
+

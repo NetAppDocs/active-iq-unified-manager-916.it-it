@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_storage_efficiency_is.html 
+sidebar: sidebar 
+keywords: storage, efficiency 
+summary: 'L"efficienza di archiviazione consente di archiviare la massima quantità di dati al costo più basso e di gestire la rapida crescita dei dati, consumando meno spazio.  La strategia NetApp per l"efficienza dello storage si basa sulle fondamenta integrate della virtualizzazione dello storage e dello storage unificato fornite dal suo sistema operativo ONTAP e dal file system Write Anywhere File Layout (WAFL).' 
+---
+= Cos'è l'efficienza di archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'efficienza di archiviazione consente di archiviare la massima quantità di dati al costo più basso e di gestire la rapida crescita dei dati, consumando meno spazio.  La strategia NetApp per l'efficienza dello storage si basa sulle fondamenta integrate della virtualizzazione dello storage e dello storage unificato fornite dal suo sistema operativo ONTAP e dal file system Write Anywhere File Layout (WAFL).
+
+L'efficienza di archiviazione include l'utilizzo di tecnologie quali thin provisioning, copia Snapshot, deduplicazione, compressione dati, FlexClone, thin replication con SnapVault e volume SnapMirror, RAID-DP, Flash Cache, Flash Pool aggregate e aggregati abilitati FabricPool che contribuiscono ad aumentare l'utilizzo dell'archiviazione e a ridurne i costi.
+
+L'architettura di storage unificata consente di consolidare in modo efficiente una rete di archiviazione (SAN), un sistema di storage collegato alla rete (NAS) e uno storage secondario su un'unica piattaforma.
+
+Le unità disco ad alta densità, come le unità SATA (Serial Advanced Technology Attachment) configurate nell'aggregato Flash Pool o con tecnologia Flash Cache e RAID-DP, aumentano l'efficienza senza compromettere le prestazioni e la resilienza.
+
+Un aggregato abilitato per FabricPool include un aggregato completamente SSD o un aggregato HDD (a partire da ONTAP 9.8) come livello di prestazioni locale e un archivio oggetti specificato come livello cloud.  La configurazione FabricPool consente di gestire il livello di archiviazione (locale o cloud) in cui archiviare i dati, in base alla frequenza di accesso ai dati.
+
+Tecnologie quali thin provisioning, Snapshot copy, deduplicazione, compressione dati, thin replication con SnapVault e volume SnapMirror e FlexClone offrono maggiori risparmi.  È possibile utilizzare queste tecnologie singolarmente o insieme per ottenere la massima efficienza di archiviazione.

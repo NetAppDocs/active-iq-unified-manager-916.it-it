@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_edit_annotation_rules.html 
+sidebar: sidebar 
+keywords: edit, annotation rules 
+summary: 'È possibile modificare le regole di annotazione per modificare i gruppi di condizioni e le condizioni all"interno del gruppo di condizioni per aggiungere annotazioni o rimuovere annotazioni dagli oggetti di archiviazione.' 
+---
+= Modifica le regole di annotazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare le regole di annotazione per modificare i gruppi di condizioni e le condizioni all'interno del gruppo di condizioni per aggiungere annotazioni o rimuovere annotazioni dagli oggetti di archiviazione.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Le annotazioni vengono dissociate dagli oggetti di archiviazione quando si modificano le regole di annotazione associate.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Annotazioni*.
+. Nella scheda *Regole di annotazione*, seleziona la regola di annotazione che desideri modificare, quindi fai clic su *Azioni* > *Modifica*.
+. Nella finestra di dialogo *Modifica regola di annotazione*, modificare il nome della regola, il nome e il valore dell'annotazione, i gruppi di condizioni e le condizioni come richiesto.
++
+Non è possibile modificare il tipo di oggetto di destinazione per una regola di annotazione.
+
+. Fare clic su *Salva*.
+

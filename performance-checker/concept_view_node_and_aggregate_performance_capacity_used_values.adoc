@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html 
+sidebar: sidebar 
+keywords: view, node, aggregate, performance, capacity, used, values 
+summary: È possibile monitorare i valori della capacità prestazionale utilizzata per tutti i nodi o per tutti gli aggregati in un cluster, oppure è possibile visualizzare i dettagli per un singolo nodo o aggregato. 
+---
+= Visualizza i valori utilizzati per la capacità di prestazione aggregata e del nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile monitorare i valori della capacità prestazionale utilizzata per tutti i nodi o per tutti gli aggregati in un cluster, oppure è possibile visualizzare i dettagli per un singolo nodo o aggregato.
+
+I valori della capacità prestazionale utilizzata vengono visualizzati nella Dashboard, nelle pagine Inventario prestazioni, nella pagina Migliori prestazioni, nella pagina Crea criterio soglia, nelle pagine Esplora prestazioni e nei grafici dettagliati.  Ad esempio, la pagina Prestazioni: tutti gli aggregati fornisce una colonna Capacità di prestazione utilizzata per visualizzare il valore della capacità di prestazione utilizzata per tutti gli aggregati.
+
+image::../media/node_inventory_used_headroom.gif[Uno screenshot dell'interfaccia utente della pagina Prestazioni: Tutti gli aggregati]
+
+Monitorare il contatore della capacità prestazionale utilizzata consente di identificare quanto segue:
+
+* Se i nodi o gli aggregati su qualsiasi cluster hanno un valore di capacità di prestazioni elevato utilizzato
+* Se i nodi o gli aggregati su qualsiasi cluster hanno eventi di capacità di prestazioni attive utilizzati
+* I nodi e gli aggregati che hanno la capacità di prestazioni più alta e più bassa vengono utilizzati in un cluster
+* Valori del contatore di latenza e utilizzo in combinazione con nodi o aggregati che hanno valori di capacità di prestazioni elevate utilizzati
+* In che modo i valori di capacità prestazionale utilizzati per i nodi in una coppia HA saranno influenzati se uno dei nodi fallisce
+* I volumi e i LUN più occupati su un aggregato che ha un valore di capacità di prestazioni elevato utilizzato
+

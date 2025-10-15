@@ -1,0 +1,54 @@
+---
+permalink: api-automation/concept_security_apis.html 
+sidebar: sidebar 
+keywords: manage, user 
+summary: 'È possibile utilizzare le API nella categoria sicurezza per controllare l"accesso degli utenti agli oggetti cluster selezionati in Active IQ Unified Manager.  È possibile aggiungere utenti locali o utenti del database.  È anche possibile aggiungere utenti o gruppi remoti che appartengono a un server di autenticazione.  In base ai privilegi dei ruoli assegnati agli utenti, questi possono gestire gli oggetti di archiviazione o visualizzare i dati in Unified Manager.' 
+---
+= Gestisci gli utenti tramite API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare le API in `security` categoria per controllare l'accesso degli utenti agli oggetti cluster selezionati in Active IQ Unified Manager.  È possibile aggiungere utenti locali o utenti del database.  È anche possibile aggiungere utenti o gruppi remoti che appartengono a un server di autenticazione.  In base ai privilegi dei ruoli assegnati agli utenti, questi possono gestire gli oggetti di archiviazione o visualizzare i dati in Unified Manager.
+
+[NOTE]
+====
+Per eseguire queste operazioni è necessario disporre del ruolo di Amministratore dell'applicazione.  Per configurare queste impostazioni è possibile utilizzare anche l'interfaccia utente Web di Unified Manager.
+
+====
+Le API sotto il `security` categoria utilizza il parametro utenti, ovvero il nome utente, e non il parametro chiave come identificatore univoco per l'entità utente.
+
+[cols="3*"]
+|===
+| Verbo HTTP | Sentiero | Descrizione 
+
+
+ a| 
+`GET`
+
+`POST`
+ a| 
+`/security/users`
+
+`/security/users`
+ a| 
+È possibile utilizzare questi metodi per ottenere i dettagli degli utenti o aggiungere nuovi utenti a Unified Manager.
+
+È possibile aggiungere ruoli specifici agli utenti in base alla loro tipologia.  Quando si aggiungono utenti, è necessario fornire le password per l'utente locale, l'utente addetto alla manutenzione e l'utente del database.
+
+
+
+ a| 
+`GET`
+
+`PATCH`
+
+`DELETE`
+ a| 
+`/security/users/\{name}`
+ a| 
+Il metodo GET consente di recuperare tutti i dettagli di un utente, come nome, indirizzo email, ruolo, tipo di autorizzazione.  Il metodo PATCH consente di aggiornare i dettagli.  Il metodo DELETE consente di rimuovere l'utente.
+
+|===

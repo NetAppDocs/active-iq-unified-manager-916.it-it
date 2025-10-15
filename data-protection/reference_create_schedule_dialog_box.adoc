@@ -1,0 +1,74 @@
+---
+permalink: data-protection/reference_create_schedule_dialog_box.html 
+sidebar: sidebar 
+keywords: create, schedule, dialog box 
+summary: La finestra di dialogo Crea pianificazione consente di creare una pianificazione di protezione di base o avanzata per i trasferimenti di relazioni SnapMirror e SnapVault .  È possibile creare una nuova pianificazione per aumentare la frequenza dei trasferimenti di dati a causa di frequenti aggiornamenti dei dati oppure è possibile creare una pianificazione meno frequente quando i dati cambiano raramente. 
+---
+= Finestra di dialogo Crea pianificazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Crea pianificazione consente di creare una pianificazione di protezione di base o avanzata per i trasferimenti di relazioni SnapMirror e SnapVault .  È possibile creare una nuova pianificazione per aumentare la frequenza dei trasferimenti di dati a causa di frequenti aggiornamenti dei dati oppure è possibile creare una pianificazione meno frequente quando i dati cambiano raramente.
+
+Non è possibile configurare le pianificazioni per le relazioni sincrone SnapMirror .
+
+* *Cluster di destinazione*
++
+Il nome del cluster selezionato nella scheda SnapVault o nella scheda SnapMirror della finestra di dialogo Configura protezione.
+
+* *Nome programma*
++
+Il nome che fornisci per la pianificazione.  I nomi delle pianificazioni possono essere composti dai caratteri dalla A alla Z, dalla a alla z, dallo 0 al 9, nonché da uno qualsiasi dei seguenti caratteri speciali: !  @ # $ % {accento circonflesso} & * ( ) _ -.  I nomi degli orari non possono contenere i seguenti caratteri: < >.
+
+* *Base o Avanzato*
++
+La modalità di pianificazione che desideri utilizzare.
+
++
+La modalità base include i seguenti elementi:
+
++
+** Ripetere
++
+Con quale frequenza si verifica un trasferimento programmato.  Le opzioni disponibili sono oraria, giornaliera e settimanale.
+
+** Giorno
++
+Quando si seleziona una ripetizione settimanale, il giorno della settimana in cui avviene il trasferimento.
+
+** Tempo
++
+Selezionando Giornaliero o Settimanale, viene indicata l'ora del giorno in cui avviene il trasferimento.
+
+
+
++
+La modalità avanzata include i seguenti elementi:
+
++
+** Mesi
++
+Un elenco numerico separato da virgole che rappresenta i mesi dell'anno.  I valori validi sono compresi tra 0 e 11, dove zero rappresenta gennaio e così via.  Questo elemento è facoltativo.  Lasciando il campo vuoto si intende che i trasferimenti avvengono ogni mese.
+
+** Giorni
++
+Un elenco numerico separato da virgole che rappresenta il giorno del mese.  I valori validi sono compresi tra 1 e 31.  Questo elemento è facoltativo.  Lasciando il campo vuoto si implica che il trasferimento avviene ogni giorno del mese.
+
+** Giorni feriali
++
+Un elenco numerico separato da virgole che rappresenta i giorni della settimana.  I valori validi sono compresi tra 0 e 6, dove 0 rappresenta la domenica e così via.  Questo elemento è facoltativo.  Lasciando il campo vuoto si implica che il trasferimento avviene ogni giorno della settimana.  Se viene specificato un giorno della settimana ma non un giorno del mese, il trasferimento avviene solo nel giorno della settimana specificato e non tutti i giorni.
+
+** Ore
++
+Un elenco numerico separato da virgole che rappresenta il numero di ore in un giorno.  I valori validi sono compresi tra 0 e 23, dove 0 rappresenta la mezzanotte.  Questo elemento è facoltativo.
+
+** Minuti
++
+Un elenco numerico separato da virgole che rappresenta i minuti in un'ora.  I valori validi sono compresi tra 0 e 59.  Questo elemento è obbligatorio.
+
+
+
+

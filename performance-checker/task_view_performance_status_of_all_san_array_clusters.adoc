@@ -1,0 +1,37 @@
+---
+permalink: performance-checker/task_view_performance_status_of_all_san_array_clusters.html 
+sidebar: sidebar 
+keywords: all san, array, performance, clusters 
+summary: 'È possibile utilizzare la vista Prestazioni: Tutti i cluster per visualizzare lo stato delle prestazioni di tutti i cluster SAN Array.' 
+---
+= Visualizza le prestazioni per tutti i cluster SAN Array
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la vista Prestazioni: Tutti i cluster per visualizzare lo stato delle prestazioni di tutti i cluster SAN Array.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Operatore, Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+È possibile visualizzare informazioni generali per tutti i cluster SAN Array nella vista Prestazioni: Tutti i cluster e dettagli nella pagina Cluster/Esplora prestazioni.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Archiviazione* > *Cluster*.
+. Assicurarsi che la colonna "`Personalità`" sia visualizzata nella vista *Salute: Tutti i cluster* oppure aggiungerla utilizzando il controllo *Mostra / Nascondi*.
++
+Questa colonna visualizza "`All SAN Array`" per i cluster All SAN Array.
+
+. Per visualizzare informazioni sulle prestazioni in tali cluster, selezionare la vista *Prestazioni: tutti i cluster*.
++
+Visualizza le informazioni sulle prestazioni per il cluster All SAN Array.
+
+. Per visualizzare informazioni dettagliate sulle prestazioni di tali cluster, fare clic sul nome di un cluster All SAN Array.
+. Fare clic sulla scheda *Esplora*.
+. Nella pagina *Cluster / Performance Explorer*, seleziona *Nodi su questo cluster* dal menu *Visualizza e confronta*.
++
+È possibile confrontare le statistiche delle prestazioni di entrambi i nodi su questo cluster per assicurarsi che il carico sia pressoché identico su entrambi i nodi.  Se ci sono grandi discrepanze tra i due nodi, puoi aggiungere il secondo nodo ai grafici e confrontare i valori su un intervallo di tempo più lungo per identificare eventuali problemi di configurazione.
+
+

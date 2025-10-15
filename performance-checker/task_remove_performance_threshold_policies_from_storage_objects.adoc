@@ -1,0 +1,58 @@
+---
+permalink: performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html 
+sidebar: sidebar 
+keywords: remove, performance, threshold, policies, storage, objects 
+summary: 'È possibile rimuovere un criterio di soglia delle prestazioni definito dall"utente da un oggetto di archiviazione quando non si desidera più che Unified Manager monitori il valore del contatore delle prestazioni.' 
+---
+= Rimuovere i criteri di soglia delle prestazioni dagli oggetti di archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile rimuovere un criterio di soglia delle prestazioni definito dall'utente da un oggetto di archiviazione quando non si desidera più che Unified Manager monitori il valore del contatore delle prestazioni.
+
+.Prima di iniziare
+È necessario disporre del ruolo di amministratore dell'applicazione.
+
+È possibile rimuovere solo un criterio alla volta da un oggetto selezionato.
+
+È possibile rimuovere un criterio di soglia da più oggetti di archiviazione selezionando più di un oggetto nell'elenco.
+
+.Passi
+. Dalla pagina *inventario* di qualsiasi oggetto di archiviazione, seleziona uno o più oggetti a cui è applicata almeno una policy di soglia delle prestazioni.
++
+|===
+| Per cancellare le soglie da... | Fai questo... 
+
+
+ a| 
+Un singolo oggetto
+ a| 
+Seleziona la casella di controllo a sinistra dell'oggetto.
+
+
+
+ a| 
+Oggetti multipli
+ a| 
+Selezionare la casella di controllo a sinistra di ciascun oggetto.
+
+
+
+ a| 
+Tutti gli oggetti sulla pagina
+ a| 
+Clicimage:../media/select_dropdown_65_png.gif["seleziona l'icona a discesa"] nell'intestazione della colonna.
+
+|===
+. Fare clic su *Cancella criterio soglia prestazioni*.
++
+Viene visualizzata la pagina Cancella criterio soglia, che mostra un elenco dei criteri soglia attualmente assegnati agli oggetti di archiviazione.
+
+. Selezionare la policy di soglia che si desidera rimuovere dagli oggetti e fare clic su *Cancella policy*.
++
+Quando si seleziona un criterio di soglia, vengono visualizzati i dettagli del criterio in modo da poter confermare di aver selezionato il criterio appropriato.
+
+

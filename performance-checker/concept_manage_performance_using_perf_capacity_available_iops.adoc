@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/concept_manage_performance_using_perf_capacity_available_iops.html 
+sidebar: sidebar 
+keywords: managing, performance, performance, capacity, available, iops, information 
+summary: La capacità di prestazione indica quanta produttività è possibile ottenere da una risorsa senza superare le prestazioni utili di tale risorsa.  Se considerata utilizzando i contatori delle prestazioni esistenti, la capacità delle prestazioni è il punto in cui si ottiene il massimo utilizzo da un nodo o da un aggregato prima che la latenza diventi un problema. 
+---
+= Gestire le prestazioni utilizzando la capacità delle prestazioni e le informazioni IOPS disponibili
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La _capacità prestazionale_ indica quanta produttività è possibile ottenere da una risorsa senza superare le prestazioni utili di tale risorsa.  Se considerata utilizzando i contatori delle prestazioni esistenti, la capacità delle prestazioni è il punto in cui si ottiene il massimo utilizzo da un nodo o da un aggregato prima che la latenza diventi un problema.
+
+Unified Manager raccoglie statistiche sulla capacità delle prestazioni dai nodi e le aggrega in ciascun cluster.  La _capacità prestazionale utilizzata_ è la percentuale di capacità prestazionale attualmente utilizzata, mentre la _capacità prestazionale libera_ è la percentuale di capacità prestazionale ancora disponibile.
+
+Mentre la capacità di prestazioni libera fornisce una percentuale della risorsa ancora disponibile, _IOPS disponibili_ indica il numero di IOPS che possono essere aggiunti alla risorsa prima di raggiungere la capacità di prestazioni massima.  Utilizzando questa metrica, puoi essere certo di poter aggiungere carichi di lavoro di un numero predeterminato di IOPS a una risorsa.
+
+Monitorare le informazioni sulla capacità delle prestazioni presenta i seguenti vantaggi:
+
+* Aiuta a predisporre e bilanciare il flusso di lavoro.
+* Aiuta a prevenire il sovraccarico di un nodo o lo spostamento delle sue risorse oltre il punto ottimale, riducendo così la necessità di risolvere i problemi.
+* Ti aiuta a determinare con maggiore precisione dove potrebbero essere necessarie attrezzature di stoccaggio aggiuntive.
+

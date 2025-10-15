@@ -1,0 +1,69 @@
+---
+permalink: install-windows/task_restart_unified_manager_win.html 
+sidebar: sidebar 
+keywords: restart, unified manager 
+summary: Potrebbe essere necessario riavviare Unified Manager dopo aver apportato modifiche alla configurazione. 
+---
+= Riavvia Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario riavviare Unified Manager dopo aver apportato modifiche alla configurazione.
+
+.Prima di iniziare
+È necessario disporre dei privilegi di amministratore di Windows.
+
+.Passi
+. Accedi a Windows utilizzando l'account amministratore locale predefinito.
+. Arrestare i servizi Unified Manager:
++
+[cols="2*"]
+|===
+| Dal... | Arrestare i servizi nel seguente ordine... 
+
+
+ a| 
+Riga di comando
+ a| 
+.. `sc stop ocie-au`
+.. `sc stop Oncommandsvc`
+
+
+
+
+ a| 
+Microsoft Service Manager
+ a| 
+.. Servizio di acquisizione NetApp Active IQ (Ocie-au)
+.. Servizio NetApp Active IQ Management Server (Oncommandsvc)
+
+
+|===
+. Avviare i servizi Unified Manager:
++
+[cols="2*"]
+|===
+| Dal... | Avviare i servizi nel seguente ordine... 
+
+
+ a| 
+Riga di comando
+ a| 
+.. `sc start Oncommandsvc`
+.. `sc start ocie-au`
+
+
+
+
+ a| 
+Microsoft Service Manager
+ a| 
+.. Servizio NetApp Active IQ Management Server (Oncommandsvc)
+.. Servizio di acquisizione NetApp Active IQ (Ocie-au)
+
+
+|===
+

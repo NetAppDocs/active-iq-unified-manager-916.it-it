@@ -1,0 +1,28 @@
+---
+permalink: health-checker/concept_how_group_actions_work_on_storage_objects.html 
+sidebar: sidebar 
+keywords: group actions, work, storage, objects 
+summary: 'Un"azione di gruppo è un"operazione che viene eseguita su tutti gli oggetti di archiviazione in un gruppo.  Ad esempio, è possibile configurare l"azione del gruppo di soglie del volume per modificare simultaneamente i valori delle soglie del volume di tutti i volumi in un gruppo.' 
+---
+= Come funzionano le azioni di gruppo sugli oggetti di archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un'azione di gruppo è un'operazione che viene eseguita su tutti gli oggetti di archiviazione in un gruppo.  Ad esempio, è possibile configurare l'azione del gruppo di soglie del volume per modificare simultaneamente i valori delle soglie del volume di tutti i volumi in un gruppo.
+
+I gruppi supportano tipi di azioni di gruppo univoci.  È possibile avere un gruppo con un solo tipo di azione di gruppo per la soglia di integrità del volume.  Tuttavia, è possibile configurare un diverso tipo di azione di gruppo, se disponibile, per lo stesso gruppo.  Il grado di un'azione di gruppo determina l'ordine in cui l'azione viene applicata agli oggetti di archiviazione.  La pagina dei dettagli di un oggetto di archiviazione fornisce informazioni sull'azione di gruppo applicata all'oggetto di archiviazione.
+
+
+
+== Esempio di azioni di gruppo uniche
+
+Si consideri un volume A appartenente ai gruppi G1 e G2 e per questi gruppi siano configurate le seguenti azioni di gruppo soglia di integrità del volume:
+
+* `Change_capacity_threshold`azione di gruppo con rango 1, per configurare la capacità del volume
+* `Change_snapshot_copies`azione di gruppo con rango 2, per configurare le copie Snapshot del volume
+
+
+IL `Change_capacity_threshold` l'azione di gruppo ha sempre la priorità sull' `Change_snapshot_copies` azione di gruppo e viene applicata al volume A. Quando Unified Manager completa un ciclo di monitoraggio, gli eventi correlati alla soglia di integrità del volume A vengono rivalutati in base al `Change_capacity_threshold` azione di gruppo.  Non è possibile configurare un altro tipo di soglia del volume per l'azione di gruppo per il gruppo G1 o G2.

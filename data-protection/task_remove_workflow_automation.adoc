@@ -1,0 +1,22 @@
+---
+permalink: data-protection/task_remove_workflow_automation.html 
+sidebar: sidebar 
+keywords: remove, oncommand, workflow, automation, setup, unified manager 
+summary: È possibile rimuovere la configurazione di OnCommand Workflow Automation da Unified Manager quando non si desidera più utilizzare Workflow Automation. 
+---
+= Rimuovere la configurazione di OnCommand Workflow Automation da Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile rimuovere la configurazione di OnCommand Workflow Automation da Unified Manager quando non si desidera più utilizzare Workflow Automation.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Generale* > *Automazione del flusso di lavoro* nel menu Impostazioni a sinistra.
+. Nella pagina *Automazione del flusso di lavoro*, fare clic su *Rimuovi configurazione*.
+

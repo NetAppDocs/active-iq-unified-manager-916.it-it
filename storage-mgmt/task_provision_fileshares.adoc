@@ -1,0 +1,61 @@
+---
+permalink: storage-mgmt/task_provision_fileshares.html 
+sidebar: sidebar 
+keywords: provision, file, share, volumes 
+summary: 'È possibile creare volumi di condivisione file che supportano i protocolli CIFS/SMB e NFS su un cluster esistente e su una macchina virtuale di archiviazione (VM di archiviazione) dalla pagina Provision Workload.' 
+---
+= Fornire volumi di condivisione file
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare volumi di condivisione file che supportano i protocolli CIFS/SMB e NFS su un cluster esistente e su una macchina virtuale di archiviazione (VM di archiviazione) dalla pagina Provision Workload.
+
+.Prima di iniziare
+* La VM di archiviazione deve disporre di spazio per il provisioning del volume di condivisione file.
+* Uno o entrambi i servizi SMB e NFS devono essere abilitati sulla VM di archiviazione.
+* Per selezionare e assegnare il Performance Service Level (PSL) e la Storage Efficiency Policy (SEP) al carico di lavoro, è necessario che le policy siano state create prima di iniziare a creare il carico di lavoro.
+
+
+.Passi
+. Nella pagina *Provision Workload*, aggiungi il nome del carico di lavoro che desideri creare, quindi seleziona il cluster dall'elenco disponibile.
+. In base al cluster selezionato, il campo *STORAGE VM* filtra le VM di archiviazione disponibili per quel cluster.  Selezionare la VM di archiviazione richiesta dall'elenco.
++
+In base ai servizi SMB e NFS supportati sulla VM di archiviazione, l'opzione NAS è abilitata nella sezione Informazioni host.
+
+. Nella sezione Archiviazione e ottimizzazione, assegnare la capacità di archiviazione e il PSL e, facoltativamente, un SEP per il carico di lavoro.
++
+Le specifiche per il SEP vengono assegnate al LUN e le definizioni per il PSL vengono applicate al carico di lavoro al momento della sua creazione.
+
+. Selezionare la casella di controllo *Applica limiti di prestazioni* se si desidera applicare il PSL assegnato al carico di lavoro.
++
+L'assegnazione di un PSL a un carico di lavoro garantisce che l'aggregato su cui viene creato il carico di lavoro possa supportare gli obiettivi di prestazioni e capacità definiti nella rispettiva policy.  Ad esempio, se a un carico di lavoro viene assegnato il PSL "Prestazioni estreme", l'aggregato su cui deve essere eseguito il provisioning del carico di lavoro deve essere in grado di supportare gli obiettivi di prestazioni e capacità della policy "Prestazioni estreme", come l'archiviazione SSD.
+
++
+[NOTE]
+====
+Se non si seleziona questa casella di controllo, il PSL non viene applicato al carico di lavoro e lo stato del carico di lavoro nella dashboard appare come non assegnato.
+
+====
+. Selezionare l'opzione *NAS*.
++
+Se non riesci a vedere l'opzione *NAS* abilitata, verifica se la VM di archiviazione selezionata supporta SMB o NFS, oppure entrambi.
+
++
+[NOTE]
+====
+Se la VM di archiviazione è abilitata per i servizi SMB e NFS, è possibile selezionare le caselle di controllo *Condividi tramite NFS* e *Condividi tramite SMB* e creare una condivisione file che supporti entrambi i protocolli NFS e SMB.  Se si desidera creare una condivisione SMB o CIFS, selezionare solo la rispettiva casella di controllo.
+
+====
+. Per i volumi di condivisione file NFS, specificare l'indirizzo IP dell'host o della rete per accedere al volume di condivisione file.  È possibile immettere valori separati da virgole per più host.
++
+Aggiungendo l'indirizzo IP dell'host, viene eseguito un controllo interno per verificare la corrispondenza dei dettagli dell'host con la VM di archiviazione e viene creata la policy di esportazione per quell'host oppure, se esiste già una policy, questa viene riutilizzata.  Se sono state create più condivisioni NFS per lo stesso host, per tutte le condivisioni di file viene riutilizzata una policy di esportazione disponibile per lo stesso host con regole corrispondenti.  La funzione di specificare le regole delle singole policy o di riutilizzare le policy fornendo chiavi policy specifiche è disponibile quando si esegue il provisioning della condivisione NFS tramite API.
+
+. Per una condivisione SMB, specificare quali utenti o gruppi di utenti possono accedere alla condivisione SMB e assegnare le autorizzazioni necessarie.  Per ogni gruppo di utenti, durante la creazione della condivisione file viene generato un nuovo elenco di controllo degli accessi (ACL).
+. Fare clic su *Salva*.
++
+Il carico di lavoro viene aggiunto all'elenco dei carichi di lavoro di archiviazione.
+
+

@@ -1,0 +1,31 @@
+---
+permalink: events/task_test_alerts.html 
+sidebar: sidebar 
+keywords: test, alerts 
+summary: 'Puoi testare un avviso per verificare di averlo configurato correttamente.  Quando viene attivato un evento, viene generato un avviso e un"e-mail di avviso viene inviata ai destinatari configurati.  È possibile verificare se la notifica è stata inviata e se lo script è stato eseguito utilizzando l"avviso di prova.' 
+---
+= Avvisi di prova
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi testare un avviso per verificare di averlo configurato correttamente.  Quando viene attivato un evento, viene generato un avviso e un'e-mail di avviso viene inviata ai destinatari configurati.  È possibile verificare se la notifica è stata inviata e se lo script è stato eseguito utilizzando l'avviso di prova.
+
+.Prima di iniziare
+* È necessario aver configurato le impostazioni di notifica, quali l'indirizzo e-mail dei destinatari, il server SMTP e la trap SNMP.
++
+Il server Unified Manager può utilizzare queste impostazioni per inviare notifiche agli utenti quando viene generato un evento.
+
+* È necessario aver assegnato uno script e configurato lo script in modo che venga eseguito quando viene generato l'avviso.
+* È necessario disporre del ruolo di amministratore dell'applicazione.
+
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Configurazione avvisi*.
+. Nella pagina *Impostazione avviso*, seleziona l'avviso che vuoi testare, quindi fai clic su *Test*.
++
+Un'e-mail di avviso di prova verrà inviata agli indirizzi e-mail specificati durante la creazione dell'avviso.
+
+

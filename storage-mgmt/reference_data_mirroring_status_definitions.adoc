@@ -1,0 +1,42 @@
+---
+permalink: storage-mgmt/reference_data_mirroring_status_definitions.html 
+sidebar: sidebar 
+keywords: data mirror, status, definitions 
+summary: Le configurazioni MetroCluster forniscono il mirroring dei dati e la possibilità aggiuntiva di avviare un failover se un intero sito diventa non disponibile.  Lo stato del mirroring dei dati tra i cluster in una configurazione MetroCluster può essere Normale o Mirroring non disponibile.  La comprensione dello stato consente di gestire in modo efficace le configurazioni MetroCluster . 
+---
+= Definizioni dello stato di mirroring dei dati per MetroCluster su FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le configurazioni MetroCluster su FC forniscono il mirroring dei dati e la possibilità aggiuntiva di avviare un failover se un intero sito diventa non disponibile.  Lo stato del mirroring dei dati tra i cluster in una configurazione MetroCluster su FC può essere Normale o Mirroring non disponibile.  La comprensione dello stato consente di gestire in modo efficace le configurazioni MetroCluster .
+
+|===
+| Stato di mirroring dei dati | Descrizione | Icona visualizzata 
+
+
+ a| 
+Normale
+ a| 
+Il mirroring dei dati tra i cluster nella configurazione MetroCluster è normale.
+ a| 
+image:../media/metrocluster_connectivity_optimal.gif["icona ottimale della connettività del metrocluster"]
+
+
+
+ a| 
+Mirroring non disponibile
+ a| 
+Il mirroring dei dati tra i cluster nella configurazione MetroCluster non è disponibile a causa del passaggio.  Ad esempio, quando il cluster partner è inattivo a causa di un disastro o quando è pianificato un passaggio a fini di test.
+ a| 
+Commutazione con errori:
+
+image::../media/metrocluster_connectivity_down.gif[icona di connettività metrocluster inattiva]
+
+Passaggio riuscito:
+
+image::../media/metrocluster_connectivity_failover.gif[icona di failover della connettività metrocluster]
+
+|===

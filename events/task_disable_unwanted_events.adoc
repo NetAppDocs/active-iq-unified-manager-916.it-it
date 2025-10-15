@@ -1,0 +1,51 @@
+---
+permalink: events/task_disable_unwanted_events.html 
+sidebar: sidebar 
+keywords: disable, unwanted, events 
+summary: Tutti gli eventi sono abilitati per impostazione predefinita.  È possibile disabilitare gli eventi a livello globale per impedire la generazione di notifiche per eventi che non sono importanti nel proprio ambiente.  È possibile abilitare gli eventi disabilitati quando si desidera riprendere a ricevere le relative notifiche. 
+---
+= Disabilitare gli eventi indesiderati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tutti gli eventi sono abilitati per impostazione predefinita.  È possibile disabilitare gli eventi a livello globale per impedire la generazione di notifiche per eventi che non sono importanti nel proprio ambiente.  È possibile abilitare gli eventi disabilitati quando si desidera riprendere a ricevere le relative notifiche.
+
+.Prima di iniziare
+È necessario disporre del ruolo di Amministratore dell'applicazione o Amministratore dell'archiviazione.
+
+Quando si disabilitano gli eventi, gli eventi generati in precedenza nel sistema vengono contrassegnati come obsoleti e gli avvisi configurati per tali eventi non vengono attivati.  Quando si abilitano eventi disabilitati, le notifiche per questi eventi vengono generate a partire dal ciclo di monitoraggio successivo.
+
+Quando si disabilita un evento per un oggetto (ad esempio, il `vol offline` evento) e in seguito si abilita l'evento, Unified Manager non genera nuovi eventi per gli oggetti che sono andati offline quando l'evento era nello stato disabilitato.  Unified Manager genera un nuovo evento solo quando si verifica una modifica nello stato dell'oggetto dopo la riattivazione dell'evento.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Configurazione evento*.
+. Nella pagina *Impostazione evento*, disabilita o abilita gli eventi scegliendo una delle seguenti opzioni:
++
+|===
+| Se lo desidera... | Allora fai così... 
+
+
+ a| 
+Disabilitare gli eventi
+ a| 
+.. Fare clic su *Disabilita*.
+.. Nella finestra di dialogo Disabilita eventi, seleziona la gravità dell'evento.
+.. Nella colonna Eventi corrispondenti, seleziona gli eventi che desideri disabilitare in base alla gravità dell'evento, quindi fai clic sulla freccia destra per spostare tali eventi nella colonna Disabilita eventi.
+.. Fare clic su *Salva e chiudi*.
+.. Verificare che gli eventi disabilitati siano visualizzati nella vista elenco della pagina Impostazione evento.
+
+
+
+
+ a| 
+Abilita eventi
+ a| 
+.. Seleziona la casella di controllo per l'evento o gli eventi che desideri abilitare.
+.. Fare clic su *Abilita*.
+
+
+|===
+

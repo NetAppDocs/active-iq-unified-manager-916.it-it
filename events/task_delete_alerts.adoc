@@ -1,0 +1,23 @@
+---
+permalink: events/task_delete_alerts.html 
+sidebar: sidebar 
+keywords: delete, alerts 
+summary: È possibile eliminare un avviso quando non è più necessario.  Ad esempio, è possibile eliminare un avviso creato per una risorsa specifica quando tale risorsa non è più monitorata da Unified Manager. 
+---
+= Elimina avvisi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare un avviso quando non è più necessario.  Ad esempio, è possibile eliminare un avviso creato per una risorsa specifica quando tale risorsa non è più monitorata da Unified Manager.
+
+.Prima di iniziare
+È necessario disporre del ruolo di amministratore dell'applicazione.
+
+.Passi
+. Nel riquadro di navigazione a sinistra, fare clic su *Gestione archiviazione* > *Configurazione avvisi*.
+. Nella pagina *Impostazione avvisi*, seleziona gli avvisi che desideri eliminare e fai clic su *Elimina*.
+. Fare clic su *Sì* per confermare la richiesta di eliminazione.
+

@@ -1,0 +1,68 @@
+---
+permalink: events/reference_dynamic_performance_event_chart_details.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, chart, details 
+summary: 'Per gli eventi di prestazioni dinamiche, la sezione Diagnosi di sistema della pagina Dettagli evento elenca i carichi di lavoro principali con la latenza o l"utilizzo più elevati del componente cluster in competizione.  Le statistiche sulle prestazioni si basano sul momento in cui l"evento prestazionale è stato rilevato fino all"ultima analisi dell"evento.  I grafici mostrano anche le statistiche storiche delle prestazioni del componente del cluster in competizione.' 
+---
+= Dettagli del grafico degli eventi di prestazioni dinamiche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per gli eventi di prestazioni dinamiche, la sezione Diagnosi di sistema della pagina Dettagli evento elenca i carichi di lavoro principali con la latenza o l'utilizzo più elevati del componente cluster in competizione.
+
+Le statistiche sulle prestazioni si basano sul momento in cui l'evento prestazionale è stato rilevato fino all'ultima analisi dell'evento.  I grafici mostrano anche le statistiche storiche delle prestazioni del componente del cluster in competizione.
+
+Ad esempio, è possibile identificare i carichi di lavoro con un elevato utilizzo di un componente per determinare quale carico di lavoro spostare su un componente meno utilizzato.  Spostando il carico di lavoro si ridurrebbe la quantità di lavoro sul componente corrente, eventualmente eliminando il componente dalla competizione.  Nella parte superiore di questa sezione sono riportati l'intervallo di data e ora in cui un evento è stato rilevato e analizzato l'ultima volta.  Per gli eventi attivi (nuovi o riconosciuti), viene aggiornato l'ultimo orario analizzato.
+
+I grafici di latenza e attività mostrano i nomi dei carichi di lavoro principali quando si passa il cursore sul grafico.  Facendo clic sul menu Tipo di carico di lavoro a destra del grafico è possibile ordinare i carichi di lavoro in base al loro ruolo nell'evento, inclusi _squali_, _bulli_ o _vittime_, e vengono visualizzati i dettagli sulla loro latenza e sul loro utilizzo sul componente del cluster in competizione.  È possibile confrontare il valore effettivo con quello previsto per vedere quando il carico di lavoro si è trovato al di fuori dell'intervallo previsto di latenza o utilizzo.  Per informazioni, vederelink:..//performance-checker/concept_types_of_workloads_monitored_by_unified_manager.html["Tipi di carichi di lavoro monitorati da Unified Manager"] .
+
+[NOTE]
+====
+Quando si ordina in base alla deviazione massima della latenza, i carichi di lavoro definiti dal sistema non vengono visualizzati nella tabella, perché la latenza si applica solo ai carichi di lavoro definiti dall'utente.  I carichi di lavoro con valori di latenza molto bassi non vengono visualizzati nella tabella.
+
+====
+Per ulteriori informazioni sulle soglie di prestazioni dinamiche, vederelink:../performance-checker/concept_analyze_events_from_dynamic_performance_thresholds.html["Analisi degli eventi dalle soglie di prestazioni dinamiche"] .
+
+Per informazioni su come Unified Manager classifica i carichi di lavoro e determina l'ordine di ordinamento, vederelink:../performance-checker/concept_how_um_determines_performance_impact_for_incident.html["Come Unified Manager determina l'impatto sulle prestazioni di un evento"] .
+
+I dati nei grafici mostrano le statistiche delle prestazioni delle 24 ore precedenti l'ultima analisi dell'evento.  I valori effettivi e quelli previsti per ciascun carico di lavoro si basano sul tempo in cui il carico di lavoro è stato coinvolto nell'evento.  Ad esempio, un carico di lavoro potrebbe essere coinvolto in un evento dopo che l'evento è stato rilevato, quindi le sue statistiche sulle prestazioni potrebbero non corrispondere ai valori al momento del rilevamento dell'evento.  Per impostazione predefinita, i carichi di lavoro vengono ordinati in base alla deviazione massima (massima) della latenza.
+
+[NOTE]
+====
+Poiché Unified Manager conserva un massimo di 30 giorni di dati storici di 5 minuti sulle prestazioni e sugli eventi, se l'evento ha più di 30 giorni, non vengono visualizzati dati sulle prestazioni.
+
+====
+* *Colonna Ordinamento carico di lavoro*
++
+** *Grafico di latenza*
++
+Visualizza l'impatto dell'evento sulla latenza del carico di lavoro durante l'ultima analisi.
+
+** *Colonna Utilizzo componenti*
++
+Visualizza i dettagli sull'utilizzo del carico di lavoro del componente del cluster in competizione.  Nei grafici, l'utilizzo effettivo è rappresentato dalla linea blu.  Una barra rossa evidenzia la durata dell'evento, dal momento del rilevamento all'ultimo momento analizzato. Per maggiori informazioni, vedere link:../performance-checker/reference_workload_performance_measurement_values.html["Valori di misurazione delle prestazioni del carico di lavoro"].
+
++
+[NOTE]
+====
+Per il componente di rete, poiché le statistiche sulle prestazioni di rete provengono dall'attività esterna al cluster, questa colonna non viene visualizzata.
+
+====
+** *Utilizzo dei componenti*
++
+Visualizza la cronologia di utilizzo, in percentuale, per i componenti di elaborazione di rete, elaborazione dati e aggregazione oppure la cronologia dell'attività, in percentuale, per il componente del gruppo di policy QoS.  Il grafico non viene visualizzato per i componenti di rete o di interconnessione.  È possibile puntare alle statistiche per visualizzare le statistiche di utilizzo in un momento specifico.
+
+** *Cronologia totale MB/s scritti*
++
+Solo per il componente Risorse MetroCluster , mostra la velocità effettiva di scrittura totale, in megabyte al secondo (MBps), per tutti i carichi di lavoro del volume sottoposti a mirroring sul cluster partner in una configurazione MetroCluster .
+
+** *Cronologia eventi*
++
+Visualizza linee ombreggiate in rosso per indicare gli eventi storici per il componente in questione.  Per gli eventi obsoleti, il grafico mostra gli eventi che si sono verificati prima che l'evento selezionato venisse rilevato e dopo che è stato risolto.
+
+
+
+
