@@ -43,9 +43,6 @@ Unified Manager include le seguenti funzionalità:
 * Creazione e gestione di report sulle informazioni relative agli oggetti di archiviazione, quali capacità fisica e logica, utilizzo, risparmio di spazio, prestazioni ed eventi correlati
 * Integrazione con OnCommand Workflow Automation per eseguire flussi di lavoro
 +
-Storage Automation Store contiene pacchetti di flussi di lavoro di archiviazione automatizzati certificati NetApp, sviluppati per l'uso con OnCommand Workflow Automation (WFA).  È possibile scaricare i pacchetti e poi importarli in WFA per eseguirli.  I flussi di lavoro automatizzati sono disponibili qui:
-
-+
-https://automationstore.netapp.com["Negozio di automazione dell'archiviazione"]
+https://mysupport.netapp.com/site/products/all/details/ocwfa/downloads-tab["Download WFA"^]
 
 
