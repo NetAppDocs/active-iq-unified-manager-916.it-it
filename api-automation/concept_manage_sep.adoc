@@ -25,6 +25,7 @@ Si prega di notare i seguenti punti:
 ====
 
 
+[[view-storage-efficiency-policies]]
 == Visualizza le policy di efficienza di archiviazione
 
 È possibile utilizzare il metodo seguente per visualizzare i criteri di efficienza dell'archiviazione prima di assegnarli ai carichi di lavoro di archiviazione.  Questa API elenca tutte le policy di efficienza di archiviazione definite dal sistema e create dall'utente e recupera gli attributi di tutte le policy di efficienza di archiviazione.  Se si desidera interrogare una specifica politica di efficienza di archiviazione, è necessario immettere l'ID univoco della politica per recuperarne i dettagli.
@@ -46,6 +47,7 @@ OTTENERE
 |===
 
 
+[[add-storage-efficiency-policies]]
 == Aggiungi criteri di efficienza di archiviazione
 
 È possibile utilizzare il metodo seguente per creare criteri di efficienza di archiviazione personalizzati e assegnarli ai carichi di lavoro di archiviazione se i criteri definiti dal sistema non soddisfano i requisiti di provisioning per i carichi di lavoro di archiviazione.  Immettere i dettagli della politica di efficienza di archiviazione che si desidera creare come parametri di input.
@@ -65,6 +67,7 @@ INVIARE
 |===
 
 
+[[delete-storage-efficiency-policies]]
 == Elimina i criteri di efficienza dell'archiviazione
 
 È possibile utilizzare il seguente metodo per eliminare uno specifico criterio di efficienza di archiviazione.  Non è possibile eliminare un criterio di efficienza di archiviazione se è assegnato a un carico di lavoro o se è l'unico criterio di efficienza di archiviazione disponibile.  Per eliminare una determinata Policy di efficienza di archiviazione, è necessario fornire l'ID univoco della Policy di efficienza di archiviazione come parametro di input.
@@ -84,6 +87,7 @@ ELIMINARE
 |===
 
 
+[[modify-storage-efficiency-policies]]
 == Modificare le policy di efficienza di archiviazione
 
 È possibile utilizzare il metodo seguente per modificare un criterio di efficienza di archiviazione e aggiornarne le proprietà.  Non è possibile modificare un criterio di efficienza dell'archiviazione definito dal sistema o assegnato a un carico di lavoro.  Per modificare una determinata politica di efficienza di archiviazione, è necessario fornire l'ID univoco della politica di efficienza di archiviazione.  Inoltre, è necessario fornire l'immobile che si desidera aggiornare, insieme al suo valore.

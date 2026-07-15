@@ -70,6 +70,7 @@ IL `OPTIONS` metodo determina se una risorsa è disponibile.  Questa operazione 
 |===
 
 
+[[understand-the-api-gateway-tunneling]]
 == Comprendere il tunneling dell'API Gateway
 
 Le API gateway consentono di gestire gli oggetti ONTAP tramite Unified Manager.  Unified Manager gestisce i cluster e i dettagli di autenticazione e reindirizza le richieste all'endpoint REST ONTAP .  L'API gateway trasforma l'URL e i collegamenti Hypermedia as the Engine of Application State (HATEOAS) nell'intestazione e nel corpo della risposta con l'URL di base del gateway API.  L'API gateway funge da URL di base proxy a cui aggiungere l'URL REST ONTAP ed eseguire l'endpoint REST ONTAP richiesto.
@@ -102,6 +103,7 @@ L'API restituisce l'elenco dei volumi di archiviazione in quel cluster.  Il form
 
 
 
+[[set-api-scope]]
 == Imposta l'ambito dell'API
 
 Tutte le API hanno un contesto impostato all'interno dell'ambito del cluster.  Anche le API che operano sulla base di VM di storage hanno come ambito il cluster, ovvero le operazioni API vengono eseguite su una particolare VM di storage all'interno di un cluster gestito.  Quando esegui il `/gateways/\{uuid}/\{path}` API, assicurati di immettere l'UUID del cluster (UUID dell'origine dati Unified Manager) per il cluster su cui esegui l'operazione.  Per impostare il contesto su una specifica VM di archiviazione all'interno di quel cluster, immettere la chiave della VM di archiviazione come parametro X-Dot-SVM-UUID oppure il nome della VM di archiviazione come parametro X-Dot-SVM-Name.  Il parametro viene aggiunto come filtro nell'intestazione della stringa e l'operazione viene eseguita nell'ambito di quella VM di archiviazione all'interno di quel cluster.

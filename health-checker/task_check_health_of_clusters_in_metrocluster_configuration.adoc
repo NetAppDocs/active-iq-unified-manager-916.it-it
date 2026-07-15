@@ -21,6 +21,7 @@ summary: 'È possibile utilizzare Unified Manager per verificare lo stato operat
 
 
 
+[[determine-cluster-health-in-metrocluster-over-fc-configuration]]
 == Determinare lo stato del cluster in MetroCluster tramite la configurazione FC
 
 Per determinare lo stato di integrità del cluster in una configurazione MetroCluster su FC, seguire questi passaggi.
@@ -59,6 +60,7 @@ In questo esempio, se l'icona NVRAM sul cluster locale o partner è gialla o ros
 
 
 
+[[determine-cluster-health-in-metrocluster-over-ip-configuration]]
 == Determinare lo stato del cluster nella configurazione MetroCluster su IP
 
 Per determinare lo stato di integrità del cluster in una configurazione MetroCluster su IP, seguire questi passaggi.

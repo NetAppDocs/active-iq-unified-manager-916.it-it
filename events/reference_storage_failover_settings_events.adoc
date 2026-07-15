@@ -15,6 +15,7 @@ Gli eventi delle impostazioni di failover dell'archiviazione (SFO) forniscono in
 
 
 
+[[impact-area-availability]]
 == Area di impatto: disponibilità
 
 |===

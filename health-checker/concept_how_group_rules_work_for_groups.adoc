@@ -22,6 +22,7 @@ Una regola di gruppo è un criterio definito per consentire l'inclusione di ogge
 
 
 
+[[conditions]]
 == Condizioni
 
 È possibile creare più gruppi di condizioni e ogni gruppo di condizioni può avere una o più condizioni.  È possibile applicare tutti i gruppi di condizioni definiti in una regola di gruppo per i gruppi, al fine di specificare quali oggetti di archiviazione sono inclusi nel gruppo.
@@ -93,6 +94,7 @@ Il campo valore cambia in base all'operando selezionato.
 
 
 
+[[example-of-a-group-rule-with-conditions]]
 == Esempio di una regola di gruppo con condizioni
 
 Consideriamo un gruppo di condizioni per un volume con le due condizioni seguenti:
@@ -105,12 +107,14 @@ Questo gruppo di condizioni seleziona tutti i volumi che includono "`vol`" nei l
 
 
 
+[[condition-groups]]
 == Gruppi di condizioni
 
 I gruppi di condizioni vengono eseguiti utilizzando l'operatore logico OR e quindi applicati agli oggetti di archiviazione.  Per essere inclusi in un gruppo, gli oggetti di archiviazione devono soddisfare uno dei gruppi di condizioni.  Vengono combinati gli oggetti di archiviazione di tutti i gruppi di condizioni.  È possibile utilizzare i gruppi di condizioni per ampliare l'ambito degli oggetti di archiviazione da includere in un gruppo.
 
 
 
+[[example-of-a-group-rule-with-condition-groups]]
 == Esempio di una regola di gruppo con gruppi di condizioni
 
 Consideriamo due gruppi di condizioni per un volume, ciascuno contenente le due condizioni seguenti:

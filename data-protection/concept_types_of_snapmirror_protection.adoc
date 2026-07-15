@@ -15,6 +15,7 @@ A seconda dell'implementazione della topologia di archiviazione dati, Unified Ma
 
 
 
+[[traditional-snapmirror-asynchronous-protection-relationships]]
 == Relazioni di protezione asincrone tradizionali SnapMirror
 
 La protezione asincrona SnapMirror tradizionale fornisce protezione mirror di replicazione a blocchi tra i volumi di origine e di destinazione.
@@ -23,6 +24,7 @@ Nelle relazioni SnapMirror tradizionali, le operazioni di mirroring vengono eseg
 
 
 
+[[snapmirror-asynchronous-protection-with-version-flexible-replication]]
 == Protezione asincrona SnapMirror con replica flessibile in base alla versione
 
 La protezione asincrona SnapMirror con replica flessibile in base alla versione fornisce una protezione mirror di replica logica tra volumi di origine e di destinazione, anche se tali volumi sono in esecuzione con versioni diverse del software ONTAP 8.3 o successive (ad esempio, dalla versione 8.3 alla 8.3.1, dalla 8.3 alla 9.1 o dalla 9.2.2 alla 9.2).
@@ -39,6 +41,7 @@ In entrambe le circostanze elencate, è richiesta l'esecuzione più rapida basat
 
 
 
+[[snapmirror-asynchronous-protection-with-version-flexible-replication-and-backup-option]]
 == Protezione asincrona SnapMirror con replica flessibile in base alla versione e opzione di backup
 
 La protezione asincrona SnapMirror con opzione di replica e backup flessibile in base alla versione fornisce protezione mirror tra volumi di origine e di destinazione e la possibilità di archiviare più copie dei dati mirror nella destinazione.
@@ -49,18 +52,21 @@ Nelle relazioni SnapMirror con opzione di replica e backup flessibile in base al
 
 
 
+[[snapmirror-unified-replication-mirror-and-vault]]
 == SnapMirror Unified Replication (mirror e vault)
 
 La replica unificata SnapMirror consente di configurare il ripristino di emergenza e l'archiviazione sullo stesso volume di destinazione.  Come con SnapMirror, la protezione dati unificata esegue un trasferimento di base la prima volta che la si richiama.  Un trasferimento di base in base alla policy di protezione dati unificata predefinita "`MirrorAndVault`" crea una copia Snapshot del volume di origine, quindi trasferisce tale copia e i blocchi di dati a cui fa riferimento al volume di destinazione.  Come SnapVault, la protezione dati unificata non include le copie Snapshot più vecchie nella baseline.
 
 
 
+[[snapmirror-synchronous-protection-with-strict-synchronization]]
 == Protezione sincrona SnapMirror con sincronizzazione rigorosa
 
 La protezione sincrona SnapMirror con sincronizzazione "`strict`" garantisce che i volumi primario e secondario siano sempre una copia fedele l'uno dell'altro.  Se si verifica un errore di replica durante il tentativo di scrivere dati sul volume secondario, l'I/O del client sul volume primario viene interrotto.
 
 
 
+[[snapmirror-synchronous-protection-with-regular-synchronization]]
 == Protezione sincrona SnapMirror con sincronizzazione regolare
 
 La protezione sincrona SnapMirror con sincronizzazione "`regolare`" non richiede che il volume primario e quello secondario siano sempre una copia fedele l'uno dell'altro, garantendo così la disponibilità del volume primario.  Se si verifica un errore di replica durante il tentativo di scrivere dati sul volume secondario, i volumi primario e secondario perdono la sincronizzazione e l'I/O del client continuerà sul volume primario.
@@ -72,6 +78,7 @@ Il pulsante Ripristina e i pulsanti Operazione relazione non sono disponibili qu
 ====
 
 
+[[snapmirror-active-sync]]
 == Sincronizzazione attiva SnapMirror
 
 La funzionalità di sincronizzazione attiva SnapMirror è disponibile con ONTAP 9.8 e versioni successive e può essere utilizzata per proteggere le applicazioni con LUN, consentendo alle applicazioni di eseguire il failover in modo trasparente, garantendo la continuità aziendale in caso di disastro.

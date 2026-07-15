@@ -17,6 +17,7 @@ Se non hai generato un nuovo certificato HTTPS autofirmato, il certificato visua
 
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 I pulsanti di comando consentono di eseguire le seguenti operazioni:

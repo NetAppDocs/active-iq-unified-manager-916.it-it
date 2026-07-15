@@ -15,6 +15,7 @@ La pagina Pool di risorse visualizza i pool di risorse esistenti e i relativi me
 
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 I pulsanti di comando consentono di eseguire le seguenti attività:
@@ -35,6 +36,7 @@ Consente di eliminare uno o più pool di risorse.
 
 
 
+[[resource-pools-list]]
 == Elenco dei pool di risorse
 
 L'elenco Pool di risorse visualizza (in formato tabellare) le proprietà dei pool di risorse esistenti.
@@ -71,6 +73,7 @@ Visualizza la percentuale di spazio utilizzato nel pool di risorse.
 
 
 
+[[members-list-command-buttons]]
 == Pulsanti di comando dell'elenco dei membri
 
 I pulsanti di comando dell'elenco Membri consentono di eseguire le seguenti attività:
@@ -87,6 +90,7 @@ Consente di eliminare uno o più membri dal pool di risorse.
 
 
 
+[[members-list]]
 == Elenco dei membri
 
 L'elenco Membri visualizza (in formato tabellare) i membri del pool di risorse e le relative proprietà quando viene selezionato un pool di risorse.

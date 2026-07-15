@@ -42,6 +42,7 @@ I parametri IOP per i carichi di lavoro vengono generati dinamicamente, a second
 
 
 
+[[manage-workloads-by-assigning-psls]]
 == Gestire i carichi di lavoro assegnando PSL
 
 È possibile accedere ai PSL dalla pagina *Politiche* > *Livelli di servizio delle prestazioni* e utilizzando le API del provider di storage.  Gestire i carichi di lavoro di archiviazione assegnando loro dei PSL è comodo, poiché non è necessario gestirli singolarmente.  Eventuali modifiche possono essere gestite anche riassegnando un altro PSL anziché gestirli singolarmente.  Unified Manager ti aiuta ad assegnare PSL ai tuoi carichi di lavoro in base a valutazioni e raccomandazioni interne.
@@ -136,6 +137,7 @@ Per informazioni su come gli IOPS di picco e gli IOPS previsti contribuiscono a 
 
 
 
+[[events-generated-for-workloads-breaching-the-threshold-defined-by-psls]]
 === Eventi generati per carichi di lavoro che superano la soglia definita dai PSL
 
 Tieni presente che se i carichi di lavoro superano il valore di latenza previsto per il 30% del tempo durante l'ora precedente, Unified Manager genera uno dei seguenti eventi per avvisarti di un potenziale problema di prestazioni:
@@ -156,6 +158,7 @@ Per maggiori informazioni, consultare i seguenti link:
 
 
 
+[[system-defined-psls]]
 === PSL definiti dal sistema
 
 La tabella seguente fornisce informazioni sui PSL definiti dal sistema:

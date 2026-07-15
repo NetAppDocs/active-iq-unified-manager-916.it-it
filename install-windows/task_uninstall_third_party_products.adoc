@@ -15,6 +15,7 @@ Dopo aver aggiornato Unified Manager, puoi disinstallare prodotti di terze parti
 
 
 
+[[uninstall-python]]
 == Disinstallare Python
 
 .Passi
@@ -25,6 +26,7 @@ Dopo aver aggiornato Unified Manager, puoi disinstallare prodotti di terze parti
 
 
 
+[[uninstall-microsoft-visual-c-2013]]
 == Disinstallare Microsoft Visual C++ 2013
 
 .Passi

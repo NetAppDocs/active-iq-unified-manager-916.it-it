@@ -78,6 +78,7 @@ Numero di carichi di lavoro di archiviazione a cui è stato assegnato il SEP
 |===
 
 
+[[guidelines-for-creating-a-custom-storage-efficiency-policy]]
 == Linee guida per la creazione di una politica di efficienza di archiviazione personalizzata
 
 Se gli SEP esistenti non soddisfano i requisiti dei criteri per i carichi di lavoro di archiviazione, è possibile creare un SEP personalizzato.  Tuttavia, si consiglia di provare a utilizzare gli SEP definiti dal sistema per i carichi di lavoro di archiviazione e di creare SEP personalizzati solo se necessario.

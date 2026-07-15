@@ -17,6 +17,7 @@ summary: 'È possibile creare avvisi per essere avvisati quando viene generato u
 
 
 
+[[name]]
 == Nome
 
 Quest'area consente di specificare un nome e una descrizione per l'avviso:
@@ -33,6 +34,7 @@ Consente di specificare una descrizione per l'avviso.
 
 
 
+[[resources]]
 == Risorse
 
 Quest'area consente di selezionare una singola risorsa o di raggruppare le risorse in base a una regola dinamica per la quale si desidera attivare l'avviso.  Una _regola dinamica_ è l'insieme di risorse filtrate in base alla stringa di testo specificata.  È possibile cercare risorse selezionando un tipo di risorsa dall'elenco a discesa oppure è possibile specificare il nome esatto della risorsa per visualizzarne una specifica.
@@ -57,6 +59,7 @@ Se una risorsa è conforme sia alle regole di inclusione che a quelle di esclusi
 
 
 
+[[events]]
 == Eventi
 
 In questa area è possibile selezionare gli eventi per i quali si desidera creare gli avvisi.  È possibile creare avvisi per eventi in base a una particolare gravità o per un insieme di eventi.
@@ -75,6 +78,7 @@ Consente di selezionare gli eventi il cui nome contiene i caratteri specificati.
 
 
 
+[[actions]]
 == Azioni
 
 In questa area è possibile specificare gli utenti a cui inviare una notifica quando viene attivato un avviso.  È inoltre possibile specificare il metodo di notifica e la frequenza della notifica.
@@ -117,6 +121,7 @@ Se questa funzionalità non è disponibile nell'interfaccia utente, è perché �
 
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 * *Salva*

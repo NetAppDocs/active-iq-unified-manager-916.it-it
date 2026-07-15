@@ -15,6 +15,7 @@ La finestra di dialogo Risincronizza consente di risincronizzare i dati su una r
 
 
 
+[[resynchronization-options-tab]]
 == Scheda Opzioni di risincronizzazione
 
 La scheda Opzioni di risincronizzazione consente di impostare la priorità di trasferimento e la velocità di trasferimento massima per la relazione di protezione che si sta risincronizzando.
@@ -31,6 +32,7 @@ Specifica la velocità massima alla quale i dati vengono trasferiti tra cluster 
 
 
 
+[[source-snapshot-copies-tab]]
 == Scheda Copie snapshot di origine
 
 La scheda Copie snapshot di origine visualizza le seguenti informazioni sulla copia snapshot di origine utilizzata per il trasferimento di base:
@@ -55,6 +57,7 @@ Visualizza la copia Snapshot utilizzata per il trasferimento dei dati.  Facendo 
 
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 * *Invia*

@@ -17,6 +17,7 @@ I gruppi supportano tipi di azioni di gruppo univoci.  È possibile avere un gru
 
 
 
+[[example-of-unique-group-actions]]
 == Esempio di azioni di gruppo uniche
 
 Si consideri un volume A appartenente ai gruppi G1 e G2 e per questi gruppi siano configurate le seguenti azioni di gruppo soglia di integrità del volume:

@@ -20,6 +20,7 @@ Per ulteriori informazioni sui diversi stati anti-ransomware, vederelink:https:/
 
 
 
+[[view-security-details-of-all-volumes-with-anti-ransomware-detection]]
 == Visualizza i dettagli di sicurezza di tutti i volumi con rilevamento anti-ransomware
 
 .Passi
@@ -33,6 +34,7 @@ NOTE: L'anti-ransomware non è supportato per volumi offline, volumi con restriz
 
 
 
+[[view-security-details-of-all-storage-vms-with-anti-ransomware-detection]]
 == Visualizza i dettagli di sicurezza di tutte le VM di archiviazione con rilevamento anti-ransomware
 
 .Passi

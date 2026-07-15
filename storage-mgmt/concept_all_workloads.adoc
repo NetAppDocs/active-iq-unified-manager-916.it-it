@@ -19,6 +19,7 @@ Sono esclusi i volumi FlexGroup e i suoi componenti.
 
 
 
+[[workloads-overview]]
 == Panoramica dei carichi di lavoro
 
 La pagina Panoramica carichi di lavoro mostra una panoramica dei carichi di lavoro nel data center, nonché una panoramica dello spazio e delle prestazioni del data center.
@@ -29,6 +30,7 @@ La pagina Panoramica carichi di lavoro mostra una panoramica dei carichi di lavo
 
 
 
+[[all-workloads-view]]
 == Visualizzazione di tutti i carichi di lavoro
 
 Nella pagina *Archiviazione > Carichi di lavoro > Tutti i carichi di lavoro* sono elencati i carichi di lavoro di archiviazione associati ai cluster ONTAP gestiti da Unified Manager.
@@ -46,6 +48,7 @@ La pagina consente inoltre di assegnare criteri di efficienza di archiviazione (
 
 
 
+[[adding-or-provisioning-storage-workloads]]
 === Aggiunta o provisioning di carichi di lavoro di archiviazione
 
 È possibile aggiungere o predisporre i carichi di lavoro di archiviazione su LUN supportate (che supportano sia i protocolli iSCSI che FCP), condivisioni file NFS e condivisioni SMB.
@@ -57,6 +60,7 @@ La pagina consente inoltre di assegnare criteri di efficienza di archiviazione (
 
 
 
+[[viewing-and-filtering-workloads]]
 === Visualizzazione e filtraggio dei carichi di lavoro
 
 Nella schermata Tutti i carichi di lavoro, puoi visualizzare tutti i carichi di lavoro nel tuo data center o cercare carichi di lavoro di archiviazione specifici in base ai loro PSL o nomi.  Puoi utilizzare l'icona del filtro per inserire condizioni specifiche per la tua ricerca.  È possibile effettuare la ricerca in base a diverse condizioni di filtro, ad esempio in base al cluster host o alla VM di archiviazione.  L'opzione *Capacità totale* consente di filtrare in base alla capacità totale dei carichi di lavoro (per MB).  Tuttavia, in questo caso, il numero di carichi di lavoro restituiti potrebbe variare, perché la capacità totale viene confrontata a livello di byte.
@@ -67,6 +71,7 @@ La pagina consente inoltre di visualizzare i dettagli delle prestazioni di un ca
 
 
 
+[[analyzing-performance-and-capacity-criteria-for-a-workload]]
 === Analisi dei criteri di prestazioni e capacità per un carico di lavoro
 
 Il pulsante *Analizza carico di lavoro* nel pop-up *Analisi IOPS* conduce alla pagina Analisi carico di lavoro, dove è possibile selezionare un intervallo di tempo e visualizzare i trend di latenza, produttività e capacità per il carico di lavoro selezionato.  Per ulteriori informazioni sull'analizzatore del carico di lavoro, vederelink:..//performance-checker/concept_troubleshooting_workloads_using_workload_analyzer.html["Risoluzione dei problemi dei carichi di lavoro tramite l'analizzatore dei carichi di lavoro"] .

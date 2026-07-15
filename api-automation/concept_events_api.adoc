@@ -15,6 +15,7 @@ IL `events` , `alerts` , E `scripts` API sotto il `management-server` La categor
 
 
 
+[[view-and-modify-events]]
 == Visualizza e modifica gli eventi
 
 Unified Manager riceve gli eventi generati su ONTAP per i cluster monitorati e gestiti da Unified Manager.  Utilizzando queste API, puoi visualizzare gli eventi generati per i tuoi cluster, risolverli e aggiornarli.
@@ -54,6 +55,7 @@ Esegui questa API per assegnare un evento o modificare lo stato in riconosciuto 
 |===
 
 
+[[manage-alerts]]
 == Gestisci gli avvisi
 
 Gli eventi vengono generati automaticamente e continuamente.  Unified Manager genera un avviso solo quando un evento soddisfa determinati criteri di filtro.  È possibile selezionare gli eventi per i quali devono essere generati gli avvisi.  Utilizzando il `/management-server/alerts` API, è possibile configurare gli avvisi per inviare notifiche automatiche quando si verificano eventi specifici o eventi di determinati tipi di gravità.
@@ -103,6 +105,7 @@ NOTE: Quando si seleziona una risorsa per aggiungere un avviso, tenere presente 
 
 
 
+[[manage-scripts]]
 == Gestisci gli script
 
 Utilizzando il `/management-server/scripts` API, è anche possibile associare un avviso a uno script che viene eseguito quando viene attivato un avviso.  È possibile utilizzare gli script per modificare o aggiornare automaticamente più oggetti di archiviazione in Unified Manager.  Lo script è associato a un avviso.  Quando un evento attiva un avviso, lo script viene eseguito.  È possibile caricare script personalizzati e testarne l'esecuzione quando viene generato un avviso.  È possibile associare un avviso allo script in modo che venga eseguito quando viene generato un avviso per un evento in Unified Manager.

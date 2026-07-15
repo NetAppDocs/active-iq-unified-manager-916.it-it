@@ -28,6 +28,7 @@ La pagina Carichi di lavoro è composta dalle due sezioni seguenti:
 
 
 
+[[workloads-overview-section]]
 == Sezione panoramica dei carichi di lavoro
 
 La sezione Panoramica dei carichi di lavoro fornisce informazioni cumulative e immediate sui carichi di lavoro di archiviazione.  Lo stato dei carichi di lavoro di archiviazione viene visualizzato in base ai livelli di servizio delle prestazioni assegnati e non assegnati.
@@ -54,6 +55,7 @@ La sottosezione Conformità per livelli di servizio delle prestazioni visualizza
 
 
 
+[[data-center-overview-section]]
 == Sezione panoramica del data center
 
 La sezione Panoramica del data center rappresenta graficamente la capacità disponibile e utilizzata, nonché gli IOPS per tutti i cluster nel data center.  Utilizzando questi dati, dovresti gestire la capacità e gli IOPS dei carichi di lavoro di archiviazione.  La sezione visualizza anche le seguenti informazioni per i carichi di lavoro di archiviazione in tutti i cluster:

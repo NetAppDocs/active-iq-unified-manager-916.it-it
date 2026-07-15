@@ -26,6 +26,7 @@ Se si sposta un oggetto in un cluster diverso, la policy di soglia definita dall
 ====
 
 
+[[threshold-policy-functionality-during-ha-takeover-and-giveback]]
 == Funzionalità della politica di soglia durante l'acquisizione e la restituzione dell'HA
 
 Quando si verifica un'operazione di acquisizione o restituzione in una configurazione ad alta disponibilità (HA), gli oggetti che vengono spostati da un nodo all'altro mantengono le proprie policy di soglia nello stesso modo delle operazioni di spostamento manuale.  Poiché Unified Manager verifica le modifiche alla configurazione del cluster ogni 15 minuti, l'impatto del passaggio al nuovo nodo non viene identificato fino al successivo polling della configurazione del cluster.
@@ -37,12 +38,14 @@ Se si verificano sia un'operazione di acquisizione che di restituzione entro il 
 ====
 
 
+[[threshold-policy-functionality-during-aggregate-relocation]]
 == Funzionalità della politica di soglia durante la rilocazione aggregata
 
 Se si sposta un aggregato da un nodo a un altro nodo utilizzando `aggregate relocation start` comando, sia le policy di soglia singole che quelle combinate vengono mantenute su tutti gli oggetti e la parte del nodo della policy di soglia viene applicata al nuovo nodo.
 
 
 
+[[threshold-policy-functionality-during-metrocluster-switchover]]
 == Funzionalità della politica di soglia durante il passaggio a MetroCluster
 
 Gli oggetti che si spostano da un cluster a un altro in una configurazione MetroCluster non mantengono le impostazioni dei criteri di soglia definiti dall'utente.  Se necessario, è possibile applicare criteri di soglia sui volumi e sulle LUN spostati nel cluster partner.  Dopo che un oggetto è stato riportato al suo cluster originale, la politica di soglia definita dall'utente viene riapplicata automaticamente.

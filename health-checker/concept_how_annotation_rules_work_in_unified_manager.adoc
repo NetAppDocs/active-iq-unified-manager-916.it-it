@@ -22,6 +22,7 @@ Una regola di annotazione è un criterio definito per annotare gli oggetti di ar
 
 
 
+[[conditions]]
 == Condizioni
 
 È possibile creare più gruppi di condizioni e ogni gruppo di condizioni può avere una o più condizioni.  È possibile applicare tutti i gruppi di condizioni definiti in una regola di annotazione di un'annotazione per annotare gli oggetti di archiviazione.
@@ -72,6 +73,7 @@ Quando si seleziona l'annotazione come operando per un qualsiasi oggetto di arch
 
 
 
+[[example-of-an-annotation-rule-with-conditions]]
 == Esempio di una regola di annotazione con condizioni
 
 Si consideri una regola di annotazione con un gruppo di condizioni per un volume con le due condizioni seguenti:
@@ -84,12 +86,14 @@ Questa regola di annotazione annota tutti i volumi che includono "`vol`" nei lor
 
 
 
+[[condition-groups]]
 == Gruppi di condizioni
 
 I gruppi di condizioni vengono eseguiti utilizzando l'operatore logico OR e quindi applicati agli oggetti di archiviazione.  Gli oggetti di archiviazione devono soddisfare i requisiti di uno dei gruppi di condizioni da annotare.  Vengono annotati gli oggetti di archiviazione che soddisfano le condizioni di tutti i gruppi di condizioni.  È possibile utilizzare gruppi di condizioni per ampliare l'ambito degli oggetti di archiviazione da annotare.
 
 
 
+[[example-of-an-annotation-rule-with-condition-groups]]
 == Esempio di una regola di annotazione con gruppi di condizioni
 
 Si consideri una regola di annotazione con due gruppi di condizioni per un volume; ogni gruppo contiene le due condizioni seguenti:

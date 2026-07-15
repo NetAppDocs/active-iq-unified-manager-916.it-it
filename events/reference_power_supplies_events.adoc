@@ -15,6 +15,7 @@ Gli eventi degli alimentatori forniscono informazioni sullo stato dell'hardware,
 
 
 
+[[impact-area-availability]]
 == Area di impatto: disponibilità
 
 |===

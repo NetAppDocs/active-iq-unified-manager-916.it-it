@@ -15,6 +15,7 @@ Gli eventi di relazione Asynchronous Mirror e Vault forniscono informazioni sull
 
 
 
+[[impact-area-protection]]
 == Area di impatto: protezione
 
 [NOTE]

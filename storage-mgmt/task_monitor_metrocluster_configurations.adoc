@@ -29,6 +29,7 @@ Unified Manager utilizza avvisi sullo stato del sistema per indicare lo stato de
 
 
 
+[[monitor-connectivity-issues-in-metrocluster-over-fc-configuration]]
 == Monitora i problemi di connettività in MetroCluster tramite la configurazione FC
 
 Per i cluster in una configurazione MetroCluster su FC, i grafici di connettività vengono visualizzati nella pagina dei dettagli *Cluster / Integrità*.  Seguire questi passaggi.
@@ -58,6 +59,7 @@ Per ulteriori informazioni sulla determinazione dello stato di integrità del cl
 
 
 
+[[monitor-connectivity-issues-in-metrocluster-over-ip-configuration]]
 == Monitora i problemi di connettività nella configurazione MetroCluster su IP
 
 Per i cluster in una configurazione MetroCluster su IP, i grafici di connettività vengono visualizzati nella pagina *Clusters*.  Seguire questi passaggi.

@@ -15,6 +15,7 @@ summary: È possibile modificare una relazione di protezione esistente per cambi
 
 
 
+[[destination-information]]
 == Informazioni sulla destinazione
 
 * *Cluster di destinazione*
@@ -56,6 +57,7 @@ Avvia la finestra di dialogo Crea pianificazione, che consente di creare una nuo
 
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 I pulsanti di comando consentono di eseguire le seguenti attività:

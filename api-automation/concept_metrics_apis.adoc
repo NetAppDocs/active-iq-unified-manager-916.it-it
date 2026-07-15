@@ -89,6 +89,7 @@ Oltre le 72 ore.  La durata su cui viene calcolato questo campione è rappresent
 |===
 
 
+[[output-sample-for-metrics-apis]]
 == Esempio di output per le API delle metriche
 
 Ad esempio, il `/datacenter/cluster/nodes/\{key}/metrics` L'API recupera i seguenti dettagli (tra gli altri) per un nodo:
@@ -166,6 +167,7 @@ NOTE: Il 95° percentile nel valore riepilogativo indica che il 95% dei campioni
 ----
 
 
+[[output-sample-for-analytics-apis]]
 == Esempio di output per le API di analisi
 
 Ad esempio, il `/datacenter/cluster/nodes/analytics` L'API recupera i seguenti valori (tra gli altri) per tutti i nodi:
@@ -208,6 +210,7 @@ Ad esempio, il `/datacenter/cluster/nodes/analytics` L'API recupera i seguenti v
 ----
 
 
+[[list-of-the-available-apis]]
 == Elenco delle API disponibili
 
 La tabella seguente descrive il `/metrics` E `/analytics` API in dettaglio.

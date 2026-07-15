@@ -15,6 +15,7 @@ Esistono alcune limitazioni relative alla nuova funzionalità di reporting Activ
 
 
 
+[[existing-reports-from-previous-versions-of-unified-manager]]
 == Report esistenti dalle versioni precedenti di Unified Manager
 
 È possibile modificare la pianificazione e i destinatari solo per i report esistenti creati e importati (come file .rptdesign) in Unified Manager 9.5 e versioni precedenti.  Se hai personalizzato uno qualsiasi dei report standard forniti con Unified Manager 9.5 o versioni precedenti, questi report personalizzati non vengono importati nel nuovo strumento di reporting.
@@ -29,24 +30,28 @@ Le visualizzazioni predefinite possono essere generate come report senza bisogno
 
 
 
+[[schedule-and-report-relationship]]
 == Relazione tra pianificazione e report
 
 È possibile creare numerose pianificazioni diverse con qualsiasi combinazione di destinatari per ogni report salvato.  Tuttavia, non è possibile riutilizzare la pianificazione per più report.
 
 
 
+[[report-protection]]
 == Segnala la protezione
 
 Qualsiasi utente con le autorizzazioni appropriate può modificare o eliminare i report.  Non è possibile impedire ad altri utenti di rimuovere o modificare visualizzazioni o pianificazioni salvate.
 
 
 
+[[event-reports]]
 == resoconti degli eventi
 
 Sebbene sia possibile personalizzare la visualizzazione degli eventi e scaricare il report risultante in formato CSV, non è possibile pianificare la generazione e la distribuzione di report di eventi ricorrenti.
 
 
 
+[[report-attachments]]
 == Segnala allegati
 
 I report non possono essere inviati nel corpo di un'e-mail.  I report vengono invece inviati solo come allegati PDF, Excel o CSV.

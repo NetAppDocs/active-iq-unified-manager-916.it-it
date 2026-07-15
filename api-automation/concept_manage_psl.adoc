@@ -15,6 +15,7 @@ summary: È possibile visualizzare, creare, modificare ed eliminare i livelli di
 
 
 
+[[view-performance-service-levels]]
 == Visualizza i livelli di servizio delle prestazioni
 
 È possibile utilizzare il metodo seguente per visualizzare i livelli di servizio delle prestazioni e assegnarli ai carichi di lavoro di archiviazione.  L'API elenca tutti i livelli di servizio delle prestazioni definiti dal sistema e creati dall'utente e recupera gli attributi di tutti i livelli di servizio delle prestazioni.  Se si desidera interrogare uno specifico Performance Service Level, è necessario immettere l'ID univoco del Performance Service Level per recuperarne i dettagli.
@@ -36,6 +37,7 @@ OTTENERE
 |===
 
 
+[[add-performance-service-levels]]
 == Aggiungi livelli di servizio delle prestazioni
 
 È possibile utilizzare il seguente metodo per creare livelli di servizio delle prestazioni personalizzati e assegnarli ai carichi di lavoro di archiviazione se i livelli di servizio delle prestazioni definiti dal sistema non soddisfano gli obiettivi di livello di servizio (SLO) richiesti per i carichi di lavoro di archiviazione.  Inserisci i dettagli per il livello di servizio delle prestazioni che desideri creare.  Per le proprietà IOPS, assicurarsi di immettere un intervallo di valori valido.
@@ -55,6 +57,7 @@ INVIARE
 |===
 
 
+[[delete-performance-service-levels]]
 == Elimina i livelli di servizio delle prestazioni
 
 È possibile utilizzare il seguente metodo per eliminare uno specifico livello di servizio delle prestazioni.  Non è possibile eliminare un Performance Service Level se è assegnato a un carico di lavoro o se è l'unico Performance Service Level disponibile.  Per eliminare un determinato livello di servizio delle prestazioni, è necessario fornire l'ID univoco del livello di servizio delle prestazioni come parametro di input.
@@ -74,6 +77,7 @@ ELIMINARE
 |===
 
 
+[[modify-performance-service-levels]]
 == Modifica i livelli di servizio delle prestazioni
 
 È possibile utilizzare il metodo seguente per modificare un livello di servizio delle prestazioni e aggiornarne le proprietà.  Non è possibile modificare un livello di servizio delle prestazioni definito dal sistema o assegnato a un carico di lavoro.  È necessario fornire l'ID univoco per modificare un determinato livello di servizio delle prestazioni.  È inoltre necessario immettere la proprietà IOPS che si desidera aggiornare, insieme a un valore valido.
@@ -93,6 +97,7 @@ TOPPA
 |===
 
 
+[[view-aggregate-capabilities-based-on-performance-service-levels]]
 == Visualizza le capacità aggregate in base ai livelli di servizio delle prestazioni
 
 È possibile utilizzare il metodo seguente per interrogare le capacità aggregate in base ai livelli di servizio delle prestazioni.  Questa API restituisce l'elenco degli aggregati disponibili nel tuo data center e indica le capacità in termini di livelli di servizio delle prestazioni che possono essere supportati in tali aggregati.  Durante il provisioning dei carichi di lavoro su un volume, è possibile visualizzare la capacità di un aggregato di supportare un particolare livello di servizio delle prestazioni e di eseguire il provisioning dei carichi di lavoro in base a tale capacità.  La possibilità di specificare l'aggregato è disponibile solo quando si esegue il provisioning di un carico di lavoro tramite API.  Questa funzionalità non è disponibile nell'interfaccia utente Web di Unified Manager.

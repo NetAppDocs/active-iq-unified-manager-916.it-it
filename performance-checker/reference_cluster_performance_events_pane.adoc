@@ -15,6 +15,7 @@ Il riquadro Eventi prestazioni cluster visualizza le statistiche sulle prestazio
 
 
 
+[[all-events-on-this-cluster-pane]]
 == Riquadro Tutti gli eventi in questo cluster
 
 Il riquadro Tutti gli eventi su questo cluster visualizza tutti gli eventi di prestazioni del cluster attivi nelle 72 ore precedenti.  Il totale degli eventi attivi viene visualizzato all'estrema sinistra; questo numero rappresenta il totale di tutti gli eventi nuovi e riconosciuti per tutti gli oggetti di archiviazione in questo cluster.  È possibile fare clic sul collegamento Eventi attivi totali per passare alla pagina Inventario eventi, che è filtrata per visualizzare questi eventi.
@@ -37,6 +38,7 @@ I dati del grafico (barre del contatore verticale) vengono visualizzati in rosso
 
 
 
+[[counter-panels]]
 == Pannelli da banco
 
 I pannelli dei contatori mostrano l'attività del cluster e gli eventi di prestazione delle 72 ore precedenti e includono i seguenti contatori:

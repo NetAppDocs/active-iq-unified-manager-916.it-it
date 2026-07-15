@@ -15,6 +15,7 @@ Gli eventi degli enclosure forniscono informazioni sullo stato degli enclosure d
 
 
 
+[[impact-area-availability]]
 == Area di impatto: disponibilità
 
 |===
@@ -72,6 +73,7 @@ Avvertimento
 |===
 
 
+[[impact-area-configuration]]
 == Area di impatto: configurazione
 
 |===

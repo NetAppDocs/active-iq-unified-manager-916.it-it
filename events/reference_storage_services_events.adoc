@@ -15,6 +15,7 @@ Gli eventi dei servizi di archiviazione forniscono informazioni sulla creazione 
 
 
 
+[[impact-area-configuration]]
 == Area di impatto: configurazione
 
 |===
@@ -55,6 +56,7 @@ Informazioni
 |===
 
 
+[[impact-area-protection]]
 == Area di impatto: protezione
 
 |===

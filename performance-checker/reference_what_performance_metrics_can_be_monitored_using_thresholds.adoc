@@ -15,6 +15,7 @@ Alcuni contatori di prestazioni comuni, come IOPS e MB/s, possono avere soglie i
 
 
 
+[[available-performance-counters]]
 == Contatori di prestazioni disponibili
 
 |===

@@ -15,6 +15,7 @@ summary: 'È possibile utilizzare la finestra di dialogo Impostazioni di destina
 
 
 
+[[space-guarantee]]
 == Garanzia di spazio
 
 Garantisce che sul volume di destinazione sia allocato spazio sufficiente affinché i trasferimenti di dati vadano sempre a buon fine.  L'impostazione della garanzia dello spazio può essere una delle seguenti:

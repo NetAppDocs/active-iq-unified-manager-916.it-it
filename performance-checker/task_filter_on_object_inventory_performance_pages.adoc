@@ -57,6 +57,7 @@ I campi Colonna, Operatore e Valore sono obbligatori per ciascun filtro; i filtr
 
 
 
+[[filtering-example]]
 == Esempio di filtraggio
 
 L'illustrazione mostra il pannello Filtraggio con tre filtri.  Il pulsante *+Aggiungi filtro* viene visualizzato quando si hanno meno del massimo di quattro filtri.

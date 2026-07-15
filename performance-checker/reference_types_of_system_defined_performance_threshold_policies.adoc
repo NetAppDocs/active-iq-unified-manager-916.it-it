@@ -22,6 +22,7 @@ Se si ricevono eventi non necessari da qualsiasi criterio di soglia delle presta
 
 
 
+[[cluster-threshold-policies]]
 == Criteri di soglia del cluster
 
 Per impostazione predefinita, i criteri di soglia delle prestazioni del cluster definiti dal sistema vengono assegnate a ogni cluster monitorato da Unified Manager:
@@ -44,6 +45,7 @@ Ciò avviene confrontando il valore della capacità utilizzata per tutti gli agg
 
 
 
+[[node-threshold-policies]]
 == Criteri di soglia dei nodi
 
 Per impostazione predefinita, i criteri di soglia delle prestazioni dei nodi definiti dal sistema vengono assegnate a ogni nodo nei cluster monitorati da Unified Manager:
@@ -79,6 +81,7 @@ Il criterio "`Frammentazione disco nodo`" analizza solo gli aggregati HDD; gli a
 
 
 
+[[aggregate-threshold-policies]]
 == Politiche di soglia aggregate
 
 La soglia di prestazioni aggregate definita dal sistema viene assegnata per impostazione predefinita a ogni aggregato nei cluster monitorati da Unified Manager:
@@ -105,6 +108,7 @@ Il criterio "`Dischi aggregati sovrautilizzati`" analizza gli aggregati solo HDD
 ====
 
 
+[[workload-latency-threshold-policies]]
 == Criteri di soglia di latenza del carico di lavoro
 
 I criteri di soglia di latenza del carico di lavoro definiti dal sistema vengono assegnati a qualsiasi carico di lavoro che abbia un criterio di livello di servizio delle prestazioni configurato con un valore di "`latenza prevista`" definito:
@@ -120,6 +124,7 @@ Lo fa cercando i carichi di lavoro che hanno superato il valore di latenza previ
 
 
 
+[[qos-threshold-policies]]
 == Criteri di soglia QoS
 
 I criteri di soglia delle prestazioni QoS definiti dal sistema vengono assegnate a qualsiasi carico di lavoro per il quale è configurato un criterio di throughput massimo QoS ONTAP (IOPS, IOPS/TB o MB/s).  Unified Manager attiva un evento quando il valore della velocità effettiva del carico di lavoro è inferiore del 15% rispetto al valore QoS configurato:

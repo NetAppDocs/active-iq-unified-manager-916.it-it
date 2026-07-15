@@ -15,6 +15,7 @@ Gli eventi aggregati forniscono informazioni sullo stato degli aggregati, in mod
 
 
 
+[[impact-area-availability]]
 == Area di impatto: disponibilità
 
 Un asterisco (*) identifica gli eventi EMS che sono stati convertiti in eventi Unified Manager.
@@ -145,6 +146,7 @@ Errore
 |===
 
 
+[[impact-area-capacity]]
 == Area di impatto: capacità
 
 |===
@@ -229,6 +231,7 @@ Avvertimento
 |===
 
 
+[[impact-area-configuration]]
 == Area di impatto: configurazione
 
 |===
@@ -269,6 +272,7 @@ Informazioni
 |===
 
 
+[[impact-area-performance]]
 == Area di impatto: prestazioni
 
 |===

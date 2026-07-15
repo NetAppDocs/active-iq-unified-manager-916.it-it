@@ -15,6 +15,7 @@ summary: 'È possibile assegnare criteri di efficienza di archiviazione (SEP) e 
 
 
 
+[[assign-policies-to-a-single-workload]]
 == Assegnare policy a un singolo carico di lavoro
 
 È possibile assegnare un PSL o un SEP o entrambi a un singolo carico di lavoro. Segui questi passaggi:
@@ -35,6 +36,7 @@ I campi *Livello di servizio delle prestazioni assegnato* e *Criterio di efficie
 ====
 
 
+[[assign-policies-to-multiple-storage-workloads]]
 == Assegna policy a più carichi di lavoro di archiviazione
 
 È possibile assegnare un PSL o un SEP a più carichi di lavoro di archiviazione contemporaneamente. Segui questi passaggi:
@@ -53,6 +55,7 @@ L'applicazione di policy in blocco sui carichi di lavoro potrebbe richiedere del
 
 
 
+[[assign-system-recommended-psls-to-workloads]]
 == Assegnare PSL consigliati dal sistema ai carichi di lavoro
 
 È possibile assegnare PSL consigliati dal sistema ai carichi di lavoro di archiviazione in un data center a cui non sono assegnati PSL oppure i PSL assegnati non corrispondono alle raccomandazioni del sistema.  Per utilizzare questa funzionalità, fare clic sul pulsante *Assegna PSL consigliati dal sistema*.  Non è necessario selezionare carichi di lavoro specifici.

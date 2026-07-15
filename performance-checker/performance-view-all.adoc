@@ -21,6 +21,7 @@ Tutti i campi di queste pagine possono essere utilizzati nelle visualizzazioni p
 
 
 
+[[performance-all-clusters-view]]
 == Prestazioni: visualizzazione di tutti i cluster
 
 La vista Prestazioni: tutti i cluster mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ciascun cluster monitorato da un'istanza di Unified Manager.  Questa pagina consente di monitorare le prestazioni dei cluster e di risolvere i problemi relativi alle prestazioni e agli eventi di soglia.
@@ -44,6 +45,7 @@ NOTE: Se sui nodi del cluster sono installate diverse versioni del software ONTA
 
 
 
+[[performance-all-volumes-view]]
 == Prestazioni: visualizzazione di tutti i volumi
 
 La vista Prestazioni: tutti i volumi mostra una panoramica degli eventi relativi alle prestazioni, dei dati dei contatori e delle informazioni di configurazione per ciascun FlexVol volume e FlexGroup monitorato da un'istanza di Unified Manager.  Ciò consente di monitorare rapidamente le prestazioni dei volumi e di risolvere i problemi di prestazioni e gli eventi di soglia.
@@ -75,6 +77,7 @@ Per maggiori informazioni consultare i seguenti link:
 
 
 
+[[performance-all-aggregates-view]]
 == Prestazioni: visualizzazione di tutti gli aggregati
 
 La vista Prestazioni: tutti gli aggregati mostra una panoramica degli eventi di prestazioni, dei dati e delle informazioni di configurazione per ciascun aggregato monitorato da un'istanza di Unified Manager.  Questa pagina consente di monitorare le prestazioni dei tuoi aggregati e di risolvere problemi di prestazioni ed eventi di soglia.
@@ -102,6 +105,7 @@ Di seguito sono riportati alcuni campi importanti nella vista Prestazioni: Tutti
 
 
 
+[[performance-all-nodes-view]]
 == Prestazioni: visualizzazione di tutti i nodi
 
 La vista Prestazioni: tutti i nodi mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ciascun nodo monitorato da un'istanza di Unified Manager.  Ciò consente di monitorare rapidamente le prestazioni dei nodi e di risolvere i problemi di prestazioni e gli eventi di soglia.
@@ -120,6 +124,7 @@ Per maggiori informazioni consultare i seguenti link:
 
 
 
+[[performance-all-storage-vms-view]]
 == Prestazioni: visualizzazione di tutte le VM di archiviazione
 
 La vista Prestazioni: tutte le VM di storage mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ciascuna macchina virtuale di storage (SVM) monitorata da un'istanza di Unified Manager.  Ciò consente di monitorare rapidamente le prestazioni delle SVM e di risolvere problemi di prestazioni ed eventi di soglia.  Il campo Latenza in questa pagina riporta il tempo medio di risposta per tutte le richieste di I/O, espresso in millisecondi per operazione.
@@ -135,6 +140,7 @@ Per maggiori informazioni consultare i seguenti link:
 
 
 
+[[performance-all-luns-view]]
 == Prestazioni: visualizzazione di tutti i LUN
 
 La vista Prestazioni: tutte le LUN mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ciascuna LUN monitorata da un'istanza di Unified Manager.  Ciò consente di monitorare rapidamente le prestazioni dei LUN e di risolvere problemi di prestazioni ed eventi di soglia.
@@ -154,6 +160,7 @@ Per maggiori informazioni consultare i seguenti link:
 
 
 
+[[performance-all-nvme-namespaces-view]]
 == Prestazioni: visualizzazione di tutti gli spazi dei nomi NVMe
 
 La vista Prestazioni: tutti gli spazi dei nomi NVMe mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ogni spazio dei nomi NVMe monitorato da un'istanza di Unified Manager.  Ciò consente di monitorare rapidamente le prestazioni e lo stato di salute dei tuoi Namespace e di risolvere problemi ed eventi di soglia.
@@ -168,6 +175,7 @@ Per maggiori informazioni consultare i seguenti link:
 
 
 
+[[performance-all-network-interfaces-view]]
 == Prestazioni: visualizzazione di tutte le interfacce di rete
 
 La vista Prestazioni: tutte le interfacce di rete mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ciascuna interfaccia di rete (LIF) monitorata da questa istanza di Unified Manager.  Questa pagina consente di monitorare rapidamente le prestazioni delle interfacce e di risolvere i problemi di prestazioni e gli eventi di soglia.  Di seguito sono riportati alcuni campi importanti nella vista Prestazioni: tutte le interfacce di rete.
@@ -184,6 +192,7 @@ NOTE: Le interfacce elencate in questa pagina includono LIF dati, LIF cluster, L
 
 
 
+[[performance-all-ports-view]]
 == Prestazioni: visualizzazione di tutte le porte
 
 La vista Prestazioni: tutte le porte mostra una panoramica degli eventi relativi alle prestazioni, dei dati e delle informazioni di configurazione per ciascuna porta monitorata da un'istanza di Unified Manager.  Ciò consente di monitorare rapidamente le prestazioni delle porte e di risolvere problemi di prestazioni ed eventi di soglia.  Per un ruolo di porta, viene visualizzata la funzione della porta di rete: Dati o Cluster.  Le porte FCP non possono avere un ruolo e il ruolo viene visualizzato come N/D.
@@ -199,6 +208,7 @@ Per maggiori informazioni consultare i seguenti link:
 
 
 
+[[performance-qos-policy-groups-view]]
 == Prestazioni: visualizzazione Gruppi di criteri QoS
 
 La vista Gruppi di policy QoS mostra i gruppi di policy QoS disponibili nei cluster monitorati da Unified Manager.  Ciò include policy QoS tradizionali, policy QoS adattive e policy QoS assegnate tramite livelli di servizio delle prestazioni.

@@ -17,6 +17,7 @@ Per le raccomandazioni di sicurezza, vedere il https://www.netapp.com/pdf.html?i
 
 
 
+[[view-object-level-security-status-on-security-page]]
 == Visualizza lo stato di sicurezza a livello di oggetto nella pagina Sicurezza
 
 In qualità di amministratore di sistema, puoi utilizzare la pagina *Sicurezza* per ottenere visibilità sul livello di sicurezza dei tuoi cluster ONTAP e delle VM di storage a livello di data center e sito.  Gli oggetti supportati sono cluster, VM di archiviazione e volumi. Segui questi passaggi:
@@ -40,6 +41,7 @@ La pagina Sicurezza visualizza i seguenti pannelli:
 
 
 
+[[view-security-details-of-all-clusters-on-the-clusters-page]]
 == Visualizza i dettagli di sicurezza di tutti i cluster nella pagina Cluster
 
 La pagina dei dettagli *Cluster / Sicurezza* consente di visualizzare lo stato di conformità della sicurezza a livello di cluster.
@@ -58,6 +60,7 @@ NOTE: Se un cluster ha un certificato scaduto, puoi fare clic `expired` in *Vali
 
 
 
+[[view-security-details-of-all-clusters-from-the-storage-vms-page]]
 == Visualizza i dettagli di sicurezza di tutti i cluster dalla pagina delle VM di archiviazione
 
 La pagina dei dettagli *VM di archiviazione / Sicurezza* consente di visualizzare lo stato di conformità della sicurezza a livello di VM di archiviazione.

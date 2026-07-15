@@ -15,6 +15,7 @@ La pagina Riepilogo visualizza grafici dei contatori contenenti dettagli sugli e
 
 
 
+[[charts-and-counter-statistics]]
 == Grafici e statistiche del contatore
 
 I grafici riepilogativi forniscono una rapida panoramica di alto livello per le ultime 72 ore e aiutano a identificare possibili problemi che richiedono ulteriori indagini.
@@ -135,6 +136,7 @@ Il grafico del contatore di utilizzo mostra la percentuale di utilizzo dell'ogge
 
 
 
+[[events]]
 == Eventi
 
 La tabella della cronologia degli eventi, ove applicabile, elenca gli eventi più recenti che si sono verificati su quell'oggetto.  Facendo clic sul nome dell'evento vengono visualizzati i dettagli dell'evento nella pagina Dettagli evento.

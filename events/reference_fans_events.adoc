@@ -15,6 +15,7 @@ Gli eventi delle ventole forniscono informazioni sullo stato delle ventole sui n
 
 
 
+[[impact-area-availability]]
 == Area di impatto: disponibilità
 
 |===

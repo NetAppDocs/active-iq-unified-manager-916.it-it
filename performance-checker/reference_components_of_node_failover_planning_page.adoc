@@ -15,6 +15,7 @@ I componenti della pagina Pianificazione del failover dei nodi/prestazioni vengo
 
 
 
+[[performance-statistics-grid]]
 == Griglia delle statistiche delle prestazioni
 
 La pagina Pianificazione del failover dei nodi/prestazioni visualizza una griglia contenente statistiche su latenza, IOPS, utilizzo e capacità prestazionale utilizzata.
@@ -49,6 +50,7 @@ Sebbene il carico di lavoro del nodo di acquisizione sia equivalente ai carichi 
 
 
 
+[[comparing-pane]]
 == riquadro di confronto
 
 L'elenco seguente descrive i componenti visualizzati per impostazione predefinita nel riquadro Confronto:

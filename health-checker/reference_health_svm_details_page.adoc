@@ -20,6 +20,7 @@ summary: 'È possibile utilizzare la pagina Dettagli VM di archiviazione/Stato p
 ====
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 I pulsanti di comando consentono di eseguire le seguenti attività per la VM di archiviazione selezionata:
@@ -48,6 +49,7 @@ Consente di accedere alla vista Integrità: tutte le VM di archiviazione.
 
 
 
+[[health-tab]]
 == Scheda Salute
 
 La scheda Integrità visualizza informazioni dettagliate sulla disponibilità dei dati, sulla capacità dei dati e sui problemi di protezione di vari oggetti quali volumi, aggregati, LIF NAS, LIF SAN, LUN, protocolli, servizi, condivisioni NFS e condivisioni CIFS.
@@ -73,6 +75,7 @@ Fornisce una rapida panoramica dello stato di salute correlato alla protezione d
 
 
 
+[[capacity-tab]]
 == Scheda Capacità
 
 La scheda Capacità visualizza informazioni dettagliate sulla capacità dati dell'SVM selezionato.
@@ -152,6 +155,7 @@ Per i volumi FlexVol , visualizza il nome dell'aggregato che contiene il volume.
 
 
 
+[[configuration-tab]]
 == Scheda di configurazione
 
 La scheda Configurazione visualizza i dettagli di configurazione relativi alla VM di archiviazione selezionata, come il suo cluster, il volume radice, il tipo di volumi che contiene (volumi FlexVol ), i criteri e la protezione creata sulla VM di archiviazione:
@@ -252,6 +256,7 @@ Visualizza gli indirizzi IP del server DNS o NIS.  Quando il server NIS è abili
 
 
 
+[[network-interfaces-tab]]
 == Scheda Interfacce di rete
 
 La scheda Interfacce di rete visualizza i dettagli sulle interfacce di rete dati (LIF) create sulla VM di archiviazione selezionata:
@@ -311,6 +316,7 @@ Visualizza il nome del gruppo di failover.
 
 
 
+[[qtrees-tab]]
 == Scheda Qtrees
 
 La scheda Qtrees mostra i dettagli sui qtree e le relative quote.  È possibile fare clic sul pulsante *Modifica soglie* se si desidera modificare le impostazioni della soglia di integrità per la capacità di qtree per uno o più qtree.
@@ -399,6 +405,7 @@ Visualizza il limite flessibile per il numero di file consentiti nei qtree.  Il 
 
 
 
+[[user-and-group-quotas-tab]]
 == Scheda Quote utente e gruppo
 
 Visualizza i dettagli sulle quote utente e gruppo utente per la VM di archiviazione selezionata.  È possibile visualizzare informazioni quali lo stato della quota, il nome dell'utente o del gruppo di utenti, i limiti flessibili e rigidi impostati sui dischi e sui file, la quantità di spazio su disco e il numero di file utilizzati, nonché il valore della soglia del disco.  È anche possibile modificare l'indirizzo email associato a un utente o a un gruppo di utenti.
@@ -487,6 +494,7 @@ Visualizza l'indirizzo email dell'utente o del gruppo di utenti a cui vengono in
 
 
 
+[[nfs-shares-tab]]
 == Scheda Condivisioni NFS
 
 La scheda Condivisioni NFS visualizza informazioni sulle condivisioni NFS, come lo stato, il percorso associato al volume (volumi FlexGroup o volumi FlexVol ), i livelli di accesso dei client alle condivisioni NFS e la policy di esportazione definita per i volumi esportati.  Le condivisioni NFS non verranno visualizzate nelle seguenti condizioni: se il volume non è montato o se i protocolli associati al criterio di esportazione per il volume non contengono condivisioni NFS.
@@ -568,6 +576,7 @@ Visualizza le regole che definiscono l'autorizzazione di accesso per i volumi es
 
 
 
+[[smb-shares-tab]]
 == Scheda Condivisioni SMB
 
 Visualizza informazioni sulle condivisioni SMB sulla VM di archiviazione selezionata.  È possibile visualizzare informazioni quali lo stato della condivisione SMB, il nome della condivisione, il percorso associato alla VM di archiviazione, lo stato del percorso di giunzione della condivisione, l'oggetto contenitore, lo stato del volume contenitore, i dati di sicurezza della condivisione e i criteri di esportazione definiti per la condivisione.  È anche possibile determinare se esiste un percorso NFS equivalente per la condivisione SMB.
@@ -675,6 +684,7 @@ Specifica se esiste un equivalente NFS per la condivisione.
 
 
 
+[[san-tab]]
 == Scheda SAN
 
 Visualizza i dettagli su LUN, gruppi di iniziatori e iniziatori per la VM di archiviazione selezionata.  Per impostazione predefinita, viene visualizzata la vista LUN.  È possibile visualizzare i dettagli sui gruppi di iniziatori nella scheda Gruppi di iniziatori e i dettagli sugli iniziatori nella scheda Iniziatori.
@@ -721,12 +731,14 @@ Visualizza il nome e il tipo dell'iniziatore e il numero totale di gruppi di ini
 
 
 
+[[related-annotations-pane]]
 == Riquadro Annotazioni correlate
 
 Il riquadro Annotazioni correlate consente di visualizzare i dettagli delle annotazioni associati alla VM di archiviazione selezionata.  I dettagli includono il nome dell'annotazione e i valori dell'annotazione applicati alla VM di archiviazione.  È anche possibile rimuovere le annotazioni manuali dal riquadro Annotazioni correlate.
 
 
 
+[[related-devices-pane]]
 == Riquadro Dispositivi correlati
 
 Il riquadro Dispositivi correlati consente di visualizzare il cluster, gli aggregati e i volumi correlati alla VM di archiviazione:
@@ -751,12 +763,14 @@ Visualizza il numero e la capacità dei volumi che appartengono alla VM di archi
 
 
 
+[[related-groups-pane]]
 == Riquadro Gruppi correlati
 
 Il riquadro Gruppi correlati consente di visualizzare l'elenco dei gruppi associati alla VM di archiviazione selezionata.
 
 
 
+[[related-alerts-pane]]
 == Riquadro Avvisi correlati
 
 Il riquadro Avvisi correlati consente di visualizzare l'elenco degli avvisi creati per la VM di archiviazione selezionata.  Puoi anche aggiungere un avviso cliccando sul link *Aggiungi avviso* oppure modificare un avviso esistente cliccando sul nome dell'avviso.

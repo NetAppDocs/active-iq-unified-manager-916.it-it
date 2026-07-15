@@ -17,6 +17,7 @@ summary: È possibile utilizzare la pagina Dettagli volume/integrità per visual
 
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 I pulsanti di comando consentono di eseguire le seguenti attività per il volume selezionato:
@@ -106,6 +107,7 @@ Consente di passare alla vista Salute: Tutti i volumi.
 
 
 
+[[capacity-tab]]
 == Scheda Capacità
 
 La scheda Capacità visualizza i dettagli sul volume selezionato, come la sua capacità fisica, la capacità logica, le impostazioni della soglia, la capacità della quota e informazioni su qualsiasi operazione di spostamento del volume:
@@ -308,6 +310,7 @@ Visualizza anche il numero di operazioni di spostamento del volume eseguite sul 
 
 
 
+[[configuration-tab]]
 == Scheda di configurazione
 
 La scheda Configurazione visualizza i dettagli sul volume selezionato, come la politica di esportazione, il tipo di RAID, la capacità e le caratteristiche relative all'efficienza di archiviazione del volume:
@@ -422,6 +425,7 @@ Specifica se le copie automatiche degli snapshot sono abilitate o disabilitate.
 
 
 
+[[protection-tab]]
 == Scheda di protezione
 
 La scheda Protezione visualizza i dettagli di protezione relativi al volume selezionato, ad esempio informazioni sul ritardo, tipo di relazione e topologia della relazione.
@@ -659,6 +663,7 @@ Questo grafico non è disponibile per i volumi che si trovano in relazioni di pr
 
 
 
+[[history-area]]
 == Area storica
 
 L'area Cronologia visualizza grafici che forniscono informazioni sulla capacità e sulle prenotazioni di spazio del volume selezionato.  Inoltre, puoi cliccare sul pulsante *Esporta* per creare un report in formato CSV per il grafico che stai visualizzando.
@@ -689,6 +694,7 @@ Visualizza la riserva Snapshot e la soglia di avviso Snapshot come grafici linea
 
 
 
+[[events-list]]
 == Elenco degli eventi
 
 L'elenco Eventi mostra i dettagli sugli eventi nuovi e riconosciuti:
@@ -709,12 +715,14 @@ Visualizza il tempo trascorso da quando è stato generato l'evento.  Se il tempo
 
 
 
+[[related-annotations-pane]]
 == Riquadro Annotazioni correlate
 
 Il riquadro Annotazioni correlate consente di visualizzare i dettagli delle annotazioni associate al volume selezionato.  I dettagli includono il nome dell'annotazione e i valori di annotazione applicati al volume.  È anche possibile rimuovere le annotazioni manuali dal riquadro Annotazioni correlate.
 
 
 
+[[related-devices-pane]]
 == Riquadro Dispositivi correlati
 
 Il riquadro Dispositivi correlati consente di visualizzare e navigare tra gli SVM, gli aggregati, i qtree, i LUN e le copie Snapshot correlati al volume:
@@ -763,12 +771,14 @@ Visualizza il nome e la capacità del volume padre di un volume FlexClone selezi
 
 
 
+[[related-groups-pane]]
 == Riquadro Gruppi correlati
 
 Il riquadro Gruppi correlati consente di visualizzare l'elenco dei gruppi associati al volume selezionato.
 
 
 
+[[related-alerts-pane]]
 == Riquadro Avvisi correlati
 
 Il riquadro Avvisi correlati consente di visualizzare l'elenco degli avvisi creati per il volume selezionato.  È anche possibile aggiungere un avviso cliccando sul link Aggiungi avviso oppure modificare un avviso esistente cliccando sul nome dell'avviso.

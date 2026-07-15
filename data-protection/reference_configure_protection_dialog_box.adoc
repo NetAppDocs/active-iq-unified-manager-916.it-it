@@ -15,6 +15,7 @@ summary: È possibile utilizzare la finestra di dialogo Configura protezione per
 
 
 
+[[source-tab]]
 == Scheda Sorgente
 
 * *Vista topologica*
@@ -65,6 +66,7 @@ Visualizza la copia Snapshot utilizzata per il trasferimento della linea di base
 
 
 
+[[snapmirror-tab]]
 == Scheda SnapMirror
 
 Consente di specificare un cluster di destinazione, una macchina virtuale di archiviazione (SVM) e un aggregato per una relazione di protezione, nonché una convenzione di denominazione per le destinazioni durante la creazione di una relazione SnapMirror .  È anche possibile specificare una politica e una pianificazione SnapMirror .
@@ -157,6 +159,7 @@ Avvia la finestra di dialogo Crea pianificazione, che consente di creare una nuo
 
 
 
+[[snapvault-tab]]
 == Scheda SnapVault
 
 Consente di specificare un cluster secondario, SVM e aggregato per una relazione di protezione, nonché una convenzione di denominazione per i volumi secondari durante la creazione di una relazione SnapVault .  È anche possibile specificare una politica e una pianificazione SnapVault .
@@ -249,6 +252,7 @@ Avvia la finestra di dialogo Crea pianificazione, che consente di creare una pia
 
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 I pulsanti di comando consentono di eseguire le seguenti attività:

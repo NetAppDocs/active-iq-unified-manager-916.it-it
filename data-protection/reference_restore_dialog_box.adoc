@@ -15,6 +15,7 @@ summary: È possibile utilizzare la finestra di dialogo Ripristina per ripristin
 
 
 
+[[restore-from]]
 == Ripristina da
 
 L'area Ripristina da consente di specificare da dove si desidera ripristinare i dati.
@@ -35,6 +36,7 @@ Per impostazione predefinita, nell'elenco vengono visualizzati al massimo 995 og
 
 
 
+[[select-items-to-restore]]
 == Seleziona gli elementi da ripristinare
 
 L'area Seleziona elementi da ripristinare consente di selezionare l'intero volume o file e cartelle specifici che si desidera ripristinare.  È possibile selezionare un massimo di 10 file, cartelle o una combinazione di entrambi.  Quando è selezionato il numero massimo di elementi, le caselle di controllo per la selezione degli elementi sono disabilitate.
@@ -65,6 +67,7 @@ Non è possibile ripristinare i flussi di file NTFS.
 ====
 
 
+[[restore-to]]
 == Ripristinare a
 
 L'area Ripristina in consente di specificare dove si desidera ripristinare i dati.
@@ -92,6 +95,7 @@ Se selezionata, questa opzione conserva la struttura del file o della directory 
 
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 I pulsanti di comando consentono di eseguire le seguenti attività:

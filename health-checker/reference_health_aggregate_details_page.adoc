@@ -15,6 +15,7 @@ summary: 'È possibile utilizzare la pagina Dettagli aggregato/integrità per vi
 
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 [NOTE]
@@ -48,6 +49,7 @@ Consente di passare alla vista Salute: Tutti gli aggregati.
 
 
 
+[[capacity-tab]]
 == Scheda Capacità
 
 La scheda Capacità visualizza informazioni dettagliate sull'aggregato selezionato, come la sua capacità, le soglie e il tasso di crescita giornaliero.
@@ -204,6 +206,7 @@ Visualizza grafici che forniscono informazioni sulla capacità dei volumi conten
 
 
 
+[[disk-information-tab]]
 == Scheda Informazioni sul disco
 
 Visualizza informazioni dettagliate sui dischi nell'aggregato selezionato, tra cui il tipo e la dimensione RAID e il tipo di dischi utilizzati nell'aggregato.  La scheda visualizza anche graficamente i gruppi RAID e i tipi di dischi utilizzati (ad esempio SAS, ATA, FCAL, SSD o VMDISK).  È possibile visualizzare ulteriori informazioni, come l'alloggiamento, lo scaffale e la velocità di rotazione del disco, posizionando il cursore sui dischi di parità e sui dischi dati.
@@ -385,6 +388,7 @@ Visualizza il nome del livello cloud, se è stato configurato un aggregato abili
 
 
 
+[[configuration-tab]]
 == Scheda di configurazione
 
 La scheda Configurazione visualizza i dettagli sull'aggregato selezionato, come il nodo del cluster, il tipo di blocco, il tipo di RAID, la dimensione del RAID e il conteggio dei gruppi RAID:
@@ -456,6 +460,7 @@ Mostra se la crittografia SSL è abilitata per il livello cloud.
 
 
 
+[[history-area]]
 == Area storica
 
 L'area Cronologia visualizza grafici che forniscono informazioni sulla capacità dell'aggregato selezionato.  Inoltre, puoi cliccare sul pulsante *Esporta* per creare un report in formato CSV per il grafico che stai visualizzando.
@@ -480,6 +485,7 @@ Visualizza l'andamento dell'utilizzo della capacità aggregata in base alla cron
 
 
 
+[[events-list]]
 == Elenco degli eventi
 
 L'elenco Eventi mostra i dettagli sugli eventi nuovi e riconosciuti:
@@ -500,6 +506,7 @@ Visualizza il tempo trascorso da quando è stato generato l'evento.  Se il tempo
 
 
 
+[[related-devices-pane]]
 == Riquadro Dispositivi correlati
 
 Il riquadro Dispositivi correlati consente di visualizzare i nodi del cluster, i volumi e i dischi correlati all'aggregato:
@@ -528,6 +535,7 @@ Visualizza il numero di dischi nell'aggregato selezionato.
 
 
 
+[[related-alerts-pane]]
 == Riquadro Avvisi correlati
 
 Il riquadro Avvisi correlati consente di visualizzare l'elenco degli avvisi creati per l'aggregato selezionato.  È anche possibile aggiungere un avviso cliccando sul link Aggiungi avviso oppure modificare un avviso esistente cliccando sul nome dell'avviso.

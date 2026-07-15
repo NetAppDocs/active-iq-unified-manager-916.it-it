@@ -23,6 +23,7 @@ Puoi utilizzare Unified Manager per monitorare i tuoi cluster.  Quando si verifi
 
 
 
+[[physical-and-logical-capacity]]
 == Capacità fisica e logica
 
 Unified Manager sfrutta i concetti di spazio fisico e logico utilizzati per gli oggetti di archiviazione ONTAP .
@@ -33,6 +34,7 @@ Unified Manager sfrutta i concetti di spazio fisico e logico utilizzati per gli 
 
 
 
+[[capacity-measurement-units]]
 == Unità di misura della capacità
 
 Unified Manager calcola la capacità di archiviazione in base a unità binarie di 1024 (2^10^) byte.  In ONTAP 9.10.0 e nelle versioni precedenti, queste unità venivano visualizzate come KB, MB, GB, TB e PB.  A partire da ONTAP 9.10.1, vengono visualizzati in Unified Manager come KiB, MiB, GiB, TiB e PiB.

@@ -43,6 +43,7 @@ image::../media/vm_workflow.gif[flusso di lavoro della macchina virtuale]
 
 
 
+[[what-is-not-supported]]
 == Cosa non è supportato
 
 * Gli archivi dati esterni a ONTAP e mappati alle istanze di vCenter Server non sono supportati su Unified Manager.  Non sono supportate nemmeno le VM con dischi virtuali su tali datastore.

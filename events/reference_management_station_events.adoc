@@ -15,6 +15,7 @@ Gli eventi della stazione di gestione forniscono informazioni sullo stato del se
 
 
 
+[[impact-area-configuration]]
 == Area di impatto: configurazione
 
 |===
@@ -154,6 +155,7 @@ Avvertimento
 |===
 
 
+[[impact-area-performance]]
 == Area di impatto: prestazioni
 
 |===

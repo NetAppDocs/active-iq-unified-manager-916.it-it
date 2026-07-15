@@ -22,6 +22,7 @@ Un utente con ruolo di amministratore di storage può generare e inviare messagg
 ====
 
 
+[[send-on-demand-autosupport-messages]]
 == Invia messaggi AutoSupport su richiesta
 
 È possibile generare e inviare un messaggio su richiesta al supporto tecnico, a un destinatario e-mail specificato o a entrambi.
@@ -36,6 +37,7 @@ Un utente con ruolo di amministratore di storage può generare e inviare messagg
 
 
 
+[[enable-periodic-autosupport]]
 == Abilita AutoSupport periodico
 
 È possibile inviare periodicamente messaggi specifici e predefiniti al supporto tecnico per la diagnosi e la risoluzione dei problemi.  Questa funzionalità è abilitata per impostazione predefinita.  Se disabilitata, un amministratore o un utente addetto alla manutenzione può abilitare le impostazioni.
@@ -49,6 +51,7 @@ Un utente con ruolo di amministratore di storage può generare e inviare messagg
 
 
 
+[[upload-on-demand-support-bundle]]
 == Carica il pacchetto di supporto su richiesta
 
 È possibile generare e inviare un pacchetto di supporto al supporto tecnico in base alle esigenze di risoluzione dei problemi.  Unified Manager memorizza solo i due bundle di supporto generati più di recente.  I vecchi pacchetti di supporto vengono eliminati dal sistema.
@@ -72,6 +75,7 @@ Anche se non si seleziona alcun tipo di dati, il pacchetto di supporto viene com
 
 
 
+[[set-up-http-proxy-server]]
 == Imposta il server proxy HTTP
 
 È possibile designare un proxy per fornire l'accesso a Internet per inviare contenuti AutoSupport al supporto se l'ambiente non fornisce un accesso diretto dal server Unified Manager.  Questa sezione è disponibile solo per gli utenti amministratori e manutentori.

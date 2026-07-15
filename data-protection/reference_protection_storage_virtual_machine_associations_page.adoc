@@ -26,6 +26,7 @@ In qualità di amministratore dell'applicazione o amministratore dell'archiviazi
 
 
 
+[[create-storage-vm-associations]]
 == Creare associazioni di VM di archiviazione
 
 La procedura guidata Crea associazioni di macchine virtuali di archiviazione consente alle applicazioni di protezione dei partner di associare una VM di archiviazione di origine a una VM di archiviazione di destinazione per l'utilizzo con relazioni SnapMirror e SnapVault .  Le applicazioni partner utilizzano queste associazioni al momento del provisioning iniziale dei volumi di destinazione per determinare quali risorse selezionare.dd
@@ -74,6 +75,7 @@ Selezionare questa opzione quando si desidera creare un'associazione tra una VM 
 
 
 
+[[delete-storage-vm-associations]]
 == Elimina le associazioni delle VM di archiviazione
 
 È possibile eliminare le associazioni delle VM di archiviazione per le applicazioni partner per rimuovere la relazione di provisioning secondaria tra la VM di archiviazione di origine e quella di destinazione; ad esempio, è possibile eseguire questa operazione quando la VM di archiviazione di destinazione è piena e si desidera creare nuove associazioni di protezione per la VM di archiviazione.

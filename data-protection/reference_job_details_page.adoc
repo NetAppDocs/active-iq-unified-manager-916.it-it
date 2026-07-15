@@ -15,6 +15,7 @@ La pagina Dettagli processo consente di visualizzare lo stato e altre informazio
 
 
 
+[[job-summary]]
 == Riepilogo del lavoro
 
 Il riepilogo del lavoro mostra le seguenti informazioni:
@@ -29,6 +30,7 @@ Il riepilogo del lavoro mostra le seguenti informazioni:
 
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 I pulsanti di comando consentono di eseguire le seguenti attività:
@@ -45,6 +47,7 @@ Ti riporta alla pagina Lavori.
 
 
 
+[[job-tasks-list]]
 == Elenco delle attività lavorative
 
 L'elenco delle attività di lavoro visualizza in una tabella tutte le attività associate a un lavoro specifico e le proprietà relative a ciascuna attività.

@@ -21,6 +21,7 @@ Nel corso di diversi giorni, l'aumento e la diminuzione dell'attività del caric
 
 
 
+[[how-the-latency-forecast-is-formed]]
 == Come si forma la previsione di latenza
 
 Unified Manager deve raccogliere almeno 3 giorni di attività del carico di lavoro prima di poter iniziare l'analisi e prima che la previsione di latenza per il tempo di risposta I/O possa essere visualizzata nella GUI.  La raccolta dati minima richiesta non tiene conto di tutte le modifiche che si verificano a causa dell'attività del carico di lavoro.  Dopo aver raccolto i primi 3 giorni di attività, Unified Manager modifica la previsione di latenza ogni 24 ore alle ore 00:00 per riflettere le variazioni dell'attività del carico di lavoro e stabilire una soglia di prestazioni dinamiche più accurata.

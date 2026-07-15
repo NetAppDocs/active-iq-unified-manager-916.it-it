@@ -15,6 +15,7 @@ Gli eventi di protezione ti informano se un processo non è riuscito o è stato 
 
 
 
+[[impact-area-protection]]
 == Area di impatto: protezione
 
 |===

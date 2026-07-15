@@ -17,6 +17,7 @@ Nella finestra di dialogo Disabilita eventi viene visualizzato l'elenco dei tipi
 
 
 
+[[event-properties-area]]
 == Area Proprietà evento
 
 L'area Proprietà evento specifica le seguenti proprietà dell'evento:
@@ -44,6 +45,7 @@ Insieme al nome dell'evento viene visualizzata anche la gravità.
 
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 I pulsanti di comando consentono di eseguire le seguenti attività per gli eventi selezionati:

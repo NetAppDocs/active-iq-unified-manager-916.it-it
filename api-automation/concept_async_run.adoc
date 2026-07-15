@@ -17,12 +17,14 @@ Alcune chiamate API, in particolare quelle utilizzate per aggiungere o modificar
 
 
 
+[[asynchronous-requests-described-using-job-object]]
 == Richieste asincrone descritte utilizzando l'oggetto Job
 
 Dopo aver effettuato una chiamata API eseguita in modo asincrono, il codice di risposta HTTP 202 indica che la richiesta è stata convalidata e accettata correttamente, ma non è ancora stata completata. La richiesta viene elaborata come un'attività in background che continua a essere eseguita dopo la risposta HTTP iniziale al client. La risposta include l'oggetto Job che ancora la richiesta, incluso il suo identificatore univoco.
 
 
 
+[[query-the-job-object-associated-with-an-api-request]]
 == Interroga l'oggetto Job associato a una richiesta API
 
 L'oggetto Job restituito nella risposta HTTP contiene diverse proprietà. È possibile interrogare la proprietà di stato per determinare se la richiesta è stata completata correttamente. Un oggetto Job può trovarsi in uno dei seguenti stati:
@@ -41,6 +43,7 @@ Esistono due tecniche che è possibile utilizzare quando si interroga un oggetto
 
 
 
+[[steps-in-an-asynchronous-request]]
 == Fasi di una richiesta asincrona
 
 Per completare una chiamata API asincrona, è possibile utilizzare la seguente procedura di alto livello:

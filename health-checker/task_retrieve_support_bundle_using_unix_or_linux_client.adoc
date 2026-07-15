@@ -49,6 +49,7 @@ Il nome del pacchetto di supporto ti viene fornito quando lo generi tramite la c
 
 
 
+[[examples]]
 == Esempi
 
 L'esempio seguente utilizza SCP per recuperare il bundle di supporto:

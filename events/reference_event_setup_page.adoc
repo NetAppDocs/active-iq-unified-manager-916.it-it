@@ -17,6 +17,7 @@ Puoi accedere a questa pagina solo se disponi del ruolo di Amministratore dell'a
 
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 I pulsanti di comando consentono di eseguire le seguenti attività per gli eventi selezionati:
@@ -41,6 +42,7 @@ Avvia la finestra di dialogo Iscriviti agli eventi EMS, che consente di iscriver
 
 
 
+[[list-view]]
 == Visualizzazione elenco
 
 La vista Elenco mostra (in formato tabellare) le informazioni sugli eventi disabilitati.  È possibile utilizzare i filtri delle colonne per personalizzare i dati visualizzati.

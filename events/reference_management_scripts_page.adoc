@@ -17,6 +17,7 @@ La pagina Script consente di aggiungere o eliminare script da Unified Manager.
 
 
 
+[[command-buttons]]
 == Pulsanti di comando
 
 * *Aggiungere*
@@ -31,6 +32,7 @@ Elimina lo script selezionato.
 
 
 
+[[list-view]]
 == Visualizzazione elenco
 
 La visualizzazione elenco mostra, in formato tabellare, gli script aggiunti a Unified Manager.
